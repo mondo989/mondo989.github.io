@@ -748,7 +748,6 @@ section.success {
     left:0;
     right:0;
     top: 0;
-    transition: 1s;
 }
 
 .fa-plus-circle:hover{
@@ -844,7 +843,6 @@ background: white;
 }
 
 .circle {
-    background: white;
     width: 120px;
     height: 120px;
     margin: auto;
