@@ -1,0 +1,178 @@
+
+
+.box-container {
+   margin: 0 auto;
+   margin-top:20px;
+   width: 100%;
+   height: 300px;
+   background: url('clothingrack.jpg')  no-repeat center 82% ;
+
+}
+
+      .img-box {
+         
+         width: 100%;
+         height: 100%;
+         position: relative;
+         background: transparent;
+         
+
+
+             -webkit-box-shadow: 1px 1px 1.4px #000;
+                           box-shadow: 1px 1px 1.4px #000;
+         
+             -webkit-transition: 1s;
+                -moz-transition: 1s;
+                   -ms-transition: 1s;
+                     -o-transition: 1s;
+                           transition: 1s;
+      }
+   
+      .img-box:hover {
+             -webkit-box-shadow: 1px 3px 9px #000;
+                          box-shadow: 1px 3px 9px #000;
+}
+
+
+      .content-box {
+         background: blue;
+         width: 100%;
+         height: 1000px;
+
+         top: 0;         
+         overflow: hidden;
+      
+               -webkit-transition: .5s;
+               -moz-transition: .5s;
+               -ms-transition: .5s;
+               -o-transition: .5s;
+               transition: .5s;
+      }
+
+      .content-box:hover {
+               -webkit-transition: .5s;
+               -moz-transition: .5s;
+               -ms-transition: .5s;
+               -o-transition: .5s;
+               transition: .5s;
+      }
+
+    
+
+      .content-headline {
+         font-size: 30px;
+         color: blue;
+         opacity: 0;
+         background: gray;
+         height: 30px;
+         text-align: center;
+         margin: 0 auto;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         overflow-y: scroll;
+
+   
+               -webkit-transition: .5s;
+               -moz-transition: .5s;
+               -ms-transition: .5s;
+               -o-transition: .5s;
+               transition: .5s;
+
+         
+      }
+
+
+.box-container:hover>.content-headline {
+      opacity: .65;
+      height: 81.6%;
+      background: black;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-top: .2px solid red;
+
+}
+
+      .content-box:hover>.content-headline {
+      opacity: .65;
+      height: 81.6%;
+      background: black;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      -webkit-border-radius: .2px solid red;
+              border-radius: .2px solid red;
+
+             -webkit-transition: .5s;
+             -moz-transition: .5s;
+             -ms-transition: .5s;
+             -o-transition: .5s;
+             transition: .5s;
+      
+      }
+
+
+.title-box-top {
+   width: 100%;
+   height:100%;
+   text-align: center;
+   z-index: -2000;
+
+   background: rgb(169,3,41); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(169,3,41,1)), color-stop(44%,rgba(143,2,34,1)), color-stop(100%,rgba(109,0,25,1))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+} 
+
+
+.title-font {
+   color: white;   
+   font-size: 25px;
+   font-family: Helvetica;
+
+}
+
+.lists-inline {
+   list-style: none;
+   width: 80%;
+   color: white;
+   margin: 0 auto;
+   overflow-y: scroll;
+   font-size: 17px;
+}
+
+.lists-inline >li  {
+   padding: 10px 0;
+   border-bottom: .1px solid gray;
+}
+
+
+
+.lists-inline >li:hover {
+   background: darkred;
+   color: white;
+   z-index: 300;
+}
+
+
+
+.lists-inline>li:active {
+   background: white;
+   color: black;
+
+}
+
+
+
+.blue {
+   background: blue
+}
