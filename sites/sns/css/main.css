@@ -101,7 +101,9 @@ footer {
 }
 
 .blue {
-    background: blue;
+
+    margin-left: -30px;
+    margin-top: 10px;
     
 }
 
@@ -236,7 +238,7 @@ width: 25%;
 
 .footer-bottom {
     position: relative;
-    margin-top: 270px;
+    margin-top: 420px;
 }
 
 .footer-position > li {
@@ -292,7 +294,6 @@ width: 25%;
     transition: .41s;
 
 }
-
 
 .top-btn:hover {
     background: #f5f5f5;
@@ -559,17 +560,65 @@ a:after {
 .navbar-default {
 	background-color: white;
 	border-color: transparent;
-            height: 70px;
+      height: 70px;
 }
 
 .navbar-default .navbar-toggle {
-
     border-color: #f1f1f1;
     margin-top: 15px; 
     margin-right: 20px;
     transition: .41s;
 }
 
+
+.login-icon {
+  height: auto;
+  background: blue;
+  width: 15%;
+
+  margin: 2% auto;
+  -webkit-border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+}
+
+.log-nav-active {
+  font-size: 18px;
+  padding-bottom: 15px;
+  border-bottom: 7px solid #f3f3f3;
+}
+
+
+.mobile-icons > li {
+  display: inline;
+  color: white;
+}
+
+.yo {
+    margin: 0 auto;
+    background: pink;
+
+}
+
+
+.top-login-logo {
+    text-align: center; 
+    margin-top: 15px;
+}
+
+
+
+.navbar-logo {
+  margin: 0 auto;
+  position: relative;
+  top:0;
+}
+
+.login-logo {
+  width: 40%;
+  max-width: 220px;
+}
 
 .brand {
     width: 200px;
@@ -631,7 +680,7 @@ a:after {
 .form-control {
 	height: 42px;
 	font-size: 18px;
-	width: 280px;
+
 }
 
 i {
@@ -1038,6 +1087,15 @@ margin-top: -40px;
               animation: slideUpRetourn .81s;
 }
 
+.username {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.username-top {
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
 
 .form-signin
 {
@@ -1196,6 +1254,8 @@ margin-top: -40px;
 }
 
 
+
+
   
 
 @media (min-width: 995px) {
@@ -1312,4 +1372,12 @@ margin-top: 0;
     margin-top: -82px;
     }
   }
+
+
+
+
+
+
+
+
 
