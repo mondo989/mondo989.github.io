@@ -94,7 +94,7 @@ $(".btn-action").on("click", function () {
 
 // Randomizer using this from another place i've made it. 
 
-var randomNumGen = Math.floor((Math.random() * 10) + 1);
+var randomNumGen = Math.floor((Math.random() * 15) + 1);
 
     if ( randomNumGen <= 2)  {
      $('header').css({ background: '#000' });
