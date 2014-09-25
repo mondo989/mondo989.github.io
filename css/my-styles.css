@@ -821,6 +821,7 @@ background: white;
 
 .white-background {
     font-size:22px;
+
 }
 
 .foolish {
@@ -917,9 +918,13 @@ background: white;
     margin-top: 15px;
     border: solid 2px #fff;
     font-size: 20px;
-    color: #fff;
+    color: white;
     background: 0 0;
     transition: all .3s ease-in-out;
+}
+
+.col-lg-8 .btn-outline:hover {
+    color: gray;
 }
 
 #begin-contact:hover {
