@@ -773,12 +773,12 @@ a.trystyle {
     -ms-transition: .51s;
     -o-transition: .51s;
     transition: .51s;
-
-  color: black;
+    font-size: 27px;
+    color: black;
 }
 
 .trystyle:hover {
-    color: white;
+    color: gray;
     -webkit-transition: .51s;
     -moz-transition: .51s;
     -ms-transition: .51s;
