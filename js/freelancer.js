@@ -92,8 +92,7 @@ $(".btn-action").on("click", function () {
 });
 
 
-// Randomizer using this from another place i've made it. 
-
+// Randomizer that determines the color of background.. 
 var randomNumGen = Math.floor((Math.random() * 15) + 1);
 
     if ( randomNumGen <= 2)  {

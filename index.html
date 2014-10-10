@@ -24,6 +24,8 @@
 </head>
 
 <body id="page-top" class="index">
+  <!-- Skrollr Blank div for mobile devices -->
+  <div id="skrollr-body">  
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -297,7 +299,7 @@
                                 data-350="opacity: 1; transform: rotate(270deg);" 
                            ></i> 
                         </span>
-                      <span class="contact-button-span"> <a href="#contact"> <span class ="white-background"> Contact Me </span></a>
+                      <span class="contact-button-span"> <a href="#contact"> <span class ="white-background"> Get in Contact </span></a>
                       </span>
             </div>
      </div>
@@ -317,13 +319,13 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2 text-center">
-                       <p>I started out doing print design/graphic design in school.</p>
+                       <p>I was a graphic/print designer in college.</p>
                        <p>YouTube Inspirational videos indirectly led me to <a href="http://youtu.be/PfIYGaslVnA"> Alan Watts & Philosophy.</a></p>
                 </div>
                 <div class="col-lg-4 text-center">
                         <p><a href="http://tympanus.net/codrops/author/crnacura/">Mary Lou,</a> and
-                        <a href="http://lea.verou.me/">Lea Verou,</a> are awesome.</p>
-                        <p>I'm self taught and owe a lot of it to <a href="http://www.teamtreehouse.com/armandoflores">Team Treehouse.</a></p><br></p>
+                        <a href="http://lea.verou.me/">Lea Verou,</a> are awesome.</p><p></p>
+                        <p>I'm a coffee fan, 'wichcraft in SF is one of my favorites.</p><br></p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                        <a href="mailto:flores@mtu.edu?" class="btn btn-lg btn-outline move-bottom"
@@ -332,7 +334,7 @@
                                 data-1300="opacity: 1; background: black;" 
                             
                        >
-                             <i class="fa fa-envelope"></i> Contact Me
+                             <i class="fa fa-envelope"></i> Let's Connect
                        </a>
                 </div>
             </div>
@@ -413,7 +415,7 @@
         </div> 
 
   <div class="moving-background-holder">
-      <!--      <div class="footer-move-left"></div>
+      <!--  <div class="footer-move-left"></div>
             <div class="footer-move-right"></div>  -->
   </div>
 
@@ -438,9 +440,8 @@
 <!-- the overlay element -->
 <div class="md-overlay"></div>
 
-
-
-<!-- Including all the scripts -->
+<!-- End of Blank Skrollr Div-->
+</div>
 
 
     <script>
@@ -459,16 +460,18 @@
     <script src="js/cbpAnimatedHeader.js"></script>
     <script src="js/freelancer.js"></script>
     <script src="js/modalEffects.js"></script>
+    <script type="text/javascript" src="js/skrollr.min.js"></script>
+
     <!-- <script src="js/jquery.spritely.js"></script> -->
-    <!-- Disabling Skrollr if screensize is less than 500px -->
-    <script>
-        if (screen && screen.width > 500) {
-          document.write('<script type="text/javascript" src="js/skrollr.min.js"><\/script>');
-        }
-        </script>
+   
+
+
+     <!-- Including all the scripts -->
      <script type="text/javascript">
-                 var s = skrollr.init();
-    </script> 
+                   var s = skrollr.init();
+     </script> 
+
+
 </body>
 
 </html>
