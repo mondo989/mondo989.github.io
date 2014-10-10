@@ -935,7 +935,6 @@ background: white;
 
 .btn-action {
     z-index: 90000;
-
 }
 
 .btn-center {
@@ -1375,7 +1374,6 @@ footer .footer-below {
         -ms-transition: 1s;
          -o-transition: 1s;
             transition: 1s;
-    
-}
+    }
 }
 
