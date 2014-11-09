@@ -305,6 +305,10 @@ section {
     padding: 105px 0;
 }
 
+section#portfolio {
+    padding: 105px 0 2px 0;
+}
+
 .back-parallax { 
     width: 99%;
     height: 100%;
@@ -452,6 +456,16 @@ section {
     background: black;
     margin: 0 auto;
     border-radius: 50%;
+}
+
+
+.reviews-seperator {
+    height: 1px;
+    width: 80%;
+    background: black;
+    margin: 0 auto;
+    border-radius: 50%;
+    opacity: .124;
 }
 
 
@@ -1343,6 +1357,113 @@ footer .footer-below {
 
 
 
+
+/* Added carousel CSS 11/3/14*/
+
+.reviews-p {
+  font-size: 20px;  
+  color: #888;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 23px;
+}
+
+
+.cbp-qtrotator {
+  position: relative;
+  margin: -2px auto 0 auto;
+  max-width: 860px;
+  width: 100%;
+  min-height: 200px;
+}
+
+.cbp-qtrotator .cbp-qtcontent {
+  position: absolute;
+  max-height: 200px;
+  padding: 2em 0;
+  z-index: 0;
+  opacity: 0;
+  width: 100%;
+}
+
+.no-js .cbp-qtrotator .cbp-qtcontent {
+  border-bottom: none;
+}
+
+.cbp-qtrotator .cbp-qtcontent.cbp-qtcurrent,
+.no-js .cbp-qtrotator .cbp-qtcontent {
+  position: relative; 
+  z-index: 100;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.cbp-qtrotator .cbp-qtcontent:before,
+.cbp-qtrotator .cbp-qtcontent:after {
+  content: " ";
+  display: table;
+}
+
+.cbp-qtrotator .cbp-qtcontent:after {
+  clear: both;
+}
+
+.cbp-qtprogress {
+  position: absolute;
+  background: #ccc;
+  height: 1px;
+  width: 0%;
+  top: 0;
+  z-index: 1000;
+}
+
+.cbp-qtrotator blockquote {
+  margin: 0;
+  padding: 0;
+  border-left: 0;
+}
+
+.cbp-qtrotator blockquote p {
+  color: #888;
+  font-weight: 300;
+  text-align: center;
+}
+
+.cbp-qtrotator blockquote footer {
+  font-size: 16px;
+  text-align: right;
+}
+
+.cbp-qtrotator .cbp-qtcontent img {
+  float: right;
+  margin-left: 3em;
+}
+
+/* Example for media query */
+@media screen and (max-width: 30.6em) { 
+
+  .cbp-qtrotator {
+    font-size: 70%;
+  }
+
+  .cbp-qtrotator img {
+    width: 80px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @media(min-width:1400px){
   .temp{
     background-size: cover;
@@ -1366,7 +1487,6 @@ footer .footer-below {
     #mhead {
         width: 125px;
     }
-
     .md-content > div p {
     margin: 0;
     padding: 10px 0;
@@ -1379,3 +1499,13 @@ footer .footer-below {
     }
 }
 
+@media(max-width: 900px){
+  .reviews-p {
+        margin-left: 30px;
+    }
+
+    .cbp-qtrotator blockquote footer  {
+      margin: 0 auto;
+      width: 80%;
+    }
+}

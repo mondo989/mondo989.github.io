@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="Armando.sx Web Developer HTML CSS Javasript">
-    <meta name="author" content="Armando.sx Armando Flores UI Designer and Front End Web Developer">
+    <meta name="description" content="Armando.sx Web Developer HTML CSS Javasript San Francisco">
+    <meta name="keywords" content="U/I Designer Web Developer User Interface User Experience HTML CSS Freelance Consultant">
+    <meta name="author" content="Armando.sx Armando Flores">
     <title>Armando.sx - U/I Designer & Front-End Web Developer</title>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/my-styles.css" rel="stylesheet" type="text/css">
     <link href="css/animations.css" rel="stylesheet" >
+    <link rel="shortcut icon" href="../favicon.ico">
     <!-- Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
@@ -22,7 +22,6 @@
     <![endif]-->   
     <script src="js/modernizr.custom.js"></script>
 </head>
-
 <body id="page-top" class="index">
   <!-- Skrollr Blank div for mobile devices -->
   <div id="skrollr-body">  
@@ -302,6 +301,51 @@
             </div>
      </div>
  </section>
+<p class="reviews-p"
+      data-430="opacity: 0; margin-bottom: 200px; transition: 2s;" 
+      data-470="opacity: 1; margin-bottom: 40px;" 
+> Clients are saying:</p>
+<!-- <div class="reviews-seperator"></div>  -->
+
+  <div class="main">
+    <!-- <h8>Past clients have said:</h8> -->
+        <div id="cbp-qtrotator" class="cbp-qtrotator clearfix">
+          <div class="cbp-qtcontent">
+          <!--   <img src="img/something.png" alt="img01" /> -->
+            <blockquote>
+              <p>
+                "Armando is a really nice guy to work with. He works smart and fast. Definitely will be recommending him in the future!"
+              </p>
+              <footer><a href="http://www.jerrrys.io">Adam Ortiz</a></footer>
+            </blockquote>
+          </div>
+          <div class="cbp-qtcontent">
+            <blockquote>
+              <p>"It was awesome working with Armando."</p>
+              <footer><a href="http://www.chicospizza.com">Sado Alhakim</a></footer>
+            </blockquote>
+          </div>
+         <!--  <div class="cbp-qtcontent">
+            <blockquote>
+              <p>"If you don't want to be beaten, imprisoned, mutilated, killed or tortured then you shouldn't condone such behaviour towards anyone, be they human or not."</p>
+              <footer>Moby</footer>
+            </blockquote>
+          </div>
+          <div class="cbp-qtcontent">
+            <blockquote>
+              <p>My body will not be a tomb for other creatures.</p>
+              <footer>Leonardo Da Vinci</footer>
+            </blockquote>
+          </div> -->
+        </div>
+      </div>
+
+
+
+
+
+
+
 
 <!-- About Section -->
 
@@ -309,7 +353,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>About Me</h2>
+                    <h2>About me</h2>
                     <hr class="mail-primary ">
                     <br>
 
@@ -459,6 +503,31 @@
     <script src="js/freelancer.js"></script>
     <script src="js/modalEffects.js"></script>
     <script type="text/javascript" src="js/skrollr.min.js"></script>
+
+<script src="js/jquery.cbpQTRotator.min.js"></script>
+    <script>
+      $( function() {
+        /*
+        - how to call the plugin:
+        $( selector ).cbpQTRotator( [options] );
+        - options:
+        {
+          // default transition speed (ms)
+          speed : 700,
+          // default transition easing
+          easing : 'ease',
+          // rotator interval (ms)
+          interval : 8000
+        }
+        - destroy:
+        $( selector ).cbpQTRotator( 'destroy' );
+        */
+
+        $( '#cbp-qtrotator' ).cbpQTRotator();
+
+      } );
+    </script>
+
 
     <!-- <script src="js/jquery.spritely.js"></script> -->
    
