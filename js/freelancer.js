@@ -45,6 +45,8 @@ $(function() {
 });
 
 
+
+
 //Scrolll button on bottom makes animation appear
 $("#transform").on("click", function (){
     $('#mhead').hide();
@@ -66,13 +68,45 @@ $("#af-logo").on("click", function (){
 });
 
  $(".head-circle").on("click", function () {
-    $(".head-circle").removeClass("vanish");
      $('header').css({ background: '#000' });
      $('.name').css({color:'white'});
      $('.skills').css({color:'white'});
      $('.separator').css({background:'white'});
      $('.fa-code').css({color:'white'});
+
 });
+
+
+// $("#mhead").on("click", function () {
+//     $('#mhead').removeClass("head-circle");
+//     $('#mhead').addClass("entranceb");
+//     $('#mhead').removeClass("entranceb");
+//     $('#mhead').addClass("entranceb");
+
+// });
+
+
+$( "#mhead" ).toggle(function() {
+         // $(this).removeClass("entrance");
+         $(this).addClass("clicked-head");
+       
+    }, function() {
+        // $(this).removeClass("entrance");
+        $(this).addClass("clicked-head");
+    });
+
+
+
+    //     $(this).removeClass("ui-icon-minusthick");
+    //     $(this).addClass("ui-icon-plusthick");
+    //     $(this).parents(".portlet:first").find(".portlet-content").toggle();
+    // }, function() {
+    //     $(this).removeClass("ui-icon-plusthick");
+    //     $(this).addClass("ui-icon-minusthick");
+    //     $(this).parents(".portlet:first").find(".portlet-content").toggle();
+    // });
+
+
 
 // The see more button clicked makes contact appear
 $(".see-more-span").on("click", function () {
