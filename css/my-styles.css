@@ -1454,6 +1454,7 @@ footer .footer-below {
   max-width: 860px;
   width: 100%;
   min-height: 200px;
+  z-index: -900000;
 }
 
 .cbp-qtrotator .cbp-qtcontent {
