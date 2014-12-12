@@ -86,14 +86,16 @@ $("#af-logo").on("click", function (){
 // });
 
 
-$( "#mhead" ).toggle(function() {
-         // $(this).removeClass("entrance");
-         $(this).addClass("clicked-head");
+// This is for clicking the main circle
+
+// $( "#mhead" ).toggle(function() {
+//          // $(this).removeClass("entrance");
+//          $(this).addClass("clicked-head");
        
-    }, function() {
-        // $(this).removeClass("entrance");
-        $(this).addClass("clicked-head");
-    });
+//     }, function() {
+//         // $(this).removeClass("entrance");
+//         $(this).addClass("clicked-head");
+//     });
 
 
 
