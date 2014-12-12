@@ -343,19 +343,6 @@ section#portfolio {
             */
 }
 
-.blue {
-  background: blue;
-  width: 40px;
-  height: 40px;
-}
-
-.red {
-  background: red;
-  height: 400px;
-  width: 40px;
-}
-
-
 
 /* 
 @-webkit-keyframes animatedBackground {
@@ -510,8 +497,8 @@ img#mhead {
     z-index: 2;
     opacity: 1;
     width: 175px;   
-     background: rgb(0, 0, 0); /* The Fallback */
-     background: rgba(255, 255, 255, 1); 
+   
+   
 }
 
 .spritehead {
@@ -554,61 +541,9 @@ img#mhead {
    -ms-animation: slideDownRetourn 3s ease;
    -o-animation: slideDownRetourn 3s ease;
    animation: slideDownRetourn 3s ease;
-    /*
-    -webkit-transform: rotate(360deg) scaleY(2);
-       -moz-transform: rotate(360deg) scaleY(2);
-        -ms-transform: rotate(360deg) scaleY(2);
-         -o-transform: rotate(360deg) scaleY(2);
-            transform: rotate(360deg) scaleY(2);*/
    z-index: 90000;
+
 }
-
-
-.clicked-head {
-   -webkit-animation: superRotate 1s ease;
-   -moz-animation: superRotate 1s ease;
-   -ms-animation: superRotate 1s ease;
-   -o-animation: superRotate 1s ease;
-   animation: superRotate 1s ease;
-}
-
-@keyframes superRotate {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  40% {
-    -webkit-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-
-  60% {
-    -webkit-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
-}
-
-.superRotate {
-  -webkit-animation-name: superRotate;
-  animation-name: superRotate;
-}
-
-
-
-.clicked-twice {
- -webkit-animation: fadeInDown 5s ease;
-   -moz-animation: fadeInDown 5s ease;
-   -ms-animation: fadeInDown 5s ease;
-   -o-animation: fadeInDown 5s ease;
-   animation: fadeInDown 5s ease;
-}
-
-
-
 
 .entranceb {
    -webkit-animation: foolishIn 1.82s ease-in;
