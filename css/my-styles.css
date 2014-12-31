@@ -781,13 +781,12 @@ section.success {
 }
 
 a.trystyle {
-    font-size:1.2em;
+    font-size:17px;
     -webkit-transition: .51s;
     -moz-transition: .51s;
     -ms-transition: .51s;
     -o-transition: .51s;
     transition: .51s;
-    font-size: 27px;
     color: black;
 }
 
@@ -1124,6 +1123,10 @@ footer .footer-below {
     color: white;
 }
 
+.img-modal {
+  width: 100%; 
+}
+
 
 
 
@@ -1365,6 +1368,12 @@ footer .footer-below {
     color: black;
 }
 
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #ccc;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #ccc;
+  }
 
 
 
