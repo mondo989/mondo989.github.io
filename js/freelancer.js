@@ -131,14 +131,14 @@ $(".btn-action").on("click", function () {
 // Randomizer that determines the color of background.. 
 var randomNumGen = Math.floor((Math.random() * 15) + 1);
 
-    if ( randomNumGen <= 2)  {
+    if ( randomNumGen <= 1)  {
      $('header').css({ background: '#000' });
      $('.name').css({color:'white'});
      $('.skills').css({color:'white'});
      $('.separator').css({background:'white'});
      $('.fa-code').css({color:'white'});
     }
-    else if ( randomNumGen <= 8)  {
+    else if ( randomNumGen <= 2)  {
      $('header').css({ background: 'white' });
      $( ".head-circle" ).removeClass( "entrance" ).addClass( "entrancec" );
      $('.name').css({color:'black'});
@@ -146,8 +146,8 @@ var randomNumGen = Math.floor((Math.random() * 15) + 1);
      $('.separator').css({background:'black'});
      $('.fa-code').css({color:'black'});
     }
-    else if ( randomNumGen <= 1)  {
-     $( ".head-circle" ).removeClass( "entrance" ).addClass( "entranceb" );
+    else if ( randomNumGen <= 15)  {
+     $( ".head-circle" ).removeClass( "entrance" ).addClass( "entrancec" );
      $('.name').css({color:'black'});
      $('.skills').css({color:'black'});
      $('.separator').css({background:'black'});
