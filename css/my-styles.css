@@ -1274,14 +1274,13 @@ footer .footer-below {
 
 .md-content h3 {
     margin: 0;
-    padding: 0.4em;
+    padding: 0.2em;
     text-align: center;
     font-size: 1.8em;
     font-weight: 300;
     opacity: 0.8;
     border-radius: 3px 3px 0 0;
     color: black;
-    padding-top: 40px;
     margin-bottom: -10px;
 
 }
