@@ -1356,10 +1356,11 @@ footer .footer-below {
     -moz-transform: translateZ(0px) rotateX(0deg);
     -ms-transform: translateZ(0px) rotateX(0deg);
     transform: translateZ(0px) rotateX(0deg); 
-    background: rgba(0,0,0,0.021);
+    background: #f3f3f3;
     /* box-shadow: .2px .23px .31px black; */
     opacity: 1;
     padding: 25px;
+    z-index: 9000000;
 
 }
 
