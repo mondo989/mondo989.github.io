@@ -451,8 +451,8 @@ section#portfolio {
     height: 1px;
     width: 80%;
     margin: 0 auto;
-
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     border: 0;
     text-align: center;
     opacity: .36;
@@ -530,9 +530,6 @@ img#mhead {
 
 .head-circle {   
    height: auto;
-/*    -webkit-box-shadow: inset, 0, 0, 0, 7px rgba(61,64,85,0.3);
-   -moz-box-shadow:  inset, 0, 0, 0, 7px rgba(61,64,85,0.3);
-   box-shadow: inset, 0, 0, 0, 7px rgba(61,64,85,0.3);    */
    background-size: cover;
    background-color: #fff;
    background-repeat: no-repeat;
@@ -540,15 +537,27 @@ img#mhead {
    -webkit-border-radius: 50%;
    border-radius: 50%;
    width: 175px;
-  /*  -webkit-box-shadow: 0px 2px 40px rgba(0,0,0,.28);
+/*   -webkit-box-shadow: 0px 2px 40px rgba(0,0,0,.28);
   -moz-box-shadow: 0px 2px 40px rgba(0,0,0,.28);
   box-shadow: 0px 2px 40px rgba(0,0,0,.28); */
-  webkit-box-shadow: 0px 2px 5px rgba(0,0,0,0.127) inset, 0px 0px 0px 3px rgba(61,64,85,0.93);
-   -moz-box-shadow: 0px 2px 5px rgba(0,0,0,0.127) inset, 0px 0px 0px 3px rgba(61,64,85,0.93);
-   box-shadow: 0px 2px 5px rgba(0,0,0,0.127) inset, 0px 0px 0px 3px rgba(61,64,85,0.93);
-  
-  
+  webkit-box-shadow: 0px 2px 5px rgba(0,0,0,0.127) inset, 0 0 0 1px rgba(61,64,85,0.93);
+   -moz-box-shadow: 0px 2px 5px rgba(0,0,0,0.127) inset, 0 0 0 1px rgba(61,64,85,0.93);
+   box-shadow: 0px 2px 5px rgba(0,0,0,0.127) inset, 0 0 0 1px rgba(61,64,85,0.93);
 }
+
+
+
+.head-circle:hover {   
+  background: transparent;
+
+webkit-box-shadow: 0px 2px 5px rgba(0,0,0,1) inset, 0 0 0 3px rgba(61,64,85,0.93);
+   -moz-box-shadow: 0px 2px 5px rgba(0,0,0,1) inset, 0 0 0 3px rgba(61,64,85,0.93);
+   box-shadow: 0px 2px 5px rgba(0,0,0, 1) inset, 0 0 0 3px rgba(61,64,85,0.93);
+
+
+}
+
+
 
 .entrance {
    -webkit-animation: slideDownRetourn 3s ease;
@@ -1546,10 +1555,17 @@ footer .footer-below {
 
     header .intro-text .name {
       font-weight: 400;
+      text-shadow: .2px .2px 3px #fff;
     }
 
     header .intro-text .skills {
       font-weight: 400;
+      text-shadow: .2px .2px 3px #fff;
+
+    }
+
+    .fa.fa-code.fa-3x {
+      display: none;
     }
 
 
