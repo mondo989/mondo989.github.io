@@ -317,7 +317,7 @@ section {
 }
 
 section#portfolio {
-    padding: 105px 0 2px 0;
+    padding: 55px 0 2px 0;
 }
 
 .back-parallax { 
@@ -344,109 +344,23 @@ section#portfolio {
           -ms-transition: 3s;
            -o-transition: 3s;
               transition: 3s;
-            /* 
-                background-position: center 20px;
-                background-repeat: cover;
-                -webkit-animation: animatedBackground 3.5s ease-out ;
-                   -moz-animation: animatedBackground 3.5s ease-out ;
-                     -o-animation: animatedBackground 3.5s ease-out ;
-                        animation: animatedBackground 3.5s ease-out ;
-            */
 }
-
-
-/* 
-@-webkit-keyframes animatedBackground {
-    0% {
-    opacity: 0;
-  }
-  50% {
-          background-position: 50px 0; 
-          opacity: .51;
-          }
-  100% {  background-position: 0 0; 
-          opacity: 1;
-          }
+.btn.btn-lg.btn-success.btn-position {
+  background: #eaeaea;
+  color: black;
+  border: 1px solid black;
 }
-
-@-moz-keyframes animatedBackground {
-    0% {
-    opacity: 0;
-  }
-
-  50% {
-          background-position: 50px 0; 
-          opacity: .51;
-          }
-  100% {  background-position: 0 0;  
-          opacity: 1;
-          }
-}
-
-@-o-keyframes animatedBackground {
- 0% {
-    opacity: 0;
-  }
-
-  50% {
-          background-position: 50px 0; 
-          opacity: .51;
-          }
-  100% {  background-position: 0 0; 
-          opacity: 1;
-          }
-}
-
-@-ms-keyframes animatedBackground {
- 0% { 
-    opacity: 0; 
- }
-  50% {
-          background-position: 50px 0; 
-          opacity: .51;
-  }
-  100% {  background-position: 0 0; 
-          opacity: 1;
-  }
-}
-
-@keyframes animatedBackground {
-
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-          background-position: 50px 0; 
-          opacity: .51;
-          }
-  100% {  background-position: 0 0; 
-          opacity: 1;
-          }
-}
-
- */
-
 .modal-img-size {
   width: 400px; 
   height: auto;
-
 }
-
 .modal-frame {
     -webkit-border-radius: 6px;
     border-radius: 6px;
-
     height: 400px;
     overflow-y: scroll;
     margin: 0 auto;
 }
-
-.productdisplay {
-    min-width: 120px;
-
-}
-
 .separator {
     height: 1px;
     width: 80%;
@@ -459,8 +373,6 @@ section#portfolio {
     background: black;
     border-radius: 50%;
 }
-
-
 .portfolio-seperator {
     height: 1px;
     width: 100%;
@@ -468,8 +380,6 @@ section#portfolio {
     margin: 0 auto;
     border-radius: 50%;
 }
-
-
 .reviews-seperator {
     height: 1px;
     width: 80%;
@@ -478,8 +388,6 @@ section#portfolio {
     border-radius: 50%;
     opacity: .124;
 }
-
-
 .lion-animate {
     -webkit-animation: fadein 2s ease;
     -moz-animation: fadein 2s ease;
@@ -487,7 +395,6 @@ section#portfolio {
     -o-animation: fadein 2s ease;
     animation: fadein 2s ease;
 }
-
 #lion {
     display: none;
     opacity: .71;
@@ -497,13 +404,10 @@ section#portfolio {
     -ms-animation: vanishIn 2s  ease;
     -o-animation: vanishIn 2s  ease;
     animation: vanishIn 2s  ease;
-  
 }
-
 img#mhead {
     padding-left: 10px;
 }
-
 #mhead {
     z-index: 2;
     opacity: 1;
@@ -513,21 +417,7 @@ img#mhead {
        -ms-transition: 5s;
         -o-transition: 5s;
            transition: 5s;
-   
 }
-
-.spritehead {
-   display: block;
-   background: url('../img/mesprite.png') no-repeat;
-   height: 220px;
-   width: 100%;
-}
-
-.spritehead:hover {
-   background-position: -190px 0;
-}
-
-
 .head-circle {   
    height: auto;
    background-size: cover;
@@ -544,21 +434,12 @@ img#mhead {
    -moz-box-shadow: 0px 2px 5px rgba(0,0,0,0.127) inset, 0 0 0 1px rgba(61,64,85,0.93);
    box-shadow: 0px 2px 5px rgba(0,0,0,0.127) inset, 0 0 0 1px rgba(61,64,85,0.93);
 }
-
-
-
 .head-circle:hover {   
   background: transparent;
-
-webkit-box-shadow: 0px 2px 5px rgba(0,0,0,1) inset, 0 0 0 3px rgba(61,64,85,0.93);
-   -moz-box-shadow: 0px 2px 5px rgba(0,0,0,1) inset, 0 0 0 3px rgba(61,64,85,0.93);
-   box-shadow: 0px 2px 5px rgba(0,0,0, 1) inset, 0 0 0 3px rgba(61,64,85,0.93);
-
-
+  webkit-box-shadow: 0px 2px 5px rgba(0,0,0,1) inset, 0 0 0 3px rgba(61,64,85,0.93);
+  -moz-box-shadow: 0px 2px 5px rgba(0,0,0,1) inset, 0 0 0 3px rgba(61,64,85,0.93);
+  box-shadow: 0px 2px 5px rgba(0,0,0, 1) inset, 0 0 0 3px rgba(61,64,85,0.93);
 }
-
-
-
 .entrance {
    -webkit-animation: slideDownRetourn 3s ease;
    -moz-animation: slideDownRetourn 3s ease;
@@ -566,9 +447,7 @@ webkit-box-shadow: 0px 2px 5px rgba(0,0,0,1) inset, 0 0 0 3px rgba(61,64,85,0.93
    -o-animation: slideDownRetourn 3s ease;
    animation: slideDownRetourn 3s ease;
    z-index: 90000;
-
 }
-
 .entranceb {
    -webkit-animation: foolishIn 1.82s ease-in;
    -moz-animation: foolishIn 1.82s  ease-in;
@@ -577,7 +456,6 @@ webkit-box-shadow: 0px 2px 5px rgba(0,0,0,1) inset, 0 0 0 3px rgba(61,64,85,0.93
    animation: foolishIn 1.82s ease-in;
    z-index: 90000;
 }
-
 .entrancec {
    -webkit-animation: slideUpRetourn 3s ease;
    -moz-animation: slideUpRetourn 3s ease;
@@ -585,28 +463,7 @@ webkit-box-shadow: 0px 2px 5px rgba(0,0,0,1) inset, 0 0 0 3px rgba(61,64,85,0.93
    -o-animation: slideUpRetourn 3s ease;
    animation: slideUpRetourn 3s ease;
    z-index: 90000;
-
 }
-
-/* 
-.head-circle:hover {   
- -webkit-animation: swap 2s  ease;
-   -moz-animation: swap 2s  ease;
-   -ms-animation: swap 2s  ease;
-   -o-animation: swap 2s  ease;
-   animation: swap 2s  ease;
-}
- */
-
-
-/* .vanish {
-   -webkit-animation: vanishIn 2s  ease;
-   -moz-animation: vanishIn 2s  ease;
-   -ms-animation: vanishIn 2s  ease;
-   -o-animation: vanishIn 2s  ease;
-   animation: vanishIn 2s  ease;
-} */
-
 .fade-out {
    opacity: 1;
    z-index: 1;
@@ -628,30 +485,23 @@ webkit-box-shadow: 0px 2px 5px rgba(0,0,0,1) inset, 0 0 0 3px rgba(61,64,85,0.93
   -o-animation: holeOut 2s  ease;
   animation: holeOut 2s  ease;
 }
-
 .fa-code {
     font-size: 1.12em;
     color: black;
 }
-
 .fa-plus-circle:before{
     z-index: 900;
     background: white;
-
 }
-
 .fa-fire:before{
     content: "\f1b2";
 }
-
 .fa-chevron-up {
   color: black;
 }
-
 .see-more-span {
   font-size: 17px;
 }
-
 .btm-right {
   background: white;
   z-index: 200000;
@@ -659,11 +509,9 @@ webkit-box-shadow: 0px 2px 5px rgba(0,0,0,1) inset, 0 0 0 3px rgba(61,64,85,0.93
   margin-top: -4px;
   opacity: .2;
 }
-
 .btm-right:hover {
   background: white;
-  z-index: 200000;
-  
+  z-index: 200000; 
   -webkit-transition: .41s;
   -moz-transition: .41s;
   -ms-transition: .41s;
@@ -671,16 +519,9 @@ webkit-box-shadow: 0px 2px 5px rgba(0,0,0,1) inset, 0 0 0 3px rgba(61,64,85,0.93
   transition: .41s;
   opacity: 1;
 }
-
-
 .copyright-move {
   margin-right: 50px;
-  
-
-
 }
-
-
 /* This is the aboutsection */
 
 section.success {
