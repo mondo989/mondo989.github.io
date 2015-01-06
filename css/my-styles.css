@@ -1,17 +1,14 @@
 body {
-    overflow: scroll;
-   
+    -ms-overflow-y: hidden;
+        overflow-y: hidden;
 }
-
 p {
     font-size: 20px;
     font-weight: 300;
 }
-
 p.small {
     font-size: 16px;
 }
-
 a,
 a:hover,
 a:focus,
@@ -20,7 +17,6 @@ a.active {
     outline: 0;
     color: gray;
 }
-
 h1,
 h2,
 h3,
@@ -66,7 +62,7 @@ hr.star-primary:after {
     top: -.8em;
     padding: 0 .25em;
     font-family: FontAwesome;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 hr.mail-primary {
@@ -87,7 +83,7 @@ hr.mail-primary:after {
     top: -.8em;
     padding: 0 .25em;
     font-family: FontAwesome;
-    font-size: 2.2em;
+    font-size: 1.4em;
     background: white;
 }
 
@@ -98,8 +94,9 @@ hr.mail-primary:after {
     border-radius: 50%;
     box-shadow: 0 1px .1px black;
     padding: 0 .25em;
-    width: 49px;
-    height: 49px;
+    width: 35px;
+    height: 35px;
+    padding-top: 2px;
 }
 
 hr.star-light {
@@ -214,6 +211,11 @@ header .intro-text .skills {
 
     header .intro-text .name {
         font-size: 4em;
+        -webkit-transition: 3s;
+           -moz-transition: 3s;
+            -ms-transition: 3s;
+             -o-transition: 3s;
+                transition: 3s;
     }
 
     h2 {
@@ -223,6 +225,11 @@ header .intro-text .skills {
 
     header .intro-text .skills {
         font-size: 1.75em;
+        -webkit-transition: 3s;
+           -moz-transition: 3s;
+            -ms-transition: 3s;
+             -o-transition: 3s;
+                transition: 3s;
     }
 }
 
@@ -288,7 +295,11 @@ header .intro-text .skills {
     border: 0;
     background: black;
     border-bottom: 1px gray double;
-
+    -webkit-transition: 3s;
+       -moz-transition: 3s;
+        -ms-transition: 3s;
+         -o-transition: 3s;
+            transition: 3s;
     
 }
 
@@ -302,7 +313,7 @@ header .intro-text .skills {
 }
 
 section {
-    padding: 105px 0;
+    padding: 60px 0;
 }
 
 section#portfolio {
@@ -440,8 +451,8 @@ section#portfolio {
     height: 1px;
     width: 80%;
     margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+
+    margin-bottom: 20px;
     border: 0;
     text-align: center;
     opacity: .36;
@@ -496,8 +507,12 @@ img#mhead {
 #mhead {
     z-index: 2;
     opacity: 1;
-    width: 175px;   
-   
+    width: 155px;   
+   -webkit-transition: 5s;
+      -moz-transition: 5s;
+       -ms-transition: 5s;
+        -o-transition: 5s;
+           transition: 5s;
    
 }
 
@@ -1477,6 +1492,10 @@ footer .footer-below {
 }
 
 
+.fa.fa-code.fa-3x {
+  font-size: .9em;
+}
+
 
 
 
@@ -1493,14 +1512,18 @@ footer .footer-below {
     background-position: center -150px; 
     background-repeat: no-repeat;
     width: 100%;
-
-
         -webkit-transition: 8s;
         -moz-transition: 8s;
         -ms-transition: 8s;
         -o-transition: 8s;
         transition: 8s;
     }
+
+    .fa-3x {
+      font-size: 400px;
+    }
+
+
 }
 
 
@@ -1508,7 +1531,7 @@ footer .footer-below {
 @media(max-width: 500px){
     
     #mhead {
-        width: 125px;
+        width: 100px;
     }
     .md-content > div p {
     margin: 0;
@@ -1520,6 +1543,16 @@ footer .footer-below {
          -o-transition: 1s;
             transition: 1s;
     }
+
+    header .intro-text .name {
+      font-weight: 400;
+    }
+
+    header .intro-text .skills {
+      font-weight: 400;
+    }
+
+
 }
 
 @media(max-width: 900px){
