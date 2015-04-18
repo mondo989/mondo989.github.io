@@ -129,32 +129,25 @@ $(".btn-action").on("click", function () {
 
 
 // Randomizer that determines the color of background.. 
-var randomNumGen = Math.floor((Math.random() * 15) + 1);
+var randomNumGen = Math.floor((Math.random() * 10) + 1);
 
-    if ( randomNumGen <= 1)  {
+    if ( randomNumGen >= 5)  {
      $('header').css({ background: '#000' });
+     $( ".head-circle" ).addClass( "entrancec" );
      $('.name').css({color:'white'});
      $('.skills').css({color:'white'});
      $('.separator').css({background:'white'});
      $('.fa-code').css({color:'white'});
     }
-    else if ( randomNumGen <= 2)  {
+    else if ( randomNumGen <= 5)  {
      $('header').css({ background: 'white' });
-     $( ".head-circle" ).removeClass( "entrance" ).addClass( "entrancec" );
+     $( ".head-circle" ).addClass( "entrancec" );
      $('.name').css({color:'black'});
      $('.skills').css({color:'black'});
      $('.separator').css({background:'black'});
      $('.fa-code').css({color:'black'});
     }
-    else if ( randomNumGen <= 15)  {
-     $( ".head-circle" ).removeClass( "entrance" ).addClass( "entrancec" );
-     $('.name').css({color:'black'});
-     $('.skills').css({color:'black'});
-     $('.separator').css({background:'black'});
-     $('.fa-code').css({color:'black'});
-    }
-
-
+  
 
 /*
 // This allows the window to know when we reached a certain point
