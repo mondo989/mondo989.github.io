@@ -17,7 +17,9 @@ $(function() {
 
 
   $('.circle').on("click", function() {
+    $(".circle").addClass("circle-anim");
     $(".demo-row-2").show();
+    $(".demo-row-3").show();
   });
 
   $('#begin-contact').on("click", function() {

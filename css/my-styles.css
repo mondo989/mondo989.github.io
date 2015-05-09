@@ -215,7 +215,7 @@ header .intro-text .skills {
   font-family: "Ostrich Sans", sans-serif;
   font-size: 25px!important;
   letter-spacing: 5px;
-  color: #787878!important;
+  /*color: #787878!important;*/
   text-transform: uppercase;
 }
 
@@ -436,7 +436,7 @@ section#portfolio {
   color: white!important;
 }
 
-.dark span.skills {
+.dark .skills {
   display: inline-block;
   -webkit-animation: rubberBand 2s;
   -moz-animation: rubberBand 2s;
@@ -484,7 +484,7 @@ section#portfolio {
   animation: rubberBand 1s;
 }
 
-.weird span.skills,
+.weird .skills,
 .weird .amp,
 .weird .name {
   display: inline-block;
@@ -545,8 +545,6 @@ section#portfolio {
 }
 
 .head-circle:hover {
-
-  background: red;
   border: 2px solid #fff;
   -webkit-box-shadow: 0 0 5px black;
           box-shadow: 0 0 5px black;
@@ -571,13 +569,12 @@ section#portfolio {
   z-index: 90000;
 }
 
-.entrancec {
-  -webkit-animation: fadeIn 1s ease;
-  -moz-animation: fadeIn 1s ease;
-  -ms-animation: fadeIn 1s ease;
-  -o-animation: fadeIn 1s ease;
-  animation: fadeIn 1s ease;
-  z-index: 90000;
+.entrance-anim {
+  -webkit-animation: fadeIn 2s ease;
+  -moz-animation: fadeIn 2s ease;
+  -ms-animation: fadeIn 2s ease;
+  -o-animation: fadeIn 2s ease;
+  animation: fadeIn 2s ease;
 }
 
 .fade-out {
@@ -746,16 +743,39 @@ section.success {
 
 .demo-row-2 {
   display: none;
-  -webkit-animation: vanishIn 1s linear;
-  -moz-animation: vanishIn 1s linear;
-  -ms-animation: vanishIn 1s linear;
-  -o-animation: vanishIn 1s linear;
-  animation: vanishIn 1s linear;
+  -webkit-animation: fadeInUpBig 1.5s ease;
+  -moz-animation: fadeInUpBig 1.5s ease;
+  -ms-animation: fadeInUpBig 1.5s ease;
+  -o-animation: fadeInUpBig 1.5s ease;
+  animation: fadeInUpBig 1.5s ease;
+  
   -webkit-transition: 1s;
   -moz-transition: 1s;
   -ms-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
+}
+
+.demo-row-3 {
+  display: none;
+  -webkit-animation: fadeInUpBig 2s ease;
+  -moz-animation: fadeInUpBig 2s ease;
+  -ms-animation: fadeInUpBig 2s ease;
+  -o-animation: fadeInUpBig 2s ease;
+  animation: fadeInUpBig 2s ease;
+  
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.circle-anim {
+ -webkit-animation: bounceOut 1s;
+     -moz-animation: bounceOut 1s;
+       -o-animation: bounceOut 1s;
+          animation: bounceOut 1s; 
 }
 
 .show-more {
@@ -865,6 +885,10 @@ a.trystyle {
   animation: 4.7s ease;
 }
 
+.red {
+  background: red;
+}
+
 .circle {
   width: 120px;
   height: 120px;
@@ -872,7 +896,7 @@ a.trystyle {
   position: relative;
   cursor: pointer;
   border-radius: 120px;
-  opacity: .8;
+  opacity: .48;
 }
 
 .red {
@@ -1536,7 +1560,8 @@ footer .footer-below {
 
 @media(max-width: 500px) {
   #mhead {
-    width: 100px;
+    min-width: 100px!important;
+    min-height: 100px!important;
   }
   .md-content > div p {
     margin: 0;
