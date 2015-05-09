@@ -1,3 +1,8 @@
+
+html {  
+    -webkit-font-smoothing: antialiased;
+}
+
 @font-face {
   font-family: "Ostrich Sans";
   src: url('../fonts/OstrichSans-Medium.otf') format("woff");
@@ -232,22 +237,12 @@ header .intro-text .skills {
   }
   header .intro-text .name {
     font-size: 4em;
-    -webkit-transition: 3s;
-    -moz-transition: 3s;
-    -ms-transition: 3s;
-    -o-transition: 3s;
-    transition: 3s;
   }
   h2 {
     font-size: 3em;
   }
   header .intro-text .skills {
     font-size: 1.75em;
-    -webkit-transition: 3s;
-    -moz-transition: 3s;
-    -ms-transition: 3s;
-    -o-transition: 3s;
-    transition: 3s;
   }
 }
 
@@ -537,6 +532,7 @@ section#portfolio {
   -webkit-border-radius: 50%;
   border-radius: 50%;
   width: 130px;
+  min-height: 130px;
   height: auto;
   border: 2px solid #f3f3f3;
   cursor: pointer;
