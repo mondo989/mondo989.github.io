@@ -783,10 +783,17 @@ section.success {
   transition: .31s;
 }
 
+.btn-lg {
+  padding: 0;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
 .fa-envelope {
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin: 0 3px;
-  margin-left: -2px;
+  margin-bottom: 5px;
+  display: block!important;
 }
 
 a.trystyle {
