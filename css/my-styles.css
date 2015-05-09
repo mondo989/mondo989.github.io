@@ -326,7 +326,7 @@ section#portfolio {
   display: none;
   /*     -webkit-animation: flipInY 5s ease;
    -moz-animation: flipInY 5s ease;
-             animation: flipInY 5s ease; */
+             animation: flipInY 5s ease; */
 }
 
 .temp {
@@ -652,7 +652,7 @@ section#portfolio {
 .copyright-move {
   margin-right: 50px;
 }
-/* This is the aboutsection */
+/* This is the aboutsection */
 
 section.success {
   color: black;
@@ -1046,7 +1046,7 @@ footer h4 {
   margin-bottom: 30px;
   font-weight: 200;
 }
-/*  This is the topfooter section */
+/*  This is the topfooter section */
 
 footer .footer-above {
   padding-top: 50px;
@@ -1123,7 +1123,7 @@ footer .footer-below {
 .img-modal {
   width: 100%;
 }
-/* CSS HoverOvers from thecodeplayer.com */
+/* CSS HoverOvers from thecodeplayer.com */
 /*Thumbnail Background*/
 
 .thumb {
@@ -1221,7 +1221,7 @@ footer .footer-below {
   
   transform: rotateX(0) translateZ(-60px) scale(0.85);
 }
-/* Modal Window Stuff */
+/* Modal Window Stuff */
 
 .md-perspective,
 .md-perspective body {
@@ -1377,7 +1377,7 @@ footer .footer-below {
   -ms-transform: translateZ(0px) rotateX(0deg);
   transform: translateZ(0px) rotateX(0deg);
   background: #f3f3f3;
-  /* box-shadow: .2px .23px .31px black; */
+  /* box-shadow: .2px .23px .31px black; */
   
   opacity: 1;
   padding: 25px;
@@ -1397,7 +1397,7 @@ footer .footer-below {
 .navbar-default .navbar-brand:focus {
   color: #ccc;
 }
-/* Added carousel CSS 11/3/14*/
+/* Added carousel CSS 11/3/14*/
 
 .about-ft p {
   font-weight: 300!important;
@@ -1532,7 +1532,7 @@ footer .footer-below {
     font-size: 400px;
   }
 }
-/* Smallest size */
+/* Smallest size */
 
 @media(max-width: 500px) {
   #mhead {
