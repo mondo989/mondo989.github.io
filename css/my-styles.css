@@ -358,6 +358,14 @@ section#portfolio {
   z-index: 9000000000;
 }
 
+.md-content .separator {
+  background: red;
+  height: 2px;
+  background: red!important;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .separator {
   height: 1px;
   width: 80%;
@@ -1340,7 +1348,7 @@ footer .footer-below {
   position: relative;
   margin: 0 auto;
   -webkit-border-radius: 25px;
-  border-radius: 25px;
+  border-radius: 7px;
 }
 
 .md-content h3 {
@@ -1380,8 +1388,8 @@ footer .footer-below {
 .md-content button {
   display: block;
   margin: 0 auto;
-  font-size: 1.38em;
-  padding: 17px 12px;
+  font-size: 15px;
+  
   position: absolute;
   top: 0;
   margin-left: 1px;
@@ -1389,11 +1397,12 @@ footer .footer-below {
   line-height: 2px;
   color: white;
   background: black;
+  border: 1px solid gray;
   -webkit-border-radius: 16px;
   border-radius: 60px;
   z-index: 200000;
-  height: 40px;
-  width: 40px;
+  height: 25px;
+  width: 25px;
 }
 /* Effect 5: fall */
 
@@ -1426,12 +1435,13 @@ footer .footer-below {
   /* box-shadow: .2px .23px .31px black; */
   
   opacity: 1;
-  padding: 25px;
+  padding: 15px 5px;
   z-index: 9000000;
 }
 
 .p-modal {
   color: black;
+  font-size: 13px;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -1606,6 +1616,38 @@ footer .footer-below {
   .fa.fa-code.fa-3x {
     display: none;
   }
+  #portfolio h2, #about h2 {
+    /*background: blue;*/
+    font-size: 8vw;
+  }
+  .reviews-p {
+    text-align: center;
+    margin-left: 0!important;
+    font-size: 7vw;
+  }
+   #about p {
+     font-size: 3.5vw;
+   }
+
+  .md-modal {
+    min-width: 90%;
+  }
+
+  .md-content button {
+    width: 25px!important;
+    font-size: 4.3vw;
+    padding: 0;
+    height: 25px!important;
+    border: 1px solid gray;
+  }
+
+   .md-content h3 {
+     font-size: 4vw;
+   }
+   .p-modal {
+     font-size: 2.0vw!important;
+   }
+
 }
 
 @media(max-width: 900px) {
