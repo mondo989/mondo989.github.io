@@ -672,7 +672,7 @@ section.success {
 }
 
 .env-recent-projects {
-  font-size: 40px;
+  font-size: 26px;
   margin-top: 8px;
 }
 
@@ -1259,6 +1259,28 @@ footer .footer-below {
   -moz-perspective: 600px;
   perspective: 600px;
 }
+
+
+/*
+
+.md-modal {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  max-width: 800px;
+  min-width: 370px;
+  margin-top: 200px;
+  padding: 10px;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 200000;
+}*/
 
 .md-modal {
   position: fixed;
