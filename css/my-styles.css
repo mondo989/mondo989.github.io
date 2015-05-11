@@ -359,9 +359,9 @@ section#portfolio {
 }
 
 .md-content .separator {
-  background: red;
-  height: 2px;
-  background: red!important;
+  background: black!important;
+  width: 90%;
+  height: 1px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -1504,6 +1504,29 @@ footer .footer-below {
   width: 90%;
   margin: 0 auto;
 }
+.mb20 {
+  margin-bottom: 20px;
+}
+
+a.circle-holder {
+  display: inline;
+  text-decoration: none;
+}
+.code {
+  width: 40px;
+  border: 1px solid black;
+  height: auto;
+  background: #f3f3f3;
+  display: block;
+  margin: 0 auto;
+
+  -webkit-border-radius: 120px;
+          border-radius: 120px;
+}
+.code:hover {
+  border: 1px solid gray;
+  background: #fff;
+}
 
 .no-js .cbp-qtrotator .cbp-qtcontent {
   border-bottom: none;
@@ -1631,11 +1654,12 @@ footer .footer-below {
 
   .md-modal {
     min-width: 90%;
+    top: 10vh;
   }
 
   .md-content button {
     width: 25px!important;
-    font-size: 4.3vw;
+    font-size: 3.3vw;
     padding: 0;
     height: 25px!important;
     border: 1px solid gray;
@@ -1645,8 +1669,16 @@ footer .footer-below {
      font-size: 4vw;
    }
    .p-modal {
-     font-size: 2.0vw!important;
+     font-size: 3.0vw!important;
    }
+
+    .md-content .separator {
+      background: #ccc!important;
+      width: 100%!important;
+      height: 1px;
+      opacity: .4;
+      
+    }
 
 }
 
