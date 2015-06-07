@@ -1,6 +1,18 @@
 
-html {  
+html {
     -webkit-font-smoothing: antialiased;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+#background-canvas{
+  width: 100%;
+  /* height: 400px; */
+  /* margin-top: -450px; */
+  background: #f3f3f3;
+  opacity: 1!important;
 }
 
 @font-face {
@@ -152,6 +164,171 @@ hr.star-primary:after {
   opacity: 1;
   box-shadow: 0 1px .1px black;
 }
+
+
+
+
+@-webkit-keyframes bounce-cust {
+  0%, 25% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.910, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.955, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    opacity: .2;
+  }
+    50% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, 30px, 0);
+    opacity: 0;
+
+  }
+
+  75% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0)
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0,0px,0);
+    transform: translate3d(0,0px,0);
+    opacity: .2;
+  }
+}
+
+@keyframes bounce-cust {
+  0%, 25% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.910, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.955, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    opacity: .2;
+  }
+    50% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, 30px, 0);
+    opacity: 0;
+
+  }
+
+  75% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0)
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0,0px,0);
+    transform: translate3d(0,0px,0);
+    opacity: .2;
+  }
+}
+
+
+.circle-anim {
+  -webkit-animation: bounce-cust 5s ;
+   -moz-animation: bounce-cust 5s;
+     -o-animation: bounce-cust 5s;
+        animation: bounce-cust 5s;
+
+        -webkit-animation-iteration-count: 3; Chrome, Safari, Opera
+         animation-iteration-count: 3;
+
+}
+
+.fa-circle-anim {
+  -webkit-animation: circle-spin-anim 5s ;
+   -moz-animation: circle-spin-anim 5s;
+     -o-animation: circle-spin-anim 5s;
+        animation: circle-spin-anim 5s;
+
+                -webkit-animation-iteration-count: 3; Chrome, Safari, Opera
+                 animation-iteration-count: 3;
+}
+
+
+
+@-webkit-keyframes circle-spin-anim {
+  0% {
+  -ms-transform: rotate(0); /* IE 9 */
+  -webkit-transform: rotate(0); /* Chrome, Safari, Opera */
+  transform: rotate(0);
+  }
+
+  25% {
+  -ms-transform: rotate(0); /* IE 9 */
+  -webkit-transform: rotate(0); /* Chrome, Safari, Opera */
+  transform: rotate(0);
+  }
+
+   50% {
+    opacity: 1;
+    -ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+  }
+
+  75% {
+    -ms-transform: rotate(1deg); /* IE 9 */
+    -webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */
+    transform: rotate(1deg);
+    opacity: 1;
+  }
+  100% {
+    -ms-transform: rotate(-360deg); /* IE 9 */
+    -webkit-transform: rotate(-360deg); /* Chrome, Safari, Opera */
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes circle-spin-anim {
+  0% {
+  -ms-transform: rotate(0); /* IE 9 */
+  -webkit-transform: rotate(0); /* Chrome, Safari, Opera */
+  transform: rotate(0);
+  }
+  25% {
+  -ms-transform: rotate(0); /* IE 9 */
+  -webkit-transform: rotate(0); /* Chrome, Safari, Opera */
+  transform: rotate(0);
+  }
+   50% {
+    opacity: 1;
+    -ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+  }
+
+  75% {
+    -ms-transform: rotate(1deg); /* IE 9 */
+    -webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */
+    transform: rotate(1deg);
+    opacity: 1;
+  }
+  100% {
+    -ms-transform: rotate(-360deg); /* IE 9 */
+    -webkit-transform: rotate(-360deg); /* Chrome, Safari, Opera */
+    transform: rotate(-360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 .img-centered {
   margin: 0 auto;
@@ -556,7 +733,7 @@ section#portfolio {
   border: 2px solid #fff;
   -webkit-box-shadow: 0 0 5px black;
           box-shadow: 0 0 5px black;
-  
+
 }
 
 .entrance {
@@ -654,29 +831,7 @@ section#portfolio {
 
 section.success {
   color: black;
-  background: rgb(255, 255, 255);
-  /* Old browsers */
-  
-  background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(178, 178, 178, 1) 100%);
-  /* FF3.6+ */
-  
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(178, 178, 178, 1)));
-  /* Chrome,Safari4+ */
-  
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(178, 178, 178, 1) 100%);
-  /* Chrome10+,Safari5.1+ */
-  
-  background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(178, 178, 178, 1) 100%);
-  /* Opera 12+ */
-  
-  background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(178, 178, 178, 1) 100%);
-  /* IE10+ */
-  
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(178, 178, 178, 1) 100%);
-  /* W3C */
-  
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b2b2b2', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
+
 }
 
 .env-recent-projects {
@@ -756,7 +911,7 @@ section.success {
   -ms-animation: fadeInUpBig 1.5s ease;
   -o-animation: fadeInUpBig 1.5s ease;
   animation: fadeInUpBig 1.5s ease;
-  
+
   -webkit-transition: 1s;
   -moz-transition: 1s;
   -ms-transition: 1s;
@@ -771,7 +926,7 @@ section.success {
   -ms-animation: fadeInUpBig 2s ease;
   -o-animation: fadeInUpBig 2s ease;
   animation: fadeInUpBig 2s ease;
-  
+
   -webkit-transition: 1s;
   -moz-transition: 1s;
   -ms-transition: 1s;
@@ -779,12 +934,12 @@ section.success {
   transition: 1s;
 }
 
-.circle-anim {
+/* .circle-anim {
  -webkit-animation: bounceOut 1s;
      -moz-animation: bounceOut 1s;
        -o-animation: bounceOut 1s;
-          animation: bounceOut 1s; 
-}
+          animation: bounceOut 1s;
+} */
 
 .show-more {
   margin: 30px 0;
@@ -858,7 +1013,26 @@ a.trystyle {
   min-width: 200px;
   right: 0;
   bottom: -15px;
+  /* z-index: 90000; */
   left: 0;
+  background: #f3f3f3!important;
+}
+
+a.move-bottom:hover {
+
+/*   opacity: .8; */
+  /* border: 1px solid black; */
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, .5);
+  -webkit-transform: scale(1.1);
+-moz-transform: scale(1.1);
+-ms-transform: scale(1.1);
+-o-transform: scale(1.1);
+transform: scale(1.1);
+
+}
+
+.move-bottom i, .move-bottom p {
+  color: #343434;
 }
 
 #contact-button-inside {
@@ -1170,13 +1344,13 @@ footer .footer-below {
   width: 100%;
   height: 100%;
   /*double layered BG for lighting effect*/
-  
+
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("http://thecodeplayer.com/u/m/i1.png");
   /*disabling the translucent black bg on the main image*/
-  
+
   background-size: 0, cover;
   /*3d space for children*/
-  
+
   transform-style: preserve-3d;
   transition: all 0.5s;
 }
@@ -1189,7 +1363,7 @@ footer .footer-below {
 
 .thumb a:after {
   /*36px high element positioned at the bottom of the image*/
-  
+
   content: '';
   position: absolute;
   left: 0;
@@ -1197,14 +1371,14 @@ footer .footer-below {
   width: 100%;
   height: 36px;
   /*inherit the main BG*/
-  
+
   background: inherit;
   background-size: cover, cover;
   /*draw the BG bottom up*/
-  
+
   background-position: bottom;
   /*rotate the surface 90deg on the bottom axis*/
-  
+
   transform: rotateX(90deg);
   transform-origin: bottom;
 }
@@ -1220,7 +1394,7 @@ footer .footer-below {
   font: bold 12px/36px Montserrat;
   text-align: center;
   /*the rotation is a bit less than the bottom surface to avoid flickering*/
-  
+
   transform: rotateX(-89.99deg);
   transform-origin: top;
   z-index: 1;
@@ -1238,7 +1412,7 @@ footer .footer-below {
   box-shadow: 0 0 10px 50px rgba(0, 0, 0, 0.15);
   transition: all 0.5s;
   /*by default the shadow will be almost flat, very transparent, scaled down with a large blur*/
-  
+
   opacity: 0.5;
   transform: rotateX(95deg) translateZ(-80px) scale(0.75);
   transform-origin: bottom;
@@ -1247,10 +1421,10 @@ footer .footer-below {
 .thumb:hover a:before {
   opacity: 1;
   /*blurred effect using box shadow as filter: blur is not supported in all browsers*/
-  
+
   box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);
   /*pushing the shadow down and scaling it down to size*/
-  
+
   transform: rotateX(0) translateZ(-60px) scale(0.85);
 }
 /* Modal Window Stuff */
@@ -1389,7 +1563,7 @@ footer .footer-below {
   display: block;
   margin: 0 auto;
   font-size: 15px;
-  
+
   position: absolute;
   top: 0;
   margin-left: 1px;
@@ -1433,7 +1607,7 @@ footer .footer-below {
   transform: translateZ(0px) rotateX(0deg);
   background: #f3f3f3;
   /* box-shadow: .2px .23px .31px black; */
-  
+
   opacity: 1;
   padding: 15px 5px;
   z-index: 9000000;
@@ -1677,7 +1851,7 @@ a.circle-holder {
       width: 100%!important;
       height: 1px;
       opacity: .4;
-      
+
     }
 
 }
