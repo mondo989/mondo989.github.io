@@ -255,6 +255,14 @@ hr.star-primary:after {
 }
 
 
+.des-web-anim {
+-webkit-animation: flipInX 2s;
+ -moz-animation: flipInX 2s;
+   -o-animation:  flipInX 2s;
+      animation:  flipInX 2s;
+    }
+
+
 
 @-webkit-keyframes circle-spin-anim {
   0% {
@@ -573,6 +581,16 @@ section#portfolio {
   opacity: .124;
 }
 
+.main-anim {
+  display: inline-block;
+  -webkit-animation: fadeInUp 1s;
+  -moz-animation: fadeInUp 1s;
+  -o-animation: fadeInUp 1s;
+  animation: fadeInUp 1s;
+}
+
+
+
 
 .light header {
   background: white!important;
@@ -602,6 +620,11 @@ section#portfolio {
 
 .light .separator {
   background: black!important;
+
+  -webkit-animation: bounceIn 2s;
+  -moz-animation: bounceIn 2s;
+  -o-animation: bounceIn 2s;
+  animation: bounceIn 2s;
 }
 
 .dark #mhead {
@@ -637,10 +660,10 @@ section#portfolio {
 }
 
 .light .separator {
-  -webkit-animation: pulse 5s;
-  -moz-animation: pulse 5s;
-  -o-animation: pulse 5s;
-  animation: pulse 5s;
+  -webkit-animation: bounceIn 2s;
+  -moz-animation: bounceIn 2s;
+  -o-animation: bounceIn 2s;
+  animation: bounceIn 2s;
 }
 
 .dark .amp {
@@ -652,6 +675,11 @@ section#portfolio {
 
 .dark .separator {
   background: white!important;
+
+  -webkit-animation: bounceIn 2s;
+  -moz-animation: bounceIn 2s;
+  -o-animation: bounceIn 2s;
+  animation: bounceIn 2s;
 }
 
 .weird header {
