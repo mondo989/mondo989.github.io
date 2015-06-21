@@ -189,7 +189,7 @@ hr.star-primary:after {
     -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
     transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
     -webkit-transform: translate3d(0, -20px, 0);
-    transform: translate3d(0, -20px, 0)
+    transform: translate3d(0, -20px, 0);
     opacity: 1;
   }
 
@@ -495,6 +495,7 @@ section {
 
 section#portfolio {
   padding: 55px 0 2px 0;
+  z-index: 90000000;
 }
 
 .back-parallax {
@@ -583,12 +584,27 @@ section#portfolio {
 
 .main-anim {
   display: inline-block;
+  -webkit-animation: fadeInUp 1.5s;
+  -moz-animation: fadeInUp 1.5s;
+  -o-animation: fadeInUp 1.5s;
+  animation: fadeInUp 1.5s;
+}
+
+
+.modalContent img {
+  width: 90%;
+}
+
+.modalContent {
+  display: none;
+}
+.modalContent.active {
+  display: block;
   -webkit-animation: fadeInUp 1s;
   -moz-animation: fadeInUp 1s;
   -o-animation: fadeInUp 1s;
   animation: fadeInUp 1s;
 }
-
 
 
 
@@ -1470,33 +1486,11 @@ footer .footer-below {
   perspective: 600px;
 }
 
-
-/*
-
 .md-modal {
   position: fixed;
   top: 30%;
   left: 50%;
-  max-width: 800px;
-  min-width: 370px;
-  margin-top: 200px;
-  padding: 10px;
-  visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 200000;
-}*/
-
-.md-modal {
-  position: fixed;
-  top: 30%;
-  left: 50%;
-  max-width: 800px;
+  max-width: 700px;
   min-width: 370px;
   margin-top: 200px;
   padding: 10px;
