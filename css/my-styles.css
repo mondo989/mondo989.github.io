@@ -495,7 +495,8 @@ section {
 
 section#portfolio {
   padding: 55px 0 2px 0;
-  z-index: 90000000;
+  background: white;
+  z-index: 900000!important;
 }
 
 .back-parallax {
