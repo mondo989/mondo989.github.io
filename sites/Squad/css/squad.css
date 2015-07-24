@@ -1,0 +1,102 @@
+.squad-logo {
+  width: 150px;
+}
+section.intro h1 {
+  font-size: 30px;
+  letter-spacing: 1;
+  font-weight: 500!important;
+}
+
+section.team h1 {
+  font-size: 30px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  letter-spacing: 0;
+}
+
+section.intro {
+   background: url('../img/community-people.png');
+   margin-bottom: 30px;
+}
+
+.intro p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.up-btn {
+  background: rgb(95, 179, 54);
+
+
+}
+
+.team h2 {
+  font-size: 27px;
+  font-weight: 400;
+}
+
+
+section.subscribe h1 {
+  line-height: 1.4;
+}
+
+input.squad-ios {
+    background: #5fb336!important;
+    border-radius: 6px;
+    width: 120px;
+}
+
+input.squad-ios {
+  widht: 100px!important;
+  font-weight: 500;
+}
+
+.hero {
+  border-bottom: .5px solid black;
+  /* background: url('../img/community-people.png'); */
+}
+
+.hero p {
+  font-size: 2vw;
+  letter-spacing: 0;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.hero .separator {
+  background: rgba(0, 0, 0, 0.1);
+  height: 1px;
+  width: 80%;
+  margin: 0 auto;
+
+
+}
+
+.features h1 {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 35px;
+}
+
+.video-holder {
+  padding-top: 140px;
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  z-index: 90;
+}
+
+
+.map {
+  height:inherit;
+  width: 100%;
+  }
+
+
+.icon {
+  width: 120px;
+  height: 120px;
+}
