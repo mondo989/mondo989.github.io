@@ -1,5 +1,14 @@
+html, body {
+  overflow-x: hidden!important;
+  letter-spacing: 0!important;
+}
+
+.red {
+  background: red;
+}
+
 .squad-logo {
-  width: 150px;
+  width: 200px;
 }
 section.intro h1 {
   font-size: 30px;
@@ -8,7 +17,14 @@ section.intro h1 {
 }
 
 section.team h1 {
-  font-size: 30px;
+  /* font-size: 30px; */
+}
+
+.video-copy {
+  width: 80%;
+  margin-top: 20px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .hero h1 {
@@ -29,8 +45,6 @@ section.intro {
 
 .up-btn {
   background: rgb(95, 179, 54);
-
-
 }
 
 .team h2 {
@@ -38,10 +52,36 @@ section.intro {
   font-weight: 400;
 }
 
+.learn-more-btn {
+  font-size: 25px;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 500;
+}
+
+.learn-more-btn:hover {
+  background: white;
+  color: green;
+}
 
 section.subscribe h1 {
   line-height: 1.4;
 }
+
+
+
+
+
+img#trending-icon {
+  margin-top: -10px;
+  }
+
+.fa-globe {
+  font-size: 80px;
+  margin-top: 20px;
+}
+
+
 
 input.squad-ios {
     background: #5fb336!important;
@@ -50,13 +90,28 @@ input.squad-ios {
 }
 
 input.squad-ios {
-  widht: 100px!important;
+  width: 100px!important;
   font-weight: 500;
 }
 
+h1.arrow {
+  font-weight: 600!important;
+}
+
 .hero {
-  border-bottom: .5px solid black;
+  /* border-bottom: .5px solid black; */
   /* background: url('../img/community-people.png'); */
+}
+
+.squad-video-img {
+  width:80%;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.features-link {
+  color: #5fb336;
+  font-weight: 500;
 }
 
 .hero p {
@@ -71,22 +126,33 @@ input.squad-ios {
   height: 1px;
   width: 80%;
   margin: 0 auto;
-
-
 }
 
-.features h1 {
+.separator {
+  background: rgba(0, 0, 0, 0.1);
+  height: 1px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+section.features h2 {
   font-family: 'Open Sans';
-  font-weight: 400;
-  font-size: 35px;
+  font-weight: 500;
+  font-size: 23px;
+
 }
+section.features p {
+  color: #444444;
+  font-size: 16px;
+}
+
 
 .video-holder {
-  padding-top: 140px;
-  width: 80%;
-  max-width: 500px;
+  width: 100%;
   margin: 0 auto;
-  z-index: 90;
+  text-align: center;
+  overflow: hidden!important;
 }
 
 
@@ -99,4 +165,63 @@ input.squad-ios {
 .icon {
   width: 120px;
   height: 120px;
+}
+
+
+.football-player {
+  width: 50%;
+  position: absolute;
+  right: -20%;
+  opacity: .1!important;
+  top: 40px;
+}
+
+
+.field {
+  position: absolute;
+  right: 0;
+  bottom:-400px;
+  width: 250%!important;
+  left: -400px!important;
+  z-index: -20;
+  margin: 0 auto;
+  margin-left: -120px;
+  overflow-x: hidden!important;
+}
+
+.social-btn {
+  background: #fff;
+  opacity: .7;
+  border: 1px solid #5fb336;
+  transition: 0;
+
+}
+
+.social-btn:hover{
+  background: #5fb336;
+  opacity: 1;
+}
+
+.social-btn i {
+  color: black;
+}
+
+.social-btn:hover i {
+  color: #fff;
+}
+
+.modal-container {
+  height: 40%;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.modal-container iframe {
+  margin-top: 150px;
+}
+
+
+.inner {
+  padding-top: 50px;
 }
