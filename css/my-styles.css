@@ -258,6 +258,13 @@ hr.star-primary:after {
      -o-animation: rotating 1.7s linear infinite;
         animation: rotating 1.7s linear infinite;
 }
+.intro-text .separator {
+  -webkit-animation: pulse 1.7s ease infinite;
+   -moz-animation: pulse 1.7s ease infinite;
+     -o-animation: pulse 1.7s ease infinite;
+        animation: pulse 1.7s ease infinite;
+}
+
 
 .des-web-anim {
 -webkit-animation: flipInX 2s;
@@ -339,8 +346,6 @@ hr.star-primary:after {
       animation: fadeInUp 5s;
 }
 
-
-
 .recentProjects-copy {
   opacity: 0;
 }
@@ -402,6 +407,38 @@ hr.star-primary:after {
   -o-animation: fadeInRight 1s ease;
   animation: fadeInRight 1s ease;
   opacity: 1;
+}
+
+.scroll-down {
+  width: 100%;
+
+  margin: 0 auto!important;
+  text-align: center;
+
+  -webkit-animation: bounce 5s ease;
+  -moz-animation: bounce 5s ease;
+  -ms-animation: bounce 5s ease;
+  -o-animation: bounce 5s ease;
+  animation: bounce 5s ease;
+
+  -webkit-animation-iteration-count: infinite;
+animation-iteration-count: infinite;
+}
+
+.fa-chevron-down.inactive {
+  -webkit-animation: bounceOut .5s ease;
+  -moz-animation: bounceOut .5s ease;
+  -ms-animation: bounceOut .5s ease;
+  -o-animation: bounceOut .5s ease;
+  animation: bounceOut .5s ease;
+  opacity: 0;
+}
+
+
+
+.scroll-down {
+  font-size: 30px;
+  color: black;
 }
 
 
@@ -563,7 +600,8 @@ section {
 }
 
 section#portfolio {
-  padding: 55px 0 2px 0;
+  margin-top: -30px;
+  padding: 45px 0 2px 0;
   background: white;
   z-index: 900000!important;
 }
@@ -580,7 +618,7 @@ section#portfolio {
              animation: flipInY 5s ease; */
 }
 
-.temp {
+.bk-main {
   background: url('../img/skyyyy.png');
   z-index: -1;
   background-size: cover;
@@ -817,16 +855,6 @@ section#portfolio {
 }
 */
 
-#lion {
-  display: none;
-  opacity: .71;
-  z-index: -1;
-  -webkit-animation: vanishIn 2s ease;
-  -moz-animation: vanishIn 2s ease;
-  -ms-animation: vanishIn 2s ease;
-  -o-animation: vanishIn 2s ease;
-  animation: vanishIn 2s ease;
-}
 
 .head-circle {
   height: auto;
@@ -861,11 +889,6 @@ section#portfolio {
           -o-animation: pulse 2s ease-out infinite;
           animation: pulse 2s ease-out infinite;
 }
-.main-circle:hover {
-  background: red!important;
-
-}
-
 
 .entrance {
   -webkit-animation: slideDownRetourn 3s ease;
@@ -936,7 +959,7 @@ section#portfolio {
   font-size: 17px;
 }
 
-.btm-right {
+.btn-right {
   background: white;
   z-index: 200000;
   margin-left: -30px;
@@ -948,10 +971,17 @@ section#portfolio {
   -o-transition: 1s;
   transition: 1s;
 }
+.btn-right.active {
+  -webkit-animation: fadeInRight 1.5s ease;
+  -moz-animation: fadeInRight 1.5s ease;
+  -ms-animation: fadeInRight 1.5s ease;
+  -o-animation: fadeInRight 1.5s ease;
+  animation: fadeInRight 1.5s ease;
+}
 
-.btm-right:hover {
+.btn-right:hover {
   background: white;
-  z-index: 200000;
+  z-index: 2000;
   opacity: 1;
 }
 
@@ -1927,7 +1957,7 @@ a.circle-holder {
 }
 
 @media(min-width:1400px) {
-  .temp {
+  .bk-main {
     background-size: cover;
     background-position: center -150px;
     background-repeat: no-repeat;
