@@ -44,6 +44,15 @@ p.small {
   color: white;
 }
 
+.blue {
+  background: blue;
+  width: 100%;
+}
+
+.blue img {
+  width: 100%!important;
+}
+
 .red {
   background: red!important;
 }
@@ -232,7 +241,7 @@ hr.star-primary:after {
   }
 }
 
-
+/*
 .circle-anim {
   -webkit-animation: bounce-cust 5s ;
    -moz-animation: bounce-cust 5s;
@@ -241,19 +250,14 @@ hr.star-primary:after {
 
         -webkit-animation-iteration-count: 3; Chrome, Safari, Opera
          animation-iteration-count: 3;
-
 }
-
+ */
 .fa-circle-anim {
-  -webkit-animation: circle-spin-anim 5s ;
-   -moz-animation: circle-spin-anim 5s;
-     -o-animation: circle-spin-anim 5s;
-        animation: circle-spin-anim 5s;
-
-                -webkit-animation-iteration-count: 3; Chrome, Safari, Opera
-                 animation-iteration-count: 3;
+  -webkit-animation: rotating 1.7s linear infinite;
+   -moz-animation: rotating 1.7s linear infinite;
+     -o-animation: rotating 1.7s linear infinite;
+        animation: rotating 1.7s linear infinite;
 }
-
 
 .des-web-anim {
 -webkit-animation: flipInX 2s;
@@ -328,12 +332,77 @@ hr.star-primary:after {
   }
 }
 
+.custAnim {
+-webkit-animation: fadeInUp 5s ;
+ -moz-animation: fadeInUp 5s;
+   -o-animation: fadeInUp 5s;
+      animation: fadeInUp 5s;
+}
 
 
 
+.recentProjects-copy {
+  opacity: 0;
+}
+.recentProjects-copy.active {
+  -webkit-animation: fadeInUp 1s ease;
+  -moz-animation: fadeInUp 1s ease;
+  -ms-animation: fadeInUp 1s ease;
+  -o-animation: fadeInUp 1s ease;
+  animation: fadeInUp 1s ease;
+  opacity: 1;
+}
 
+.first-row {
+  opacity: 0;
+}
 
+.first-row.active {
+  opacity: 1;
+  -webkit-animation: fadeIn 1s ease;
+  -moz-animation: fadeIn 1s ease;
+  -ms-animation: fadeIn 1s ease;
+  -o-animation: fadeIn 1s ease;
+  animation: fadeIn 1s ease;
+}
 
+.circle-anim {
+  opacity: 0!important;
+}
+
+.circle-anim.active {
+  -webkit-animation: fadeInUp 2s ease;
+  -moz-animation: fadeInUp 2s ease;
+  -ms-animation: fadeInUp 2s ease;
+  -o-animation: fadeInUp 2s ease;
+  animation: fadeInUp 2s ease;
+  opacity: .7!important;
+}
+
+.left {
+  opacity: 0;
+}
+.right {
+  opacity: 0;
+}
+
+.left.active {
+  -webkit-animation: fadeInLeft 1s ease;
+  -moz-animation: fadeInLeft 1s ease;
+  -ms-animation: fadeInLeft 1s ease;
+  -o-animation: fadeInLeft 1s ease;
+  animation: fadeInLeft 1s ease;
+  opacity: 1;
+}
+
+.right.active {
+  -webkit-animation: fadeInRight 1s ease;
+  -moz-animation: fadeInRight 1s ease;
+  -ms-animation: fadeInRight 1s ease;
+  -o-animation: fadeInRight 1s ease;
+  animation: fadeInRight 1s ease;
+  opacity: 1;
+}
 
 
 
@@ -591,10 +660,11 @@ section#portfolio {
   animation: fadeInUp 1.5s;
 }
 
-
 .modalContent img {
-  width: 90%;
+  /* width: 100%; */
+   width: 420px;
 }
+
 
 .modalContent {
   display: none;
@@ -608,6 +678,10 @@ section#portfolio {
 }
 
 
+/*
+.slick-class img{
+  margin: 0 auto;
+} */
 
 .light header {
   background: white!important;
@@ -701,10 +775,10 @@ section#portfolio {
 
 .weird header {
   background: gray!important;
-  -webkit-animation: pulse .21s;
-  -moz-animation: pulse .21s;
-  -o-animation: pulse .21s;
-  animation: pulse .21s;
+  -webkit-animation: pulse 1s;
+  -moz-animation: pulse 1s;
+  -o-animation: pulse 1s;
+  animation: pulse 1s;
 }
 
 .weird #mhead {
@@ -764,7 +838,7 @@ section#portfolio {
   width: 130px;
   min-height: 130px;
   height: auto;
-  border: 2px solid #f3f3f3;
+  border: 5px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
   -webkit-transform-style: preserve-3d;
   -webkit-transition: .4s;
@@ -774,12 +848,24 @@ section#portfolio {
           transition: .4s;
 }
 
+
+
 .head-circle:hover {
   border: 2px solid #fff;
-  -webkit-box-shadow: 0 0 5px black;
-          box-shadow: 0 0 5px black;
+  -webkit-box-shadow: 0 0 5px .2 black;
+          box-shadow: 0 0 5px .2 black;
+
+          -webkit-animation: pulse 2s ease-out infinite;
+          -moz-animation: pulse 2s ease-out infinite;
+          -ms-animation: pulse 2s ease-out infinite;
+          -o-animation: pulse 2s ease-out infinite;
+          animation: pulse 2s ease-out infinite;
+}
+.main-circle:hover {
+  background: red!important;
 
 }
+
 
 .entrance {
   -webkit-animation: slideDownRetourn 3s ease;
@@ -979,6 +1065,54 @@ section.success {
   transition: 1s;
 }
 
+
+.owl-prev:before {
+  font-family: FontAwesome;
+  content: "\f053";
+  font-size: 30px;
+}
+
+.owl-prev {
+  position: absolute;
+  top:0;
+  left:0;
+
+  -webkit-animation: fadeInRight 1s linear;
+  -moz-animation: fadeInRight 1s linear;
+  -ms-animation: fadeInRight 1s linear;
+  -o-animation: fadeInRight 1s linear;
+  animation: fadeInRight 1s linear;
+}
+
+.owl-next:before {
+  font-family: FontAwesome;
+  content: "\f054";
+  font-size: 30px;
+}
+
+.owl-next {
+  position: absolute;
+  color: white;
+  right: 0;
+  top:0;
+
+
+  -webkit-animation: fadeInLeft 1s linear;
+  -moz-animation: fadeInLeft 1s linear;
+  -ms-animation: fadeInLeft 1s linear;
+  -o-animation: fadeInLeft 1s linear;
+  animation: fadeInLeft 1s linear;
+
+}
+
+.owl-nav div {
+
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 70px;
+  padding: 8px 20px;
+  color: #f3f3f3;
+}
+
 /* .circle-anim {
  -webkit-animation: bounceOut 1s;
      -moz-animation: bounceOut 1s;
@@ -1000,7 +1134,6 @@ section.success {
 }
 
 .fa-plus-circle:hover {
-  opacity: 0;
   transition: .31s;
 }
 
@@ -1494,6 +1627,7 @@ footer .footer-below {
   max-width: 700px;
   min-width: 370px;
   margin-top: 200px;
+  max-height: 400px;
   padding: 10px;
   visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -1582,7 +1716,7 @@ footer .footer-below {
   padding: 5px 0;
 }
 
-.md-content button {
+.md-content button.md-close {
   display: block;
   margin: 0 auto;
   font-size: 15px;
@@ -1854,7 +1988,7 @@ a.circle-holder {
     top: 10vh;
   }
 
-  .md-content button {
+  .md-content button.md-close {
     width: 25px!important;
     font-size: 3.3vw;
     padding: 0;
@@ -1887,4 +2021,31 @@ a.circle-holder {
     margin: 0 auto;
     width: 80%;
   }
+}
+/*
+
+img.portfolio-slider-img {
+  background: red;
+  margin: 0 auto!important;
+  height: auto;
+}
+
+
+ */
+
+.owl-item {
+  background: black;
+}
+
+.item {
+  display: block;
+ }
+
+
+
+
+
+.item img {
+
+  height: auto;
 }

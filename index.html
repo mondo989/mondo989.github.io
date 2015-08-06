@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="css/my-styles.css" type="text/css">
   <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link rel="stylesheet" href="css/owl.theme.default.css">
   <link rel="shortcut icon" href="../favicon.ico">
 
   <!-- Fonts -->
@@ -67,7 +69,7 @@
           <div class="row main-anim">
             <div class="col-lg-12 ">
               <span class="main-circle">
-                <img id="mhead" class=" img-responsive head-circle entrance-anim " src="img/armando.png" alt="Armando.sx Main Profile image">
+                <img id="mhead" class="img-responsive head-circle entrance-anim " src="img/armando.png" alt="Armando.sx Main Profile image">
               </span>
               <div class="intro-text">
                 <h1 class="name">I'm Armando</h1>
@@ -86,7 +88,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2>Recent projects</h2>
+            <h2 class="recentProjects-copy">Recent projects</h2>
             <hr>
             <br>
             <div class="md-modal md-effect-5" id="modal-1">
@@ -258,26 +260,34 @@
                   <button class="md-close">X</button>
                   <div class="separator"></div>
                   <p class="p-modal">
-                    An upcoming sports social network that aggregates those who have a passion for sports onto a single, focused platform. This single page app uses technologies like Angular &amp; JQuery.
+                    An sports social network that aggregates those who have a passion for sports onto a single, focused platform. This single page app uses technologies like Angular &amp; JQuery.
                   </p>
-
                   <br>
                   <div class="row modalContent" id="squad-modal">
-                    <div class="col-sm-12 mb20">
-                      <a href="img/portfolio/squad-3.png">
-                        <img src="img/portfolio/squad-des-tn.png" alt="TeamWork Online">
-                      </a>
-                    </div>
+                      <div class="owl-carousel row">
+                        <div class="item">
+                          <img style="text-align: center;"  src="img/portfolio/squad-des-tn.png" alt="TeamWork Online">
+                        </div>
+                        <div class="item">
+                          <img src="img/portfolio/payments-page.png" alt="TeamWork Online">
+                        </div>
+                        <div class="item">
+                          <img src="img/portfolio/squad-des-tn.png" class="img-responsive" alt="TeamWork Online">
+                        </div>
+                      </div>
+
+
+                    <div class="col-sm-12 mb20"></div>
                   </div>
 
                   <div class="row des-web-anim">
                     <div class="col-sm-6 mb20" id="squadDesCont">
-                      <a onclick="showDesign()" id="magicBtn" class="trystyle circle-holder">
+                    <!--  <a onclick="showDesign()" id="magicBtn" class="trystyle circle-holder">
                         <img class="code" src="img/design.png" alt="Still North Landing page design"> View Designs
-                      </a>
+                      </a> -->
                     </div>
-                    <div class="col-sm-6 mb20">
-                      <a class="trystyle circle-holder" href="http://new-dev.teamworkonline.com/sports/#/squad-sports-network/people">
+                    <div class="col-sm-12 mb20">
+                      <a class="trystyle circle-holder" href="http://new-dev.teamworkonline.com/sports/#!/squad-sports-network/people">
                         <img class="code" src="img/code.png"> Visit Website
                       </a>
                     </div>
@@ -315,7 +325,7 @@
           </div>
         </div>
         <!-- First row of Projects -->
-        <div class="row">
+        <div class="row first-row">
           <div class="col-sm-4 portfolio-item">
             <a href="#portfolioModal1" class="md-trigger " data-modal="modal-8">
               <div class="caption">
@@ -468,11 +478,11 @@
           </div>
         </div>
         <div class="row about-ft">
-          <div class="col-lg-4 col-lg-offset-2 text-center">
+          <div class="col-lg-4 col-lg-offset-2 left text-center">
             <p>I was a graphic &amp; print designer in <a href="http://mtu.edu"> college.</a></p>
             <p>YouTube Inspirational videos indirectly led me to <a href="http://youtu.be/PfIYGaslVnA"> Alan Watts &amp; Philosophy.</a></p>
           </div>
-          <div class="col-lg-4 text-center">
+          <div class="col-lg-4 right text-center">
             <p>
               <a href="http://tympanus.net/codrops/author/crnacura/">Mary Lou,</a> and
               <a href="http://lea.verou.me/">Lea Verou,</a> are awesome.
@@ -598,42 +608,34 @@
     ga('create', 'UA-49251923-1', 'armando.sx');
     ga('send', 'pageview');
   </script>
-  <script src="js/jquery-1.10.2.js"></script>
+
+  <!-- <script src="js/jquery-1.10.2.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
   <script src="js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
   <script src="js/classie.js"></script>
   <script src="js/cbpAnimatedHeader.js"></script>
-  <script src="js/freelancer.js"></script>
+
   <script src="js/modalEffects.js"></script>
   <script type="text/javascript" src="js/skrollr.min.js"></script>
   <script src="js/jquery.cbpQTRotator.min.js"></script>
-  <script>
-    $(function() {
-      $('#cbp-qtrotator').cbpQTRotator();
-    });
-  </script>
+  <script type="text/javascript" src="js/owl.carousel.js"></script>
+  <script src="js/freelancer.js"></script>
+  <script src="js/waypoint.jquery.min.js"></script>
+  <script src="js/waypoint.js"></script>
 
-
-
-
-
-  <script type="text/javascript">
-    // Don't Repeat Yourself
-    function showDesign() {
-      document.getElementById("squad-modal").className += " active";
-      document.getElementById("squad-modal").className += " active";
-    };
-
-    $('#modal-8 #magicBtn').click(function() {
-      $('#squadDesCont').hide();
-    });
-  </script>
 
   <!-- <script src="js/jquery.spritely.js"></script> -->
   <!-- Including all the scripts -->
   <!--<script type="text/javascript">
   var s = skrollr.init();
   </script> -->
+
+
+
+
 </body>
+
 
 </html>

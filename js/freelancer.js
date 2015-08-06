@@ -4,6 +4,53 @@ $('.navbar-collapse.in').collapse('hide');
 }); */
 
 
+// Enables owl carousel
+$('.owl-carousel').owlCarousel({
+  margin:50,
+  items:1,
+  nav: true,
+  dots: true,
+  responsiveBaseElement: document.getElementsByClassName('md-modal'),
+
+  // responsiveClass:true,
+  //  responsive:{
+  //      0:{
+  //          items:1
+  //      },
+  //      600:{
+  //          items:1
+  //      },
+  //
+  //
+  //   }
+})
+
+
+
+
+// Don't Repeat Yourself
+function showDesign() {
+  document.getElementById("squad-modal").className += " active";
+  // document.getElementById("squad-modal").className += " active";
+};
+
+$('#modal-8 #magicBtn').click(function() {
+  $('#squadDesCont').hide();
+});
+
+
+
+
+
+$(function() {
+  $('#cbp-qtrotator').cbpQTRotator();
+});
+
+
+
+
+
+
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
 
