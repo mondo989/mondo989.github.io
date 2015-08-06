@@ -40,8 +40,6 @@ $('#modal-8 #magicBtn').click(function() {
 
 
 
-
-
 $(function() {
   $('#cbp-qtrotator').cbpQTRotator();
 });
@@ -53,7 +51,6 @@ $(function() {
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
-
   $('.page-scroll a').bind('click', function(event) {
     var $anchor = $(this);
     $('html, body').stop().animate({
@@ -241,7 +238,7 @@ $(function() {
     $('.separator').css({
       background: 'white'
     });
-    $('.fa-code').css({
+    $('.amp').css({
       color: 'white'
     });
   } else if (randomNumGen <= 5) {
@@ -258,7 +255,7 @@ $(function() {
     $('.separator').css({
       background: 'black'
     });
-    $('.fa-code').css({
+    $('.amp').css({
       color: 'black'
     });
   }
