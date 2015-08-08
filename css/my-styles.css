@@ -425,12 +425,20 @@ hr.star-primary:after {
 animation-iteration-count: infinite;
 }
 
+
+.fa-chevron-down {
+  position: absolute;
+  left: 0;
+  margin-top: 40px;
+}
+
+
 .fa-chevron-down.inactive {
-  -webkit-animation: bounceOut .5s ease;
-  -moz-animation: bounceOut .5s ease;
-  -ms-animation: bounceOut .5s ease;
-  -o-animation: bounceOut .5s ease;
-  animation: bounceOut .5s ease;
+  -webkit-animation: bounceOut .8s ease;
+  -moz-animation: bounceOut .8s ease;
+  -ms-animation: bounceOut .8s ease;
+  -o-animation: bounceOut .8s ease;
+  animation: bounceOut .8s ease;
   opacity: 0;
 }
 

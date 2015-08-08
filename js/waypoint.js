@@ -4,7 +4,7 @@ $('.recentProjects-copy').waypoint( function(){
   $('.circle-anim').addClass('active');
   $('.scroll-down').addClass('inactive');
 },{
-  offset: '45%'
+  offset: '65%'
 });
 
 $('.success').waypoint( function(){
