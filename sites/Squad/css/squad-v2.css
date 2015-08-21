@@ -40,7 +40,7 @@ section.subscribe .container {
 section.subscribe {
   padding: 120px 0 110px;
   z-index: 100!important;
-  background: url('img/ios-4.png'), url('img/turf-5.png');
+  background: url('http://www.armando.sx/sites/Squad/img/ios-4.png'), url('http://www.armando.sx/sites/Squad/img/turf-5.png');
   background-repeat: no-repeat, no-repeat;
   background-size: 280px auto, cover;
   background-position: 23% 40px, left;
