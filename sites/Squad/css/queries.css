@@ -29,7 +29,19 @@
 	.legals { text-align: center; margin: 0; padding: 0; }
 	.credit { text-align: center; }
 	.iphone { margin-bottom: 30px;}
+	.features-wrapper img {
+		 width: 240px; height: auto;
+	}
+	.features-wrapper .col-md-4 {
+		margin: 20px 0!important;
+		padding: 50px 0!important;
+	}
 	.video-copy {  margin-right: 0; margin-left: 0!important; width: 90%!important; margin: 0 auto!important; padding-top: 20px!important;}
+
+	.ac-container {
+		width: 95%!important;
+	}
+
 }
 
 @media (max-width: 991px) {
@@ -38,6 +50,39 @@
 		margin: 10px 0;
 		padding: 30px 0;
 		border-radius: 17px;
+		-webkit–transition: .5s;
+		transition: .5s;
+	}
+
+	.feat-video .col-md-offset-1 {
+		height: 350px;
+	}
+
+	.features-wrapper .col-md-4 {
+		width: 100%!important;
+		/* Yeaah I know dont mod Bstrap */
+}
+	section.final-cta {
+		padding: 280px 0 0!important;
+	}
+
+	.final-cta .col-md-6 {
+		text-align: center;
+		z-index: 0!important;
+		opacity: .2!important;
+	}
+	.final-cta .col-md-5 {
+		z-index: 9000;
+	}
+
+	.final-cta img {
+		width: 500px;
+		margin-top: -350px;
+	}
+
+	.features-wrapper .col-md-4:hover  {
+		background: #f3f3f3;
+
 	}
 
 	section.subscribe {
@@ -50,7 +95,7 @@
 }
 
 
-	.team .col-md-4 p {
+.team .col-md-4 p {
 	width: 80%;
 	margin: 0 auto;
 	}
@@ -64,7 +109,7 @@
 }
 @media (min-width: 991px) {
 	input.input-ios {
-		min-width: 500px!important;
+		min-width: 470px!important;
 	}
 }
 
@@ -80,5 +125,15 @@
 @media (max-width: 400px) {
 input.squad-ios {
 	margin-top: 30px!important;
+	}
+}
+
+@media (max-width: 1250px) {
+	input.squad-ios {
+		background: red!important;
+		padding: 30px!important;
+	}
+	input.input-ios {
+		width: 40%!important;
 	}
 }

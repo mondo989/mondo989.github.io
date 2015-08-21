@@ -34,7 +34,7 @@ section.team h1 {
 
 section.intro {
    background: url('../img/community-people.png');
-   margin-bottom: 30px;
+   background-repeat: no-repeat;
 }
 
 .intro p {
