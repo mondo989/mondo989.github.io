@@ -637,6 +637,10 @@ section#portfolio {
 
 .design-list {
   list-style: none;
+  text-align: center;
+}
+ul.design-list li {
+  text-align: center!important;
 }
 
 .light header {
@@ -836,6 +840,12 @@ section#portfolio {
 .fa-chevron-up {
   color: black;
 }
+.fa-times {
+  font-size: 1.5em;
+  opacity: .9;
+
+}
+
 .see-more-span {
   font-size: 17px;
 }
@@ -1035,6 +1045,7 @@ a.trystyle {
   -o-transition: .51s;
   transition: .51s;
   color: black;
+  text-align: center;
 }
 .trystyle:hover {
   color: gray;
@@ -1331,6 +1342,10 @@ footer .footer-below {
   width: 100%;
 }
 
+.md-content h3 {
+  margin-top: 10px!important;
+}
+
 /* CSS HoverOvers from thecodeplayer.com */
 
 
@@ -1420,6 +1435,11 @@ footer .footer-below {
   /*pushing the shadow down and scaling it down to size*/
   transform: rotateX(0) translateZ(-60px) scale(0.85);
 }
+
+.des-web-anim {
+  text-align: center;
+}
+
 
 /* Modal Window Stuff */
 
@@ -1520,6 +1540,7 @@ footer .footer-below {
 .md-content > div ul li {
   padding: 5px 0;
 }
+
 .md-content button.md-close {
   display: block;
   margin: 0 auto;
@@ -1527,7 +1548,8 @@ footer .footer-below {
   position: absolute;
   top: 0;
   margin-left: 1px;
-  left: 0;
+
+
   line-height: 2px;
   color: white;
   background: black;
@@ -1535,8 +1557,9 @@ footer .footer-below {
   -webkit-border-radius: 16px;
   border-radius: 60px;
   z-index: 200000;
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
+
 }
 
 /* Effect 5: fall */
@@ -1628,8 +1651,12 @@ footer .footer-below {
   margin-bottom: 20px;
 }
 a.circle-holder {
-  display: inline;
+  display: block;
+  padding-top: 30px;
   text-decoration: none;
+}
+.trystyle img {
+  margin-bottom: 10px;
 }
 .code {
   width: 40px;
@@ -1724,6 +1751,9 @@ a.circle-holder {
   #mhead {
     min-width: 100px!important;
     min-height: 100px!important;
+  }
+  .fa-times {
+    font-size: 1em;
   }
   .md-content > div p {
     margin: 0;
