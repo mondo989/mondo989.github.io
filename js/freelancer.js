@@ -5,25 +5,25 @@ $('.navbar-collapse.in').collapse('hide');
 
 
 // Enables owl carousel
-$('.owl-carousel').owlCarousel({
-  margin:50,
-  items:1,
-  nav: true,
-  dots: true,
-  responsiveBaseElement: document.getElementsByClassName('md-modal'),
-
-  // responsiveClass:true,
-  //  responsive:{
-  //      0:{
-  //          items:1
-  //      },
-  //      600:{
-  //          items:1
-  //      },
-  //
-  //
-  //   }
-})
+// $('.owl-carousel').owlCarousel({
+//   margin:50,
+//   items:1,
+//   nav: true,
+//   dots: true,
+//   responsiveBaseElement: document.getElementsByClassName('md-modal'),
+//
+//   // responsiveClass:true,
+//   //  responsive:{
+//   //      0:{
+//   //          items:1
+//   //      },
+//   //      600:{
+//   //          items:1
+//   //      },
+//   //
+//   //
+//   //   }
+// })
 
 
 
