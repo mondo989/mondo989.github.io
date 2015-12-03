@@ -1,0 +1,70 @@
+div.hero h1, .level h1  {
+  color: white!important;
+  font-weight: 400!important;
+  font-size: 36px;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-transform: none;
+}
+.level h1  {
+  color: black!important;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+}
+
+div.hero h3 {
+  text-align: center;
+  color: white;
+}
+
+.hero-buttons-holder {
+  margin-top: 20px;
+  padding-top: 50px;
+}
+
+.hero-buttons-holder a {
+  background: #1f2a44;
+  color: white;
+  text-transform: uppercase;
+}
+
+
+.hero-home .btn-prepend + .btn-prepend {
+  margin-top: 0;
+}
+
+.level-hero.hero-home .btn {
+  text-align: center;
+}
+
+
+.level-hero {
+  background-color: #5c6164;
+}
+
+.navbar.transparent.navbar-inverse .navbar-inner {
+  background: rgba(0,0,0,0);
+}
+.navbar-inverse {
+  background: none!important;
+  border-color: none!important;
+  border: 0;
+}
+.navbar-inner {
+padding: 10px 20px;
+}
+.navbar-inner svg {
+  width: 120px;
+}
+
+a.apply-btn {
+  margin-top: 40px;
+  background: #fff;
+  color: #1f2a44;
+  font-weight: bold;
+  font-size: 17px;
+  float:right;
+  display: block;
+  padding: 10px 20px;
+}
