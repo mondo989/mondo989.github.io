@@ -4,7 +4,6 @@ div.hero h1, .level h1  {
   font-size: 36px;
   width: 80%;
   margin: 0 auto;
-  margin-bottom: 20px;
   text-transform: none;
 }
 .level h1  {
@@ -16,6 +15,7 @@ div.hero h1, .level h1  {
 div.hero h3 {
   text-align: center;
   color: white;
+  letter-spacing: 1px;
 }
 
 .hero-buttons-holder {
@@ -67,4 +67,11 @@ a.apply-btn {
   float:right;
   display: block;
   padding: 10px 20px;
+}
+
+
+.navbar-inner img {
+  position: absolute; margin-top: 50px;
+  width: 200px;
+  opacity:.9;
 }
