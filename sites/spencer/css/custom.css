@@ -69,6 +69,11 @@ a.apply-btn {
   padding: 10px 20px;
 }
 
+span.ion-person, span.ion-home {
+  display: inline-block;
+  width: 80px;
+  margin: 5px 0;
+}
 
 .navbar-inner img {
   position: absolute; margin-top: 50px;
