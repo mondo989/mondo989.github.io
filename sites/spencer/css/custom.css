@@ -70,9 +70,14 @@ a.apply-btn {
 }
 
 span.ion-person, span.ion-home {
-  display: inline-block;
-  width: 80px;
+  display: block;
+  float: left;
   margin: 5px 0;
+}
+.address {
+  float: left;
+  text-align: left;
+  margin-left: 10px;
 }
 
 .navbar-inner img {
@@ -91,4 +96,13 @@ footer h3 {
   color: #fff;
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+
+
+
+@media (max-width: 991px) {
+  span.ion-person, span.ion-home  {
+    background: blue;
+  }
 }
