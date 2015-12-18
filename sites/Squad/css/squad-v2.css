@@ -1,9 +1,7 @@
 .hero {
-  /* border-bottom: .5px solid black; */
-  /* background: url('../img/hero2.jpg'); */
+  background: url('../img/turf-5.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-image: stretch;
 }
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
   background: #fff;
@@ -40,7 +38,8 @@ section.subscribe .container {
 section.subscribe {
   padding: 120px 0 110px;
   z-index: 100!important;
-  background: url('http://www.armando.sx/sites/Squad/img/ios-4.png'), url('http://www.armando.sx/sites/Squad/img/turf-5.png');
+  background: url('http://www.armando.sx/sites/Squad/img/ios-4.png'),
+  url('http://www.armando.sx/sites/Squad/img/turf-5.png');
   background-repeat: no-repeat, no-repeat;
   background-size: 280px auto, cover;
   background-position: 23% 40px, left;
@@ -372,4 +371,12 @@ footer .col-md-4 a.up-btn {
 
 footer {
   overflow: hidden;
+}
+
+
+
+@media (min-width: 1150px) {
+  .hero {
+    background-size: 100%!important;
+  }
 }
