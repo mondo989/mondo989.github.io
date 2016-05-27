@@ -533,16 +533,11 @@ section#portfolio {
   background: white;
   z-index: 900000!important;
 }
-.back-parallax {
-  width: 99%;
-  height: 100%;
-  margin: 0 auto;
-  background: black;
-  opacity: .81;
-  display: none;
-  /*     -webkit-animation: flipInY 5s ease;
-   -moz-animation: flipInY 5s ease;
-             animation: flipInY 5s ease; */
+
+section#portfolio .separator {
+  background: rgba(0,0,0,.2)!important;
+  margin: 15px auto 25px auto;
+
 }
 .bk-main {
   background: url('../img/skyyyy.png');
@@ -1778,6 +1773,10 @@ a.circle-holder {
   #portfolio h2, #about h2 {
     /*background: blue;*/
     font-size: 8vw;
+  }
+  .demo-row-2 {
+    background: red;
+    margin-top: 60px;
   }
   .reviews-p {
     text-align: center;
