@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="462px" height="437px" viewBox="0 0 462 437" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 45</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.357775954 140.670041 227.140771 0.596613615 453.294741 140.670041 453.294741 429.021696 0.357775954 429.021696"></polygon>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.8   0 0 0 0 0.8   0 0 0 0 0.8  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="37.3006912" y="31.972021" width="377.269848" height="282.419519"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="377.269848" height="282.419519" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <radialGradient cx="50%" cy="54.9447265%" fx="50%" fy="54.9447265%" r="174.063671%" id="radialGradient-5">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#8FD37F" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="web/hero" transform="translate(-697.000000, -51.000000)">
+            <g transform="translate(0.000000, 52.000000)" id="Group-45">
+                <g transform="translate(927.911257, 215.167157) rotate(-360.000000) translate(-927.911257, -215.167157) translate(700.911257, 0.167157)">
+                    <g id="Group-53" transform="translate(227.000000, 215.000000) rotate(-360.000000) translate(-227.000000, -215.000000) translate(0.000000, -0.000000)">
+                        <g id="new-email" transform="translate(-0.000000, -0.000000)">
+                            <g id="Group" transform="translate(0.000000, 0.000000)">
+                                <polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" points="349.001781 216.095388 105.205239 216.095388 153.518578 255.467696 300.688442 255.467696"></polygon>
+                                <g id="Rectangle-3">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                    <use fill="#F5F5F5" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                </g>
+                                <use id="Rectangle-8" stroke="#CCCCCC" mask="url(#mask-4)" stroke-width="4" fill="#FFFFFF" xlink:href="#path-3"></use>
+                                <polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" points="227.10351 314.897594 268.72731 281.468276 280.619824 271.810918 173.587196 271.810918 185.47971 281.468276"></polygon>
+                                <polygon id="Shape" stroke="#CCCCCC" fill="#F5F5F5" fill-rule="nonzero" points="450.851731 426.488458 450.851731 146.030352 273.955343 296.500449"></polygon>
+                                <polygon id="Shape" stroke="#CCCCCC" fill="#F5F5F5" fill-rule="nonzero" transform="translate(91.332215, 286.259405) scale(-1, 1) translate(-91.332215, -286.259405) " points="179.780409 426.488458 179.780409 146.030352 2.88402145 296.500449"></polygon>
+                                <path d="M231.676609,330.651858 C228.70348,332.880479 224.243788,332.880479 222.013941,330.651858 L180.390141,297.22254 L4.97555645,427.225443 L448.714994,427.225443 L273.300409,297.22254 L231.676609,330.651858 Z" id="Shape" stroke="#CCCCCC" fill="#F5F5F5" fill-rule="nonzero"></path>
+                            </g>
+                            <g id="Group-54" transform="translate(87.118381, 96.202902)" fill="#CCCCCC" opacity="0.5">
+                                <rect id="Rectangle-5" x="0.912698054" y="95.8129685" width="276.851743" height="20" rx="4"></rect>
+                                <rect id="Rectangle-5" x="0.912698054" y="48.9868786" width="276.851743" height="20" rx="4"></rect>
+                                <rect id="Rectangle-5" x="0.912698054" y="0.0323300259" width="142.685129" height="20" rx="4"></rect>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="Group-35" transform="translate(162.000000, 232.000000)" stroke="#31A217" stroke-width="5" fill="url(#radialGradient-5)">
+                        <ellipse id="Oval-2" cx="65.0308793" cy="65.0308793" rx="65.0308793" ry="65.0308793"></ellipse>
+                    </g>
+                    <path d="M211.836134,269.205708 C211.836134,263.512683 216.466534,258.882283 222.159558,258.882283 L232.482983,258.882283 C238.176008,258.882283 242.806408,263.512683 242.806408,269.205708 L242.806408,279.057008 C245.154643,279.683296 247.451949,280.448606 249.688691,281.343303 L249.688691,269.205708 C249.688691,259.717792 241.970899,252 232.482983,252 L222.159558,252 C212.671643,252 204.95385,259.717792 204.95385,269.205708 L204.95385,281.344679 C207.190592,280.449982 209.487899,279.683296 211.836134,279.057008 L211.836134,269.205708 L211.836134,269.205708 Z M227.321271,281.618594 C215.695718,281.618594 204.91118,285.436885 196,291.950278 C197.61596,320.959101 211.021271,343.594931 227.321271,343.594931 C243.619894,343.594931 257.026582,320.960478 258.641165,291.950278 C249.731361,285.436885 238.946824,281.618594 227.321271,281.618594 Z M231.10515,308.341123 L231.10515,318.254364 C231.10515,320.343825 229.410732,322.03962 227.319894,322.03962 C225.229057,322.03962 223.534639,320.343825 223.534639,318.254364 L223.534639,308.341123 C221.942078,307.171135 220.895971,305.30053 220.895971,303.172529 C220.895971,299.626776 223.772766,296.749982 227.319894,296.749982 C230.867023,296.749982 233.743818,299.626776 233.743818,303.172529 C233.743818,305.30053 232.69771,307.171135 231.10515,308.341123 Z" id="Shape" fill="#31A217" fill-rule="nonzero"></path>
+                    <text id="PGP" font-family="Lato-Heavy, Lato" font-size="25" font-weight="600" letter-spacing="-0.0454545505" fill="#0A9FD3">
+                        <tspan x="347.754027" y="65.7878499">PGP</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1034px" height="766px" viewBox="0 0 1034 766" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 19</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="51.5754879%" y1="33.7054597%" x2="51.5754879%" y2="97.7920908%" id="linearGradient-1">
+            <stop stop-color="#FEFEFE" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#F1F1F1" offset="0%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+        <path d="M428,76.0988071 L428,86 L214,86 L214,0 L290.555956,0 C290.612739,0.350683797 290.672044,0.701383734 290.733883,1.05208816 C299.845805,52.7283652 360.608447,85.5015425 428,76.0988071 Z M137.444044,0 L214,0 L214,86 L0,86 L0,76.0988071 C67.3915531,85.5015425 128.154195,52.7283652 137.266117,1.05208816 C137.327956,0.701383734 137.387261,0.350683797 137.444044,-6.10622664e-15 Z" id="path-3"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#E9E7E7" offset="0%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+        <path d="M-2.07304317e-16,17.0097936 C-1.61508529e-15,7.61554398 7.61928862,0 17.0044572,0 L1016.99554,0 C1026.38685,0 1034,7.60302734 1034,17.0097936 L1034,659.990206 C1034,669.384456 1026.38071,677 1016.99554,677 L17.0044572,677 C7.6131548,677 9.75565721e-14,669.396973 9.61469155e-14,659.990206 L-2.07304317e-16,17.0097936 Z M51,60 L51,582 L984,582 L984,60 L51,60 Z" id="path-7"></path>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="1034" height="677" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.800000012">
+        <g id="web/value-props" transform="translate(-434.000000, -11.000000)">
+            <g transform="translate(0.000000, -199.000000)" id="Group-33">
+                <g transform="translate(0.000000, 210.000000)">
+                    <g id="Group-19" transform="translate(434.000000, 0.000000)">
+                        <g id="Group-13">
+                            <g id="Group-43">
+                                <g id="Group-44" transform="translate(303.000000, 677.000000)">
+                                    <g id="Rectangle-13">
+                                        <mask id="mask-4" fill="white">
+                                            <use xlink:href="#path-3"></use>
+                                        </mask>
+                                        <g id="Mask">
+                                            <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-3"></use>
+                                            <use fill="url(#linearGradient-2)" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                        </g>
+                                        <rect fill="#D8D8D8" opacity="0.5" mask="url(#mask-4)" x="96" y="0" width="314" height="27"></rect>
+                                    </g>
+                                </g>
+                                <use id="Combined-Shape" stroke="#888888" mask="url(#mask-8)" fill="url(#linearGradient-6)" xlink:href="#path-7"></use>
+                            </g>
+                            <circle id="Oval-2" fill="#9F9C9C" cx="517.5" cy="29.5" r="5.5"></circle>
+                        </g>
+                        <g id="Group-12" transform="translate(48.000000, 60.000000)"></g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
