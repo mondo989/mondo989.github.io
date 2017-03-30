@@ -1,16 +1,20 @@
-.red {
-  background: red; }
+.gray {
+  background: #f3f3f3; }
 
 .container-fluid {
   padding-left: 0;
   padding-right: 0; }
 
 body {
-  font-family: 'Lato', 'Open san', sans-serif;
+  font-family: 'Lato', 'Open San', sans-serif;
   text-rendering: optimizeLegibility; }
 
-.container-fluid {
-  background: #f3f3f3; }
+.navbar li.nav-item {
+  float: right;
+  display: inline-block;
+  width: 80px;
+  font-weight: 300;
+  text-align: center; }
 
 #hero {
   padding: 120px 50px;
@@ -58,7 +62,7 @@ body {
     z-index: -30; }
 
 #value-props-copy {
-  padding: 75px 0px 100px 0px;
+  padding: 25px 0px 100px 0px;
   max-width: 70%;
   margin: 0 auto !important;
   text-align: right; }
@@ -150,10 +154,10 @@ body {
     position: absolute;
     width: 30px; }
   #ratings .separator {
-    width: 40px;
-    height: 3px;
+    width: 30px;
+    height: 5px;
     border-radius: 12px;
-    background: rgba(0, 0, 0, 0.5);
+    background: #f3f3f3;
     margin: 10px auto 0 auto; }
 
 #testimonial {
@@ -271,9 +275,19 @@ body {
     text-align: right;
     position: absolute;
     right: 0;
-    top: -5px; }
+    top: 0px; }
+    #footer-links span a {
+      width: 40px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 5px 10px; }
+      #footer-links span a:hover img {
+        opacity: 1; }
     #footer-links span img {
-      transform: scale(0.7); }
+      transform: scale(0.7);
+      opacity: .4;
+      transition: .5s;
+      text-align: center; }
 
 @media (max-width: 991px) {
   #hero h1 {
