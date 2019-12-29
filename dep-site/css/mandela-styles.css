@@ -1,0 +1,110 @@
+body {
+   background: yellow!important;
+}
+
+.section__mandela {
+   background: #f3f3f3;
+   height: 100vh;
+   overflow: hidden;
+   position: relative;
+}
+
+.section__mandela img {
+   display: inline;
+}
+
+.mandela-outline {
+   opacity: 0;
+   animation-direction: alternate;
+   animation-fill-mode: forwards;   
+   width: 420px;
+   
+   
+/*   animation-duration: 5s;*/
+/*   animation-iteration-count: 1;*/
+}
+
+.mandela-b {
+   animation-name: backwards-spin;
+   animation-duration: 3s;
+}
+
+.mandela-c {
+   animation-name: backwards-spin-inv;
+   animation-duration: 5s;
+}
+
+.mandela-d {
+   animation-name: backwards-spin-inv;
+   animation-duration: 8s;
+}
+
+
+
+.infinite {
+   animation-iteration-count: infinite;
+}
+
+.mandela-position {
+}
+
+
+@keyframes base-spin {
+   0% { 
+      transform: scale(4) 
+                 rotate(0deg);
+      opacity: 0;
+      }
+   
+   50% { 
+      transform: 
+         scale(2) 
+         rotate(420deg);
+      opacity: 30%;
+      }
+   100% {
+      transform: scale(4) rotate(-900deg);
+      opacity: 10%;
+   }
+}
+
+
+@keyframes backwards-spin {
+   0% { 
+      transform: 
+         scale(1)
+         rotate(0deg);
+      opacity: 0;
+      }
+   
+   50% { 
+      transform: 
+         scale(2) 
+         rotate(420deg);
+      opacity: 40%;
+      }
+   100% {
+      transform: scale(1) rotate(-400deg);
+      opacity: 50%;
+   }
+}
+
+@keyframes backwards-spin-inv {
+   0% { 
+      transform: 
+         scale(1)
+         rotate(0deg);
+      opacity: 0;
+      }
+   
+   50% { 
+      transform: 
+         scale(2) 
+         rotate(-420deg);
+      opacity: 40%;
+      }
+   100% {
+      transform: scale(6) rotate(400deg);
+      opacity: 50%;
+   }
+}

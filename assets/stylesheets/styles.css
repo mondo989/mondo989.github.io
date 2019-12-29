@@ -1,0 +1,399 @@
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden;
+}
+
+:root {
+	--dk-blue: #182848;
+	--lt-gray: #f3f3f3;
+	--lt-blue-gradient:
+		linear-gradient(200deg, #00D2FF 11%, #3A47D5 97%);
+}
+
+section {
+	height: 100vh;
+	transition: 0.4s;
+	position: relative;
+}
+
+.section__blue {
+	background: var(--dk-blue);
+	color: white;
+	padding: 30px 0;
+}
+
+.section__lt-blue-gradient {
+	align-self: center;
+}
+
+.section__lt-blue-gradient::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100vh;
+	background-image: var(--lt-blue-gradient);
+	background-size: cover;
+	animation: ltbluegradientAnim 1s ease-out;
+	animation-fill-mode: forwards;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+#section__three.animated {
+	/*	background: red;*/
+}
+
+
+#section__three .section__lt-blue-gradient::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-image: var(--lt-blue-gradient);
+	background-size: cover;
+	opacity: 0;
+	animation: fadeInUp 3s 1s ease-out;
+	animation-fill-mode: forwards;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	animation: ltbluegradientAnimBottom 1s ease-out;
+
+	/*	clip-path: polygon(100% 0, 0 0, 0 100%);*/
+
+}
+
+.hero-background::after {
+	z-index: -10;
+	background: url("/assets/imgs/sky-sample.png");
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	animation: heroBackgroundAnim 2s 1.5s ease-out;
+
+	animation-fill-mode: forwards;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+}
+
+.hero-background {
+	overflow-y: hidden;
+	z-index: -10;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+}
+
+.hero-background .hero__image--seagull {
+	opacity: 0;
+	animation: seagullEntry 4s 3s ease-out;
+	animation-fill-mode: forwards;
+	-webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
+}
+
+
+.hero__image--person {
+	width: 225px;
+	position: absolute;
+	/*	bottom: -500px;*/
+	z-index: 10;
+	right: 10%;
+	opacity: 0;
+	animation-fill-mode: forwards;
+	animation: guyEntry 2s 1.5s;
+	transition: 1s;
+}
+
+.animated .hero__image--person {
+	bottom: -15px;
+}
+
+.hero__image--seagull {
+	animation-fill-mode: forwards;
+}
+
+.hero__image--seagull-one {
+	/*	transition-delay: 1.5s;*/
+	transition: 1.5s ease-out;
+	display: block;
+	z-index: -10;
+	/*	left: 25%;*/
+	/*	top: 120px;*/
+	width: 400px;
+	padding-top: 300px;
+}
+
+.hero__image--seagull-two {
+	width: 120px;
+	transition: 6s ease-out;
+
+	margin-left: 420px;
+	margin-top: 100px;
+	z-index: -20;
+}
+
+.hero__image--seagull-three {
+	width: 320px;
+	transition: 2s ease-out;
+	margin-left: 570px;
+	margin-top: 180px;
+	/*	top: 25%;*/
+	/*	left: 75%;*/
+	z-index: -15;
+}
+
+.main-content {
+	z-index: 100;
+	justify-content: center;
+	align-items: left;
+	flex-direction: column;
+}
+
+#section__one .nav {
+	padding-top: 20px;
+}
+
+.btn__main {
+	background: var(--dk-blue);
+	border-radius: 6px;
+	height: 45px;
+	align-self: top;
+	color: white;
+	display: inline-block;
+	font-weight: 800;
+	padding: 10px 20px;
+	cursor: pointer;
+	opacity: 0;
+
+	animation: herobuttonAnim 1.5s 4s;
+	animation-fill-mode: forwards;
+}
+
+a.btn__main:hover {
+	transform: scale(1.5) !important;
+	text-decoration: none;
+}
+
+
+#section__one .main-content {
+	animation: fadeInRight 2s;
+	animation-fill-mode: forwards;
+	opacity: 1;
+
+	-webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
+}
+
+#section__one.animated .emoji__wave--animation {
+	animation: waveHand 2s 1.75s ease-out;
+	animation-iteration-count: 1;
+}
+
+
+#section__two h2,
+#section__two h3 {
+	opacity: 0;
+	margin-top: 30px;
+}
+
+#section__two h3 {
+	font-weight: 300;
+}
+
+.emoji__containers {
+	opacity: 0;
+	/*	animation-fill-mode: forwards;*/
+	position: relative;
+	top: -70px;
+	padding-top: 70px;
+	text-align: center;
+	transition: 1s 1s;
+	/*	animation: smileyNod 1s ease-out;*/
+}
+
+.animated .emoji__containers {
+	opacity: 1;
+}
+
+.button__circle {
+	background: var(--lt-gray);
+}
+
+#section__two {
+	margin-top: 1px;
+}
+
+#section__two.animated {
+	/*	background: green;*/
+}
+
+#section__two.animated h2 {
+	animation: fadeInUp 0.5s 0.5s ease-out;
+	animation-fill-mode: forwards;
+}
+
+#section__two.animated h3 {
+	animation: fadeInUp 1s 0.75s ease-out;
+	animation-fill-mode: forwards;
+}
+
+#section__three h1 {
+	color: var(--dk-blue)
+}
+
+
+.emoji__smiley {
+	font-size: 135px;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	top: 50px;
+	/*	left: 50px;*/
+	position: absolute;
+	transition: 1s 1s;
+	text-align: center;
+	z-index: 1;
+	display: inline-block;
+}
+
+.animated .emoji__smiley {
+	animation: smileyNod 0.5s 1s ease-out;
+	animation-iteration-count: 2;
+	opacity: 1;
+}
+
+.emoji__wave,
+.emoji__briefcase {
+	font-size: 120px;
+	width: 100px;
+	transition: 1s;
+}
+
+.emoji__wave:hover {
+	transform: scale(1.05) rotate(42deg);
+}
+
+h1 {
+	font-size: 72px;
+	font-weight: 600;
+	color: white;
+}
+
+h2 {
+	/*	background: blue;*/
+	font-size: 32px;
+	line-height: 1.5;
+}
+
+h3 {
+	/*	background: green;*/
+	font-size: 22px;
+}
+
+[class^='spin-'] {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 140px;
+	left: 50%;
+	/*	margin: 0px;*/
+	font-size: 100px;
+	z-index: 0;
+	/*	opacity: 0;*/
+}
+
+
+.button__circle {
+	border-radius: 120px;
+	border: 1px solid var(--dk-blue);
+	display: inline-block;
+	padding: 15px;
+	margin: 5px 10px;
+	transition: 0.35s;
+	opacity: 0.8;
+}
+
+.button__circle:hover {
+	transform: scale(1.3);
+	opacity: 1;
+}
+
+.button__circle img {
+	width: 30px;
+	height: 30px;
+}
+
+.text-shadow::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.1) transform-origin: 0 100%;
+	transform: translatez(-10px);
+	/*	border-radius: 0 0 100% 0;*/
+}
+
+/*Chrome,Safari*/
+#clipPolygon {
+	background: green;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	clip-path: polygon(0px 420px, 959px 419px, 0px 0px);
+	-webkit-clip-path: polygon(0px 420px, 959px 419px, 0px 0px);
+
+	/*Firefox*/
+	clip-path: url("#clipPolygon");
+}
+
+
+
+@media (max-width: 991px) {
+	h1 {
+		font-size: 48px;
+	}
+}
+
+@media (max-width: 761px) {
+	h1 {
+		font-size: 38px;
+	}
+
+	.foreground {
+		z-index: 2;
+	}
+
+	.foreground.section__lt-blue-gradient {
+		align-self: flex-end;
+		padding-bottom: 120px;
+	}
+
+	.section__blue {
+		padding-top: 200px;
+	}
+
+	.emoji__wave {
+		font-size: 72px;
+	}
+
+	.animated .hero__image--person {
+		width: 150px;
+		/*		bottom: 10%;*/
+		left: 45%;
+		transform: rotateX(120deg);
+	}
+}
