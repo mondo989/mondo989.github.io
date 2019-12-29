@@ -1,17 +1,27 @@
-remix
+Redesign of Armando.sx
 =====
-This is a remix of my current website. 
-www.armando.sx
+https://www.armando.sx
 
-It was built with Twitter Bootstrap.
-Skrollr
-FontAwesome
+Tools/Tech/Things used:
+
+Sketch (Drafting UI)
+
+Photoshop (Isolating & manipulating assets)
+
+Brackets (Moving pixels)
+
+Bootstrap
+
+Parallax.js (https://matthew.wagerfield.com/parallax/)
+
 
 Thanks:
-Lea Verou
-Mary Lou
-Freelancer Theme - Bootstrap
-http://daneden.me/animate - the animation boss
 
-TeamTreehouse for teaching me.
-Youtube
+IntersectionalObserver
+
+Lea Verou - Amongst many things:
+http://lea.verou.me/2012/02/moving-an-element-along-a-circle/
+
+Mary Lou - Codrops
+
+Kevin Powell - CSS Tips - Animating Gradients - https://www.youtube.com/watch?v=f3mwKLXpOLk
