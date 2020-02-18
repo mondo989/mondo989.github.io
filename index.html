@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- TODO:
-- Complete Homebase section
-- Add footer contact section
-- Make CTA do action.
-- Explore Parralax.js safari hover bug. / Decide to keep / remove
-- CSS/SVG Sprites
-- IE Can o' Worms
--->
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -20,14 +11,11 @@
 	<title>Armando.sx - Freelance Product Designer / Open Source Enthusiast</title>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
 	<link rel="stylesheet" href="assets/stylesheets/styles.css" type="text/css">
-
 	<link rel="stylesheet" href="assets/stylesheets/animations.css" type="text/css">
-
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600&display=swap" rel="stylesheet">
 
-	<script>
+	<script defer>
 		window['_fs_debug'] = false;
 		window['_fs_host'] = 'fullstory.com';
 		window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
@@ -85,7 +73,6 @@
 			};
 			g.clearUserCookie = function() {};
 		})(window, document, window['_fs_namespace'], 'script', 'user');
-
 	</script>
 
 	<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicons/apple-icon-57x57.png">
@@ -104,7 +91,6 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="../assets/favicons/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-
 </head>
 
 <body>
@@ -134,16 +120,11 @@
 			</div>
 			<div class="hero-background">
 				<img src="../assets/imgs/guy.png" class="hero__image--person guyAnim" alt="">
-
-				<div class="seagull-scene unselectable" data-calibrate-y="true" data-calibrate-x="true" data-friction-x="0.5" data-friction-y="0.1" data-scalar-x="50" data-scalar-y="50" data-invert-x="false" data-invert-y="false">
-
-					<img data-origin-x="-1" data-depth="1.5" src="../assets/imgs/seagull.png" class=" hero__image--seagull-one " alt="seagull 1">
-
-					<img data-depth="5" data-position="right 100%" src="../assets/imgs/seagull2.png" class="hero__image--seagull hero__image--seagull-two " alt="seagull 2">
-
-					<img data-depth="2.5" src="../assets/imgs/seagull3.png" class=" hero__image--seagull-three hero__image--seagull" alt="seagull ">
-
-					<img data-depth="3" src="../assets/imgs/seagull4.png" class=" hero__image--seagull-four hero__image--seagull" alt="seagull ">
+				<div class="seagull-scene unselectable">
+					<img src="../assets/imgs/seagull.png" class="hero__image--seagull hero__image--seagull-one " alt="seagull 1">
+					<img src="../assets/imgs/seagull2.png" class="hero__image--seagull hero__image--seagull-two " alt="seagull 2">
+					<img src="../assets/imgs/seagull3.png" class=" hero__image--seagull-three hero__image--seagull" alt="seagull ">
+					<img src="../assets/imgs/seagull4.png" class=" hero__image--seagull-four hero__image--seagull" alt="seagull ">
 				</div>
 			</div>
 		</div>
@@ -154,8 +135,8 @@
 			<div class="row align-self-center">
 				<div class="col-md-8 col-sm-8 main-content">
 					<h1>I’m a Freelance Product Designer.</h1>
-					<h2>I like websites that are delightful and converting.</h2>
-					<h3>In my past life… I was a <u><a href="https://medium.com/@StartupHouse/from-junkyard-to-web-development-a9631a4642cc">auto mechanic</a></u>.</h3>
+					<h2 class="fadeInUp">I like websites that are delightful and converting.</h2>
+					<h3 class="fadeInUp">In my past life… I was a <u><a href="https://medium.com/@StartupHouse/from-junkyard-to-web-development-a9631a4642cc">auto mechanic</a></u>.</h3>
 				</div>
 				<div class=" col-md-4 col-sm-4 text-right secondary-content">
 					<span class="emoji__smiley"></span>
@@ -170,7 +151,7 @@
 		</div>
 	</section>
 
-	<section class="section__three section__animate foreground lt-blue-gradient">
+	<section class="section__three section__animate foreground lt-blue-gradient__bottom">
 		<div class="container d-flex h-100">
 			<div class="row align-self-center">
 				<div class="col-sm-9 main-content">
@@ -215,17 +196,16 @@
 				</div>
 			</div>
 		</div>
-		<!--		<div class=""></div>-->
 	</section>
 
 	<section class=" section__four section__blue">
 		<div class="container d-flex h-100">
 			<div class="row align-self-center">
-				<div class="col-10">
+				<div class="col-10 ">
 					<h1>🛰️</h1>
-					<h1>Home Base <br> on Earth</h1>
-					<h2>From Saginaw, MI but traveled to San Francisco, CA a few years back.</h2>
-					<h3>Currently working remote now 🌎.</h3>
+					<h1 class="fadeInRight">Home Base <br> on Earth</h1>
+					<h2 class="fadeInUp">From Saginaw MI, but visit San Francisco CA, pretty frequently.</h2>
+					<h3>Currently working remote 🌎.</h3>
 				</div>
 			</div>
 		</div>
@@ -285,21 +265,19 @@
 	images.forEach(image => {
 		observer.observe(image);
 	});
-
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js" defer></script>
 
 <script>
 	var scene = document.querySelector('.scene');
 	var parallaxInstance = new Parallax(scene);
 	//	relativeInput: true;
-
 </script>
 
 
 <!--Googley Analytics-->
-<script>
+<script defer>
 	(function(i, s, o, g, r, a, m) {
 		i['GoogleAnalyticsObject'] = r;
 		i[r] = i[r] || function() {
@@ -314,12 +292,11 @@
 
 	ga('create', 'UA-49251923-1', 'armando.sx');
 	ga('send', 'pageview');
-
 </script>
 
 
 <!-- Fullstory Script -->
-<script>
+<script defer>
 	window['_fs_debug'] = false;
 	window['_fs_host'] = 'fullstory.com';
 	window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
@@ -377,7 +354,4 @@
 		};
 		g.clearUserCookie = function() {};
 	})(window, document, window['_fs_namespace'], 'script', 'user');
-
-</script>
-
-</html>
+</script></html>

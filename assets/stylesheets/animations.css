@@ -409,8 +409,6 @@
 	}
 }
 
-
-
 @keyframes seagullEntry {
 	0% {
 		opacity: 0;
@@ -426,7 +424,7 @@
 	}
 
 	100% {
-		opacity: 0.8;
+		opacity: 0.9;
 		transform: translateY(0) scale(1);
 	}
 }
@@ -441,7 +439,6 @@
 	}
 }
 
-
 @keyframes seagullTwoEase {
 	0% {
 		transform: translateX(0%);
@@ -461,7 +458,6 @@
 		transform: translateX(120%) translateY(160%);
 	}
 }
-
 
 @keyframes seagullThreeEase {
 	0% {
@@ -479,27 +475,9 @@
 	}
 
 	100% {
-		transform: translateX(-60%) translateY(40%);
+		transform: translateX(-550%) translateY(250%);
 	}
 }
-
-
-
-
-
-
-/*
-@keyframes ltbluegradientAnim {
-	from {
-		clip-path: polygon(0 500%, 0% 100%, 0% 100%);
-	}
-
-	to {
-
-		clip-path: polygon(0 10%, 0% 100%, 100% 100%);
-	}
-}
-*/
 
 @-webkit-keyframes ltbluegradientAnim {
 	from {
