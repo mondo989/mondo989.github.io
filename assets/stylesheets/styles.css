@@ -27,7 +27,6 @@ h1 {
 @media (max-width: 448px) {
   h1 {
     font-size: 1.75em;
-    background: red;
   }
 }
 
