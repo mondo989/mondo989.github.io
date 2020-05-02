@@ -287,26 +287,16 @@ section {
 }
 
 
-
 .hero__image--person {
-	width: 250px;
-	position: absolute;
-	right: 15%;
-	opacity: 0;
 	animation-fill-mode: forwards;
 	animation: guyEntry 2s;
-	bottom: -200px;
-	top: 100px;
-	z-index: 10;
+	position: absolute;
+	right: 15%;
+	width: 250px;
 
 	@include for-tablet-portrait-up {
-		width: 25vw;
-		top: 40%;
-		bottom: 10px;
-		position: absolute;
-		bottom: 50%;
-		align-self: flex-end;
-		right: 10%; 
+		right: 7%; 
+		// width: 500px;
 	}
 }
 
@@ -434,7 +424,6 @@ section {
 
 .container__social-icons {
 	animation-fill-mode: forwards;
-	-webkit-animation-fill-mode: forwards;
 	opacity: 0;
 	animation: fadeIn $base-transition-speed;
 	margin: 0 auto;
@@ -462,14 +451,11 @@ section {
 			margin: 0 auto;
 			text-align: center;
 			transition: 1s;
-
-			-webkit-transform: scale(0.8);
 			transform: scale(0.8);
 		}
 
 
 		&:hover {
-			-webkit-transform: scale(1.2);
 			transition: $base-transition-speed;
 			transform: scale(1.2);
 		}
@@ -484,7 +470,6 @@ section {
 			}
 
 			@include for-mobile-device {
-				-webkit-transform: scale(0.8);
 				transform: scale(0.8);
 			}
 		}
@@ -533,22 +518,16 @@ section {
 .animated {
 
 	.hero__image--person {
-		bottom: -150px;
-		transition: $base-transition-speed;
+		bottom: 120px;
 
-		@include for-tablet-landscape-up {
-			width: 25vw;
-			top: 40%;
-			/*		bottom: 10px;*/
-			position: absolute;
-			bottom: 50%;
-			align-self: flex-end;
-			right: 10%;
+		@include for-tablet-portrait-up {
+			width: 250px;
+			bottom: -70px;
 		}
 
 		@include for-mobile-device {
-			width: 50vw;
-			top: 30%;
+			bottom: 300px;
+			width:300px;
 		}
 	}
 
