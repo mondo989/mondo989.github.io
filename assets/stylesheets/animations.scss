@@ -358,23 +358,15 @@
 	}
 }
 
-@-webkit-keyframes ltbluegradientAnim {
+@keyframes ltbluegradientAnim {
 	from {
 		clip-path: polygon(0 500%, 0% 100%, 0% 100%);
-		-webkit-clip-path: polygon(0 500%, 0% 100%, 0% 100%);
 	}
 
 	to {
-		clip-path: polygon(0 21%, 0% 100%, 100% 100%);
-
-		-webkit-clip-path: polygon(0 21%, 0% 100%, 100% 100%);
-
 		clip-path: polygon(0 10%, 0% 100%, 100% 100%);
-
-		-webkit-clip-path: polygon(0 10%, 0% 100%, 100% 100%);
 	}
 }
-
 
 @keyframes blue-gradient-animation {
 	0% {
@@ -390,35 +382,12 @@
 	}
 }
 
-
-
 @keyframes ltbluegradientAnimBottom {
-
 	from {
 		clip-path: polygon(0% 0%, 0% -100%, 0% -100%);
-		-webkit-clip-path: polygon(0% 0%, 0% -100%, 0% -100%);
 	}
 
 	to {
 		clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
-		-webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
 	}
 }
-
-
-@-webkit-keyframes ltbluegradientAnimBottom {
-	from {
-		/*		clip-path: polygon(0 100%, 0% 100%, 0% 100%);*/
-		clip-path: polygon(0% 0%, 0% -100%, 0% -100%);
-		-webkit-clip-path: polygon(0% 0%, 0% -100%, 0% -100%);
-	}
-
-	to {
-		clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
-
-		-webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
-		/* clip-path: polygon(0 100%, 0% 500%, 100% 500%);
- 		-webkit-clip-path: polygon(0 100%, 0% 500%, 100% 500%);*/
-	}
-}
-

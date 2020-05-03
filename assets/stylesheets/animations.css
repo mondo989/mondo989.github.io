@@ -694,14 +694,23 @@
 
 @-webkit-keyframes ltbluegradientAnim {
   from {
-    clip-path: polygon(0 500%, 0% 100%, 0% 100%);
     -webkit-clip-path: polygon(0 500%, 0% 100%, 0% 100%);
+            clip-path: polygon(0 500%, 0% 100%, 0% 100%);
   }
   to {
-    clip-path: polygon(0 21%, 0% 100%, 100% 100%);
-    -webkit-clip-path: polygon(0 21%, 0% 100%, 100% 100%);
-    clip-path: polygon(0 10%, 0% 100%, 100% 100%);
     -webkit-clip-path: polygon(0 10%, 0% 100%, 100% 100%);
+            clip-path: polygon(0 10%, 0% 100%, 100% 100%);
+  }
+}
+
+@keyframes ltbluegradientAnim {
+  from {
+    -webkit-clip-path: polygon(0 500%, 0% 100%, 0% 100%);
+            clip-path: polygon(0 500%, 0% 100%, 0% 100%);
+  }
+  to {
+    -webkit-clip-path: polygon(0 10%, 0% 100%, 100% 100%);
+            clip-path: polygon(0 10%, 0% 100%, 100% 100%);
   }
 }
 
@@ -729,28 +738,25 @@
   }
 }
 
-@keyframes ltbluegradientAnimBottom {
+@-webkit-keyframes ltbluegradientAnimBottom {
   from {
-    clip-path: polygon(0% 0%, 0% -100%, 0% -100%);
     -webkit-clip-path: polygon(0% 0%, 0% -100%, 0% -100%);
+            clip-path: polygon(0% 0%, 0% -100%, 0% -100%);
   }
   to {
-    clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
     -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+            clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
   }
 }
 
-@-webkit-keyframes ltbluegradientAnimBottom {
+@keyframes ltbluegradientAnimBottom {
   from {
-    /*		clip-path: polygon(0 100%, 0% 100%, 0% 100%);*/
-    clip-path: polygon(0% 0%, 0% -100%, 0% -100%);
     -webkit-clip-path: polygon(0% 0%, 0% -100%, 0% -100%);
+            clip-path: polygon(0% 0%, 0% -100%, 0% -100%);
   }
   to {
-    clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
     -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
-    /* clip-path: polygon(0 100%, 0% 500%, 100% 500%);
- 		-webkit-clip-path: polygon(0 100%, 0% 500%, 100% 500%);*/
+            clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
   }
 }
 /*# sourceMappingURL=animations.css.map */
