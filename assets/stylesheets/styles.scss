@@ -306,16 +306,16 @@ section {
 	will-change: transform;
 
 	&-one {
-		animation: seagullEntry 1.5s 0s ease-in-out,
-			seagullOneEase 3s 1.5s cubic-bezier(.9,.03,.19,.19);
+		animation: seagullEntry $randomNumber ease-in-out,
+			seagullOneEase $randomNumber 1.5s cubic-bezier(.9,.03,.19,.19);
 		left: 20%;
 		width: 320px;
 		z-index: 2;
 	}
 
 	&-two {
-		animation: seagullEntry 1.5s 0s ease-in-out,
-			seagullTwoEase 8s 1.5s cubic-bezier(.9,.03,.19,.19);
+		animation: seagullEntry $randomNumber 0s ease-in-out,
+			seagullTwoEase $randomNumber 1.5s cubic-bezier(.9,.03,.19,.19);
 		width: 180px;
 		left: 30%;
 		z-index: 1;
@@ -323,7 +323,7 @@ section {
 
 	&-three {
 		width: 200px;
-		animation: seagullEntry 1.75s 0s ease-in-out,
+		animation: seagullEntry $randomNumber 0s ease-in-out,
 			seagullThreeEase 9s 1.75s ease-out;
 		right: 15%;
 		z-index: 0;
@@ -332,8 +332,8 @@ section {
 	&-four {
 		width: 320px;
 		right: 0;
-		animation: seagullEntry 1.5s 0s ease-in-out,
-			seagullFourEase 2.5s 1.5s ease-in;
+		animation: seagullEntry $randomNumber 0s ease-in-out,
+			seagullFourEase $randomNumber 1.5s ease-in;
 		z-index: 10;
 	}
 
@@ -408,6 +408,7 @@ section {
 	height: 120px;
 	top: -50px;
 	right: 0;
+	// left: -70px;
 	left: -70px;
 	bottom: 0;
 	width: 120px;

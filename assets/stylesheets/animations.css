@@ -1,7 +1,6 @@
 /* TODO:
 - Clean up animations
--Spinning Emoijs media queries
-- Vendor Prefixes
+- Spinning Emoijs media queries
 */
 .spin-1 {
   -webkit-animation: rot 5s infinite linear;
