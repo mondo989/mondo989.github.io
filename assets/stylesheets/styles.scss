@@ -1,5 +1,5 @@
 @mixin for-mobile-device {
-	@media (max-width: 448px) { @content; }
+	@media (max-width: 500px) { @content; }
 }
 
 @mixin for-mobile-device-xl-up {
@@ -295,10 +295,6 @@ section {
 	width: 250px;
 	z-index: 4;
 
-	@include for-mobile-device {
-		display: none;
-	}
-
 	@include for-tablet-portrait-up {
 		right: 7%; 
 	}
@@ -537,7 +533,7 @@ section {
 .animated {
 	.hero__image--person {
 		bottom: -100px;
-
+		
 		@include for-tablet-portrait-up {
 			bottom: 0px;
 			width: 200px;
@@ -546,6 +542,7 @@ section {
 		@include for-mobile-device {
 			bottom: 300px;
 			width: 300px;
+			display: none;
 		}
 	}
 

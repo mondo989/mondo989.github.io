@@ -27,7 +27,7 @@ h1 {
   }
 }
 
-@media (max-width: 448px) {
+@media (max-width: 500px) {
   h1 {
     font-size: 1.75em;
   }
@@ -50,7 +50,7 @@ h2 {
   }
 }
 
-@media (max-width: 448px) {
+@media (max-width: 500px) {
   h2 {
     font-size: 1.25em;
   }
@@ -73,7 +73,7 @@ h3 {
   }
 }
 
-@media (max-width: 448px) {
+@media (max-width: 500px) {
   h3 {
     font-size: 1em;
   }
@@ -296,12 +296,6 @@ section {
   z-index: 4;
 }
 
-@media (max-width: 448px) {
-  .hero__image--person {
-    display: none;
-  }
-}
-
 @media (max-width: 767px) {
   .hero__image--person {
     right: 7%;
@@ -459,7 +453,7 @@ section {
   margin-left: 0;
 }
 
-@media (max-width: 448px) {
+@media (max-width: 500px) {
   .container__social-icons {
     width: 100%;
   }
@@ -480,7 +474,7 @@ section {
   position: relative;
 }
 
-@media (max-width: 448px) {
+@media (max-width: 500px) {
   .container__social-icons .button__circle {
     display: inline-block;
     margin: 0 auto;
@@ -512,7 +506,7 @@ section {
   }
 }
 
-@media (max-width: 448px) {
+@media (max-width: 500px) {
   .container__social-icons .button__circle img {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
@@ -551,7 +545,7 @@ section {
   }
 }
 
-@media (max-width: 448px) {
+@media (max-width: 500px) {
   .container__prev-work img {
     width: 90%;
   }
@@ -568,10 +562,11 @@ section {
   }
 }
 
-@media (max-width: 448px) {
+@media (max-width: 500px) {
   .animated .hero__image--person {
     bottom: 300px;
     width: 300px;
+    display: none;
   }
 }
 
