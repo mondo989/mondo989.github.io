@@ -4,15 +4,12 @@ https://www.armando.sx
 
 Tools/Tech/Things used:
 
-Sketch (Drafting UI)
+Sketch (UI) & Photoshop (Manipulating assets)
 
-Photoshop (Isolating & manipulating assets)
+Visual Studio Code
 
-Brackets (Moving pixels)
-
-Bootstrap
-
-Parallax.js (https://matthew.wagerfield.com/parallax/)
+Bootstrap - (Not needed)
+Parallax.js (https://matthew.wagerfield.com/parallax/) 
 
 
 Thanks:
