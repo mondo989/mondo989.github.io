@@ -22,11 +22,6 @@
           animation: rot4 5s infinite linear;
 }
 
-.guyAnim {
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
 @-webkit-keyframes fadeInDown {
   0% {
     opacity: 0;

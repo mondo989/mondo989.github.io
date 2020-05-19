@@ -105,12 +105,14 @@ h3 {
 .navbar-brand {
 	color: rgb(0, 210, 255);
 	font-size: 28px;
-	font-weight: 500;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
 	text-transform: uppercase;
 	
 	&::before {
 		color: rgb(58, 71, 213);
 		content: "Armando.sx";
+		font-weight: 600;
 		position: absolute;
 		transform: translateX(1px) translateY(1px);
 		z-index: -1;
@@ -176,13 +178,11 @@ section {
 	}
 }
 
-
 .nav {
 	padding-top: 20px;
 	padding-left: 5px;
 	padding-right: 0;
 }
-
 
 .secondary-content,
 .main-content {
@@ -205,15 +205,15 @@ section {
 	color: $dk-blue;
 }
 
-
 .hero-background {
-	overflow-y: hidden;
-	z-index: -10;
 	bottom: 0;
+	overflow-y: hidden;
 	right: 0;
+	display: flex;
 	position: absolute;
 	width: 100%;
 	height: 100vh;
+	z-index: -10;
 
 	::after {
 		z-index: -1;
@@ -232,6 +232,18 @@ section {
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 		background-position: center;
+	}
+
+	.hero__image--person {
+		align-content: flex-end;
+		animation-fill-mode: forwards;
+		animation: guyEntry 2s;
+		margin-left: auto;
+		margin-right: 200px;
+		width: 250px;
+		height: 100%;
+		top: 200px !important;
+		right: 50px !important;
 	}
 }
 
@@ -287,39 +299,36 @@ section {
 	}
 }
 
-.hero__image--person {
-	animation-fill-mode: forwards;
-	animation: guyEntry 2s;
-	position: absolute;
-	right: 15%;
-	width: 250px;
-	z-index: 4;
-
-	@include for-tablet-portrait-up {
-		right: 7%; 
-	}
-
-}
-
 .hero__image--seagull {
 	opacity: 0;
 	position: absolute;
-	will-change: transform;
 
 	&-one {
 		animation: seagullEntry 1s ease-out,
 			seagullOneEase 5s 1s cubic-bezier(.9, .03, .19, .19);
-		left: 20%;
-		width: 320px;
-		z-index: 2 !important;
+		
+			left: 20%;
+			width: 320px;
+			z-index: 2 !important;
+
+			@include for-mobile-device {
+				width: 45%;
+				top: 30%;
+			}
 	}
 
 	&-two {
 		animation: seagullEntry 1s ease-out,
 			seagullTwoEase 8s 1s cubic-bezier(.9, .03, .19, .19);
-		left: 30%;
-		width: 180px;
-		z-index: 1 !important;
+		
+			left: 30%;
+			width: 180px;
+			z-index: 1 !important;
+
+			@include for-mobile-device {
+				width: 40%;
+				top: 50%;
+			}
 	}
 
 	&-three {
@@ -328,22 +337,32 @@ section {
 		right: 15%;
 		width: 200px;
 		z-index: 1 !important;
+
+		@include for-mobile-device {
+			width: 50%;
+			top: 15%;
+		}
 	}
 
 	&-four {
 		width: 320px;
 		right: 0;
-		animation: seagullEntry 1.25s ease-in-out,
+		animation: seagullEntry 1.5s ease-in-out,
 			seagullFourEase 5s 1.25s ease-in;
 		z-index: 2 !important;
+
+		@include for-mobile-device {
+			width: 50%;
+			top: 5%;
+		}
 	}
 
 	&-one,
 	&-two,
 	&-three,
 	&-four {
-		// animation-duration: initial;
-		// animation-delay: initial;
+		// animation-duration: inherit;
+		// animation-delay: inherit;
 		animation-fill-mode: forwards;
 	}
 }
@@ -532,17 +551,17 @@ section {
 
 .animated {
 	.hero__image--person {
-		bottom: -100px;
+		height: inherit;
+		z-index: 4;
 		
 		@include for-tablet-portrait-up {
 			bottom: 0px;
-			width: 200px;
 		}
 
 		@include for-mobile-device {
 			bottom: 300px;
 			width: 300px;
-			display: none;
+			display: none !important;
 		}
 	}
 
@@ -558,9 +577,6 @@ section {
 		left: 0;
 		right: 0;
 		opacity: 1;
-
-			@include for-tablet-portrait-up {
-			}
 	}
 
 	.emoji__smiley {
@@ -579,18 +595,15 @@ section {
 			}
 
 			@include for-desktop-up {
-				// background: green;
-				// left: 70px;
 				left: 0;
 				right: 0;
-				// width: 100%;
 			}
 		}
 	}
 
 	//	Currently affects all main content
 	.main-content {
-		animation: fadeInLeft 1s;
+		animation: fadeInLeft 1s ease-in-out;
 	}
 
 	.container__social-icons {
@@ -651,7 +664,6 @@ section {
 		animation-fill-mode: forwards;
 	}
 
-
 	&.lt-blue-gradient__bottom::after {
 		animation: ltbluegradientAnimBottom 0.7s ease-out;
 		animation-fill-mode: forwards;
@@ -686,5 +698,4 @@ section {
 			animation-delay: 0.8s;
 		}
 	}
-
 }

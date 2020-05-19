@@ -87,13 +87,15 @@ h3 {
 .navbar-brand {
   color: #00d2ff;
   font-size: 28px;
-  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
 .navbar-brand::before {
   color: #3a47d5;
   content: "Armando.sx";
+  font-weight: 600;
   position: absolute;
   -webkit-transform: translateX(1px) translateY(1px);
           transform: translateX(1px) translateY(1px);
@@ -197,13 +199,16 @@ section {
 }
 
 .hero-background {
-  overflow-y: hidden;
-  z-index: -10;
   bottom: 0;
+  overflow-y: hidden;
   right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   width: 100%;
   height: 100vh;
+  z-index: -10;
 }
 
 .hero-background ::after {
@@ -224,6 +229,21 @@ section {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
+}
+
+.hero-background .hero__image--person {
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation: guyEntry 2s;
+          animation: guyEntry 2s;
+  margin-left: auto;
+  margin-right: 200px;
+  width: 250px;
+  height: 100%;
+  top: 200px !important;
+  right: 50px !important;
 }
 
 .section__blue {
@@ -285,27 +305,9 @@ section {
           transform: scale(1.2);
 }
 
-.hero__image--person {
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation: guyEntry 2s;
-          animation: guyEntry 2s;
-  position: absolute;
-  right: 15%;
-  width: 250px;
-  z-index: 4;
-}
-
-@media (max-width: 767px) {
-  .hero__image--person {
-    right: 7%;
-  }
-}
-
 .hero__image--seagull {
   opacity: 0;
   position: absolute;
-  will-change: transform;
 }
 
 .hero__image--seagull-one {
@@ -316,12 +318,26 @@ section {
   z-index: 2 !important;
 }
 
+@media (max-width: 500px) {
+  .hero__image--seagull-one {
+    width: 45%;
+    top: 30%;
+  }
+}
+
 .hero__image--seagull-two {
   -webkit-animation: seagullEntry 1s ease-out, seagullTwoEase 8s 1s cubic-bezier(0.9, 0.03, 0.19, 0.19);
           animation: seagullEntry 1s ease-out, seagullTwoEase 8s 1s cubic-bezier(0.9, 0.03, 0.19, 0.19);
   left: 30%;
   width: 180px;
   z-index: 1 !important;
+}
+
+@media (max-width: 500px) {
+  .hero__image--seagull-two {
+    width: 40%;
+    top: 50%;
+  }
 }
 
 .hero__image--seagull-three {
@@ -332,12 +348,26 @@ section {
   z-index: 1 !important;
 }
 
+@media (max-width: 500px) {
+  .hero__image--seagull-three {
+    width: 50%;
+    top: 15%;
+  }
+}
+
 .hero__image--seagull-four {
   width: 320px;
   right: 0;
-  -webkit-animation: seagullEntry 1.25s ease-in-out, seagullFourEase 5s 1.25s ease-in;
-          animation: seagullEntry 1.25s ease-in-out, seagullFourEase 5s 1.25s ease-in;
+  -webkit-animation: seagullEntry 1.5s ease-in-out, seagullFourEase 5s 1.25s ease-in;
+          animation: seagullEntry 1.5s ease-in-out, seagullFourEase 5s 1.25s ease-in;
   z-index: 2 !important;
+}
+
+@media (max-width: 500px) {
+  .hero__image--seagull-four {
+    width: 50%;
+    top: 5%;
+  }
 }
 
 .hero__image--seagull-one, .hero__image--seagull-two, .hero__image--seagull-three, .hero__image--seagull-four {
@@ -552,13 +582,13 @@ section {
 }
 
 .animated .hero__image--person {
-  bottom: -100px;
+  height: inherit;
+  z-index: 4;
 }
 
 @media (max-width: 767px) {
   .animated .hero__image--person {
     bottom: 0px;
-    width: 200px;
   }
 }
 
@@ -566,7 +596,7 @@ section {
   .animated .hero__image--person {
     bottom: 300px;
     width: 300px;
-    display: none;
+    display: none !important;
   }
 }
 
@@ -615,8 +645,8 @@ section {
 }
 
 .animated .main-content {
-  -webkit-animation: fadeInLeft 1s;
-          animation: fadeInLeft 1s;
+  -webkit-animation: fadeInLeft 1s ease-in-out;
+          animation: fadeInLeft 1s ease-in-out;
 }
 
 .animated .container__social-icons {
