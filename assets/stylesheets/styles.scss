@@ -40,6 +40,7 @@ $randomNumber: random(20);
 }
 
 body {
+	box-sizing: border-box;
 	font-family: 'Open Sans', sans-serif;
 	overflow-x: hidden;
 }
@@ -380,8 +381,7 @@ section {
 }
 
 .emoji__wave,
-.emoji__briefcase,
-.emoji__smiley::before {
+.emoji__briefcase {
 	font-size: 100px;
 	width: 100px;
 	transition: 1s;
@@ -394,30 +394,6 @@ section {
 .seagull-scene {
 	height: 100vh;
 	width: 100%;
-}
-
-.emoji__smiley::before {
-	content: "😁";
-	transition: 1s 0.5s;
-	font-size: 100px;
-	position: absolute;
-	z-index: 10;
-	opacity: 0.25;
-	top: -30px;
-	left: 0;
-	right: 0;
-	text-align: center;
-	margin: 0 auto;
-
-	@include for-tablet-landscape-up {
-		font-size: 82px;
-		position: absolute;
-		height: 120px;
-		right: 0;
-		left: 0;
-		animation: smileyNod 1s ease-out;
-		top: -30px;
-	}
 }
 
 [class^='spin-'] {
@@ -442,7 +418,6 @@ section {
 	height: 120px;
 	top: -50px;
 	right: 0;
-	left: -70px;
 	bottom: 0;
 	width: 120px;
 	margin: 0 auto;
@@ -452,20 +427,17 @@ section {
 	@include for-mobile-device-xl-up {
 		left: 0;
 		right: 0;
-		top: -160px;
+		top: -80px;
 	}
 
 	@include for-tablet-portrait-up {
-		// background: red;
 	}
 
 	@include for-tablet-landscape-up {
-		// background: blue;
 	}
 
 	@include for-desktop-up {
-		// background: pink;
-		left: 40px;
+		// left: 40px;
 	}
 }
 
@@ -597,25 +569,70 @@ section {
 		opacity: 1;
 	}
 
-	.emoji__smiley {
-		opacity: 1;
-		
-		&::before {
-			animation: smileyNod 1s ease-out;
-			animation-iteration-count: 2;
-			left: 70px;
-			opacity: 1;
+	.emoji__smiley-face {
+		animation: emojiFaceAppear 1.5s ease-out;
+		animation-direction: forwards;
+		position: relative;
+		right: 70px;
+		top: -50px;
+		z-index: 5;
+		transform-origin: center;
+		transform-style: preserve-3d;
+
+		@include for-tablet-landscape-up {
+			right: 50px;
+		}
+
+		@include for-tablet-portrait-up {
+			left: 0;
+			right: 0;
+			text-align: center;
+			top: -90px;
+			transition: 1s;
+		}
+
+		@include for-mobile-device {
+			left: 0;
+			right: 0;
+			text-align: center;
+			top: -90px;
+		}
+
+		svg {
+			height: 180px;
+			width: 120px;
 			transition: $base-transition-speed;
-			z-index: 5;
 
-			@include for-mobile-device-xl-up {
-				top: -135px;
+			&:hover {
+				animation: smileyNod 1.5s ease-out;
+				transform: scale(1.1);
+				transition: $base-transition-speed;
+			}
+	
+			@include for-mobile-device {
+				width: 90px;
 			}
 
-			@include for-desktop-up {
-				left: 0;
+			@include for-tablet-landscape-up {
+				width: 100px;
 				right: 0;
+				left: 0;
 			}
+		}
+
+		#face {
+			animation: smileyNod 1.5s 1.5s ease-out;
+			animation-iteration-count: 2;
+		}
+
+		#left-eye,
+		#right-eye {
+			animation: eyeAnim 1s 1.5s ease-out;
+			transform-origin: center;
+		}
+
+		#bottom-row-teeth {
+			animation: bottomTeethAnim 1s 1.5s ease-out;
 		}
 	}
 

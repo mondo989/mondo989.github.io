@@ -314,6 +314,92 @@
   }
 }
 
+@-webkit-keyframes eyeAnim {
+  0% {
+    opacity: 0.2;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  30% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  70% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes eyeAnim {
+  0% {
+    opacity: 0.2;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  30% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  70% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes bottomTeethAnim {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+  }
+}
+
+@keyframes bottomTeethAnim {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+  }
+}
+
+@-webkit-keyframes emojiFaceAppear {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes emojiFaceAppear {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes herobuttonAnim {
   from {
     opacity: 0;

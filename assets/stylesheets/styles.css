@@ -1,10 +1,11 @@
-@charset "UTF-8";
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
 }
@@ -387,8 +388,7 @@ section {
 }
 
 .emoji__wave,
-.emoji__briefcase,
-.emoji__smiley::before {
+.emoji__briefcase {
   font-size: 100px;
   width: 100px;
   -webkit-transition: 1s;
@@ -397,8 +397,7 @@ section {
 
 @media (max-width: 575px) {
   .emoji__wave,
-  .emoji__briefcase,
-  .emoji__smiley::before {
+  .emoji__briefcase {
     font-size: 72px;
   }
 }
@@ -406,34 +405,6 @@ section {
 .seagull-scene {
   height: 100vh;
   width: 100%;
-}
-
-.emoji__smiley::before {
-  content: "😁";
-  -webkit-transition: 1s 0.5s;
-  transition: 1s 0.5s;
-  font-size: 100px;
-  position: absolute;
-  z-index: 10;
-  opacity: 0.25;
-  top: -30px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  margin: 0 auto;
-}
-
-@media (max-width: 991px) {
-  .emoji__smiley::before {
-    font-size: 82px;
-    position: absolute;
-    height: 120px;
-    right: 0;
-    left: 0;
-    -webkit-animation: smileyNod 1s ease-out;
-            animation: smileyNod 1s ease-out;
-    top: -30px;
-  }
 }
 
 [class^='spin-'] {
@@ -461,7 +432,6 @@ section {
   height: 120px;
   top: -50px;
   right: 0;
-  left: -70px;
   bottom: 0;
   width: 120px;
   margin: 0 auto;
@@ -474,13 +444,7 @@ section {
   .emoji__containers {
     left: 0;
     right: 0;
-    top: -160px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .emoji__containers {
-    left: 40px;
+    top: -80px;
   }
 }
 
@@ -632,33 +596,95 @@ section {
   opacity: 1;
 }
 
-.animated .emoji__smiley {
-  opacity: 1;
-}
-
-.animated .emoji__smiley::before {
-  -webkit-animation: smileyNod 1s ease-out;
-          animation: smileyNod 1s ease-out;
-  -webkit-animation-iteration-count: 2;
-          animation-iteration-count: 2;
-  left: 70px;
-  opacity: 1;
-  -webkit-transition: 0.6s ease-out;
-  transition: 0.6s ease-out;
+.animated .emoji__smiley-face {
+  -webkit-animation: emojiFaceAppear 1.5s ease-out;
+          animation: emojiFaceAppear 1.5s ease-out;
+  -webkit-animation-direction: forwards;
+          animation-direction: forwards;
+  position: relative;
+  right: 70px;
+  top: -50px;
   z-index: 5;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
-@media (max-width: 575px) {
-  .animated .emoji__smiley::before {
-    top: -135px;
+@media (max-width: 991px) {
+  .animated .emoji__smiley-face {
+    right: 50px;
   }
 }
 
-@media (max-width: 1200px) {
-  .animated .emoji__smiley::before {
+@media (max-width: 767px) {
+  .animated .emoji__smiley-face {
     left: 0;
     right: 0;
+    text-align: center;
+    top: -90px;
+    -webkit-transition: 1s;
+    transition: 1s;
   }
+}
+
+@media (max-width: 500px) {
+  .animated .emoji__smiley-face {
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: -90px;
+  }
+}
+
+.animated .emoji__smiley-face svg {
+  height: 180px;
+  width: 120px;
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+}
+
+.animated .emoji__smiley-face svg:hover {
+  -webkit-animation: smileyNod 1.5s ease-out;
+          animation: smileyNod 1.5s ease-out;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+}
+
+@media (max-width: 500px) {
+  .animated .emoji__smiley-face svg {
+    width: 90px;
+  }
+}
+
+@media (max-width: 991px) {
+  .animated .emoji__smiley-face svg {
+    width: 100px;
+    right: 0;
+    left: 0;
+  }
+}
+
+.animated .emoji__smiley-face #face {
+  -webkit-animation: smileyNod 1.5s 1.5s ease-out;
+          animation: smileyNod 1.5s 1.5s ease-out;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+}
+
+.animated .emoji__smiley-face #left-eye,
+.animated .emoji__smiley-face #right-eye {
+  -webkit-animation: eyeAnim 1s 1.5s ease-out;
+          animation: eyeAnim 1s 1.5s ease-out;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.animated .emoji__smiley-face #bottom-row-teeth {
+  -webkit-animation: bottomTeethAnim 1s 1.5s ease-out;
+          animation: bottomTeethAnim 1s 1.5s ease-out;
 }
 
 .animated .main-content {
