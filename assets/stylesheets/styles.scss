@@ -176,6 +176,15 @@ section {
 			}
 		}
 	}
+
+	&__four {
+
+		.world-dots {
+			display: flex;
+			height: 100%;
+			width: 550px;
+		}
+	}
 }
 
 .nav {
@@ -239,11 +248,11 @@ section {
 		animation-fill-mode: forwards;
 		animation: guyEntry 2s;
 		margin-left: auto;
-		margin-right: 200px;
+		margin-right: 250px;
 		width: 250px;
 		height: 100%;
 		top: 200px !important;
-		right: 50px !important;
+		// right: 50px !important;
 	}
 }
 
@@ -571,6 +580,10 @@ section {
 
 	.emoji__wave--animation {
 		animation: waveHand 1.5s 0.5s ease-in-out;
+	}
+
+	.world-dots {
+		animation: fadeIn 1.5s ease-out;
 	}
 
 	.emoji__containers {
