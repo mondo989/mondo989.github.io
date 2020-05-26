@@ -85,17 +85,15 @@ h3 {
 }
 
 .navbar-brand {
-  color: #00d2ff;
+  color: #3a47d5;
   font-size: 28px;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
   text-transform: uppercase;
 }
 
 .navbar-brand::before {
-  color: #3a47d5;
+  color: #00d2ff;
   content: "Armando.sx";
-  font-weight: 600;
   position: absolute;
   -webkit-transform: translateX(1px) translateY(1px);
           transform: translateX(1px) translateY(1px);
@@ -176,8 +174,14 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
-  width: 550px;
+}
+
+.section__four #pins {
+  opacity: 0;
+  -webkit-animation: fadeInDown 2s 1s ease-out;
+          animation: fadeInDown 2s 1s ease-out;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
 }
 
 .nav {
@@ -518,8 +522,6 @@ section {
     text-align: center;
     -webkit-transition: 1s;
     transition: 1s;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
   }
 }
 
@@ -545,8 +547,7 @@ section {
 
 @media (max-width: 500px) {
   .container__social-icons .button__circle img {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    width: 50px;
   }
 }
 
@@ -616,9 +617,13 @@ section {
           animation: waveHand 1.5s 0.5s ease-in-out;
 }
 
-.animated .world-dots {
+.animated #undraw_connected_world {
   -webkit-animation: fadeIn 1.5s ease-out;
           animation: fadeIn 1.5s ease-out;
+}
+
+.animated #pins {
+  opacity: 1;
 }
 
 .animated .emoji__containers {

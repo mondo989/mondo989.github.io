@@ -103,16 +103,16 @@ h3 {
 }
 
 .navbar-brand {
-	color: rgb(0, 210, 255);
+	color: rgb(58, 71, 213);
 	font-size: 28px;
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 600;
+	// font-weight: 600;
 	text-transform: uppercase;
 	
 	&::before {
-		color: rgb(58, 71, 213);
+		color: rgb(0, 210, 255);
 		content: "Armando.sx";
-		font-weight: 600;
+		// font-weight: 600;
 		position: absolute;
 		transform: translateX(1px) translateY(1px);
 		z-index: -1;
@@ -178,11 +178,14 @@ section {
 	}
 
 	&__four {
-
 		.world-dots {
 			display: flex;
-			height: 100%;
-			width: 550px;
+		}
+
+		#pins {
+			opacity: 0;
+			animation: fadeInDown 2s 1s ease-out;
+			animation-direction: normal;
 		}
 	}
 }
@@ -479,7 +482,6 @@ section {
 
 	.button__circle {
 		background: white;
-
 		border-radius: 100%;
 		border: 1px solid #cecece;
 		display: inline-block;
@@ -495,9 +497,7 @@ section {
 			margin: 0 auto;
 			text-align: center;
 			transition: 1s;
-			transform: scale(0.8);
 		}
-
 
 		&:hover {
 			transition: $base-transition-speed;
@@ -514,7 +514,8 @@ section {
 			}
 
 			@include for-mobile-device {
-				transform: scale(0.8);
+				// transform: scale(0.8);
+				width: 50px;
 			}
 		}
 	}
@@ -582,8 +583,12 @@ section {
 		animation: waveHand 1.5s 0.5s ease-in-out;
 	}
 
-	.world-dots {
+	#undraw_connected_world {
 		animation: fadeIn 1.5s ease-out;
+	}
+
+	#pins {
+		opacity: 1;
 	}
 
 	.emoji__containers {
