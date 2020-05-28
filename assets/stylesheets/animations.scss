@@ -198,12 +198,38 @@
 	}
 }
 
-@keyframes emojiFaceAppear {
+@keyframes emojiPulse {
 	0% {
-		opacity: 0.3;
+		opacity: 1;
+		transform: scale(1);
+	}
+	35% {
+		transform: scale(1.25);
+	}
+	70% {
+		transform: scale(0.75);
 	}
 	100% {
+		transform: scale(1);
 		opacity: 1;
+	}
+}
+
+@keyframes newEmojiShake {
+	0% {
+		transform: translateX(0px);
+	}
+	25% {
+		transform: translateX(50px)
+	}
+	50% {
+		transform: translateX(-50px);
+	}
+	75% {
+		transform: translateX(50px);
+	}
+	100% {
+		transform: translateX(0px);
 	}
 }
 

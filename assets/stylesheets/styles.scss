@@ -303,9 +303,8 @@ section {
 	opacity: 0;
 
 	animation: herobuttonAnim 1.5s 4s;
-	animation-fill-mode: forwards;
+ 	animation-fill-mode: forwards;
 	text-decoration: none;
-
 
 	&:hover {
 		transform: scale(1.2);
@@ -427,7 +426,7 @@ section {
 	@include for-mobile-device-xl-up {
 		left: 0;
 		right: 0;
-		top: -80px;
+		top: -40px;
 	}
 
 	@include for-tablet-portrait-up {
@@ -437,16 +436,15 @@ section {
 	}
 
 	@include for-desktop-up {
-		// left: 40px;
 	}
 }
 
 .container__social-icons {
 	animation-fill-mode: forwards;
-	opacity: 0;
 	animation: fadeIn $base-transition-speed;
 	margin: 0 auto;
 	margin-left: 0;
+	opacity: 0;
 
 	@include for-mobile-device {
 		width: 100%;
@@ -524,6 +522,10 @@ section {
 	}
 }
 
+.emoji__smiley-face {
+	transform: scale(0);
+}
+
 
 // Animation Wrapper classes
 // Animation Wrapper classes
@@ -572,12 +574,14 @@ section {
 	.emoji__smiley-face {
 		animation: emojiFaceAppear 1.5s ease-out;
 		animation-direction: forwards;
+		cursor: pointer;
 		position: relative;
-		right: 70px;
+		right: 80px;
 		top: -50px;
-		z-index: 5;
+		transform: scale(1);
 		transform-origin: center;
 		transform-style: preserve-3d;
+		z-index: 1;
 
 		@include for-tablet-landscape-up {
 			right: 50px;
@@ -587,26 +591,42 @@ section {
 			left: 0;
 			right: 0;
 			text-align: center;
-			top: -90px;
-			transition: 1s;
 		}
 
 		@include for-mobile-device {
 			left: 0;
 			right: 0;
 			text-align: center;
-			top: -90px;
+			top: -20px;
 		}
 
 		svg {
 			height: 180px;
-			width: 120px;
 			transition: $base-transition-speed;
+			transform: scale(1.2);
+			width: 115px;
 
 			&:hover {
-				animation: smileyNod 1.5s ease-out;
-				transform: scale(1.1);
-				transition: $base-transition-speed;
+				animation: emojiFaceAppear 1.5s ease-out;
+				transform: scale(1.5);
+
+				#left-eye,
+				#right-eye {
+					transform: translateY(300deg);
+				}
+				#mouth-wow {
+					opacity: 1;
+				}
+
+				#mouth {
+					transition: $base-transition-speed;
+					display: none;
+				}
+			}
+
+			#mouth-wow, 
+			#mouth-kiss {
+				opacity: 0;
 			}
 	
 			@include for-mobile-device {
@@ -628,11 +648,32 @@ section {
 		#left-eye,
 		#right-eye {
 			animation: eyeAnim 1s 1.5s ease-out;
-			transform-origin: center;
+			transform: scale(1);
+			transform-origin: bottom;
+			transform: translateY(0);
 		}
 
 		#bottom-row-teeth {
 			animation: bottomTeethAnim 1s 1.5s ease-out;
+		}
+
+		&.emoji-new-emoji {
+			animation: newEmojiShake 1.5s ease-out!important;
+			animation-direction: alternate-reverse;
+
+			#mouth-kiss {
+				opacity: 1;
+			}
+			#mouth,
+			#mouth-wow {
+				opacity: 0;
+			}
+
+			&:hover { 
+				#mouth-wow {
+					opacity: 0;
+				}
+			}
 		}
 	}
 
@@ -686,7 +727,6 @@ section {
 			margin: 0 auto;
 			opacity: 1;
 		}
-
 	}
 
 	h2.fadeInUp {

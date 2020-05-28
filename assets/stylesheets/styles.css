@@ -444,18 +444,18 @@ section {
   .emoji__containers {
     left: 0;
     right: 0;
-    top: -80px;
+    top: -15px;
   }
 }
 
 .container__social-icons {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  opacity: 0;
   -webkit-animation: fadeIn 0.6s ease-out;
           animation: fadeIn 0.6s ease-out;
   margin: 0 auto;
   margin-left: 0;
+  opacity: 0;
 }
 
 @media (max-width: 500px) {
@@ -553,6 +553,11 @@ section {
   }
 }
 
+.emoji__smiley-face {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
 .animated .hero__image--person {
   height: inherit;
   z-index: 4;
@@ -601,14 +606,17 @@ section {
           animation: emojiFaceAppear 1.5s ease-out;
   -webkit-animation-direction: forwards;
           animation-direction: forwards;
+  cursor: pointer;
   position: relative;
-  right: 70px;
+  right: 80px;
   top: -50px;
-  z-index: 5;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  z-index: 1;
 }
 
 @media (max-width: 991px) {
@@ -622,9 +630,6 @@ section {
     left: 0;
     right: 0;
     text-align: center;
-    top: -90px;
-    -webkit-transition: 1s;
-    transition: 1s;
   }
 }
 
@@ -633,24 +638,45 @@ section {
     left: 0;
     right: 0;
     text-align: center;
-    top: -90px;
+    top: -20px;
   }
 }
 
 .animated .emoji__smiley-face svg {
   height: 180px;
-  width: 120px;
   -webkit-transition: 0.6s ease-out;
   transition: 0.6s ease-out;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  width: 115px;
 }
 
 .animated .emoji__smiley-face svg:hover {
-  -webkit-animation: smileyNod 1.5s ease-out;
-          animation: smileyNod 1.5s ease-out;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-animation: emojiFaceAppear 1.5s ease-out;
+          animation: emojiFaceAppear 1.5s ease-out;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.animated .emoji__smiley-face svg:hover #left-eye,
+.animated .emoji__smiley-face svg:hover #right-eye {
+  -webkit-transform: translateY(300deg);
+          transform: translateY(300deg);
+}
+
+.animated .emoji__smiley-face svg:hover #mouth-wow {
+  opacity: 1;
+}
+
+.animated .emoji__smiley-face svg:hover #mouth {
   -webkit-transition: 0.6s ease-out;
   transition: 0.6s ease-out;
+  display: none;
+}
+
+.animated .emoji__smiley-face svg #mouth-wow,
+.animated .emoji__smiley-face svg #mouth-kiss {
+  opacity: 0;
 }
 
 @media (max-width: 500px) {
@@ -678,13 +704,36 @@ section {
 .animated .emoji__smiley-face #right-eye {
   -webkit-animation: eyeAnim 1s 1.5s ease-out;
           animation: eyeAnim 1s 1.5s ease-out;
-  -webkit-transform-origin: center;
-          transform-origin: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .animated .emoji__smiley-face #bottom-row-teeth {
   -webkit-animation: bottomTeethAnim 1s 1.5s ease-out;
           animation: bottomTeethAnim 1s 1.5s ease-out;
+}
+
+.animated .emoji__smiley-face.emoji-new-emoji {
+  -webkit-animation: newEmojiShake 1.5s ease-out !important;
+          animation: newEmojiShake 1.5s ease-out !important;
+  animation-direction: alternate-reverse;
+}
+
+.animated .emoji__smiley-face.emoji-new-emoji #mouth-kiss {
+  opacity: 1;
+}
+
+.animated .emoji__smiley-face.emoji-new-emoji #mouth,
+.animated .emoji__smiley-face.emoji-new-emoji #mouth-wow {
+  opacity: 0;
+}
+
+.animated .emoji__smiley-face.emoji-new-emoji:hover #mouth-wow {
+  opacity: 0;
 }
 
 .animated .main-content {
