@@ -444,7 +444,7 @@ section {
   .emoji__containers {
     left: 0;
     right: 0;
-    top: -15px;
+    top: -40px;
   }
 }
 
@@ -616,6 +616,8 @@ section {
           transform-origin: center;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
   z-index: 1;
 }
 
@@ -642,35 +644,87 @@ section {
   }
 }
 
-.animated .emoji__smiley-face svg {
-  height: 180px;
-  -webkit-transition: 0.6s ease-out;
-  transition: 0.6s ease-out;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  width: 115px;
+.animated .emoji__smiley-face.wink #eyes {
+  opacity: 0;
 }
 
-.animated .emoji__smiley-face svg:hover {
-  -webkit-animation: emojiFaceAppear 1.5s ease-out;
-          animation: emojiFaceAppear 1.5s ease-out;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+.animated .emoji__smiley-face.wink #eyes--left-wink,
+.animated .emoji__smiley-face.wink #eye-left {
+  opacity: 1;
+  display: inline;
+}
+
+.animated .emoji__smiley-face.wink #mouth {
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+  display: inline;
+}
+
+.animated .emoji__smiley-face.wink #eyebrows {
+  display: inline;
+  opacity: 1;
+}
+
+.animated .emoji__smiley-face.wink #eyebrows #eyebrow-right {
+  animation: eyebrowRaise 0.5s ease-out infinite alternate-reverse;
+}
+
+.animated .emoji__smiley-face.wow-spin svg {
+  -webkit-animation: wowSpin 1s ease-in-out alternate infinite;
+          animation: wowSpin 1s ease-in-out alternate infinite;
+}
+
+.animated .emoji__smiley-face.wow-spin #face #mouth-wow {
+  display: inline;
+  opacity: 1;
+}
+
+.animated .emoji__smiley-face.wow-spin #face #lips-kiss {
+  opacity: 1;
+}
+
+.animated .emoji__smiley-face.smile #mouth {
+  opacity: 1 !important;
+}
+
+.animated .emoji__smiley-face.smile #lips-kiss {
+  opacity: 0;
+}
+
+.animated .emoji__smiley-face svg {
+  height: 180px;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+  width: 115px;
 }
 
 .animated .emoji__smiley-face svg:hover #left-eye,
 .animated .emoji__smiley-face svg:hover #right-eye {
-  -webkit-transform: translateY(300deg);
-          transform: translateY(300deg);
-}
-
-.animated .emoji__smiley-face svg:hover #mouth-wow {
-  opacity: 1;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
 }
 
 .animated .emoji__smiley-face svg:hover #mouth {
   -webkit-transition: 0.6s ease-out;
   transition: 0.6s ease-out;
+}
+
+.animated .emoji__smiley-face svg #left-eye,
+.animated .emoji__smiley-face svg #right-eye,
+.animated .emoji__smiley-face svg #mouth-wow,
+.animated .emoji__smiley-face svg #lips-kiss {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+}
+
+.animated .emoji__smiley-face svg #eyes--left-wink,
+.animated .emoji__smiley-face svg #eyebrows {
   display: none;
 }
 

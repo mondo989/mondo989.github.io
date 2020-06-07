@@ -457,3 +457,24 @@
 		clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
 	}
 }
+
+
+@keyframes eyebrowRaise {
+	from  {
+		transform: translateY(-5px);
+	}
+	to {
+		transform: translateY(-15px);
+	}
+}
+
+@keyframes wowSpin {
+	from {
+		transform: rotate(14400deg)
+		scale(1);
+	}
+	to {
+		transform: rotate(0deg)
+		scale(20);
+	}
+}

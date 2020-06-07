@@ -530,8 +530,6 @@ section {
 // Animation Wrapper classes
 // Animation Wrapper classes
 // Animation Wrapper classes
-// Animation Wrapper classes
-// Animation Wrapper classes
 
 .animated {
 	.hero__image--person {
@@ -581,6 +579,7 @@ section {
 		transform: scale(1);
 		transform-origin: center;
 		transform-style: preserve-3d;
+		transition: $base-transition-speed;
 		z-index: 1;
 
 		@include for-tablet-landscape-up {
@@ -600,28 +599,99 @@ section {
 			top: -20px;
 		}
 
+		&.wink {
+			// border-bottom: 1px solid red;
+
+			#eyes {
+				opacity: 0;
+			}
+
+			#eyes--left-wink,
+			#eye-left {
+				opacity: 1;
+				display: inline;
+			}
+
+			#mouth {
+				transition: $base-transition-speed;
+				display: inline;
+			}	
+			#eyebrows {
+				display: inline;
+				opacity: 1;
+
+				#eyebrow-right {
+					animation: eyebrowRaise 0.5s ease-out infinite alternate-reverse;
+				}
+			}
+		}
+
+		&.wow-spin {
+			// border-bottom: 1px solid blue;
+			
+			svg {
+				animation: wowSpin 1s ease-in-out alternate infinite;
+			}
+
+			#face {
+				#mouth-wow {
+					display: inline;
+					opacity: 1;
+				}
+
+				#lips-kiss {
+					opacity: 1;
+				}
+			}
+		}
+
+		&.smile {
+			// border-bottom: 1px solid green;
+
+			#mouth {
+				opacity: 1 !important;
+			}
+
+			#lips-kiss {
+				opacity: 0;
+			}
+		}
+
+		&.right {
+			// border-bottom: 1px solid black;
+		}
+
 		svg {
 			height: 180px;
-			transition: $base-transition-speed;
 			transform: scale(1.2);
+			transition: $base-transition-speed;
 			width: 115px;
 
 			&:hover {
-				animation: emojiFaceAppear 1.5s ease-out;
-				transform: scale(1.5);
 
 				#left-eye,
 				#right-eye {
-					transform: translateY(300deg);
-				}
-				#mouth-wow {
-					opacity: 1;
+					transform: scale(1.2);
+					transition: $base-transition-speed;
 				}
 
 				#mouth {
 					transition: $base-transition-speed;
-					display: none;
-				}
+				}			
+			}
+
+			// BASE -- USED FOR RESET
+			#left-eye,
+			#right-eye,
+			#mouth-wow,
+			#lips-kiss {
+				transform: scale(1);
+				transition: $base-transition-speed;
+			}
+
+			#eyes--left-wink,
+			#eyebrows {
+				display: none;
 			}
 
 			#mouth-wow, 
