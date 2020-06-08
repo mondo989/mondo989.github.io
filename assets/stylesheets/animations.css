@@ -962,4 +962,26 @@
             transform: rotate(-360deg) scale(1);
   }
 }
+
+@-webkit-keyframes dizzySpin {
+  0% {
+    -webkit-transform: rotate(-720) scale(0.2);
+            transform: rotate(-720) scale(0.2);
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
+  }
+}
+
+@keyframes dizzySpin {
+  0% {
+    -webkit-transform: rotate(-720) scale(0.2);
+            transform: rotate(-720) scale(0.2);
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
+  }
+}
 /*# sourceMappingURL=animations.css.map */

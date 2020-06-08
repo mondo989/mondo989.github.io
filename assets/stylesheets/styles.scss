@@ -622,6 +622,7 @@ section {
 			#eyebrows {
 				display: inline;
 				opacity: 1;
+				z-index: 2;
 
 				#eyebrow-right {
 					animation: eyebrowRaise 0.5s ease-out infinite alternate-reverse;
@@ -634,14 +635,33 @@ section {
 				animation: wowSpin 1s ease-in-out alternate;
 			}
 
-			#face {
-				#mouth-wow {
-					display: inline;
+			#eyes {
+				#right-eye--dizzy,
+				#left-eye--dizzy {
 					opacity: 1;
 				}
 
-				#lips-kiss {
+				#right-eye--dizzy,
+				#left-eye--dizzy {
+					transform-origin: center;
+					transform-style: preserve-3d;
+					animation: dizzySpin 2.5s ease-in-out infinite;
+				}
+			}
+
+			#face {
+				#mouth-wow {
+					// display: inline;
 					opacity: 1;
+					z-index: 10;
+				}
+				
+				#bottom-row-teeth,
+				#top-row-teeth,
+				#left-eye,
+				#right-eye,
+				#lips-kiss {
+					opacity: 0;
 				}
 			}
 		}
@@ -706,7 +726,9 @@ section {
 			}
 
 			#mouth-wow, 
-			#mouth-kiss {
+			#mouth-kiss,
+			#right-eye--dizzy,
+			#left-eye--dizzy {
 				opacity: 0;
 			}
 		}

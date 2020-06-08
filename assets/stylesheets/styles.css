@@ -676,6 +676,7 @@ section {
 .animated .emoji__smiley-face.wink #eyebrows {
   display: inline;
   opacity: 1;
+  z-index: 2;
 }
 
 .animated .emoji__smiley-face.wink #eyebrows #eyebrow-right {
@@ -687,13 +688,32 @@ section {
           animation: wowSpin 1s ease-in-out alternate;
 }
 
-.animated .emoji__smiley-face.wow-spin #face #mouth-wow {
-  display: inline;
+.animated .emoji__smiley-face.wow-spin #eyes #right-eye--dizzy,
+.animated .emoji__smiley-face.wow-spin #eyes #left-eye--dizzy {
   opacity: 1;
 }
 
-.animated .emoji__smiley-face.wow-spin #face #lips-kiss {
+.animated .emoji__smiley-face.wow-spin #eyes #right-eye--dizzy,
+.animated .emoji__smiley-face.wow-spin #eyes #left-eye--dizzy {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: dizzySpin 2.5s ease-in-out infinite;
+          animation: dizzySpin 2.5s ease-in-out infinite;
+}
+
+.animated .emoji__smiley-face.wow-spin #face #mouth-wow {
   opacity: 1;
+  z-index: 10;
+}
+
+.animated .emoji__smiley-face.wow-spin #face #bottom-row-teeth,
+.animated .emoji__smiley-face.wow-spin #face #top-row-teeth,
+.animated .emoji__smiley-face.wow-spin #face #left-eye,
+.animated .emoji__smiley-face.wow-spin #face #right-eye,
+.animated .emoji__smiley-face.wow-spin #face #lips-kiss {
+  opacity: 0;
 }
 
 .animated .emoji__smiley-face.lips-shake {
@@ -761,7 +781,9 @@ section {
 }
 
 .animated .emoji__smiley-face svg #mouth-wow,
-.animated .emoji__smiley-face svg #mouth-kiss {
+.animated .emoji__smiley-face svg #mouth-kiss,
+.animated .emoji__smiley-face svg #right-eye--dizzy,
+.animated .emoji__smiley-face svg #left-eye--dizzy {
   opacity: 0;
 }
 
