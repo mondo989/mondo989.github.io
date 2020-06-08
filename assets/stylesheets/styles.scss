@@ -17,6 +17,10 @@
 	@media (max-width: 1200px) { @content; }
 }
 
+@mixin for-xl-desktop-up {
+	@media  (min-width: 1200px) { @content; }
+}
+
 //Colors
 $dk-blue: #182848;
 $lt-gray: #f3f3f3;
@@ -429,13 +433,8 @@ section {
 		top: -40px;
 	}
 
-	@include for-tablet-portrait-up {
-	}
-
-	@include for-tablet-landscape-up {
-	}
-
 	@include for-desktop-up {
+		right: 60px;
 	}
 }
 
@@ -574,7 +573,7 @@ section {
 		animation-direction: forwards;
 		cursor: pointer;
 		position: relative;
-		right: 80px;
+		right: 50px;
 		top: -50px;
 		transform: scale(1);
 		transform-origin: center;
@@ -582,8 +581,10 @@ section {
 		transition: $base-transition-speed;
 		z-index: 1;
 
-		@include for-tablet-landscape-up {
-			right: 50px;
+		&:hover {
+			transition: $base-transition-speed;
+			transform: scale(1.1);
+
 		}
 
 		@include for-tablet-portrait-up {
@@ -596,12 +597,14 @@ section {
 			left: 0;
 			right: 0;
 			text-align: center;
-			top: -20px;
+			top: -45px;
+		}
+
+		@include for-xl-desktop-up {
+			right: 80px;
 		}
 
 		&.wink {
-			// border-bottom: 1px solid red;
-
 			#eyes {
 				opacity: 0;
 			}
@@ -613,8 +616,8 @@ section {
 			}
 
 			#mouth {
-				transition: $base-transition-speed;
 				display: inline;
+				transition: $base-transition-speed;
 			}	
 			#eyebrows {
 				display: inline;
@@ -626,11 +629,9 @@ section {
 			}
 		}
 
-		&.wow-spin {
-			// border-bottom: 1px solid blue;
-			
+		&.wow-spin {			
 			svg {
-				animation: wowSpin 1s ease-in-out alternate infinite;
+				animation: wowSpin 1s ease-in-out alternate;
 			}
 
 			#face {
@@ -645,14 +646,14 @@ section {
 			}
 		}
 
-		&.smile {
-			// border-bottom: 1px solid green;
-
-			#mouth {
-				opacity: 1 !important;
+		&.lips-shake {
+			animation: newEmojiShake 1s ease-out forwards;
+			
+			#lips-kiss {
+				opacity: 1;
 			}
 
-			#lips-kiss {
+			#mouth {
 				opacity: 0;
 			}
 		}
@@ -666,6 +667,16 @@ section {
 			transform: scale(1.2);
 			transition: $base-transition-speed;
 			width: 115px;
+
+			@include for-mobile-device {
+				width: 90px;
+			}
+
+			@include for-tablet-landscape-up {
+				width: 100px;
+				right: 0;
+				left: 0;
+			}
 
 			&:hover {
 
@@ -698,16 +709,6 @@ section {
 			#mouth-kiss {
 				opacity: 0;
 			}
-	
-			@include for-mobile-device {
-				width: 90px;
-			}
-
-			@include for-tablet-landscape-up {
-				width: 100px;
-				right: 0;
-				left: 0;
-			}
 		}
 
 		#face {
@@ -739,7 +740,7 @@ section {
 				opacity: 0;
 			}
 
-			&:hover { 
+			&:hover {
 				#mouth-wow {
 					opacity: 0;
 				}

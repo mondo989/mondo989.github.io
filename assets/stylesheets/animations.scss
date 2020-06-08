@@ -56,8 +56,6 @@
 	}
 }
 
-
-
 @keyframes fadeInUp {
 	0% {
 		opacity: 0;
@@ -469,12 +467,16 @@
 }
 
 @keyframes wowSpin {
-	from {
+	0% {
 		transform: rotate(14400deg)
 		scale(1);
 	}
-	to {
+	50% {
 		transform: rotate(0deg)
 		scale(20);
+	}
+	100% {
+		transform: rotate(-360deg)
+		scale(1);
 	}
 }

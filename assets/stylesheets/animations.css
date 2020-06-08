@@ -934,24 +934,32 @@
 }
 
 @-webkit-keyframes wowSpin {
-  from {
+  0% {
     -webkit-transform: rotate(14400deg) scale(1);
             transform: rotate(14400deg) scale(1);
   }
-  to {
+  50% {
     -webkit-transform: rotate(0deg) scale(20);
             transform: rotate(0deg) scale(20);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg) scale(1);
+            transform: rotate(-360deg) scale(1);
   }
 }
 
 @keyframes wowSpin {
-  from {
+  0% {
     -webkit-transform: rotate(14400deg) scale(1);
             transform: rotate(14400deg) scale(1);
   }
-  to {
+  50% {
     -webkit-transform: rotate(0deg) scale(20);
             transform: rotate(0deg) scale(20);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg) scale(1);
+            transform: rotate(-360deg) scale(1);
   }
 }
 /*# sourceMappingURL=animations.css.map */

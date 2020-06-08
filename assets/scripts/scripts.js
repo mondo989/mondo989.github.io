@@ -25,8 +25,6 @@ function callNewScene() {
 callNewScene();
 
 
-
-
 // SVGMOJI
 // SVGMOJI
 // SVGMOJI
@@ -35,13 +33,12 @@ callNewScene();
 const vectorFace = document.querySelector(".emoji__smiley-face");
 
 var updateSVGMoji = function() {
-	PrefixedEvent(vectorFace, "AnimationEnd", callRandomSvgMoji(), false);
 	vectorFace.classList.add("emoji-new-emoji");
+	PrefixedEvent(vectorFace, "AnimationEnd", callRandomSvgMoji(), false);
 	console.log("toggled emoji complete");
 }
 
 var callRandomSvgMoji = function() {
-
 	if (vectorFace.classList.length >= 2) {
 		vectorFace.classList = "emoji__smiley-face";
 		console.log("extra classes removed")
@@ -56,7 +53,7 @@ var getRandomSVGMoji = function() {
 		var randomNumber = Math.floor(Math.random() * 3);
 			if (randomNumber === 0 && vectorFace.className !== "emoji__smiley-face emoji-new-emoji") vectorFace.classList.add("wink");
 			else if (randomNumber === 1 && vectorFace.className !== "emoji__smiley-face emoji-new-emoji") vectorFace.classList.add("wow-spin");
-			else if (randomNumber === 2 && vectorFace.className !== "emoji__smiley-face emoji-new-emoji") vectorFace.classList.add("smile");
+			else if (randomNumber === 2 && vectorFace.className !== "emoji__smiley-face emoji-new-emoji") vectorFace.classList.add("lips-shake");
 			else if (randomNumber === 3 && vectorFace.className !== "emoji__smiley-face emoji-new-emoji") vectorFace.classList.add("right");
 		else randomize()
 	}
@@ -79,7 +76,6 @@ function PrefixedEvent(element, type, callback) {
 // SEAGULLS
 // SEAGULLS
 // SEAGULLS
-
 
 // document.querySelector(".hero__image--seagull-four").addEventListener('animationend', function(){
 // 	console.log("Boo");
