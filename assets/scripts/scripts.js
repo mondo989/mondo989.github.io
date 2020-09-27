@@ -1,13 +1,9 @@
-
 // Intersection Observer
 const images = document.querySelectorAll('.section__animate');
 observer = new IntersectionObserver((entries) => {
 	entries.forEach(entry => {
 		if (entry.intersectionRatio > 0) {
 			entry.target.classList.add('animated');
-		} else {
-			//				entry.target.classList.remove('section__animate');
-			//				entry.target.toggleClass('animated');
 		}
 	});
 });
@@ -15,32 +11,32 @@ images.forEach(image => {
 	observer.observe(image);
 });
 	
+// Init Parallax JS
+		// Removing Not planning to use ParallaxJs
 
-// Parallax JS Scenes
-function callNewScene() {
-	var scene = document.querySelector('.scene');
-	var parallaxInstance = new Parallax(scene, {
-	});
-}
-callNewScene();
+		// function callNewScene() {
+		// 	var scene = document.querySelector('.scene');
+		// 	var parallaxInstance = new Parallax(scene, {
+		// 	});
+		// }
+		// callNewScene();
 
 
 // SVGMOJI
 // SVGMOJI
 // SVGMOJI
-// SVGMOJI
 
-const vectorFace = document.querySelector(".emoji__smiley-face");
+const svgMoji = document.querySelector(".emoji__smiley-face");
 
 var updateSVGMoji = function() {
-	vectorFace.classList.add("emoji-new-emoji");
-	PrefixedEvent(vectorFace, "AnimationEnd", callRandomSvgMoji(), false);
+	svgMoji.classList.add("emoji-new-emoji");
+	PrefixedEvent(svgMoji, "AnimationEnd", callRandomSvgMoji(), false);
 	console.log("toggled emoji complete");
 }
 
 var callRandomSvgMoji = function() {
-	if (vectorFace.classList.length >= 2) {
-		vectorFace.classList = "emoji__smiley-face";
+	if (svgMoji.classList.length >= 2) {
+		svgMoji.classList = "emoji__smiley-face";
 		console.log("extra classes removed")
 	}
 
@@ -51,10 +47,10 @@ var callRandomSvgMoji = function() {
 var getRandomSVGMoji = function() {
 	function randomize() {
 		var randomNumber = Math.floor(Math.random() * 3);
-			if (randomNumber === 0 && vectorFace.className !== "emoji__smiley-face emoji-new-emoji") vectorFace.classList.add("wink");
-			else if (randomNumber === 1 && vectorFace.className !== "emoji__smiley-face emoji-new-emoji") vectorFace.classList.add("wow-spin");
-			else if (randomNumber === 2 && vectorFace.className !== "emoji__smiley-face emoji-new-emoji") vectorFace.classList.add("lips-shake");
-			else if (randomNumber === 3 && vectorFace.className !== "emoji__smiley-face emoji-new-emoji") vectorFace.classList.add("right");
+			if (randomNumber === 0 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("wink");
+			else if (randomNumber === 1 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("wow-spin");
+			else if (randomNumber === 2 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("lips-shake");
+			else if (randomNumber === 3 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("right");
 		else randomize()
 	}
 	randomize();

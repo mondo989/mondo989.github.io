@@ -13,7 +13,6 @@ body {
 h1 {
   font-size: 3.5em;
   font-weight: 600;
-  color: white;
 }
 
 @media (max-width: 767px) {
@@ -186,9 +185,9 @@ section {
 }
 
 .nav {
-  padding-top: 20px;
   padding-left: 5px;
   padding-right: 0;
+  padding-top: 20px;
 }
 
 .secondary-content,
@@ -212,50 +211,30 @@ section {
 }
 
 .hero-background {
-  bottom: 0;
-  overflow-y: hidden;
-  right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 10%;
+  height: 100%;
   position: absolute;
-  width: 100%;
-  height: 100vh;
-  z-index: -10;
-}
-
-.hero-background ::after {
-  z-index: -1;
-  background: url("/assets/imgs/clouds.jpg");
-  content: "";
-  position: absolute;
-  left: 0;
   top: 0;
-  bottom: 0;
+  left: 0;
   right: 0;
-  width: 100%;
-  height: 100vh;
-  -webkit-animation: heroBackgroundAnim 1.5s ease-out;
-          animation: heroBackgroundAnim 1.5s ease-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
 }
 
-.hero-background .hero__image--person {
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
+.hero-background .hero__image--circle {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation: guyEntry 2s;
           animation: guyEntry 2s;
-  margin-left: auto;
-  margin-right: 250px;
-  width: 250px;
-  height: 100%;
-  top: 200px !important;
+  position: absolute;
+  opacity: 0.5;
+  bottom: 0;
+  left: 35%;
+}
+
+.hero-background .hero__image--circle svg {
+  height: 1200px;
+  width: 1200px;
+  -webkit-animation: rotateCircle 2.5s ease-in-out infinite;
+          animation: rotateCircle 2.5s ease-in-out infinite;
 }
 
 .section__blue {
@@ -317,76 +296,6 @@ section {
           transform: scale(1.2);
 }
 
-.hero__image--seagull {
-  opacity: 0;
-  position: absolute;
-}
-
-.hero__image--seagull-one {
-  -webkit-animation: seagullEntry 1s ease-out, seagullOneEase 5s 1s cubic-bezier(0.9, 0.03, 0.19, 0.19);
-          animation: seagullEntry 1s ease-out, seagullOneEase 5s 1s cubic-bezier(0.9, 0.03, 0.19, 0.19);
-  left: 20%;
-  width: 320px;
-  z-index: 2 !important;
-}
-
-@media (max-width: 500px) {
-  .hero__image--seagull-one {
-    width: 45%;
-    top: 30%;
-  }
-}
-
-.hero__image--seagull-two {
-  -webkit-animation: seagullEntry 1s ease-out, seagullTwoEase 8s 1s cubic-bezier(0.9, 0.03, 0.19, 0.19);
-          animation: seagullEntry 1s ease-out, seagullTwoEase 8s 1s cubic-bezier(0.9, 0.03, 0.19, 0.19);
-  left: 30%;
-  width: 180px;
-  z-index: 1 !important;
-}
-
-@media (max-width: 500px) {
-  .hero__image--seagull-two {
-    width: 40%;
-    top: 50%;
-  }
-}
-
-.hero__image--seagull-three {
-  -webkit-animation: seagullEntry 1.5s ease-out, seagullThreeEase 9s 1.5s ease-out;
-          animation: seagullEntry 1.5s ease-out, seagullThreeEase 9s 1.5s ease-out;
-  right: 15%;
-  width: 200px;
-  z-index: 1 !important;
-}
-
-@media (max-width: 500px) {
-  .hero__image--seagull-three {
-    width: 50%;
-    top: 15%;
-  }
-}
-
-.hero__image--seagull-four {
-  width: 320px;
-  right: 0;
-  -webkit-animation: seagullEntry 1.5s ease-in-out, seagullFourEase 5s 1.25s ease-in;
-          animation: seagullEntry 1.5s ease-in-out, seagullFourEase 5s 1.25s ease-in;
-  z-index: 2 !important;
-}
-
-@media (max-width: 500px) {
-  .hero__image--seagull-four {
-    width: 50%;
-    top: 5%;
-  }
-}
-
-.hero__image--seagull-one, .hero__image--seagull-two, .hero__image--seagull-three, .hero__image--seagull-four {
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
 .emoji__wave,
 .emoji__briefcase {
   font-size: 100px;
@@ -400,11 +309,6 @@ section {
   .emoji__briefcase {
     font-size: 72px;
   }
-}
-
-.seagull-scene {
-  height: 100vh;
-  width: 100%;
 }
 
 [class^='spin-'] {
@@ -564,27 +468,18 @@ section {
           transform: scale(0);
 }
 
-.animated .hero__image--person {
-  height: inherit;
-  z-index: 4;
-}
-
 @media (max-width: 767px) {
-  .animated .hero__image--person {
+  .animated .hero__image--circle {
     bottom: 0px;
   }
 }
 
 @media (max-width: 500px) {
-  .animated .hero__image--person {
+  .animated .hero__image--circle {
     bottom: 300px;
     width: 300px;
     display: none !important;
   }
-}
-
-.animated .hero__image--seagull {
-  opacity: 1;
 }
 
 .animated .emoji__wave--animation {
@@ -603,8 +498,8 @@ section {
 
 .animated .emoji__containers {
   left: 0;
-  right: 0;
   opacity: 1;
+  right: 0;
 }
 
 .animated .emoji__smiley-face {
@@ -746,9 +641,9 @@ section {
 
 @media (max-width: 991px) {
   .animated .emoji__smiley-face svg {
-    width: 100px;
-    right: 0;
     left: 0;
+    right: 0;
+    width: 100px;
   }
 }
 
@@ -761,8 +656,15 @@ section {
 }
 
 .animated .emoji__smiley-face svg:hover #mouth {
-  -webkit-transition: 0.6s ease-out;
-  transition: 0.6s ease-out;
+  opacity: 0;
+}
+
+.animated .emoji__smiley-face svg:hover #lips-kiss {
+  display: none;
+}
+
+.animated .emoji__smiley-face svg:hover #mouth-wow {
+  opacity: 1;
 }
 
 .animated .emoji__smiley-face svg #left-eye,
@@ -827,7 +729,7 @@ section {
 }
 
 .animated .emoji__smiley-face.emoji-new-emoji:hover #mouth-wow {
-  opacity: 0;
+  opacity: 1;
 }
 
 .animated .main-content {

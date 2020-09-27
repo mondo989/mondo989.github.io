@@ -96,7 +96,7 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
 @keyframes waveHand {
 	0% {
-		transform: rotate(0deg);
+		transform: rotate(-60deg);
 	}
 
 	10% {
@@ -263,6 +263,18 @@
 	}
 }
 
+@keyframes rotateCircle {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(270deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
 
 @keyframes rot {
 	0% {
@@ -328,97 +340,6 @@
 	100% {
 		opacity: 0.2;
 		transform: rotate(630deg) translate(-100px) rotate(360deg);
-	}
-}
-
-@keyframes guyEntry {
-	0% {
-		opacity: 0;
-		transform: scale(1)
-		translateY(200px);
-	}
-
-	50% {
-		transform: scale(1.5);
-	}
-
-	75% {
-		opacity: 0.8;
-	}
-
-	100% {
-		opacity: 1;
-		transform: scale(1);
-	}
-}
-
-@keyframes seagullEntry {
-	0% {
-		opacity: 0;
-		transform: translateY(300%) scale(0.3);
-	}
-
-	20% {
-		opacity: 0.1;
-	}
-
-	80% {
-		transform: translateY(-20%);
-	}
-
-	100% {
-		opacity: 0.9;
-		transform: translateY(0) scale(1);
-	}
-}
-
-@keyframes seagullOneEase {
-	0% {
-		transform: translateX(0%);
-	}
-
-	100% {
-		transform: translateX(150%) translateY(100%);
-	}
-}
-
-@keyframes seagullTwoEase {
-	0% {
-		transform: translateX(0%);
-	}
-
-	100% {
-		transform: translateX(120%) translateY(160%);
-	}
-}
-
-@keyframes seagullTwoEase {
-	0% {
-		transform: translateX(0%);
-	}
-
-	100% {
-		transform: translateX(120%) translateY(160%);
-	}
-}
-
-@keyframes seagullThreeEase {
-	0% {
-		transform: translateX(0%);
-	}
-
-	100% {
-		transform: translateX(-60%) translateY(40%);
-	}
-}
-
-@keyframes seagullFourEase {
-	0% {
-		transform: translateX(0%);
-	}
-
-	100% {
-		transform: translateX(-550%) translateY(250%);
 	}
 }
 
