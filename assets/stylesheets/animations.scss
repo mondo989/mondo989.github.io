@@ -191,9 +191,7 @@
 		transform: translateY(30px);
 	}
 
-	100% {
-
-	}
+	100% {}
 }
 
 @keyframes emojiPulse {
@@ -201,12 +199,15 @@
 		opacity: 1;
 		transform: scale(1);
 	}
+
 	35% {
 		transform: scale(1.25);
 	}
+
 	70% {
 		transform: scale(0.75);
 	}
+
 	100% {
 		transform: scale(1);
 		opacity: 1;
@@ -215,19 +216,23 @@
 
 @keyframes newEmojiShake {
 	0% {
-		transform: translateX(0px);
+		transform: translateX(0px) rotate(0);
 	}
+
 	25% {
-		transform: translateX(50px)
+		transform: translateX(-100px) rotate(-90deg);
 	}
+
 	50% {
-		transform: translateX(-50px);
+		transform: translateX(0) rotate(0);
 	}
+
 	75% {
-		transform: translateX(50px);
+		transform: translateX(100px) rotate(90deg);
 	}
+
 	100% {
-		transform: translateX(0px);
+		transform: translateX(0px) rotate(0);
 	}
 }
 
@@ -267,9 +272,11 @@
 	0% {
 		transform: rotate(0deg);
 	}
+
 	50% {
 		transform: rotate(270deg);
 	}
+
 	100% {
 		transform: rotate(0deg);
 	}
@@ -379,39 +386,211 @@
 
 
 @keyframes eyebrowRaise {
-	from  {
+	from {
 		transform: translateY(-5px);
 	}
+
 	to {
 		transform: translateY(-15px);
 	}
 }
 
-@keyframes wowSpin {
+@keyframes leftEyebrowRaise {
 	0% {
-		transform: rotate(14400deg)
-		scale(1);
+		transform: translateY(-5px);
 	}
-	50% {
-		transform: rotate(0deg)
-		scale(20);
-	}
+
 	100% {
-		transform: rotate(-360deg)
-		scale(1);
+		transform: translateY(0);
 	}
 }
+
+
+@keyframes wowSpin {
+	0% {
+		opacity: 0;
+		transform: rotate(1540deg);
+	} 
+	100% {
+		opacity: 1;
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes wowFaceSpin {
+	0% {
+		opacity: 0;
+		transform: rotate(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotate(360deg);
+	}
+}
+
+
+@keyframes wowLeftEyeSpin {
+	0% {
+		opacity: 0;
+		transform: rotate(0) scale(0.5);
+	}
+
+	50% {
+		transform: rotate(360deg) scale(0.5);
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotate(720deg) scale(1);
+	}
+}
+
+
+@keyframes wowRightEyeSpin {
+	0% {
+		opacity: 0;
+		transform: rotate(0) scale(0.5);
+	}
+
+	50% {
+		transform: rotate(-360deg) scale(0.5);
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotate(-720deg) scale(1);
+	}
+}
+
+
+
 
 @keyframes dizzySpin {
 	0% {
 		// opacity: 0.5;
-		transform: rotate(-720)
-		scale(0.2);
+		transform: rotateY(-720px);
 	}
 
 	100% {
 		// opacity: 1;
-		transform: rotate(0)
-		scale(1);
+		transform: rotateY(0);
+	}
+}
+
+@keyframes eyebrowsRaise {
+	0% {
+		opacity: 0;
+		transform: translateY(0)
+	}
+
+	25% {
+		transform: translateY(-10px)
+	}
+
+	50% {
+		transform: translateY(0)
+	}
+
+	75% {
+		transform: translateY(-10px)
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0)
+	}
+}
+
+@keyframes sleepyFaceAnim {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		opacity: 0.6;
+		transform: scale(0.95);
+	}
+}
+
+@keyframes emojiBounce {
+	0% {
+		// opacity: 0;
+		transform: translateY(0)
+	}
+
+	25% {
+		transform: translateY(-20px)
+	}
+
+	50% {
+		transform: translateY(0);
+	}
+
+	75% {
+		transform: translateY(20px)
+	}
+
+	100% {
+		// opacity: 1;
+		transform: translateY(0)
+	}
+}
+
+
+@keyframes sleepyEyesAnim {
+	0% {
+		transform: translateY(0);
+	}
+
+	25%{
+		transform: translateY(-5px);
+	}
+
+	50% {
+		transform: translateY(0);
+	}
+
+	75% {
+		transform: translateY(5px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+
+}
+
+@keyframes sleepZAnim {
+	0% {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes sleepGroupAnim {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes emojiContainerFade {
+	0% {
+		opacity: 0.25;
+	}
+
+	50% {
+		opacity: 0.75;
+	}
+	100% {
+		opacity: 0.25;
 	}
 }

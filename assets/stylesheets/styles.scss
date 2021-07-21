@@ -1,34 +1,9 @@
-@mixin for-mobile-device {
-	@media (max-width: 500px) { @content; }
-}
-
-@mixin for-mobile-device-xl-up {
-	@media (max-width: 575px) { @content; }
-}
-
-@mixin for-tablet-portrait-up {
-	@media (max-width: 767px) { @content; }
-}
-
-@mixin for-tablet-landscape-up {
-	@media (max-width: 991px) { @content; }
-}
-@mixin for-desktop-up {
-	@media (max-width: 1200px) { @content; }
-}
-
-@mixin for-xl-desktop-up {
-	@media  (min-width: 1200px) { @content; }
-}
-
 //Colors
 $dk-blue: #182848;
 $lt-gray: #f3f3f3;
 
-$lt-blue-gradient:
-	linear-gradient(200deg, #00D2FF 11%, #3A47D5 97%);
-$lt-blue-gradient-background:
-	linear-gradient(225deg, rgb(0, 210, 255) 20%, rgb(58, 71, 213) 100%);
+$lt-blue-gradient: linear-gradient(200deg, #00D2FF 11%, #3A47D5 97%);
+$lt-blue-gradient-background: linear-gradient(225deg, rgb(0, 210, 255) 20%, rgb(58, 71, 213) 100%);
 
 $base-transition-speed: 0.6s ease-out;
 $long-transition-speed: 1.0s ease-out;
@@ -36,6 +11,44 @@ $gradient-transition-speed: 20s ease-out;
 
 $randomNumber: random(20);
 
+
+
+
+@mixin for-mobile-device {
+	@media (max-width: 500px) {
+		@content;
+	}
+}
+
+@mixin for-mobile-device-xl-up {
+	@media (max-width: 575px) {
+		@content;
+	}
+}
+
+@mixin for-tablet-portrait-up {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin for-tablet-landscape-up {
+	@media (max-width: 991px) {
+		@content;
+	}
+}
+
+@mixin for-desktop-up {
+	@media (max-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin for-xl-desktop-up {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
 
 
 * {
@@ -60,7 +73,7 @@ h1 {
 	@include for-mobile-device-xl-up {
 		font-size: 1.8em;
 	}
-	
+
 	@include for-mobile-device {
 		font-size: 1.75em;
 
@@ -112,7 +125,7 @@ h3 {
 	font-family: 'Open Sans', sans-serif;
 	// font-weight: 600;
 	text-transform: uppercase;
-	
+
 	&::before {
 		color: rgb(0, 210, 255);
 		content: "Armando.sx";
@@ -154,7 +167,7 @@ section {
 		.secondary-content {
 			order: 1;
 
-			@include for-tablet-portrait-up{
+			@include for-tablet-portrait-up {
 				position: relative;
 			}
 
@@ -225,7 +238,7 @@ section {
 	width: 10%;
 	height: 100%;
 	position: absolute;
-	top:0;
+	top: 0;
 	left: 0;
 	right: 0;
 	// background: radial-gradient(76.69% 146.93% at 9.43% 49.98%, #88F7FF 0%, #66A6FE 100%);
@@ -288,7 +301,7 @@ section {
 	opacity: 0;
 
 	animation: herobuttonAnim 1.5s 4s;
- 	animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
 	text-decoration: none;
 
 	&:hover {
@@ -334,6 +347,8 @@ section {
 	margin: 0 auto;
 	text-align: center;
 	transition: 1s;
+
+	animation: emojiContainerFade 2s ease-out infinite;
 
 	@include for-mobile-device-xl-up {
 		left: 0;
@@ -482,7 +497,7 @@ section {
 
 		&:hover {
 			transition: $base-transition-speed;
-			transform: scale(1.1);
+			// transform: scale(1.1);
 		}
 
 		@include for-tablet-portrait-up {
@@ -516,11 +531,16 @@ section {
 			#mouth {
 				display: inline;
 				transition: $base-transition-speed;
-			}	
+			}
+
 			#eyebrows {
 				display: inline;
 				opacity: 1;
 				z-index: 2;
+
+				#eyebrow-left {
+					animation: leftEyebrowRaise 5s ease-out infinite alternate-reverse;
+				}
 
 				#eyebrow-right {
 					animation: eyebrowRaise 0.5s ease-out infinite alternate-reverse;
@@ -528,44 +548,58 @@ section {
 			}
 		}
 
-		&.wow-spin {			
-			svg {
-				animation: wowSpin 1s ease-in-out alternate;
+		&.wow-spin {
+
+			#right-eye--dizzy {
+				animation: wowRightEyeSpin 1s ease-out forwards;
+				transform-origin: center;
+			}
+
+			#left-eye--dizzy {
+				animation: wowLeftEyeSpin 1s ease-out forwards;
+				transform-origin: center;
+			}
+
+			#faces {
+				opacity: 1;
 			}
 
 			#eyes {
-				#right-eye--dizzy,
-				#left-eye--dizzy {
-					opacity: 1;
-				}
-
-				#right-eye--dizzy,
-				#left-eye--dizzy {
-					transform-origin: center;
-					transform-style: preserve-3d;
-					animation: dizzySpin 2.5s ease-in-out infinite;
-				}
+				opacity: inherit;
 			}
 
-			#face {
+			#faces {
+				opacity: 0;
+				animation: wowSpin 2s ease-out forwards;
+				transform-origin: center;
+
 				#mouth-wow {
+					transition: $base-transition-speed;
 					opacity: 1;
 					z-index: 10;
 				}
-				
+
+				#mouth,
 				#bottom-row-teeth,
 				#top-row-teeth,
 				#left-eye,
+				#eyes--sleepy,
+				#sleep--group,
 				#right-eye,
 				#lips-kiss {
 					opacity: 0;
+					display: none;
 				}
 			}
 		}
 
 		&.lips-shake {
-			animation: newEmojiShake 1s ease-out forwards;
-			
+			animation: newEmojiShake 1s ease-in forwards;
+
+			#mouth {
+				opacity: 1 !important;
+			}
+
 			#lips-kiss {
 				opacity: 1;
 			}
@@ -575,11 +609,65 @@ section {
 			}
 		}
 
+		&.sleepy-face {
+			animation: sleepyFaceAnim 0.5s ease-out forwards !important;
+
+			#face,
+			#mouth,
+			#lips-kiss,
+			#eyes {
+				opacity: 0;
+			}
+
+			#eyes--sleepy,
+			#sleep-group,
+			#mouth-wow {
+				opacity: 1;
+			}
+
+			#mouth-wow {
+				animation: sleepGroupAnim 1s ease-out forwards;
+			}
+
+
+			#sleep-group {
+				transform-origin: center;
+				animation: sleepGroupAnim 3s ease-out infinite;
+
+				#z-small {
+					animation: sleepZAnim 1s ease-out infinite;
+					transform-origin: center;
+					opacity: 0;
+				}
+
+				#z-medium {
+					animation: sleepZAnim 1s 1s ease-out infinite;
+					transform-origin: center;
+					opacity: 0;
+				}
+
+				#z-big {
+					animation: sleepZAnim 1s 2s ease-out infinite;
+					transform-origin: center;
+					opacity: 0;
+				}
+			}
+
+
+			#eyes--sleepy {
+				animation: sleepyEyesAnim 3s ease-out infinite;
+			}
+
+
+		}
+
 		svg {
 			height: 180px;
 			transform: scale(1.2);
 			transition: $base-transition-speed;
 			width: 115px;
+
+			animation: emojiBounce 2s ease-out infinite;
 
 			@include for-mobile-device {
 				width: 90px;
@@ -595,16 +683,19 @@ section {
 
 				#left-eye,
 				#right-eye {
-					transform: scale(1.2);
+					animation: eyebrowsRaise 1s ease-out infinite;
 					transition: $base-transition-speed;
 				}
 
 				#mouth {
 					opacity: 0;
+					background: inherit;
 				}
+
 				#lips-kiss {
 					display: none;
 				}
+
 				#mouth-wow {
 					opacity: 1;
 				}
@@ -624,7 +715,7 @@ section {
 				display: none;
 			}
 
-			#mouth-wow, 
+			#mouth-wow,
 			#mouth-kiss,
 			#right-eye--dizzy,
 			#left-eye--dizzy {
@@ -632,7 +723,7 @@ section {
 			}
 		}
 
-		#face {
+		#faces {
 			animation: smileyNod 1.5s 1.5s ease-out;
 			animation-iteration-count: 2;
 		}
@@ -649,16 +740,24 @@ section {
 			animation: bottomTeethAnim 1s 1.5s ease-out;
 		}
 
+		#lips-kiss {
+			opacity: 0;
+			display: none;
+		}
+
+
+
 		&.emoji-new-emoji {
-			animation: newEmojiShake 1.5s ease-out!important;
+			// animation: newEmojiShake 1.5s ease-out!important;
+			// background: red;
 			animation-direction: alternate-reverse;
 
-			#mouth-kiss {
-				opacity: 1;
-			}
-			#mouth,
-			#mouth-wow {
+			#mouth {
 				opacity: 0;
+			}
+
+			#mouth-wow {
+				opacity: 1;
 			}
 
 			&:hover {
@@ -667,6 +766,11 @@ section {
 				}
 			}
 		}
+	}
+
+	#eyes--sleepy,
+	#sleep-group {
+		opacity: 0;
 	}
 
 	//	Currently affects all main content

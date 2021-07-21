@@ -35,22 +35,22 @@ var updateSVGMoji = function() {
 }
 
 var callRandomSvgMoji = function() {
-	if (svgMoji.classList.length >= 2) {
+	if (svgMoji.classList.length >= 1) {
 		svgMoji.classList = "emoji__smiley-face";
 		console.log("extra classes removed")
 	}
 
 	getRandomSVGMoji();
-	console.log("getRandomNumber function fired ");
+	// console.log("getRandomNumber function fired ");
 }
 
 var getRandomSVGMoji = function() {
 	function randomize() {
-		var randomNumber = Math.floor(Math.random() * 3);
-			if (randomNumber === 0 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("wink");
-			else if (randomNumber === 1 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("wow-spin");
-			else if (randomNumber === 2 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("lips-shake");
-			else if (randomNumber === 3 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("right");
+		var randomNumber = Math.floor(Math.random() * 4);
+			if (randomNumber === 0 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("wink"), console.log("Anim 1 - smile face wink eyes yTranslate anim ");
+			else if (randomNumber === 1 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("wow-spin"), console.log("Anim 2 - O face swirly eyes shake anim");
+			else if (randomNumber === 2 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("lips-shake"), console.log("Anim 3 - kiss face raised eyes yTranslate anim");
+			else if (randomNumber === 3 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("sleepy-face"), console.log("Anim 4 - smile face raised eyebrows  Y translate");
 		else randomize()
 	}
 	randomize();
