@@ -594,3 +594,13 @@
 		opacity: 0.25;
 	}
 }
+
+@keyframes circle-in-top-right {
+	from {
+		clip-path: circle(0%);
+	}
+
+	to {
+		clip-path: circle(200% at top right);
+	}
+}

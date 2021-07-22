@@ -76,7 +76,6 @@ h1 {
 
 	@include for-mobile-device {
 		font-size: 1.75em;
-
 	}
 }
 
@@ -176,7 +175,46 @@ section {
 				position: relative;
 			}
 		}
+
+		&.yellow-section {
+			background: radial-gradient(88.28% 88.28% at 50% 11.72%, #FFFBBC 18.28%, #FFAE36 59.83%, #E58425 86.54%);
+			animation: circle-in-top-right 2s ease-out forwards;
+
+			h1,
+			h2,
+			h3 {
+				color: #343434;
+			}
+
+			[transition-style="in:circle:top-right"] {
+				animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-top-right both;
+			}
+
+			@include for-mobile-device {
+
+				// [transition-style="in:circle:center"] {
+				// 	animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
+				// }
+			}
+		}
+
+		&.grow-icons {
+
+			.emoji__containers {
+				transition: 3s;
+				transform: scale(6);
+				z-index: -5;
+			}
+
+			@include for-mobile-device {
+				font-size: 1.75em;
+			}
+		}
+
+		&.sleepy-icons {
+		}
 	}
+
 
 	&__three {
 
@@ -596,17 +634,16 @@ section {
 		&.lips-shake {
 			animation: newEmojiShake 1s ease-in forwards;
 
-			#mouth {
-				opacity: 1 !important;
-			}
+			// #mouth {
+			// 	opacity: 0 !important;
+			// }
 
-			#lips-kiss {
-				opacity: 1;
-			}
-
-			#mouth {
-				opacity: 0;
-			}
+			// #mouth-wow {
+			// 	opacity: 1!important;
+			// }
+			// #lips-kiss {
+			// 	opacity: 1 !important;
+			// }
 		}
 
 		&.sleepy-face {
@@ -749,7 +786,6 @@ section {
 
 		&.emoji-new-emoji {
 			// animation: newEmojiShake 1.5s ease-out!important;
-			// background: red;
 			animation-direction: alternate-reverse;
 
 			#mouth {

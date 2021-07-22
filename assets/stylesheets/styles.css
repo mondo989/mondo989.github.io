@@ -153,6 +153,37 @@ section {
   }
 }
 
+.section__two.yellow-section {
+  background: radial-gradient(88.28% 88.28% at 50% 11.72%, #FFFBBC 18.28%, #FFAE36 59.83%, #E58425 86.54%);
+  -webkit-animation: circle-in-top-right 2s ease-out forwards;
+          animation: circle-in-top-right 2s ease-out forwards;
+}
+
+.section__two.yellow-section h1,
+.section__two.yellow-section h2,
+.section__two.yellow-section h3 {
+  color: #343434;
+}
+
+.section__two.yellow-section [transition-style="in:circle:top-right"] {
+  -webkit-animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-top-right both;
+          animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-top-right both;
+}
+
+.section__two.grow-icons .emoji__containers {
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-transform: scale(6);
+          transform: scale(6);
+  z-index: -5;
+}
+
+@media (max-width: 500px) {
+  .section__two.grow-icons {
+    font-size: 1.75em;
+  }
+}
+
 @media (max-width: 575px) {
   .section__three {
     height: 100%;
@@ -634,18 +665,6 @@ section {
 .animated .emoji__smiley-face.lips-shake {
   -webkit-animation: newEmojiShake 1s ease-in forwards;
           animation: newEmojiShake 1s ease-in forwards;
-}
-
-.animated .emoji__smiley-face.lips-shake #mouth {
-  opacity: 1 !important;
-}
-
-.animated .emoji__smiley-face.lips-shake #lips-kiss {
-  opacity: 1;
-}
-
-.animated .emoji__smiley-face.lips-shake #mouth {
-  opacity: 0;
 }
 
 .animated .emoji__smiley-face.sleepy-face {
