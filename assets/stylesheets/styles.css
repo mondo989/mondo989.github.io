@@ -185,6 +185,10 @@ section {
   z-index: -5;
 }
 
+.section__two.sleepy-icons {
+  opacity: inherit;
+}
+
 @media (max-width: 575px) {
   .section__three {
     height: 100%;
@@ -506,11 +510,28 @@ section {
   width: 30%;
   margin: auto;
   text-align: center;
-  top: -100px;
+  -webkit-transform: translateY(300px);
+          transform: translateY(300px);
   position: relative;
-  z-index: 5;
+  z-index: 5000;
   -webkit-animation: emojiPointerAnim 1.5s ease-out forwards;
           animation: emojiPointerAnim 1.5s ease-out forwards;
+}
+
+.emoji__pointer svg {
+  z-index: 3000 !important;
+}
+
+.emoji__pointer #click {
+  opacity: 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: emojiCursorClickAnim 0.5s 0.8s ease-out forwards;
+          animation: emojiCursorClickAnim 0.5s 0.8s ease-out forwards;
+}
+
+.emoji__pointer #cursor-hand {
+  display: block;
 }
 
 @media (max-width: 767px) {
@@ -555,7 +576,7 @@ section {
   cursor: pointer;
   position: relative;
   right: 50px;
-  top: -50px;
+  top: -150px;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transform-origin: center;

@@ -227,6 +227,7 @@ section {
 		}
 
 		&.sleepy-icons {
+			opacity: inherit;
 		}
 	}
 
@@ -505,11 +506,28 @@ section {
 	width: 30%;
 	margin: auto;
 	text-align: center;
-	top: -100px;
+	transform: translateY(300px);
 	position: relative;
-	z-index: 5;
+	z-index: 5000;
 
 	animation: emojiPointerAnim 1.5s ease-out forwards;
+
+	svg {
+		// display: block !important;
+		z-index: 3000 !important;
+	}
+
+	#click {
+		opacity: 0;
+		// display: none;
+		transform-origin: center;
+
+		animation: emojiCursorClickAnim 0.5s 0.8s ease-out forwards;
+	}
+
+	#cursor-hand {
+		display: block;
+	}
 }
 
 // Animation Wrapper classes
@@ -553,7 +571,7 @@ section {
 		cursor: pointer;
 		position: relative;
 		right: 50px;
-		top: -50px;
+		top: -150px;
 		transform: scale(1);
 		transform-origin: center;
 		transform-style: preserve-3d;
