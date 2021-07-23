@@ -180,21 +180,36 @@ section {
 			background: radial-gradient(88.28% 88.28% at 50% 11.72%, #FFFBBC 18.28%, #FFAE36 59.83%, #E58425 86.54%);
 			animation: circle-in-top-right 2s ease-out forwards;
 
+			// @keyframes circle-in-top-right {
+			// 	from {
+			// 		clip-path: circle(0%);
+			// 	}
+			// 	to {
+			// 		clip-path: circle(150% at top right);
+			// 	}
+			// }
+			
+			// [transition-style="in:circle:top-right"] {
+			// 	animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-top-right both;
+			// }
+
 			h1,
 			h2,
 			h3 {
 				color: #343434;
 			}
 
-			[transition-style="in:circle:top-right"] {
-				animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-top-right both;
+			[transition-style="in:circle:center"] {
+				animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
 			}
-
+			// [transition-style="in:circle:hesitate"] {
+			// 	animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-hesitate both;
+			// }
 			@include for-mobile-device {
 
-				// [transition-style="in:circle:center"] {
-				// 	animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
-				// }
+				[transition-style="in:circle:hesitate"] {
+					animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-hesitate both;
+				}
 			}
 		}
 
@@ -206,9 +221,9 @@ section {
 				z-index: -5;
 			}
 
-			@include for-mobile-device {
-				font-size: 1.75em;
-			}
+			// @include for-mobile-device {
+			// 	font-size: 1.75em;
+			// }
 		}
 
 		&.sleepy-icons {
@@ -483,6 +498,18 @@ section {
 
 .emoji__smiley-face {
 	transform: scale(0);
+}
+
+.emoji__pointer {
+	// background: red;
+	width: 30%;
+	margin: auto;
+	text-align: center;
+	top: -100px;
+	position: relative;
+	z-index: 5;
+
+	animation: emojiPointerAnim 1.5s ease-out forwards;
 }
 
 // Animation Wrapper classes

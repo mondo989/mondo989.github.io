@@ -22,6 +22,8 @@ images.forEach(image => {
 // callNewScene();
 
 
+
+
 // SVGMOJI
 // SVGMOJI
 // SVGMOJI
@@ -74,10 +76,10 @@ function PrefixedEvent(element, type, callback) {
 }
 
 const swapSleepyIcons = () => {
-	icon1.innerHTML = "🐑";
+	icon1.innerHTML = "💭";
 	icon2.innerHTML = "🐑";
-	icon3.innerHTML = "🐑";
-	icon4.innerHTML = "🐏";
+	icon3.innerHTML = "🛌";
+	icon4.innerHTML = "🌙";
 }
 
 const normalIcons = () => {

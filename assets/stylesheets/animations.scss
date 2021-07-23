@@ -604,3 +604,24 @@
 		clip-path: circle(200% at top right);
 	}
 }
+
+@keyframes circle-in-center {
+  from {
+    clip-path: circle(0%);
+  }
+  to {
+    clip-path: circle(125%);
+  }
+}
+
+@keyframes emojiPointerAnim {
+	from {
+		opacity: 0;
+		transform: translateY(150px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

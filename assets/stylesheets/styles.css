@@ -165,9 +165,16 @@ section {
   color: #343434;
 }
 
-.section__two.yellow-section [transition-style="in:circle:top-right"] {
-  -webkit-animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-top-right both;
-          animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-top-right both;
+.section__two.yellow-section [transition-style="in:circle:center"] {
+  -webkit-animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
+          animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
+}
+
+@media (max-width: 500px) {
+  .section__two.yellow-section [transition-style="in:circle:hesitate"] {
+    -webkit-animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-hesitate both;
+            animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-hesitate both;
+  }
 }
 
 .section__two.grow-icons .emoji__containers {
@@ -176,12 +183,6 @@ section {
   -webkit-transform: scale(6);
           transform: scale(6);
   z-index: -5;
-}
-
-@media (max-width: 500px) {
-  .section__two.grow-icons {
-    font-size: 1.75em;
-  }
 }
 
 @media (max-width: 575px) {
@@ -499,6 +500,17 @@ section {
 .emoji__smiley-face {
   -webkit-transform: scale(0);
           transform: scale(0);
+}
+
+.emoji__pointer {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  top: -100px;
+  position: relative;
+  z-index: 5;
+  -webkit-animation: emojiPointerAnim 1.5s ease-out forwards;
+          animation: emojiPointerAnim 1.5s ease-out forwards;
 }
 
 @media (max-width: 767px) {

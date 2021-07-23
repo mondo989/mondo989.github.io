@@ -1203,4 +1203,52 @@
             clip-path: circle(200% at top right);
   }
 }
+
+@-webkit-keyframes circle-in-center {
+  from {
+    -webkit-clip-path: circle(0%);
+            clip-path: circle(0%);
+  }
+  to {
+    -webkit-clip-path: circle(125%);
+            clip-path: circle(125%);
+  }
+}
+
+@keyframes circle-in-center {
+  from {
+    -webkit-clip-path: circle(0%);
+            clip-path: circle(0%);
+  }
+  to {
+    -webkit-clip-path: circle(125%);
+            clip-path: circle(125%);
+  }
+}
+
+@-webkit-keyframes emojiPointerAnim {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes emojiPointerAnim {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 /*# sourceMappingURL=animations.css.map */
