@@ -407,7 +407,7 @@ section {
 	@include for-mobile-device-xl-up {
 		left: 0;
 		right: 0;
-		top: -40px;
+		top: 60px;
 	}
 
 	@include for-desktop-up {
@@ -511,6 +511,10 @@ section {
 	z-index: 5000;
 
 	animation: emojiPointerAnim 1.5s ease-out forwards;
+
+	@include for-mobile-device-xl-up {
+		transform: translateY(-130px);
+	}
 
 	svg {
 		// display: block !important;

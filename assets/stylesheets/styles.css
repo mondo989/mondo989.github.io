@@ -386,7 +386,7 @@ section {
   .emoji__containers {
     left: 0;
     right: 0;
-    top: -40px;
+    top: 60px;
   }
 }
 
@@ -516,6 +516,13 @@ section {
   z-index: 5000;
   -webkit-animation: emojiPointerAnim 1.5s ease-out forwards;
           animation: emojiPointerAnim 1.5s ease-out forwards;
+}
+
+@media (max-width: 575px) {
+  .emoji__pointer {
+    -webkit-transform: translateY(-130px);
+            transform: translateY(-130px);
+  }
 }
 
 .emoji__pointer svg {
