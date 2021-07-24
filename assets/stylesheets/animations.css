@@ -3,23 +3,23 @@
 - Spinning Emoijs media queries
 */
 .spin-1 {
-  -webkit-animation: rot 5s infinite linear;
-          animation: rot 5s infinite linear;
+  -webkit-animation: rot 5s 2s infinite linear;
+          animation: rot 5s 2s infinite linear;
 }
 
 .spin-2 {
-  -webkit-animation: rot2 5s infinite linear;
-          animation: rot2 5s infinite linear;
+  -webkit-animation: rot2 5s 2s infinite linear;
+          animation: rot2 5s 2s infinite linear;
 }
 
 .spin-3 {
-  -webkit-animation: rot3 5s infinite linear;
-          animation: rot3 5s infinite linear;
+  -webkit-animation: rot3 5s 2s infinite linear;
+          animation: rot3 5s 2s infinite linear;
 }
 
 .spin-4 {
-  -webkit-animation: rot4 5s infinite linear;
-          animation: rot4 5s infinite linear;
+  -webkit-animation: rot4 5s 2s infinite linear;
+          animation: rot4 5s 2s infinite linear;
 }
 
 @-webkit-keyframes fadeInDown {
@@ -1246,7 +1246,7 @@
     -webkit-transform: translateY(20px) rotateX(0);
             transform: translateY(20px) rotateX(0);
     opacity: 0;
-    display: none;
+    display: none !important;
   }
 }
 
@@ -1270,7 +1270,7 @@
     -webkit-transform: translateY(20px) rotateX(0);
             transform: translateY(20px) rotateX(0);
     opacity: 0;
-    display: none;
+    display: none !important;
   }
 }
 
@@ -1289,7 +1289,7 @@
   }
   100% {
     opacity: 0;
-    display: none;
+    display: none !important;
   }
 }
 
@@ -1308,7 +1308,7 @@
   }
   100% {
     opacity: 0;
-    display: none;
+    display: none !important;
   }
 }
 /*# sourceMappingURL=animations.css.map */

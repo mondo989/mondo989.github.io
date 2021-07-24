@@ -4,19 +4,19 @@
 */
 
 .spin-1 {
-	animation: rot 5s infinite linear;
+	animation: rot 5s 2s infinite linear;
 }
 
 .spin-2 {
-	animation: rot2 5s infinite linear;
+	animation: rot2 5s 2s infinite linear;
 }
 
 .spin-3 {
-	animation: rot3 5s infinite linear;
+	animation: rot3 5s 2s infinite linear;
 }
 
 .spin-4 {
-	animation: rot4 5s infinite linear;
+	animation: rot4 5s 2s infinite linear;
 }
 
 @keyframes fadeInDown {
@@ -632,7 +632,7 @@
 	100% {
 		transform: translateY(20px) rotateX(0);
 		opacity: 0;
-		display: none;
+		display: none!important;
 	}
 }
 
@@ -652,6 +652,6 @@
 
 	100% {
 		opacity: 0;
-		display: none;
+		display: none !important;
 	}
 }
