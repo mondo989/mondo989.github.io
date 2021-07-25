@@ -123,6 +123,13 @@ section {
   max-width: 70%;
 }
 
+@media (max-width: 575px) {
+  .section__two h3 {
+    max-width: 90%;
+    margin: inherit auto;
+  }
+}
+
 .section__two .main-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -388,7 +395,7 @@ section {
   .emoji__containers {
     left: 0;
     right: 0;
-    top: 60px;
+    top: -50px;
   }
 }
 
@@ -615,7 +622,7 @@ section {
     left: 0;
     right: 0;
     text-align: center;
-    top: -45px;
+    top: -155px;
   }
 }
 
