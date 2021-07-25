@@ -55,11 +55,12 @@ var callRandomSvgMoji = function () {
 
 var getRandomSVGMoji = function () {
 	function randomize() {
-		var randomNumber = Math.floor(Math.random() * 4);
+		var randomNumber = Math.floor(Math.random() * 5);
 		if (randomNumber === 0 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") emojiSection.classList = "section__two section__animate animated section__blue", normalIcons(), svgMoji.classList.add("wink"), console.log("Anim 1 - smile face wink eyes yTranslate anim ");
 		else if (randomNumber === 1 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") emojiSection.classList = "section__two section__animate animated section__blue", normalIcons(), svgMoji.classList.add("wow-spin"), console.log("Anim 2 - O face swirly eyes shake anim"), emojiSection.classList.toggle("yellow-section");
 		else if (randomNumber === 2 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") emojiSection.classList = "section__two section__animate animated section__blue", normalIcons(), svgMoji.classList.add("lips-shake"), console.log("Anim 3 - kiss face raised eyes yTranslate anim"), emojiSection.classList.toggle("grow-icons");
 		else if (randomNumber === 3 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") emojiSection.classList = "section__two section__animate animated section__blue", svgMoji.classList.add("sleepy-face"), console.log("Anim 4 - o face Sleepy Eyes translate"), emojiSection.classList.toggle("sleepy-icons"), swapSleepyIcons();
+		else if (randomNumber === 4 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("star-face"), console.log("Anim 5 - half-mouth - Star Eyes scale"), swapStarIcons();
 		else randomize()
 	}
 	randomize();
@@ -80,6 +81,13 @@ const swapSleepyIcons = () => {
 	icon2.innerHTML = "🐑";
 	icon3.innerHTML = "🛌";
 	icon4.innerHTML = "🌙";
+}
+
+const swapStarIcons = () => {
+	icon1.innerHTML = "🤩";
+	icon2.innerHTML = "⭐️";
+	icon3.innerHTML = "⭐️";
+	icon4.innerHTML = "🤩";
 }
 
 const normalIcons = () => {

@@ -395,7 +395,7 @@ section {
   .emoji__containers {
     left: 0;
     right: 0;
-    top: -50px;
+    top: -30px;
   }
 }
 
@@ -622,7 +622,7 @@ section {
     left: 0;
     right: 0;
     text-align: center;
-    top: -155px;
+    top: -130px;
   }
 }
 
@@ -632,8 +632,11 @@ section {
   }
 }
 
-.animated .emoji__smiley-face.wink #eyes {
+.animated .emoji__smiley-face.wink #eye-left,
+.animated .emoji__smiley-face.wink #left-eye,
+.animated .emoji__smiley-face.wink #right-eye {
   opacity: 0;
+  display: none;
 }
 
 .animated .emoji__smiley-face.wink #eyes--left-wink,
@@ -685,7 +688,6 @@ section {
 }
 
 .animated .emoji__smiley-face.wow-spin #faces {
-  opacity: 0;
   -webkit-animation: wowSpin 2s ease-out forwards;
           animation: wowSpin 2s ease-out forwards;
   -webkit-transform-origin: center;
@@ -696,10 +698,8 @@ section {
   -webkit-transition: 0.6s ease-out;
   transition: 0.6s ease-out;
   opacity: 1;
-  z-index: 10;
 }
 
-.animated .emoji__smiley-face.wow-spin #faces #mouth,
 .animated .emoji__smiley-face.wow-spin #faces #bottom-row-teeth,
 .animated .emoji__smiley-face.wow-spin #faces #top-row-teeth,
 .animated .emoji__smiley-face.wow-spin #faces #left-eye,
@@ -721,11 +721,13 @@ section {
           animation: sleepyFaceAnim 0.5s ease-out forwards !important;
 }
 
-.animated .emoji__smiley-face.sleepy-face #face,
-.animated .emoji__smiley-face.sleepy-face #mouth,
+.animated .emoji__smiley-face.sleepy-face #top-row-teeth,
+.animated .emoji__smiley-face.sleepy-face #bottom-row-teeth,
 .animated .emoji__smiley-face.sleepy-face #lips-kiss,
-.animated .emoji__smiley-face.sleepy-face #eyes {
+.animated .emoji__smiley-face.sleepy-face #left-eye,
+.animated .emoji__smiley-face.sleepy-face #right-eye {
   opacity: 0;
+  display: none;
 }
 
 .animated .emoji__smiley-face.sleepy-face #eyes--sleepy,
@@ -775,6 +777,29 @@ section {
           animation: sleepyEyesAnim 3s ease-out infinite;
 }
 
+.animated .emoji__smiley-face.star-face #eyes--stars {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation: starEyesAnim 1s ease-out forwards;
+          animation: starEyesAnim 1s ease-out forwards;
+}
+
+.animated .emoji__smiley-face.star-face #mouth-wow {
+  opacity: 1;
+}
+
+.animated .emoji__smiley-face.star-face #left-eye,
+.animated .emoji__smiley-face.star-face #right-eye,
+.animated .emoji__smiley-face.star-face #left-eye,
+.animated .emoji__smiley-face.star-face #right-eye,
+.animated .emoji__smiley-face.star-face #top-row-teeth,
+.animated .emoji__smiley-face.star-face #bottom-row-teeth {
+  opacity: 0;
+  display: none;
+}
+
 .animated .emoji__smiley-face svg {
   height: 180px;
   -webkit-transform: scale(1.2);
@@ -798,19 +823,6 @@ section {
     right: 0;
     width: 100px;
   }
-}
-
-.animated .emoji__smiley-face svg:hover #left-eye,
-.animated .emoji__smiley-face svg:hover #right-eye {
-  -webkit-animation: eyebrowsRaise 1s ease-out infinite;
-          animation: eyebrowsRaise 1s ease-out infinite;
-  -webkit-transition: 0.6s ease-out;
-  transition: 0.6s ease-out;
-}
-
-.animated .emoji__smiley-face svg:hover #mouth {
-  opacity: 0;
-  background: inherit;
 }
 
 .animated .emoji__smiley-face svg:hover #lips-kiss {
@@ -837,9 +849,14 @@ section {
 }
 
 .animated .emoji__smiley-face svg #mouth-wow,
-.animated .emoji__smiley-face svg #mouth-kiss,
+.animated .emoji__smiley-face svg #mouth-kiss
+#right-eye--dizzy,
 .animated .emoji__smiley-face svg #right-eye--dizzy,
-.animated .emoji__smiley-face svg #left-eye--dizzy {
+.animated .emoji__smiley-face svg #left-eye--dizzy,
+.animated .emoji__smiley-face svg #eyes--stars,
+.animated .emoji__smiley-face svg #teeth-top-row--no-bottom,
+.animated .emoji__smiley-face svg #eyes--sleepy,
+.animated .emoji__smiley-face svg #sleep-group {
   opacity: 0;
 }
 
@@ -886,11 +903,6 @@ section {
 
 .animated .emoji__smiley-face.emoji-new-emoji:hover #mouth-wow {
   opacity: 1;
-}
-
-.animated #eyes--sleepy,
-.animated #sleep-group {
-  opacity: 0;
 }
 
 .animated .main-content {

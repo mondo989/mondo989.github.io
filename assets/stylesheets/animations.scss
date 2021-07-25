@@ -513,20 +513,38 @@
 	}
 }
 
+@keyframes starEyesAnim {
+	0% {
+
+	}
+
+	20% {
+		transform: scale(.5);
+	}
+
+	60% {
+		transform: scale(1.25);
+	}
+
+	80% {
+		transform: scale(0.7);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
 @keyframes emojiBounce {
 	0% {
-		// opacity: 0;
 		transform: translateY(0)
 	}
 
 	25% {
 		transform: translateY(-20px)
 	}
-
-	50% {
-		transform: translateY(0);
-	}
-
+	
 	75% {
 		transform: translateY(20px)
 	}

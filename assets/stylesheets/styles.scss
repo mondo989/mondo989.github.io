@@ -427,7 +427,7 @@ section {
 	@include for-mobile-device-xl-up {
 		left: 0;
 		right: 0;
-		top: -50px;
+		top: -30px;
 	}
 
 	@include for-desktop-up {
@@ -617,7 +617,7 @@ section {
 			left: 0;
 			right: 0;
 			text-align: center;
-			top: -155px;
+			top: -130px;
 		}
 
 		@include for-xl-desktop-up {
@@ -625,8 +625,12 @@ section {
 		}
 
 		&.wink {
-			#eyes {
+
+			#eye-left,
+			#left-eye,
+			#right-eye {
 				opacity: 0;
+				display: none;
 			}
 
 			#eyes--left-wink,
@@ -676,17 +680,14 @@ section {
 			}
 
 			#faces {
-				opacity: 0;
 				animation: wowSpin 2s ease-out forwards;
 				transform-origin: center;
 
 				#mouth-wow {
 					transition: $base-transition-speed;
 					opacity: 1;
-					z-index: 10;
 				}
 
-				#mouth,
 				#bottom-row-teeth,
 				#top-row-teeth,
 				#left-eye,
@@ -718,11 +719,13 @@ section {
 		&.sleepy-face {
 			animation: sleepyFaceAnim 0.5s ease-out forwards !important;
 
-			#face,
-			#mouth,
+			#top-row-teeth,
+			#bottom-row-teeth,
 			#lips-kiss,
-			#eyes {
+			#left-eye,
+			#right-eye {
 				opacity: 0;
+				display: none;
 			}
 
 			#eyes--sleepy,
@@ -763,7 +766,33 @@ section {
 			#eyes--sleepy {
 				animation: sleepyEyesAnim 3s ease-out infinite;
 			}
+		}
 
+		&.star-face {
+			#eyes--stars {
+				// opacity: 1;
+				transform-origin: center;
+				transform: scale(0);
+				animation: starEyesAnim 1s ease-out forwards;
+			}
+
+			#mouth-wow {
+				opacity: 1;
+			}
+
+			// #teeth-top-row--no-bottom {
+			// 	opacity: 1;
+			// }
+
+			#left-eye,
+			#right-eye,
+			#left-eye,
+			#right-eye,
+			#top-row-teeth,
+			#bottom-row-teeth {
+				opacity: 0;
+				display: none;
+			}
 
 		}
 
@@ -787,15 +816,14 @@ section {
 
 			&:hover {
 
-				#left-eye,
-				#right-eye {
-					animation: eyebrowsRaise 1s ease-out infinite;
-					transition: $base-transition-speed;
-				}
+				// #left-eye,
+				// #right-eye {
+				// 	animation: eyebrowsRaise 1s ease-out infinite;
+				// 	transition: $base-transition-speed;
+				// }
 
 				#mouth {
-					opacity: 0;
-					background: inherit;
+					// opacity: 0;
 				}
 
 				#lips-kiss {
@@ -822,9 +850,14 @@ section {
 			}
 
 			#mouth-wow,
-			#mouth-kiss,
+			#mouth-kiss
+			#right-eye--dizzy, 
 			#right-eye--dizzy,
-			#left-eye--dizzy {
+			#left-eye--dizzy,
+			#eyes--stars,
+			#teeth-top-row--no-bottom,
+			#eyes--sleepy,
+			#sleep-group {
 				opacity: 0;
 			}
 		}
@@ -873,10 +906,6 @@ section {
 		}
 	}
 
-	#eyes--sleepy,
-	#sleep-group {
-		opacity: 0;
-	}
 
 	//	Currently affects all main content
 	.main-content {
