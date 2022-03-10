@@ -616,7 +616,7 @@ section {
 	#planet--rings {
 		transform-origin: center center;
 		opacity: 0;
-		animation: planetRingsEntrance 1s 3s ease-out forwards, planetRingsAnimation 3s 2s ease-out infinite;
+		animation: planetRingsEntrance 0.5s 2s ease-out forwards, planetRingsAnimation 3s 2s ease-out infinite;
 	}
 
 	.space-background {
@@ -629,10 +629,8 @@ section {
 		display: none;
 
 		transform: translate3d(0, 0, 0);
-		-webkit-transform: translate3d(0, 0, 0);
-		-moz-transform: translate3d(0, 0, 0);
 
-		animation: spaceBackgroundExit 0.75s 1s ease-out forwards, spaceBackgroundEntrance 2s 2s ease-out forwards;
+		animation: spaceBackgroundExit 0.5s 1s ease-out forwards, spaceBackgroundEntrance 2s 2s ease-out forwards;
 	}
 
 	.hero__image--circle {
