@@ -1066,6 +1066,50 @@
   }
 }
 
+@-webkit-keyframes wowRightEyeSpinExtra {
+  0% {
+    -webkit-transform: rotateX(-720deg);
+            transform: rotateX(-720deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+}
+
+@keyframes wowRightEyeSpinExtra {
+  0% {
+    -webkit-transform: rotateX(-720deg);
+            transform: rotateX(-720deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+}
+
+@-webkit-keyframes wowLeftEyeSpinExtra {
+  0% {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-360deg);
+            transform: rotateX(-360deg);
+  }
+}
+
+@keyframes wowLeftEyeSpinExtra {
+  0% {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-360deg);
+            transform: rotateX(-360deg);
+  }
+}
+
 @-webkit-keyframes emojiBounce {
   0% {
     -webkit-transform: translateY(0);
@@ -1264,6 +1308,9 @@
 
 @-webkit-keyframes emojiPointerAnim {
   0% {
+    opacity: 0;
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
   }
   50% {
     -webkit-transform: translateY(50px);
@@ -1282,12 +1329,16 @@
     -webkit-transform: translateY(20px) rotateX(0);
             transform: translateY(20px) rotateX(0);
     opacity: 0;
+    z-index: 900;
     display: none !important;
   }
 }
 
 @keyframes emojiPointerAnim {
   0% {
+    opacity: 0;
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
   }
   50% {
     -webkit-transform: translateY(50px);
@@ -1306,6 +1357,7 @@
     -webkit-transform: translateY(20px) rotateX(0);
             transform: translateY(20px) rotateX(0);
     opacity: 0;
+    z-index: 900;
     display: none !important;
   }
 }
@@ -1345,6 +1397,330 @@
   100% {
     opacity: 0;
     display: none !important;
+  }
+}
+
+@-webkit-keyframes shapeBlueAnimation {
+  from {
+    -webkit-transform: translateX(-120px) rotateZ(0deg);
+            transform: translateX(-120px) rotateZ(0deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0) rotateZ(30deg);
+            transform: translateX(0) rotateZ(30deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes shapeBlueAnimation {
+  from {
+    -webkit-transform: translateX(-120px) rotateZ(0deg);
+            transform: translateX(-120px) rotateZ(0deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0) rotateZ(30deg);
+            transform: translateX(0) rotateZ(30deg);
+    opacity: 0.9;
+  }
+}
+
+@-webkit-keyframes shapeWhiteAnimation {
+  from {
+    -webkit-transform: translateY(-120px);
+            transform: translateY(-120px);
+    opacity: 0.2;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.7;
+  }
+}
+
+@keyframes shapeWhiteAnimation {
+  from {
+    -webkit-transform: translateY(-120px);
+            transform: translateY(-120px);
+    opacity: 0.2;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0.7;
+  }
+}
+
+@-webkit-keyframes planetEntrance {
+  from {
+    opacity: 0.5;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes planetEntrance {
+  from {
+    opacity: 0.5;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes planetCratersAnimation {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0);
+            transform: rotate(0deg) scale(0);
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes planetCratersAnimation {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0);
+            transform: rotate(0deg) scale(0);
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1);
+  }
+}
+
+@-webkit-keyframes planetRingsEntrance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes planetRingsEntrance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes planetRingsAnimation {
+  0% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  50% {
+    -webkit-transform: rotateZ(-5deg);
+            transform: rotateZ(-5deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+
+@keyframes planetRingsAnimation {
+  0% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  50% {
+    -webkit-transform: rotateZ(-5deg);
+            transform: rotateZ(-5deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+
+@-webkit-keyframes spaceBackgroundExit {
+  0% {
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: scale(0.3) rotate(360deg);
+            transform: scale(0.3) rotate(360deg);
+  }
+}
+
+@keyframes spaceBackgroundExit {
+  0% {
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: scale(0.3) rotate(360deg);
+            transform: scale(0.3) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spaceBackgroundEntrance {
+  0% {
+    opacity: 0.1;
+    -webkit-transform: scale(0.3) rotate(10deg);
+            transform: scale(0.3) rotate(10deg);
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(360deg);
+            transform: scale(1) rotate(360deg);
+    opacity: 0.1;
+    -webkit-filter: blur(15px);
+            filter: blur(15px);
+  }
+}
+
+@keyframes spaceBackgroundEntrance {
+  0% {
+    opacity: 0.1;
+    -webkit-transform: scale(0.3) rotate(10deg);
+            transform: scale(0.3) rotate(10deg);
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(360deg);
+            transform: scale(1) rotate(360deg);
+    opacity: 0.1;
+    -webkit-filter: blur(15px);
+            filter: blur(15px);
+  }
+}
+
+@-webkit-keyframes planetBaseEntrance {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes planetBaseEntrance {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes puffBallAnimation {
+  0% {
+    -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+  }
+  50% {
+    opacity: 0.25;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  75% {
+    opacity: 0.5;
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes puffBallAnimation {
+  0% {
+    -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+  }
+  50% {
+    opacity: 0.25;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  75% {
+    opacity: 0.5;
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes puffBallRotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes puffBallRotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes puffBaseAnimation {
+  from {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes puffBaseAnimation {
+  from {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=animations.css.map */

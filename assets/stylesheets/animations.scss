@@ -410,7 +410,8 @@
 	0% {
 		opacity: 0;
 		transform: rotate(1540deg);
-	} 
+	}
+
 	100% {
 		opacity: 1;
 		transform: rotate(0deg);
@@ -514,9 +515,7 @@
 }
 
 @keyframes starEyesAnim {
-	0% {
-
-	}
+	0% {}
 
 	20% {
 		transform: scale(.5);
@@ -536,6 +535,26 @@
 	}
 }
 
+@keyframes wowRightEyeSpinExtra {
+	0% {
+		transform: rotateX(-720deg);
+	}
+
+	100% {
+		transform: rotateX(360deg);
+	}
+}
+
+@keyframes wowLeftEyeSpinExtra {
+	0% {
+		transform: rotateX(360deg);
+	}
+
+	100% {
+		transform: rotateX(-360deg);
+	}
+}
+
 @keyframes emojiBounce {
 	0% {
 		transform: translateY(0)
@@ -544,7 +563,7 @@
 	25% {
 		transform: translateY(-20px)
 	}
-	
+
 	75% {
 		transform: translateY(20px)
 	}
@@ -561,7 +580,7 @@
 		transform: translateY(0);
 	}
 
-	25%{
+	25% {
 		transform: translateY(-5px);
 	}
 
@@ -595,6 +614,7 @@
 	0% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 1;
 	}
@@ -608,6 +628,7 @@
 	50% {
 		opacity: 0.75;
 	}
+
 	100% {
 		opacity: 0.25;
 	}
@@ -624,17 +645,22 @@
 }
 
 @keyframes circle-in-center {
-  from {
-    clip-path: circle(0%);
-  }
-  to {
-    clip-path: circle(125%);
-  }
+	from {
+		clip-path: circle(0%);
+	}
+
+	to {
+		clip-path: circle(125%);
+	}
 }
 
 @keyframes emojiPointerAnim {
-	0% {}
-	50%{
+	0% {
+		opacity: 0;
+		transform: translateY(150px);
+	}
+
+	50% {
 		transform: translateY(50px);
 	}
 
@@ -650,7 +676,8 @@
 	100% {
 		transform: translateY(20px) rotateX(0);
 		opacity: 0;
-		display: none!important;
+		z-index: 900;
+		display: none !important;
 	}
 }
 
@@ -659,7 +686,7 @@
 		transform: scale(0.2);
 	}
 
-	80%  {
+	80% {
 		transform: scale(1);
 		opacity: 0.7;
 	}
@@ -671,5 +698,158 @@
 	100% {
 		opacity: 0;
 		display: none !important;
+	}
+}
+
+@keyframes shapeBlueAnimation {
+	from {
+		transform: translateX(-120px) rotateZ(0deg);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0) rotateZ(30deg);
+		opacity: 0.9;
+	}
+}
+
+@keyframes shapeWhiteAnimation {
+	from {
+		transform: translateY(-120px);
+		opacity: 0.2;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 0.7;
+	}
+}
+
+@keyframes planetEntrance {
+	from {
+		opacity: 0.5;
+		transform: scale(0.3);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes planetCratersAnimation {
+	0% {
+		transform: rotate(0deg) scale(0);
+	}
+
+	50% {
+		opacity: 0.2;
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotate(360deg) scale(1);
+	}
+}
+
+@keyframes planetRingsEntrance {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes planetRingsAnimation {
+	0% {
+		transform: rotateZ(0);
+	}
+
+	50% {
+		transform: rotateZ(-5deg);
+	}
+
+	100% {
+		transform: rotateZ(0deg);
+	}
+}
+
+@keyframes spaceBackgroundExit {
+	0% {
+		transform: scale(1) rotate(0deg);
+	}
+
+	100% {
+		transform: scale(0.3) rotate(360deg);
+	}
+}
+
+@keyframes spaceBackgroundEntrance {
+	0% {
+		opacity: 0.1;
+		transform: scale(0.3) rotate(10deg);
+		filter: blur(5px);
+	}
+
+	100% {
+		transform: scale(1) rotate(360deg);
+		opacity: 0.1;
+		filter: blur(15px);
+	}
+}
+
+@keyframes planetBaseEntrance {
+	0% {
+		// opacity: 0;
+		transform: rotate(0deg);
+	}
+
+	100% {
+		// opacity: 1;
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes puffBallAnimation {
+	0% {
+		transform: scale(0.25);
+	}
+
+	50% {
+		opacity: 0.25;
+		transform: scale(1);
+	}
+
+	75% {
+		opacity: 0.5;
+		transform: scale(1.15);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes puffBallRotation {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes puffBaseAnimation {
+	from {
+		transform: scale(0.1);
+	}
+
+	to {
+		transform: scale(1);
+		opacity: 1;
 	}
 }

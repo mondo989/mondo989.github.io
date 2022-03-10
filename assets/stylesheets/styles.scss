@@ -140,7 +140,12 @@ section {
 	height: 100vh;
 	position: relative;
 	transition: 0.4s;
+	display: flex;
 	overflow: hidden;
+
+	@include for-tablet-portrait-up {
+		width: 100%;
+	}
 }
 
 .section {
@@ -156,8 +161,14 @@ section {
 		}
 	}
 
-	&__two {
+	&__two-s {
 		// margin-top: 1px;
+
+		.f-container {
+			@include for-mobile-device-xl-up {
+				margin-top: 0;
+			}
+		}
 
 		h3 {
 			font-weight: 300;
@@ -166,6 +177,7 @@ section {
 			@include for-mobile-device-xl-up {
 				max-width: 90%;
 				margin: inherit auto;
+				margin-top: 0;
 			}
 		}
 
@@ -197,19 +209,6 @@ section {
 			background: radial-gradient(88.28% 88.28% at 50% 11.72%, #FFFBBC 18.28%, #FFAE36 59.83%, #E58425 86.54%);
 			animation: circle-in-top-right 2s ease-out forwards;
 
-			// @keyframes circle-in-top-right {
-			// 	from {
-			// 		clip-path: circle(0%);
-			// 	}
-			// 	to {
-			// 		clip-path: circle(150% at top right);
-			// 	}
-			// }
-
-			// [transition-style="in:circle:top-right"] {
-			// 	animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-top-right both;
-			// }
-
 			h1,
 			h2,
 			h3 {
@@ -232,11 +231,10 @@ section {
 		}
 
 		&.grow-icons {
-
 			.emoji__containers {
 				transition: 3s;
 				transform: scale(6);
-				z-index: -5;
+				z-index: 1;
 			}
 
 			// @include for-mobile-device {
@@ -249,34 +247,17 @@ section {
 		}
 	}
 
-
-	&__three {
-
-		@include for-mobile-device-xl-up {
-			height: 100%;
-		}
-
-		.row {
-			width: 90%;
-
-			@include for-mobile-device-xl-up {
-				margin: 0 auto;
-				width: 100%;
-			}
-		}
+	&__five-s {
+		background: inherit;
 	}
 
-	&__four {
-		.world-dots {
-			display: flex;
-		}
-
-		#pins {
-			opacity: 0;
-			animation: fadeInDown 2s 1s ease-out;
-			animation-direction: normal;
-		}
+	&__three-s {
+		color: inherit;
 	}
+}
+
+.planet--craters {
+	z-index: 9000;
 }
 
 .nav {
@@ -288,6 +269,12 @@ section {
 .secondary-content,
 .main-content {
 	z-index: 2;
+}
+
+.main-content {
+	@include for-tablet-portrait-up {
+		width: 100%;
+	}
 }
 
 
@@ -302,8 +289,57 @@ section {
 }
 
 .section__three h1,
-.section__five h1 {
+.section__five h1,
+.section__five-s h1 {
 	color: $dk-blue;
+}
+
+.f-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-items: stretch;
+	width: 1160px;
+	margin: auto;
+	// background: green;
+
+	@include for-tablet-portrait-up {
+		width: 100%;
+		flex-direction: column;
+	}
+}
+
+.f-child {
+	align-self: flex-start;
+	align-items: stretch;
+	flex: 1;
+	margin: 30px;
+	width: 50%;
+	
+	position: relative;
+
+	@include for-tablet-portrait-up {
+		margin: 0 auto;
+		width: 90%;
+
+		&.o0 {
+			order: 0;
+		}
+	
+		&.o1 {
+			order: 1;
+		}
+	
+	}
+
+	&.center {
+		text-align: center;
+	}
+
+	.planet--full {
+		max-width: 350px;
+		width: 300px;
+	}
 }
 
 .hero-background {
@@ -314,25 +350,11 @@ section {
 	left: 0;
 	right: 0;
 	// background: radial-gradient(76.69% 146.93% at 9.43% 49.98%, #88F7FF 0%, #66A6FE 100%);
-
-	.hero__image--circle {
-		animation-fill-mode: forwards;
-		animation: guyEntry 2s;
-		position: absolute;
-		opacity: 0.5;
-		bottom: 0;
-		left: 35%;
-
-		svg {
-			height: 1200px;
-			width: 1200px;
-			animation: rotateCircle 2.5s ease-in-out infinite;
-		}
-	}
 }
 
 .section__blue {
 	background: $dk-blue;
+	background: radial-gradient(38.26% 59.16% at 50% 50%, #26124D 52.71%, #150B3D 100%);
 	color: white;
 	padding: 30px 0;
 
@@ -419,19 +441,13 @@ section {
 	margin: 0 auto;
 	text-align: center;
 	transition: 1s;
-	// transform: scale(1);
-	opacity: 0;
+	transform: scale(1.4);
 
 	animation: emojiContainerFade 2s ease-out infinite;
 
-	@include for-mobile-device-xl-up {
+	@include for-tablet-landscape-up {
 		left: 0;
 		right: 0;
-		top: -30px;
-	}
-
-	@include for-desktop-up {
-		right: 60px;
 	}
 }
 
@@ -522,13 +538,12 @@ section {
 }
 
 .emoji__pointer {
-	// background: red;
-	width: 30%;
 	margin: auto;
 	text-align: center;
 	transform: translateY(100px);
 	position: relative;
-	z-index: 5000;
+	width: 1px;
+	// left: -60px;
 
 	animation: emojiPointerAnim 1.5s ease-out forwards;
 
@@ -538,11 +553,11 @@ section {
 
 	svg {
 		// display: block !important;
-		z-index: 3000 !important;
+		z-index: 300000;
 	}
 
 	#click {
-		opacity: 0;
+		opacity: 1;
 		// display: none;
 		transform-origin: center;
 
@@ -559,6 +574,67 @@ section {
 // Animation Wrapper classes
 
 .animated {
+
+	.planet--full {
+		opacity: 0;
+		animation: planetEntrance 0.5s 1.25s ease-out forwards;
+	}
+
+	#planet--base {
+		transform-origin: center;
+		animation: planetBaseEntrance 10s 1.5s linear infinite;
+	}
+
+	.shape-white {
+		animation: shapeWhiteAnimation 4s ease-out forwards;
+	}
+
+	.shape-blue {
+		animation: shapeBlueAnimation 6s ease-out forwards;
+	}
+
+	#planet--craters {
+		opacity: 0;
+		width: 300px;
+		height: 400px;
+		transform-origin: center center;
+		animation: planetCratersAnimation 2s 1.5s ease-out forwards;
+	}
+
+	#planet--moon-a,
+	#planet--moon-b,
+	#planet--moon-c,
+	#planet--moon-d {
+		cursor: pointer;
+		z-index: 900;
+	}
+
+	circle {
+		cursor: pointer;
+	}
+
+	#planet--rings {
+		transform-origin: center center;
+		opacity: 0;
+		animation: planetRingsEntrance 1s 3s ease-out forwards, planetRingsAnimation 3s 2s ease-out infinite;
+	}
+
+	.space-background {
+		// SMH Safari https://discourse.webflow.com/t/overflow-hidden-round-corners-not-working-on-safari/67805/4
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+
+		opacity: 0;
+		display: none;
+
+		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+
+		animation: spaceBackgroundExit 0.75s 1s ease-out forwards, spaceBackgroundEntrance 2s 2s ease-out forwards;
+	}
+
 	.hero__image--circle {
 		@include for-tablet-portrait-up {
 			bottom: 0px;
@@ -584,9 +660,20 @@ section {
 	}
 
 	.emoji__containers {
-		left: 0;
+		left: -100px;
+		top: -70px;
 		opacity: 1;
 		right: 0;
+		position: absolute;
+
+		@include for-tablet-landscape-up {
+			left: 0;
+			right: 0;
+		}
+
+		@include for-mobile-device-xl-up {
+			top: 40px;
+		}
 	}
 
 	.emoji__smiley-face {
@@ -594,13 +681,17 @@ section {
 		animation-direction: forwards;
 		cursor: pointer;
 		position: relative;
-		right: 50px;
+		// right: 50px;
 		top: -150px;
 		transform: scale(1);
 		transform-origin: center;
 		transform-style: preserve-3d;
 		transition: $base-transition-speed;
-		z-index: 1;
+		z-index: 2;
+
+		svg {
+			z-index: 3;
+		}
 
 		&:hover {
 			transition: $base-transition-speed;
@@ -617,17 +708,91 @@ section {
 			left: 0;
 			right: 0;
 			text-align: center;
-			top: -130px;
+			top: -40px;
 		}
 
-		@include for-xl-desktop-up {
-			right: 80px;
+		@include for-mobile-device-xl-up {
+			top: -30px;
+			right: 0;
+			left: 0;
+		}
+
+
+		svg {
+			height: 180px;
+			transform: scale(1.2);
+			transition: $base-transition-speed;
+			width: 300px;
+
+			animation: emojiBounce 2s ease-out infinite;
+
+			@include for-mobile-device {
+				width: 80%;
+			}
+
+			@include for-tablet-landscape-up {
+				left: 0;
+				right: 0;
+				// width: 100px;
+			}
+
+			&:hover {
+
+				#left-eye,
+				#right-eye {
+					animation: eyebrowsRaise 1s ease-out infinite;
+					transition: $base-transition-speed;
+				}
+
+				#mouth {
+					// opacity: 0;
+					color: inherit;
+				}
+
+				#lips-kiss {
+					display: none;
+				}
+
+				#mouth-wow {
+					opacity: 1;
+				}
+			}
+
+			// BASE -- USED FOR RESET
+			#left-eye,
+			#right-eye,
+			#mouth-wow,
+			#lips-kiss {
+				transform: scale(1);
+				transition: $base-transition-speed;
+			}
+
+			#eyes--left-wink,
+			#eyebrows {
+				display: none;
+			}
+
+			#mouth-wow,
+			#mouth-kiss #right-eye--dizzy,
+			#right-eye--dizzy,
+			#left-eye--dizzy,
+			#eyes--mad,
+			#mouth-smoke-puff,
+			#eyes--stars,
+			#teeth-top-row--no-bottom,
+			#eyes--sleepy,
+			#sleep-group {
+				opacity: 0;
+			}
 		}
 
 		&.wink {
 
 			#eye-left,
 			#left-eye,
+			#eyes--mad,
+			#mouth-wow,
+			#mouth-smoke-puff,
 			#right-eye {
 				opacity: 0;
 				display: none;
@@ -662,13 +827,13 @@ section {
 		&.wow-spin {
 
 			#right-eye--dizzy {
-				animation: wowRightEyeSpin 1s ease-out forwards;
-				transform-origin: center;
+				animation: wowRightEyeSpin 1s ease-out forwards, wowRightEyeSpinExtra 2s 1s ease-out infinite;
+				transform-origin: center center;
 			}
 
 			#left-eye--dizzy {
-				animation: wowLeftEyeSpin 1s ease-out forwards;
-				transform-origin: center;
+				animation: wowLeftEyeSpin 1s ease-out forwards, wowLeftEyeSpinExtra 2s 1s ease-out infinite;;
+				transform-origin: center center;
 			}
 
 			#faces {
@@ -694,6 +859,8 @@ section {
 				#eyes--sleepy,
 				#sleep--group,
 				#right-eye,
+				#eyes--mad,
+				#mouth-smoke-puff,
 				#lips-kiss {
 					opacity: 0;
 					display: none;
@@ -703,6 +870,12 @@ section {
 
 		&.lips-shake {
 			animation: newEmojiShake 1s ease-in forwards;
+
+			#eyes--mad,
+			#mouth-smoke-puff,
+			#mouth-wow {
+				opacity: 0;
+			}
 
 			// #mouth {
 			// 	opacity: 0 !important;
@@ -723,6 +896,8 @@ section {
 			#bottom-row-teeth,
 			#lips-kiss,
 			#left-eye,
+			#eyes--mad,
+			#mouth-smoke-puff,
 			#right-eye {
 				opacity: 0;
 				display: none;
@@ -737,7 +912,6 @@ section {
 			#mouth-wow {
 				animation: sleepGroupAnim 1s ease-out forwards;
 			}
-
 
 			#sleep-group {
 				transform-origin: center;
@@ -786,9 +960,10 @@ section {
 
 			#left-eye,
 			#right-eye,
-			#left-eye,
 			#right-eye,
 			#top-row-teeth,
+			#eyes--mad,
+			#mouth-smoke-puff,
 			#bottom-row-teeth {
 				opacity: 0;
 				display: none;
@@ -796,69 +971,32 @@ section {
 
 		}
 
-		svg {
-			height: 180px;
-			transform: scale(1.2);
-			transition: $base-transition-speed;
-			width: 115px;
-
-			animation: emojiBounce 2s ease-out infinite;
-
-			@include for-mobile-device {
-				width: 90px;
-			}
-
-			@include for-tablet-landscape-up {
-				left: 0;
-				right: 0;
-				width: 100px;
-			}
-
-			&:hover {
-
-				// #left-eye,
-				// #right-eye {
-				// 	animation: eyebrowsRaise 1s ease-out infinite;
-				// 	transition: $base-transition-speed;
-				// }
-
-				#mouth {
-					// opacity: 0;
-				}
-
-				#lips-kiss {
-					display: none;
-				}
-
-				#mouth-wow {
-					opacity: 1;
-				}
-			}
-
-			// BASE -- USED FOR RESET
+		&.angry-face {
 			#left-eye,
 			#right-eye,
 			#mouth-wow,
-			#lips-kiss {
-				transform: scale(1);
-				transition: $base-transition-speed;
-			}
-
-			#eyes--left-wink,
-			#eyebrows {
+			#top-row-teeth,
+			#bottom-row-teeth,
+			#eyes--stars {
+				opacity: 0;
 				display: none;
 			}
 
-			#mouth-wow,
-			#mouth-kiss
-			#right-eye--dizzy, 
-			#right-eye--dizzy,
-			#left-eye--dizzy,
-			#eyes--stars,
-			#teeth-top-row--no-bottom,
-			#eyes--sleepy,
-			#sleep-group {
-				opacity: 0;
+			#mouth-smoke-puff,
+			#eyes--mad {
+				opacity: 1;
+			}
+
+			#puff-balls-left,
+			#puff-balls-right {
+				transform-origin: center center;
+				animation: puffBallAnimation 0.5s 0.75s ease-out forwards;
+			}
+
+			#puff-base-left,
+			#puff-base-right {
+				transform-origin: center center;
+				animation: puffBaseAnimation 0.5s .5s ease-out forwards;
 			}
 		}
 
@@ -884,6 +1022,13 @@ section {
 			display: none;
 		}
 
+		#puff-balls-left,
+		#puff-balls-right,
+		#puff-base-left,
+		#puff-base-right {
+			opacity: 0;
+			transition: 2s;
+		}
 
 
 		&.emoji-new-emoji {
@@ -979,6 +1124,7 @@ section {
 		top: 0;
 		left: 0;
 		background-image: $lt-blue-gradient-background;
+		z-index: -1;
 	}
 
 	.button__circle {

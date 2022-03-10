@@ -29,14 +29,13 @@ images.forEach(image => {
 // SVGMOJI
 
 const svgMoji = document.querySelector(".emoji__smiley-face");
-const emojiSection = document.querySelector(".section__two");
+const emojiSection = document.querySelector(".section__two-s");
 const icon1 = document.querySelector('.spin-1');
 const icon2 = document.querySelector('.spin-2');
 const icon3 = document.querySelector('.spin-3');
 const icon4 = document.querySelector('.spin-4');
 
-
-
+// This is for vendor prefixes I believe, not sure where on SO it came from.
 var updateSVGMoji = function () {
 	svgMoji.classList.add("emoji-new-emoji");
 	PrefixedEvent(svgMoji, "AnimationEnd", callRandomSvgMoji(), false);
@@ -55,12 +54,14 @@ var callRandomSvgMoji = function () {
 
 var getRandomSVGMoji = function () {
 	function randomize() {
-		var randomNumber = Math.floor(Math.random() * 5);
-		if (randomNumber === 0 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") emojiSection.classList = "section__two section__animate animated section__blue", normalIcons(), svgMoji.classList.add("wink"), console.log("Anim 1 - smile face wink eyes yTranslate anim ");
-		else if (randomNumber === 1 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") emojiSection.classList = "section__two section__animate animated section__blue", normalIcons(), svgMoji.classList.add("wow-spin"), console.log("Anim 2 - O face swirly eyes shake anim"), emojiSection.classList.toggle("yellow-section");
-		else if (randomNumber === 2 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") emojiSection.classList = "section__two section__animate animated section__blue", normalIcons(), svgMoji.classList.add("lips-shake"), console.log("Anim 3 - kiss face raised eyes yTranslate anim"), emojiSection.classList.toggle("grow-icons");
-		else if (randomNumber === 3 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") emojiSection.classList = "section__two section__animate animated section__blue", svgMoji.classList.add("sleepy-face"), console.log("Anim 4 - o face Sleepy Eyes translate"), emojiSection.classList.toggle("sleepy-icons"), swapSleepyIcons();
+		var randomNumber = Math.floor(Math.random() * 6);
+		// Def needs some refactoring
+		if (randomNumber === 0 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") emojiSection.classList = "section__two-s section__animate animated section__blue", normalIcons(), svgMoji.classList.add("wink"), console.log("Anim 1 - smile face wink eyes yTranslate anim ");
+		else if (randomNumber === 1 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("wow-spin"), console.log("Anim 2 - O face swirly eyes shake anim"), emojiSection.classList.toggle("yellow-section");
+		else if (randomNumber === 2 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("lips-shake"), console.log("Anim 3 - kiss face raised eyes yTranslate anim"), emojiSection.classList.toggle("grow-icons");
+		else if (randomNumber === 3 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("sleepy-face"), console.log("Anim 4 - o face Sleepy Eyes translate"), emojiSection.classList.toggle("sleepy-icons"), swapSleepyIcons();
 		else if (randomNumber === 4 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("star-face"), console.log("Anim 5 - half-mouth - Star Eyes scale"), swapStarIcons();
+		else if (randomNumber === 5 && svgMoji.className !== "emoji__smiley-face emoji-new-emoji") svgMoji.classList.add("angry-face"), console.log("Anim 6 - Mad face Smoke translate/scale"), emojiSection.classList.toggle("sleepy-icons"), swapAngryIcons();
 		else randomize()
 	}
 	randomize();
@@ -90,6 +91,13 @@ const swapStarIcons = () => {
 	icon4.innerHTML = "🤩";
 }
 
+const swapAngryIcons = () => {
+	icon1.innerHTML = "⚡️";
+	icon2.innerHTML = "⚡️";
+	icon3.innerHTML = "⚡️";
+	icon4.innerHTML = "⚡️";
+}
+
 const normalIcons = () => {
 	icon1.innerHTML = "🕺";
 	icon2.innerHTML = "🎨";
@@ -97,21 +105,8 @@ const normalIcons = () => {
 	icon4.innerHTML = "✨";
 }
 
-// document.querySelector(".hero__image--seagull-four").addEventListener('animationend', function(){
-// 	console.log("Boo");
-// 	callNewScene();
-// });
-
 // document.getElementById("hero").addEventListener("transitionend", myEndFunction);
 function myEndFunction() {
 	// this.innerHTML = "Transition event ended";
 	console.log("enedded");
 }
-
-// Update to get seagulls on a random Animation duration time 
-// var randomSeagullsFly = function() {
-// 	var seagullDuration = document.getElementsByClassName("hero__image--seagull").classList.add("mystles");
-// 	console.log(seagullDuration[0]);
-// }
-
-// randomSeagullsFly()
