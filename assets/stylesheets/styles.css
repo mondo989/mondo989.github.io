@@ -1,270 +1,71 @@
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+html {
+  background: inherit;
   overflow-x: hidden;
 }
 
-h1 {
-  font-size: 3.5em;
-  font-weight: 600;
+body {
+  margin: 0;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  overflow: hidden;
 }
 
-@media (max-width: 767px) {
-  h1 {
-    font-size: 2.5em;
+section {
+  height: 50vh;
+  margin: 0 auto;
+  height: 100%;
+}
+@media (max-width: 991px) {
+  section .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
   }
 }
-
-@media (max-width: 575px) {
-  h1 {
-    font-size: 1.8em;
-  }
+section p {
+  line-height: 1.75;
 }
-
-@media (max-width: 500px) {
-  h1 {
-    font-size: 1.75em;
-  }
-}
-
-h2 {
-  font-size: 1.7em;
-  line-height: 1.5;
-}
-
-@media (max-width: 767px) {
-  h2 {
-    font-size: 1.5em;
-  }
-}
-
-@media (max-width: 575px) {
-  h2 {
-    font-size: 1.35em;
-  }
-}
-
-@media (max-width: 500px) {
-  h2 {
-    font-size: 1.25em;
-  }
-}
-
-h3 {
-  font-size: 1.25em;
-  line-height: 1.5;
-  opacity: 0.5;
-}
-
-@media (max-width: 767px) {
-  h3 {
-    font-size: 1.2em;
-  }
-}
-
-@media (max-width: 575px) {
-  h3 {
-    font-size: 1.25em;
-  }
-}
-
-@media (max-width: 500px) {
-  h3 {
+@media (max-width: 991px) {
+  section p {
     font-size: 1em;
   }
 }
 
-h2,
-h3 {
-  margin-top: 30px;
+h1 {
+  font-size: 3.5em;
+  line-height: 1.1;
+  margin: 10px 0;
+}
+@media (max-width: 991px) {
+  h1 {
+    font-size: 2em;
+  }
 }
 
-.navbar-brand {
-  color: #3a47d5;
-  font-size: 28px;
-  font-family: 'Open Sans', sans-serif;
-  text-transform: uppercase;
-}
-
-.navbar-brand::before {
-  color: #00d2ff;
-  content: "Armando.sx";
-  position: absolute;
-  -webkit-transform: translateX(1px) translateY(1px);
-          transform: translateX(1px) translateY(1px);
-  z-index: -1;
-}
-
-section {
-  height: 100vh;
-  position: relative;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+.container {
+  width: clamp(90%, 100px, 1200px);
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
 }
-
-@media (max-width: 767px) {
-  section {
-    width: 100%;
+@media (max-width: 991px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
-.section__one.section__blue {
-  padding: 0;
-}
-
-.section__one h3 {
-  font-weight: 600;
-  opacity: 1;
-}
-
-@media (max-width: 575px) {
-  .section__two-s .f-container {
-    margin-top: 0;
-  }
-}
-
-.section__two-s h3 {
-  font-weight: 300;
-  max-width: 70%;
-}
-
-@media (max-width: 575px) {
-  .section__two-s h3 {
-    max-width: 90%;
-    margin: inherit auto;
-    margin-top: 0;
-  }
-}
-
-.section__two-s .main-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
-  top: -100px;
-}
-
-.section__two-s a {
-  text-decoration: underline;
-}
-
-.section__two-s .secondary-content {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-}
-
-@media (max-width: 767px) {
-  .section__two-s .secondary-content {
-    position: relative;
-  }
-}
-
-@media (max-width: 575px) {
-  .section__two-s .secondary-content {
-    -webkit-box-ordinal-group: -1;
-        -ms-flex-order: -2;
-            order: -2;
-    position: relative;
-  }
-}
-
-.section__two-s.yellow-section {
-  background: radial-gradient(88.28% 88.28% at 50% 11.72%, #FFFBBC 18.28%, #FFAE36 59.83%, #E58425 86.54%);
-  -webkit-animation: circle-in-top-right 2s ease-out forwards;
-          animation: circle-in-top-right 2s ease-out forwards;
-}
-
-.section__two-s.yellow-section h1,
-.section__two-s.yellow-section h2,
-.section__two-s.yellow-section h3 {
-  color: #343434;
-}
-
-.section__two-s.yellow-section [transition-style="in:circle:center"] {
-  -webkit-animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
-          animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
-}
-
-@media (max-width: 500px) {
-  .section__two-s.yellow-section [transition-style="in:circle:hesitate"] {
-    -webkit-animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-hesitate both;
-            animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-hesitate both;
-  }
-}
-
-.section__two-s.grow-icons .emoji__containers {
-  -webkit-transition: 3s;
-  transition: 3s;
-  -webkit-transform: scale(6);
-          transform: scale(6);
-  z-index: 1;
-}
-
-.section__two-s.sleepy-icons {
-  opacity: inherit;
-}
-
-.section__five-s {
-  background: inherit;
-}
-
-.section__three-s {
-  color: inherit;
-}
-
-.planet--craters {
-  z-index: 9000;
-}
-
-.nav {
-  padding-left: 5px;
-  padding-right: 0;
-  padding-top: 20px;
-}
-
-.secondary-content,
-.main-content {
-  z-index: 2;
-}
-
-@media (max-width: 767px) {
-  .main-content {
-    width: 100%;
-  }
-}
-
-.section__one .main-content,
-.section__three .main-content {
-  -webkit-animation: fadeInLeft 1s;
-          animation: fadeInLeft 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  opacity: 1;
-  z-index: 5;
-}
-
-.section__three h1,
-.section__five h1,
-.section__five-s h1 {
-  color: #182848;
-}
-
-.f-container {
+.content__cta {
+  background: linear-gradient(95.08deg, #D6F15B 11.05%, #69B75D 60.58%);
+  border-radius: 40px;
+  -webkit-box-shadow: 0 2px 4px #121212;
+          box-shadow: 0 2px 4px #121212;
+  color: #121212;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -274,947 +75,1222 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  width: 1160px;
-  margin: auto;
+  text-align: center;
+  font-weight: 800;
+  padding: 15px 20px;
+  text-decoration: none;
+  width: 220px;
+  margin: 0;
+  background: linear-gradient(92.98deg, #D6F15B 21.64%, #69B75D 189.75%);
+  -webkit-box-shadow: 0px 1px 1px #000000;
+          box-shadow: 0px 1px 1px #000000;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.content__cta:hover {
+  scale: 1.025;
+}
+@media (max-width: 991px) {
+  .content__cta {
+    margin: 0 auto;
+  }
+}
+.content__cta--alt {
+  background: white;
+  color: #121212;
+  -webkit-box-shadow: 0px 1px 1px #8ea03d;
+          box-shadow: 0px 1px 1px #8ea03d;
+  margin-left: 20px;
+}
+@media (max-width: 991px) {
+  .content__cta--alt {
+    margin-left: 0;
+  }
 }
 
-@media (max-width: 767px) {
-  .f-container {
-    width: 100%;
+.content__cta--emoji {
+  color: linear-gradient(95.08deg, #D6F15B 11.05%, #69B75D 60.58%);
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 25px;
+  scale: 1.25;
+}
+
+.content__left--button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 991px) {
+  .content__left--button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
 }
-
-.f-child {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin: 30px;
-  width: 50%;
-  position: relative;
+@media (max-width: 991px) {
+  .content__left--button-container a {
+    margin: 10px 0;
+  }
 }
 
-@media (max-width: 767px) {
-  .f-child {
+.profile-container {
+  cursor: pointer;
+}
+.profile-container .profile-img {
+  position: absolute;
+  width: 200px;
+  border-radius: 150px;
+  height: auto;
+  opacity: 0;
+  -webkit-animation: profileImageEntrance 0.5s 0.75s ease-out forwards;
+          animation: profileImageEntrance 0.5s 0.75s ease-out forwards;
+}
+@media (max-width: 991px) {
+  .profile-container .profile-img {
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+  }
+}
+
+.section__gradient {
+  background: linear-gradient(135deg, #7650F2, rgba(255, 0, 0, 0) 25%), linear-gradient(45deg, #59EBF9, rgba(0, 255, 0, 0) 70.1%), linear-gradient(180deg, #EC6351, rgba(0, 0, 255, 0) 50.71%), linear-gradient(270deg, #7E82ED, rgba(0, 0, 255, 0) 80.71%);
+}
+
+.shape-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: inherit;
+  width: inherit;
+}
+.shape-container svg {
+  position: absolute;
+}
+@media (max-width: 991px) {
+  .shape-container svg {
+    left: 0;
+    right: 0;
+    width: 100%;
     margin: 0 auto;
-    width: 90%;
+    text-align: center;
+    z-index: -1;
   }
-  .f-child.o0 {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
+}
+.shape-container .shape__full path {
+  fill: url(#gradient);
+}
+.shape-container #left-half,
+.shape-container #right-half,
+.shape-container #shape__full--path {
+  scale: 0.5;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.shape-container .shape__halves {
+  -webkit-animation: rotateEntrance 0.5s 0.5s ease-out forwards;
+          animation: rotateEntrance 0.5s 0.5s ease-out forwards;
+}
+.shape-container #left-half {
+  rotate: 135deg;
+  translate: 500px 500px;
+  -webkit-animation: leftHalfEntrance 0.5s ease-out forwards;
+          animation: leftHalfEntrance 0.5s ease-out forwards;
+}
+.shape-container #right-half {
+  rotate: 135deg;
+  translate: -500px -500px;
+  -webkit-animation: rightHalfEntrance 0.5s ease-out forwards;
+          animation: rightHalfEntrance 0.5s ease-out forwards;
+}
+.shape-container #shape__full--path {
+  opacity: 0;
+  -webkit-animation: shapeFullEntrance 0.5s 0.5s ease-out forwards, shapeFullRotate 125s 1s ease-out forwards infinite;
+          animation: shapeFullEntrance 0.5s 0.5s ease-out forwards, shapeFullRotate 125s 1s ease-out forwards infinite;
+}
+
+.section__hero {
+  z-index: 5;
+}
+.section__hero .container {
+  height: 100vh;
+}
+@media (max-width: 991px) {
+  .section__hero .container {
+    height: 100%;
+    padding: 50px 0;
   }
-  .f-child.o1 {
+}
+.section__hero .content {
+  display: contents;
+  position: relative;
+  z-index: 5;
+}
+.section__hero .content__left {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  opacity: 0;
+}
+@media (max-width: 991px) {
+  .section__hero .content__left {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    margin-top: 30px;
+    -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+    text-align: center;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
-
-.f-child.center {
+.section__hero .content__right {
+  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+}
+@media (max-width: 991px) {
+  .section__hero .content__right {
+    width: 100%;
+  }
+}
+.section__hero p {
+  margin: 10px 0;
+  margin-bottom: 30px;
+}
+@media (max-width: 991px) {
+  .section__hero .profile-img {
+    width: 50%;
+  }
+}
+.section__hero.animate .content__left {
+  -webkit-animation: contentLeftAppear 0.5s 0.5s ease-out forwards;
+          animation: contentLeftAppear 0.5s 0.5s ease-out forwards;
+}
+.section__portfolio {
+  background-repeat: no-repeat;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  position: relative;
+  height: 90vh;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.125s;
+          transition-delay: 0.125s;
+  z-index: 3;
+}
+.section__portfolio .container {
+  padding: 20px 0;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 5;
+}
+.section__portfolio .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 991px) {
+  .section__portfolio .content {
+    padding-bottom: 80px;
+  }
+}
+.section__portfolio .content__left {
+  opacity: 0;
+  width: 50%;
+  padding-right: 20px;
+}
+@media (max-width: 991px) {
+  .section__portfolio .content__left {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+  }
+}
+.section__portfolio .content__right {
+  width: 50%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+}
+@media (max-width: 991px) {
+  .section__portfolio .content__right {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.section__portfolio .content__right .column__left,
+.section__portfolio .content__right .column__right {
+  translate: 0 0;
+  -webkit-transition: 0.5s 0.25s;
+  transition: 0.5s 0.25s;
+}
+.section__portfolio .background--portfolio {
+  position: absolute;
+  translate: 0 -500px;
+  width: 100%;
+  scale: 2;
+  z-index: 0;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.125s;
+          transition-delay: 0.125s;
+}
+.section__portfolio .background--portfolio path {
+  fill: url(#portfolio-gradient);
+  -webkit-transition: 1s;
+  transition: 1s;
+  scale: 3;
+}
+.section__portfolio.animate .background--portfolio {
+  translate: 0 100px;
+}
+@media (max-width: 991px) {
+  .section__portfolio.animate .background--portfolio {
+    translate: 0 -100px;
+  }
+}
+.section__portfolio.animate .background--portfolio path {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  scale: 2;
+  position: absolute;
+  translate: -4000px;
+}
+.section__portfolio.animate .content__left {
+  -webkit-animation: contentLeftAppear 0.5s 0.5s ease-out forwards;
+          animation: contentLeftAppear 0.5s 0.5s ease-out forwards;
+}
+.section__portfolio.animate .content__right {
+  margin-bottom: 40px;
+}
+.section__portfolio.animate .column__left {
+  translate: 0 25px;
+}
+.section__portfolio.animate .column__right {
+  translate: 0 -25px;
+}
+.section__about-me {
+  position: relative;
+  height: 100%;
+  min-height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 100px 0;
+  z-index: 5;
+}
+@media (max-width: 991px) {
+  .section__about-me {
+    padding: 100px 0;
+  }
+}
+.section__about-me .dancer {
+  width: 200px;
+  height: auto;
+}
+.section__about-me .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: 150px;
+  height: 150px;
+  position: absolute;
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .section__about-me .content {
+    display: block;
+  }
+}
+.section__about-me h1 {
+  letter-spacing: -0.03em;
+  background: #D6F15B;
+  background: -webkit-gradient(linear, left top, right top, from(#D6F15B), to(#69B75D));
+  background: linear-gradient(to right, #D6F15B 0%, #69B75D 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 991px) {
+  .section__about-me h1 {
+    text-align: center;
+  }
+}
+.section__about-me h1::before {
+  content: "";
+}
+.section__about-me .about__img {
+  width: 275px;
+  height: auto;
+  border-radius: 100%;
+}
+.section__about-me .container {
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+.section__about-me #base-angled-background {
+  fill: #F4F9FB;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.section__about-me .svg__about--background {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  scale: 1.5;
+  height: auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+@media (max-width: 991px) {
+  .section__about-me .svg__about--background {
+    scale: 3;
+    margin-top: 180px;
+    translate: 54%;
+  }
+}
+.section__about-me .svg__about--background rect {
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+.section__about-me .svg__about--background.activated {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.section__about-me .svg__about--background.activated .moon--behind {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.section__about-me .svg__about--background.activated .moon--behind circle {
+  fill: #69B75D;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 1;
+  scale: 1;
+}
+.section__about-me .svg__about--background.activated .svg__about--ufo-back {
+  display: none;
+}
+.section__about-me .svg__about--background.activated .svg__about--ufo-front {
+  display: block;
+  -webkit-animation: frontUFOLeave 2.5s ease-out forwards;
+          animation: frontUFOLeave 2.5s ease-out forwards;
+}
+.section__about-me .about__img {
+  max-width: 520px;
+  height: auto;
+}
+.section__about-me .content__left {
+  opacity: 0;
+  -webkit-animation: appear 0.5s 0.5s ease-out forwards;
+          animation: appear 0.5s 0.5s ease-out forwards;
+  height: inherit;
+}
+.section__about-me .svg__about--ufo-front {
+  display: none;
+}
+.section__about-me .moon--behind circle {
+  opacity: 0.25;
+  scale: 1;
+  translate: 100px;
+  -webkit-transition: 5s;
+  transition: 5s;
+}
+.section__about-me.animate .svg__about--background rect {
+  opacity: 1;
+  fill: #1E1E1E;
+}
+.section__about-me.animate .moon--behind circle {
+  opacity: 1;
+}
+.section__about-me.animate .content__left {
+  -webkit-animation: contentLeftAppear 0.5s 2.25s ease-out forwards;
+          animation: contentLeftAppear 0.5s 2.25s ease-out forwards;
+}
+.section__about-me.animate .svg__about--ufo-back {
+  scale: 0.5;
+  cursor: pointer;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: aboutSectionUFOTranslateOne 2s 0.5s ease-out forwards, aboutSectionUFOPulse 3s 2.5s ease-out infinite;
+          animation: aboutSectionUFOTranslateOne 2s 0.5s ease-out forwards, aboutSectionUFOPulse 3s 2.5s ease-out infinite;
+}
+.section__footer {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  height: auto;
+  background: black;
+  z-index: 10;
+  padding: 50px 0;
+  overflow: hidden;
+}
+.section__footer .container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: inherit;
+  color: white;
+}
+.section__footer .content {
   text-align: center;
 }
-
-.f-child .planet--full {
-  max-width: 350px;
-  width: 300px;
+.section__footer h1,
+.section__footer p {
+  text-align: center;
 }
-
-.hero-background {
-  width: 10%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+.section__footer p {
+  margin: 10px auto;
+  text-align: left;
+  max-width: 600px;
 }
-
-.section__blue {
-  background: #182848;
-  background: radial-gradient(38.26% 59.16% at 50% 50%, #26124D 52.71%, #150B3D 100%);
-  color: white;
-  padding: 30px 0;
+@media (max-width: 991px) {
+  .section__footer p {
+    text-align: center;
+  }
 }
-
-.lt-blue-gradient {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.section__footer .moon-container {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
-
-.lt-blue-gradient::after {
-  -webkit-animation-fill-mode: forwards !important;
-          animation-fill-mode: forwards !important;
-  content: "";
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background-size: 150%;
-  background-image: linear-gradient(225deg, #00d2ff 20%, #3a47d5 100%);
-  -webkit-animation: ltbluegradientAnim 0.7s ease-out;
-          animation: ltbluegradientAnim 0.7s ease-out;
-}
-
-.btn__main {
-  background: #182848;
-  border-radius: 6px;
-  -ms-flex-item-align: top;
-      -ms-grid-row-align: top;
-      align-self: top;
-  color: white;
-  display: inline-block;
-  font-size: 1.1em;
-  font-weight: 800;
-  padding: 15px 20px;
+.section__footer .moon-container svg {
   cursor: pointer;
+}
+.section__footer .moon--full {
+  height: 100%;
+  width: 200px;
+  scale: 0;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
   opacity: 0;
-  -webkit-animation: herobuttonAnim 1.5s 4s;
-          animation: herobuttonAnim 1.5s 4s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  cursor: pointer !important;
+}
+.section__footer .ufo--moon {
+  scale: 0.15;
+  translate: 1000px 0;
+}
+.section__footer .ufo--moon path {
+  fill: #101010;
+}
+.section__footer .social__container {
+  padding: 0;
+  translate: 0 150px;
+  opacity: 0;
+}
+.section__footer .social__container a {
   text-decoration: none;
 }
-
-.btn__main:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+.section__footer .social__container svg {
+  margin: 5px 10px;
+  height: auto;
+  width: 45px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-animation: appear 0.5s 0.5s ease-out forwards;
+          animation: appear 0.5s 0.5s ease-out forwards;
+}
+.section__footer .social__container svg .icon-path {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  fill: rgba(214, 241, 91, 0.4666666667);
+  scale: 0.85;
+}
+.section__footer .social__container svg:hover {
+  scale: 1.15;
+}
+.section__footer .social__container svg:hover .icon-path {
+  -webkit-transition-delay: 0.125s;
+          transition-delay: 0.125s;
+  scale: 1;
+  fill: #D6F15B;
+}
+.section__footer .separator {
+  height: 1px;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto 30px;
+  background: linear-gradient(95.08deg, #D6F15B 11.05%, #69B75D 60.58%);
+  opacity: 0;
+  rotate: y 90deg;
+}
+.section__footer.animate .moon--full {
+  -webkit-animation: moonAnimate 1s ease-in-out forwards;
+          animation: moonAnimate 1s ease-in-out forwards;
+}
+.section__footer.animate .social__container {
+  -webkit-animation: socialContainerAnimate 1s ease-out forwards;
+          animation: socialContainerAnimate 1s ease-out forwards;
+}
+.section__footer.animate .social__container svg {
+  -webkit-animation: socialContainerAnimate 1s ease-out forwards;
+          animation: socialContainerAnimate 1s ease-out forwards;
+}
+.section__footer.animate .ufo--moon {
+  -webkit-animation: footerUFOEntrance 10s 1s ease-out forwards;
+          animation: footerUFOEntrance 10s 1s ease-out forwards;
+  scale: 0.15;
+}
+.section__footer.animate .separator {
+  -webkit-animation: separatorAnimate 1s 0.75s ease forwards;
+          animation: separatorAnimate 1s 0.75s ease forwards;
+}
+.section__footer.animate .icon-path {
+  opacity: 0;
+  -webkit-animation: iconPathsAnimate 1s 1s ease forwards;
+          animation: iconPathsAnimate 1s 1s ease forwards;
 }
 
-.emoji__wave,
-.emoji__briefcase {
-  font-size: 100px;
-  width: 100px;
-  -webkit-transition: 1s;
-  transition: 1s;
+.section__hero,
+.section__about,
+.section__portfolio,
+.section__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  position: relative;
 }
-
-@media (max-width: 575px) {
-  .emoji__wave,
-  .emoji__briefcase {
-    font-size: 72px;
+@media (max-width: 991px) {
+  .section__hero,
+  .section__about,
+  .section__portfolio,
+  .section__footer {
+    height: 100%;
+    padding: 50px 0;
   }
 }
 
-[class^='spin-'] {
-  position: absolute;
-  top: 40px;
-  opacity: 0;
-  width: 70px;
-  -webkit-transition: 1s;
-  transition: 1s;
+.content__left,
+.content__right {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 50%;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+@media (max-width: 991px) {
+  .content__left,
+  .content__right {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.content__left {
+  margin-right: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media (max-width: 991px) {
+  .content__left {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.content__right {
+  margin-left: 20px;
+}
+@media (max-width: 991px) {
+  .content__right {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.past-work .column__left img,
+.past-work .column__right img {
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.past-work a {
+  text-decoration: none;
+  color: #121212;
 }
 
 @media (max-width: 991px) {
-  [class^='spin-'] {
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    font-size: 5px;
-    opacity: 0.5;
+  .past-work .content__left p {
+    margin-bottom: 30px;
   }
 }
 
-.emoji__containers {
-  opacity: 0;
-  position: absolute;
-  height: 120px;
-  top: -50px;
-  right: 0;
-  bottom: 0;
-  width: 120px;
-  margin: 0 auto;
+.card__project {
+  margin: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+@media (max-width: 991px) {
+  .card__project {
+    width: auto;
+  }
+}
+.card__project .profile-img__rounded {
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 5px 10px rgba(77, 77, 77, 0.289);
+          box-shadow: 0px 5px 10px rgba(77, 77, 77, 0.289);
+}
+.card__project .card__project--title {
+  margin: 0;
   text-align: center;
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  -webkit-animation: emojiContainerFade 2s ease-out infinite;
-          animation: emojiContainerFade 2s ease-out infinite;
+  background-color: white;
+  padding: 5px 0;
+  position: relative;
+  top: -5px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -webkit-box-shadow: 0px 5px 10px rgba(77, 77, 77, 0.289);
+          box-shadow: 0px 5px 10px rgba(77, 77, 77, 0.289);
+  width: inherit;
 }
-
+.card__project h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 5px;
+  font-weight: 600;
+}
 @media (max-width: 991px) {
-  .emoji__containers {
-    left: 0;
-    right: 0;
+  .card__project h3 {
+    font-size: 0.85em;
+    text-align: left;
   }
 }
-
-.container__social-icons {
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation: fadeIn 0.6s ease-out;
-          animation: fadeIn 0.6s ease-out;
-  margin: 0 auto;
-  margin-left: 0;
-  opacity: 0;
+.card__project .card__project--trophy {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
-
-@media (max-width: 500px) {
-  .container__social-icons {
+@media (max-width: 991px) {
+  .card__project .card__project--trophy {
+    margin-right: 5px;
+  }
+}
+.card__project img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  max-width: 300px;
+}
+@media (max-width: 991px) {
+  .card__project img {
     width: 100%;
   }
 }
 
-.container__social-icons .button__circle {
-  background: white;
-  border-radius: 100%;
-  border: 1px solid #cecece;
-  display: inline-block;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  opacity: 0;
-  padding: 5px;
-  margin: 5px 10px;
-  -webkit-transition: 0.6s ease-out;
-  transition: 0.6s ease-out;
-  position: relative;
-}
-
-@media (max-width: 500px) {
-  .container__social-icons .button__circle {
-    display: inline-block;
-    margin: 0 auto;
-    text-align: center;
-    -webkit-transition: 1s;
-    transition: 1s;
+@-webkit-keyframes leftHalfEntrance {
+  to {
+    translate: 0;
   }
 }
 
-.container__social-icons .button__circle:hover {
-  -webkit-transition: 0.6s ease-out;
-  transition: 0.6s ease-out;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
-.container__social-icons .button__circle img {
-  opacity: 1;
-}
-
-@media (max-width: 991px) {
-  .container__social-icons .button__circle img {
-    position: relative;
-    right: 30%;
-    -webkit-transition: 1s;
-    transition: 1s;
+@keyframes leftHalfEntrance {
+  to {
+    translate: 0;
   }
 }
-
-@media (max-width: 500px) {
-  .container__social-icons .button__circle img {
-    width: 50px;
+@-webkit-keyframes rightHalfEntrance {
+  to {
+    translate: 0;
   }
 }
-
-.container__prev-work {
-  -webkit-animation-fill-mode: forwards !important;
-          animation-fill-mode: forwards !important;
-  border-radius: 15px;
-  margin: 20px auto;
-  text-align: center;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  z-index: 5;
-}
-
-@media (max-width: 767px) {
-  .container__prev-work:first-child {
-    margin-top: 50px;
+@keyframes rightHalfEntrance {
+  to {
+    translate: 0;
   }
 }
-
-.container__prev-work img {
-  border: 1px solid transparent;
-  border-radius: 15px;
-  height: auto;
-  -webkit-transition: 0.6s ease-out;
-  transition: 0.6s ease-out;
-  width: 280px;
-}
-
-@media (max-width: 767px) {
-  .container__prev-work img {
-    width: 250px;
+@-webkit-keyframes rotateEntrance {
+  to {
+    rotate: 45deg;
   }
 }
-
-@media (max-width: 500px) {
-  .container__prev-work img {
-    width: 90%;
+@keyframes rotateEntrance {
+  to {
+    rotate: 45deg;
   }
 }
-
-.emoji__smiley-face {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-}
-
-.emoji__pointer {
-  margin: auto;
-  text-align: center;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
-  position: relative;
-  width: 1px;
-  -webkit-animation: emojiPointerAnim 1.5s ease-out forwards;
-          animation: emojiPointerAnim 1.5s ease-out forwards;
-}
-
-@media (max-width: 575px) {
-  .emoji__pointer {
-    -webkit-transform: translateY(-130px);
-            transform: translateY(-130px);
+@-webkit-keyframes shapeFullEntrance {
+  from {
+    scale: 0;
+    rotate: 90deg;
+    opacity: 0;
+  }
+  to {
+    scale: 0.6;
+    rotate: 0deg;
+    opacity: 1;
   }
 }
-
-.emoji__pointer svg {
-  z-index: 300000;
-}
-
-.emoji__pointer #click {
-  opacity: 1;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-animation: emojiCursorClickAnim 0.5s 0.8s ease-out forwards;
-          animation: emojiCursorClickAnim 0.5s 0.8s ease-out forwards;
-}
-
-.emoji__pointer #cursor-hand {
-  display: block;
-}
-
-.animated .planet--full {
-  opacity: 0;
-  -webkit-animation: planetEntrance 0.5s 1.25s ease-out forwards;
-          animation: planetEntrance 0.5s 1.25s ease-out forwards;
-}
-
-.animated #planet--base {
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-animation: planetBaseEntrance 10s 1.5s linear infinite;
-          animation: planetBaseEntrance 10s 1.5s linear infinite;
-}
-
-.animated .shape-white {
-  -webkit-animation: shapeWhiteAnimation 4s ease-out forwards;
-          animation: shapeWhiteAnimation 4s ease-out forwards;
-}
-
-.animated .shape-blue {
-  -webkit-animation: shapeBlueAnimation 6s ease-out forwards;
-          animation: shapeBlueAnimation 6s ease-out forwards;
-}
-
-.animated #planet--craters {
-  opacity: 0;
-  width: 300px;
-  height: 400px;
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-  -webkit-animation: planetCratersAnimation 2s 1.5s ease-out forwards;
-          animation: planetCratersAnimation 2s 1.5s ease-out forwards;
-}
-
-.animated #planet--moon-a,
-.animated #planet--moon-b,
-.animated #planet--moon-c,
-.animated #planet--moon-d {
-  cursor: pointer;
-  z-index: 900;
-}
-
-.animated circle {
-  cursor: pointer;
-}
-
-.animated #planet--rings {
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-  opacity: 0;
-  -webkit-animation: planetRingsEntrance 0.5s 2s ease-out forwards, planetRingsAnimation 3s 2s ease-out infinite;
-          animation: planetRingsEntrance 0.5s 2s ease-out forwards, planetRingsAnimation 3s 2s ease-out infinite;
-}
-
-.animated .space-background {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  opacity: 0;
-  display: none;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  -webkit-animation: spaceBackgroundExit 0.5s 1s ease-out forwards, spaceBackgroundEntrance 2s 2s ease-out forwards;
-          animation: spaceBackgroundExit 0.5s 1s ease-out forwards, spaceBackgroundEntrance 2s 2s ease-out forwards;
-}
-
-@media (max-width: 767px) {
-  .animated .hero__image--circle {
-    bottom: 0px;
+@keyframes shapeFullEntrance {
+  from {
+    scale: 0;
+    rotate: 90deg;
+    opacity: 0;
+  }
+  to {
+    scale: 0.6;
+    rotate: 0deg;
+    opacity: 1;
   }
 }
-
-@media (max-width: 500px) {
-  .animated .hero__image--circle {
-    bottom: 300px;
-    width: 300px;
-    display: none !important;
+@-webkit-keyframes shapeFullRotate {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
   }
 }
-
-.animated .emoji__wave--animation {
-  -webkit-animation: waveHand 1.5s 0.5s ease-in-out;
-          animation: waveHand 1.5s 0.5s ease-in-out;
-}
-
-.animated #undraw_connected_world {
-  -webkit-animation: fadeIn 1.5s ease-out;
-          animation: fadeIn 1.5s ease-out;
-}
-
-.animated #pins {
-  opacity: 1;
-}
-
-.animated .emoji__containers {
-  left: -100px;
-  top: -70px;
-  opacity: 1;
-  right: 0;
-  position: absolute;
-}
-
-@media (max-width: 991px) {
-  .animated .emoji__containers {
-    left: 0;
-    right: 0;
+@keyframes shapeFullRotate {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
   }
 }
-
-@media (max-width: 575px) {
-  .animated .emoji__containers {
-    top: 40px;
+@-webkit-keyframes profileImageEntrance {
+  to {
+    opacity: 1;
   }
 }
-
-.animated .emoji__smiley-face {
-  -webkit-animation: emojiFaceAppear 1.5s ease-out;
-          animation: emojiFaceAppear 1.5s ease-out;
-  -webkit-animation-direction: forwards;
-          animation-direction: forwards;
-  cursor: pointer;
-  position: relative;
-  top: -150px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transition: 0.6s ease-out;
-  transition: 0.6s ease-out;
-  z-index: 2;
-}
-
-.animated .emoji__smiley-face svg {
-  z-index: 3;
-}
-
-.animated .emoji__smiley-face:hover {
-  -webkit-transition: 0.6s ease-out;
-  transition: 0.6s ease-out;
-}
-
-@media (max-width: 767px) {
-  .animated .emoji__smiley-face {
-    left: 0;
-    right: 0;
-    text-align: center;
+@keyframes profileImageEntrance {
+  to {
+    opacity: 1;
   }
 }
-
-@media (max-width: 500px) {
-  .animated .emoji__smiley-face {
-    left: 0;
-    right: 0;
-    text-align: center;
-    top: -40px;
+@-webkit-keyframes contentLeftAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
-
-@media (max-width: 575px) {
-  .animated .emoji__smiley-face {
-    top: -30px;
-    right: 0;
-    left: 0;
+@keyframes contentLeftAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
-
-.animated .emoji__smiley-face svg {
-  height: 180px;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: 0.6s ease-out;
-  transition: 0.6s ease-out;
-  width: 300px;
-  -webkit-animation: emojiBounce 2s ease-out infinite;
-          animation: emojiBounce 2s ease-out infinite;
-}
-
-@media (max-width: 500px) {
-  .animated .emoji__smiley-face svg {
-    width: 80%;
+@-webkit-keyframes aboutSectionUFOTranslate {
+  30% {
+    translate: 350px;
+    scale: 1.2;
+  }
+  60% {
+    translate: -350px 50px;
+    scale: 1.35;
+  }
+  90% {
+    translate: 350px 90px;
+    scale: 1.4;
+    opacity: 1;
+  }
+  95% {
+    scale: 0.5;
+    translate: 250px -40px;
+  }
+  100% {
+    opacity: 0;
   }
 }
-
-@media (max-width: 991px) {
-  .animated .emoji__smiley-face svg {
-    left: 0;
-    right: 0;
+@keyframes aboutSectionUFOTranslate {
+  30% {
+    translate: 350px;
+    scale: 1.2;
+  }
+  60% {
+    translate: -350px 50px;
+    scale: 1.35;
+  }
+  90% {
+    translate: 350px 90px;
+    scale: 1.4;
+    opacity: 1;
+  }
+  95% {
+    scale: 0.5;
+    translate: 250px -40px;
+  }
+  100% {
+    opacity: 0;
   }
 }
-
-.animated .emoji__smiley-face svg:hover #left-eye,
-.animated .emoji__smiley-face svg:hover #right-eye {
-  -webkit-animation: eyebrowsRaise 1s ease-out infinite;
-          animation: eyebrowsRaise 1s ease-out infinite;
-  -webkit-transition: 0.6s ease-out;
-  transition: 0.6s ease-out;
-}
-
-.animated .emoji__smiley-face svg:hover #mouth {
-  color: inherit;
-}
-
-.animated .emoji__smiley-face svg:hover #lips-kiss {
-  display: none;
-}
-
-.animated .emoji__smiley-face svg:hover #mouth-wow {
-  opacity: 1;
-}
-
-.animated .emoji__smiley-face svg #left-eye,
-.animated .emoji__smiley-face svg #right-eye,
-.animated .emoji__smiley-face svg #mouth-wow,
-.animated .emoji__smiley-face svg #lips-kiss {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: 0.6s ease-out;
-  transition: 0.6s ease-out;
-}
-
-.animated .emoji__smiley-face svg #eyes--left-wink,
-.animated .emoji__smiley-face svg #eyebrows {
-  display: none;
-}
-
-.animated .emoji__smiley-face svg #mouth-wow,
-.animated .emoji__smiley-face svg #mouth-kiss #right-eye--dizzy,
-.animated .emoji__smiley-face svg #right-eye--dizzy,
-.animated .emoji__smiley-face svg #left-eye--dizzy,
-.animated .emoji__smiley-face svg #eyes--mad,
-.animated .emoji__smiley-face svg #mouth-smoke-puff,
-.animated .emoji__smiley-face svg #eyes--stars,
-.animated .emoji__smiley-face svg #teeth-top-row--no-bottom,
-.animated .emoji__smiley-face svg #eyes--sleepy,
-.animated .emoji__smiley-face svg #sleep-group {
-  opacity: 0;
-}
-
-.animated .emoji__smiley-face.wink #eye-left,
-.animated .emoji__smiley-face.wink #left-eye,
-.animated .emoji__smiley-face.wink #eyes--mad,
-.animated .emoji__smiley-face.wink #mouth-wow,
-.animated .emoji__smiley-face.wink #mouth-smoke-puff,
-.animated .emoji__smiley-face.wink #right-eye {
-  opacity: 0;
-  display: none;
-}
-
-.animated .emoji__smiley-face.wink #eyes--left-wink,
-.animated .emoji__smiley-face.wink #eye-left {
-  opacity: 1;
-  display: inline;
-}
-
-.animated .emoji__smiley-face.wink #mouth {
-  display: inline;
-  -webkit-transition: 0.6s ease-out;
-  transition: 0.6s ease-out;
-}
-
-.animated .emoji__smiley-face.wink #eyebrows {
-  display: inline;
-  opacity: 1;
-  z-index: 2;
-}
-
-.animated .emoji__smiley-face.wink #eyebrows #eyebrow-left {
-  animation: leftEyebrowRaise 5s ease-out infinite alternate-reverse;
-}
-
-.animated .emoji__smiley-face.wink #eyebrows #eyebrow-right {
-  animation: eyebrowRaise 0.5s ease-out infinite alternate-reverse;
-}
-
-.animated .emoji__smiley-face.wow-spin #right-eye--dizzy {
-  -webkit-animation: wowRightEyeSpin 1s ease-out forwards, wowRightEyeSpinExtra 2s 1s ease-out infinite;
-          animation: wowRightEyeSpin 1s ease-out forwards, wowRightEyeSpinExtra 2s 1s ease-out infinite;
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-}
-
-.animated .emoji__smiley-face.wow-spin #left-eye--dizzy {
-  -webkit-animation: wowLeftEyeSpin 1s ease-out forwards, wowLeftEyeSpinExtra 2s 1s ease-out infinite;
-          animation: wowLeftEyeSpin 1s ease-out forwards, wowLeftEyeSpinExtra 2s 1s ease-out infinite;
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-}
-
-.animated .emoji__smiley-face.wow-spin #faces {
-  opacity: 1;
-}
-
-.animated .emoji__smiley-face.wow-spin #eyes {
-  opacity: inherit;
-}
-
-.animated .emoji__smiley-face.wow-spin #faces {
-  -webkit-animation: wowSpin 2s ease-out forwards;
-          animation: wowSpin 2s ease-out forwards;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-}
-
-.animated .emoji__smiley-face.wow-spin #faces #mouth-wow {
-  -webkit-transition: 0.6s ease-out;
-  transition: 0.6s ease-out;
-  opacity: 1;
-}
-
-.animated .emoji__smiley-face.wow-spin #faces #bottom-row-teeth,
-.animated .emoji__smiley-face.wow-spin #faces #top-row-teeth,
-.animated .emoji__smiley-face.wow-spin #faces #left-eye,
-.animated .emoji__smiley-face.wow-spin #faces #eyes--sleepy,
-.animated .emoji__smiley-face.wow-spin #faces #sleep--group,
-.animated .emoji__smiley-face.wow-spin #faces #right-eye,
-.animated .emoji__smiley-face.wow-spin #faces #eyes--mad,
-.animated .emoji__smiley-face.wow-spin #faces #mouth-smoke-puff,
-.animated .emoji__smiley-face.wow-spin #faces #lips-kiss {
-  opacity: 0;
-  display: none;
-}
-
-.animated .emoji__smiley-face.lips-shake {
-  -webkit-animation: newEmojiShake 1s ease-in forwards;
-          animation: newEmojiShake 1s ease-in forwards;
-}
-
-.animated .emoji__smiley-face.lips-shake #eyes--mad,
-.animated .emoji__smiley-face.lips-shake #mouth-smoke-puff,
-.animated .emoji__smiley-face.lips-shake #mouth-wow {
-  opacity: 0;
-}
-
-.animated .emoji__smiley-face.sleepy-face {
-  -webkit-animation: sleepyFaceAnim 0.5s ease-out forwards !important;
-          animation: sleepyFaceAnim 0.5s ease-out forwards !important;
-}
-
-.animated .emoji__smiley-face.sleepy-face #top-row-teeth,
-.animated .emoji__smiley-face.sleepy-face #bottom-row-teeth,
-.animated .emoji__smiley-face.sleepy-face #lips-kiss,
-.animated .emoji__smiley-face.sleepy-face #left-eye,
-.animated .emoji__smiley-face.sleepy-face #eyes--mad,
-.animated .emoji__smiley-face.sleepy-face #mouth-smoke-puff,
-.animated .emoji__smiley-face.sleepy-face #right-eye {
-  opacity: 0;
-  display: none;
-}
-
-.animated .emoji__smiley-face.sleepy-face #eyes--sleepy,
-.animated .emoji__smiley-face.sleepy-face #sleep-group,
-.animated .emoji__smiley-face.sleepy-face #mouth-wow {
-  opacity: 1;
-}
-
-.animated .emoji__smiley-face.sleepy-face #mouth-wow {
-  -webkit-animation: sleepGroupAnim 1s ease-out forwards;
-          animation: sleepGroupAnim 1s ease-out forwards;
-}
-
-.animated .emoji__smiley-face.sleepy-face #sleep-group {
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-animation: sleepGroupAnim 3s ease-out infinite;
-          animation: sleepGroupAnim 3s ease-out infinite;
-}
-
-.animated .emoji__smiley-face.sleepy-face #sleep-group #z-small {
-  -webkit-animation: sleepZAnim 1s ease-out infinite;
-          animation: sleepZAnim 1s ease-out infinite;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  opacity: 0;
-}
-
-.animated .emoji__smiley-face.sleepy-face #sleep-group #z-medium {
-  -webkit-animation: sleepZAnim 1s 1s ease-out infinite;
-          animation: sleepZAnim 1s 1s ease-out infinite;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  opacity: 0;
-}
-
-.animated .emoji__smiley-face.sleepy-face #sleep-group #z-big {
-  -webkit-animation: sleepZAnim 1s 2s ease-out infinite;
-          animation: sleepZAnim 1s 2s ease-out infinite;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  opacity: 0;
-}
-
-.animated .emoji__smiley-face.sleepy-face #eyes--sleepy {
-  -webkit-animation: sleepyEyesAnim 3s ease-out infinite;
-          animation: sleepyEyesAnim 3s ease-out infinite;
-}
-
-.animated .emoji__smiley-face.star-face #eyes--stars {
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-animation: starEyesAnim 1s ease-out forwards;
-          animation: starEyesAnim 1s ease-out forwards;
-}
-
-.animated .emoji__smiley-face.star-face #mouth-wow {
-  opacity: 1;
-}
-
-.animated .emoji__smiley-face.star-face #left-eye,
-.animated .emoji__smiley-face.star-face #right-eye,
-.animated .emoji__smiley-face.star-face #right-eye,
-.animated .emoji__smiley-face.star-face #top-row-teeth,
-.animated .emoji__smiley-face.star-face #eyes--mad,
-.animated .emoji__smiley-face.star-face #mouth-smoke-puff,
-.animated .emoji__smiley-face.star-face #bottom-row-teeth {
-  opacity: 0;
-  display: none;
-}
-
-.animated .emoji__smiley-face.angry-face #left-eye,
-.animated .emoji__smiley-face.angry-face #right-eye,
-.animated .emoji__smiley-face.angry-face #mouth-wow,
-.animated .emoji__smiley-face.angry-face #top-row-teeth,
-.animated .emoji__smiley-face.angry-face #bottom-row-teeth,
-.animated .emoji__smiley-face.angry-face #eyes--stars {
-  opacity: 0;
-  display: none;
-}
-
-.animated .emoji__smiley-face.angry-face #mouth-smoke-puff,
-.animated .emoji__smiley-face.angry-face #eyes--mad {
-  opacity: 1;
-}
-
-.animated .emoji__smiley-face.angry-face #puff-balls-left,
-.animated .emoji__smiley-face.angry-face #puff-balls-right {
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-  -webkit-animation: puffBallAnimation 0.5s 0.75s ease-out forwards;
-          animation: puffBallAnimation 0.5s 0.75s ease-out forwards;
-}
-
-.animated .emoji__smiley-face.angry-face #puff-base-left,
-.animated .emoji__smiley-face.angry-face #puff-base-right {
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-  -webkit-animation: puffBaseAnimation 0.5s .5s ease-out forwards;
-          animation: puffBaseAnimation 0.5s .5s ease-out forwards;
-}
-
-.animated .emoji__smiley-face #faces {
-  -webkit-animation: smileyNod 1.5s 1.5s ease-out;
-          animation: smileyNod 1.5s 1.5s ease-out;
-  -webkit-animation-iteration-count: 2;
-          animation-iteration-count: 2;
-}
-
-.animated .emoji__smiley-face #left-eye,
-.animated .emoji__smiley-face #right-eye {
-  -webkit-animation: eyeAnim 1s 1.5s ease-out;
-          animation: eyeAnim 1s 1.5s ease-out;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-.animated .emoji__smiley-face #bottom-row-teeth {
-  -webkit-animation: bottomTeethAnim 1s 1.5s ease-out;
-          animation: bottomTeethAnim 1s 1.5s ease-out;
-}
-
-.animated .emoji__smiley-face #lips-kiss {
-  opacity: 0;
-  display: none;
-}
-
-.animated .emoji__smiley-face #puff-balls-left,
-.animated .emoji__smiley-face #puff-balls-right,
-.animated .emoji__smiley-face #puff-base-left,
-.animated .emoji__smiley-face #puff-base-right {
-  opacity: 0;
-  -webkit-transition: 2s;
-  transition: 2s;
-}
-
-.animated .emoji__smiley-face.emoji-new-emoji {
-  animation-direction: alternate-reverse;
-}
-
-.animated .emoji__smiley-face.emoji-new-emoji #mouth {
-  opacity: 0;
-}
-
-.animated .emoji__smiley-face.emoji-new-emoji #mouth-wow {
-  opacity: 1;
-}
-
-.animated .emoji__smiley-face.emoji-new-emoji:hover #mouth-wow {
-  opacity: 1;
-}
-
-.animated .main-content {
-  -webkit-animation: fadeInLeft 1s ease-in-out;
-          animation: fadeInLeft 1s ease-in-out;
-}
-
-.animated .container__social-icons {
-  opacity: 1;
-}
-
-.animated .container__prev-work {
-  -webkit-animation: fadeInRight 2s;
-          animation: fadeInRight 2s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards !important;
-          animation-fill-mode: forwards !important;
-}
-
-.animated .container__prev-work img:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-.animated [class^='spin-'] {
-  font-size: 60px;
-  opacity: 1;
-}
-
-@media (max-width: 767px) {
-  .animated [class^='spin-'] {
-    left: 0;
-    right: 0;
-    font-size: 60px;
+@-webkit-keyframes aboutSectionUFOTranslateOne {
+  0% {
+    opacity: 0.2;
+    scale: 2;
+    translate: 700px -50px;
+    rotate: 0deg;
+  }
+  90% {
+    opacity: 0.8;
+    scale: 0.8;
+    translate: 80px -5px;
+    rotate: -1deg;
+  }
+  100% {
+    opacity: 0.2;
+    scale: 0.28;
   }
 }
-
-.animated .button__circle {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  -webkit-animation: fadeInUpSocialIcons ease-out 1s ease-out;
-          animation: fadeInUpSocialIcons ease-out 1s ease-out;
-  opacity: 1;
+@keyframes aboutSectionUFOTranslateOne {
+  0% {
+    opacity: 0.2;
+    scale: 2;
+    translate: 700px -50px;
+    rotate: 0deg;
+  }
+  90% {
+    opacity: 0.8;
+    scale: 0.8;
+    translate: 80px -5px;
+    rotate: -1deg;
+  }
+  100% {
+    opacity: 0.2;
+    scale: 0.28;
+  }
 }
-
-.animated .button__circle img {
-  left: 0;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  -webkit-transition: 0.6s ease-out;
-  transition: 0.6s ease-out;
-  width: 22px;
-  bottom: 0;
-  right: 0;
-  text-align: center;
-  margin: 0 auto;
-  opacity: 1;
+@-webkit-keyframes aboutSectionUFOTranslateTwo {
+  0% {
+    translate: 80px -5px;
+    opacity: 1;
+    scale: 0.8;
+  }
+  100% {
+    opacity: 1;
+    scale: 0.78;
+    translate: 130px -145px;
+    rotate: 0deg;
+  }
 }
-
-.animated h2.fadeInUp {
-  -webkit-animation: fadeInUp 0.5s 0.5s ease-out;
-          animation: fadeInUp 0.5s 0.5s ease-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+@keyframes aboutSectionUFOTranslateTwo {
+  0% {
+    translate: 80px -5px;
+    opacity: 1;
+    scale: 0.8;
+  }
+  100% {
+    opacity: 1;
+    scale: 0.78;
+    translate: 130px -145px;
+    rotate: 0deg;
+  }
 }
-
-.animated h3.fadeInUp {
-  -webkit-animation: fadeInUp 1s 0.75s ease-out;
-          animation: fadeInUp 1s 0.75s ease-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+@-webkit-keyframes aboutSectionUFOPulse {
+  0% {
+    opacity: 1;
+    scale: 0.78;
+    translate: 130px -140px;
+  }
+  50% {
+    opacity: 1;
+    scale: 0.78;
+    translate: 130px -145px;
+    rotate: 0deg;
+  }
+  100% {
+    opacity: 1;
+    translate: 130px -140px;
+    scale: 0.78;
+  }
 }
-
-.animated.lt-blue-gradient__bottom::after {
-  -webkit-animation: ltbluegradientAnimBottom 0.7s ease-out;
-          animation: ltbluegradientAnimBottom 0.7s ease-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  content: "";
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: linear-gradient(225deg, #00d2ff 20%, #3a47d5 100%);
-  z-index: -1;
+@keyframes aboutSectionUFOPulse {
+  0% {
+    opacity: 1;
+    scale: 0.78;
+    translate: 130px -140px;
+  }
+  50% {
+    opacity: 1;
+    scale: 0.78;
+    translate: 130px -145px;
+    rotate: 0deg;
+  }
+  100% {
+    opacity: 1;
+    translate: 130px -140px;
+    scale: 0.78;
+  }
 }
-
-.animated .button__circle:nth-child(1) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-  margin-left: 0;
+@-webkit-keyframes frontUFOLeave {
+  from {
+    opacity: 1;
+    translate: 277px -12px;
+    scale: 0.78;
+  }
+  to {
+    opacity: 1;
+    translate: 3000px -142px;
+    scale: 0.85;
+  }
 }
-
-.animated .button__circle :nth-child(2) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+@keyframes frontUFOLeave {
+  from {
+    opacity: 1;
+    translate: 277px -12px;
+    scale: 0.78;
+  }
+  to {
+    opacity: 1;
+    translate: 3000px -142px;
+    scale: 0.85;
+  }
 }
-
-.animated .button__circle :nth-child(3) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+@-webkit-keyframes aboutSectionUFOTranslateThree {
+  from {
+    scale: 1.2;
+  }
+  to {
+    translate: -350px;
+    scale: 2;
+  }
 }
-
-.animated .button__circle :nth-child(4) {
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
+@keyframes aboutSectionUFOTranslateThree {
+  from {
+    scale: 1.2;
+  }
+  to {
+    translate: -350px;
+    scale: 2;
+  }
 }
-
-.animated .button__circle :nth-child(5) {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-/*# sourceMappingURL=styles.css.map */
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes socialContainerAnimate {
+  to {
+    translate: 0;
+    opacity: 1;
+  }
+}
+@keyframes socialContainerAnimate {
+  to {
+    translate: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes moonAnimate {
+  to {
+    scale: 1;
+    opacity: 0.3;
+  }
+}
+@keyframes moonAnimate {
+  to {
+    scale: 1;
+    opacity: 0.3;
+  }
+}
+@-webkit-keyframes separatorAnimate {
+  to {
+    opacity: 1;
+    rotate: y 180deg;
+  }
+}
+@keyframes separatorAnimate {
+  to {
+    opacity: 1;
+    rotate: y 180deg;
+  }
+}
+@-webkit-keyframes moonRises {
+  0% {
+    scale: 0;
+    opacity: 0;
+    scale: 30;
+  }
+  10% {
+    opacity: 0;
+    translate: 50px 0;
+  }
+  100% {
+    scale: 1;
+    translate: 100px 0;
+    opacity: 1;
+  }
+}
+@keyframes moonRises {
+  0% {
+    scale: 0;
+    opacity: 0;
+    scale: 30;
+  }
+  10% {
+    opacity: 0;
+    translate: 50px 0;
+  }
+  100% {
+    scale: 1;
+    translate: 100px 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes iconPathsAnimate {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes iconPathsAnimate {
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes footerUFOEntrance {
+  0% {
+    scale: 0.15;
+    translate: 500px 10px;
+    opacity: 0.7;
+  }
+  25% {
+    translate: -250px 50px;
+    scale: 0.15;
+    opacity: 0.5;
+  }
+  50% {
+    translate: 150px 100px;
+    scale: 0.25;
+  }
+  75% {
+    translate: -25px 100px;
+    scale: 0.3;
+  }
+  100% {
+    translate: 250px 65px;
+    scale: 0.5;
+  }
+}
+@keyframes footerUFOEntrance {
+  0% {
+    scale: 0.15;
+    translate: 500px 10px;
+    opacity: 0.7;
+  }
+  25% {
+    translate: -250px 50px;
+    scale: 0.15;
+    opacity: 0.5;
+  }
+  50% {
+    translate: 150px 100px;
+    scale: 0.25;
+  }
+  75% {
+    translate: -25px 100px;
+    scale: 0.3;
+  }
+  100% {
+    translate: 250px 65px;
+    scale: 0.5;
+  }
+}/*# sourceMappingURL=styles.css.map */
