@@ -463,9 +463,14 @@ h1 {
     }
 
     .about__img {
-      width: 275px;
+      width: 200px;
       height: auto;
       border-radius: 100%;
+
+      @media(max-width: $medium-breakpoint) {
+        max-width: 50%;
+        width: 40%;
+      }
     }
 
     .container {

@@ -476,9 +476,15 @@ h1 {
   content: "";
 }
 .section__about-me .about__img {
-  width: 275px;
+  width: 200px;
   height: auto;
   border-radius: 100%;
+}
+@media (max-width: 991px) {
+  .section__about-me .about__img {
+    max-width: 50%;
+    width: 40%;
+  }
 }
 .section__about-me .container {
   position: absolute;
