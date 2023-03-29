@@ -555,8 +555,7 @@ h1 {
   transition: 5s;
 }
 .section__about-me.animate #base-angled-background {
-  fill: rgba(35, 35, 35, 0);
-  display: none;
+  fill: #232323;
 }
 .section__about-me.animate .svg__about--background rect {
   opacity: 1;
