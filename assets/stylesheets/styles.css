@@ -554,9 +554,6 @@ h1 {
   -webkit-transition: 5s;
   transition: 5s;
 }
-.section__about-me.animate #base-angled-background {
-  fill: #232323;
-}
 .section__about-me.animate .svg__about--background rect {
   opacity: 1;
   fill: #1E1E1E;
