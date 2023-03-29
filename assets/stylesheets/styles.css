@@ -108,6 +108,14 @@ h1 {
   }
 }
 
+@media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (not (-apple-color-filter: none)) {
+    #left-half,
+    #right-half {
+      display: none;
+    }
+  }
+}
 .content__cta--emoji {
   color: linear-gradient(95.08deg, #D6F15B 11.05%, #69B75D 60.58%);
   display: inline-block;
@@ -284,7 +292,8 @@ h1 {
 }
 @media (max-width: 991px) {
   .section__hero .profile-img {
-    width: 50%;
+    max-width: 50%;
+    width: 40%;
   }
 }
 .section__hero.animate .content__left {
@@ -544,6 +553,10 @@ h1 {
   translate: 100px;
   -webkit-transition: 5s;
   transition: 5s;
+}
+.section__about-me.animate #base-angled-background {
+  fill: rgba(35, 35, 35, 0);
+  display: none;
 }
 .section__about-me.animate .svg__about--background rect {
   opacity: 1;

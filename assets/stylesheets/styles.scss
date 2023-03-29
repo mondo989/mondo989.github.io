@@ -97,12 +97,24 @@ h1 {
     @media(max-width: $medium-breakpoint) {
       margin-left: 0;
     }
+
     // D6F15B
     // text-shadow: 0.5px 0.5px 1px $black, -0.5px -0.5px 1px $black;
-    
+
     // background: linear-gradient(to right, #D6F15B 0%, #69B75D 100%);
     // background-clip: text;
     // -webkit-text-fill-color: transparent;
+  }
+}
+
+
+// SAFARI Only Media Query
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) and (not (-apple-color-filter: none)) {
+    #left-half,
+    #right-half {
+      display: none;
+    }
   }
 }
 
@@ -269,7 +281,8 @@ h1 {
 
     .profile-img {
       @media(max-width: $medium-breakpoint) {
-        width: 50%;
+        max-width: 50%;
+        width: 40%;
       }
     }
 
@@ -541,6 +554,11 @@ h1 {
 
     &.animate {
 
+      #base-angled-background {
+        fill: #23232300;
+        display: none;
+      }
+
       .svg__about--background {
 
         rect {
@@ -548,6 +566,7 @@ h1 {
           fill: #1E1E1E;
         }
       }
+
       .moon--behind {
         circle {
           opacity: 1;
@@ -876,6 +895,7 @@ h1 {
     }
   }
 }
+
 
 @keyframes leftHalfEntrance {
   to {
