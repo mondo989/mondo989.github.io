@@ -7,6 +7,13 @@ $base-border-radius: 15px;
 $medium-breakpoint: 991px;
 $small-breakpoint: 448px;
 
+$random-number: round(random() * 100)+1;
+
+@mixin random-number {
+  $random: round(random() * 5);
+  --random-number: #{$random};
+}
+
 html {
   background: inherit;
   overflow-x: hidden;
@@ -71,17 +78,18 @@ h1 {
   align-items: center;
   text-align: center;
   font-weight: 800;
-  padding: 15px 20px;
+  padding: 10px 20px;
   text-decoration: none;
   width: 220px;
   margin: 0;
 
   background: linear-gradient(92.98deg, #D6F15B 21.64%, #69B75D 189.75%);
   box-shadow: 0px 1px 1px #000000;
-  transition: $base-transition * 0.5;
+  transition: $base-transition;
 
   &:hover {
     scale: 1.025;
+    background: linear-gradient(92.98deg, #D6F15B 121.64%, #69B75D 309.75%);
   }
 
   @media(max-width: $medium-breakpoint) {
@@ -97,13 +105,6 @@ h1 {
     @media(max-width: $medium-breakpoint) {
       margin-left: 0;
     }
-
-    // D6F15B
-    // text-shadow: 0.5px 0.5px 1px $black, -0.5px -0.5px 1px $black;
-
-    // background: linear-gradient(to right, #D6F15B 0%, #69B75D 100%);
-    // background-clip: text;
-    // -webkit-text-fill-color: transparent;
   }
 }
 
@@ -111,6 +112,7 @@ h1 {
 // SAFARI Only Media Query
 @media not all and (min-resolution:.001dpcm) {
   @supports (-webkit-appearance:none) and (not (-apple-color-filter: none)) {
+
     #left-half,
     #right-half {
       display: none;
@@ -260,6 +262,98 @@ h1 {
         text-align: center;
         width: 100%;
         align-items: center;
+        transition-delay: 0;
+      }
+
+      .wrench-button {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #f3f3f3;
+        background: #fff;
+        padding: 2px;
+        position: relative;
+        top: 3px;
+        border-radius: 120px;
+        transform: translate3d(0,0,0)
+      }
+
+      #cloud-main,
+      #cloud-secondary,
+      #cloud-small {
+        opacity: 0;
+        animation: cloudAppears $base-transition * 5 $base-transition * 2 ease-out forwards;
+      }
+
+      .content__cta--alt {
+        &:hover {
+          #cloud-main,
+          #cloud-secondary,
+          #cloud-small {
+            // opacity: 0;
+            animation: cloudLeaves $base-transition ease-out forwards;
+          }
+
+          #art-background--full {
+            rect {
+              fill: $primary-color;
+            }
+          }
+        }
+      }
+
+
+      #sun--full {}
+
+      #sun--full {
+        transform-origin: center;
+
+        circle {
+          opacity: 0;
+          animation: sunRises $base-transition $base-transition * 5 ease-out forwards;
+        }
+      }
+
+      #sun-rays {
+        opacity: 0;
+        animation: sunRays $base-transition * 3 $base-transition * 5 linear infinite;
+      }
+
+      .art-button {
+        width: 30px;
+        height: 30px;
+      }
+
+      #wrench--left {
+        opacity: 0;
+        animation: wrenchAnimateLeft $base-transition $base-transition * 4 ease-out forwards;
+      }
+
+      #wrench--right {
+        opacity: 0;
+        animation: wrenchAnimateRight $base-transition $base-transition * 4 ease-out forwards;
+      }
+    }
+
+    .art-button {
+      margin-left: 10px;
+      position: relative;
+      top: 5px;
+    }
+
+    .content__cta--wrench {
+      svg {
+        will-change: rotate;
+        transition: $base-transition * 3;
+        margin-left: 10px;
+      }
+
+      &:hover {
+
+        .wrench-button {}
+
+        svg {
+          animation: wrenchLeftHover $base-transition * 3 linear infinite;
+        }
       }
     }
 
@@ -271,6 +365,7 @@ h1 {
 
       @media(max-width: $medium-breakpoint) {
         width: 100%;
+        transition-delay: 0;
       }
     }
 
@@ -353,9 +448,10 @@ h1 {
 
     .background--portfolio {
       position: absolute;
-      translate: 0 -500px;
+      // translate: 0 -500px;
+      transform: translateY(-500px) scale(2);
       width: 100%;
-      scale: 2;
+      // scale: 2;
       z-index: 0;
       overflow: hidden;
       transition: $base-transition;
@@ -375,19 +471,22 @@ h1 {
 
     &.animate {
       .background--portfolio {
-        translate: 0 100px;
+        // translate: 0 100px;
+        transform: translateY(-400px);
 
         @media(max-width: $medium-breakpoint) {
           // display: none;
-          translate: 0 -100px;
+          // translate: 0 -100px;
+          transform: translateY(-100px);
         }
 
         path {
 
+          transform: translateX(-5000px) scale(2);
           transition: $base-transition;
-          scale: 2;
+          // scale: 2;
           position: absolute;
-          translate: -4000px;
+          // translate: -4000px;
         }
       }
 
@@ -410,7 +509,6 @@ h1 {
   }
 
   &__about-me {
-    // background: #ff00ff;
     position: relative;
     height: 100%;
     min-height: 600px;
@@ -468,8 +566,10 @@ h1 {
       border-radius: 100%;
 
       @media(max-width: $medium-breakpoint) {
-        max-width: 50%;
-        width: 40%;
+        // max-width: 50%;
+        // width: 40%;
+
+        width: 200px;
       }
     }
 
@@ -512,7 +612,6 @@ h1 {
           circle {
             fill: #69B75D;
             transition: $base-transition;
-
             opacity: 1;
             scale: 1;
           }
@@ -522,9 +621,7 @@ h1 {
           display: none;
         }
 
-        #base-angled-background {
-          // fill: pink;
-        }
+        #base-angled-background {}
 
         .svg__about--ufo-front {
           display: block;
@@ -591,6 +688,10 @@ h1 {
           // aboutSectionUFOTranslateTwo 3s $base-transition + 2s ease-out forwards,
           aboutSectionUFOPulse 3s $base-transition + 2s ease-out infinite;
         // aboutSectionUFOTranslateThree 5s $base-transition + 5s ease-out forwards;
+
+        .ufo-alien--full {
+          scale: 0.5;
+        }
       }
     }
   }
@@ -629,6 +730,41 @@ h1 {
       }
     }
 
+    #star-glow,
+    #star-main,
+    #star-sub {
+      transform-origin: center;
+    }
+
+    .stars__container {
+      position: absolute;
+      // background-color: red;
+      width: 100%;
+      right: 0;
+      top: 0;
+      opacity: 0;
+      // scale: 0.25;
+      z-index: -1;
+      opacity: 5;
+
+      svg {
+        // opacity: 0;
+        animation: starRotate $base-transition * 8 $base-transition * 2 infinite linear;
+      }
+
+      #star-glow {
+        animation: starGlow $base-transition * 7 $base-transition ease-in-out infinite;
+      }
+
+      #star-main {
+        animation: starMainAnimation $base-transition * 5 $base-transition ease-in-out infinite;
+      }
+
+      #star-sub {
+        animation: starSubAnimation $base-transition * 10 $base-transition ease-in-out infinite;
+      }
+    }
+
     .moon-container {
       margin: 0 auto;
       display: flex;
@@ -659,6 +795,23 @@ h1 {
         fill: #101010;
         // scale: 0;
       }
+
+      #bottom-hole--grey {
+        fill: #E6FA5C50;
+      }
+
+      #glass-top--coupling {
+        fill: red;
+      }
+    }
+
+    #ship--glow {
+      will-change: opacity;
+      animation: shipGlowAnimation $base-transition * 5 $base-transition * 2 ease-in-out infinite;
+    }
+
+    #glass-top {
+      path {}
     }
 
     .social__container {
@@ -725,6 +878,7 @@ h1 {
       }
 
       .ufo--moon {
+        will-change: translate;
         animation: footerUFOEntrance $base-transition * 20 $base-transition * 2 ease-out forwards;
         scale: 0.15;
 
@@ -732,6 +886,48 @@ h1 {
           // transform: footerUFOEntrance $base-transition * 2 ease-out forwards;
           // fill: red;
         }
+      }
+
+      .star-one {
+        scale: 0.2;
+        // opacity: 0;
+        // scale: --random-number;
+        left: $random-number + px;
+        top: $random-number + px;
+        // position: absolute;
+        // left: --random-number;
+        animation: starOneAnimation $base-transition * 2.5 ease-out forwards;
+      }
+
+      .star-two {
+        // opacity: 1;
+        scale: 0.5;
+        scale: --random-number;
+        animation-delay: $base-transition;
+        left: $random-number + px;
+        top: $random-number + px;
+        // position: absolute;
+        animation: starTwoAnimation $base-transition * 5 ease-out forwards;
+      }
+
+      .star-three {
+        opacity: 0;
+        scale: --random-number;
+        // position: absolute;
+        // left: $random-number + px;
+        // top: $random-number + px;
+        animation: starTwoAnimation $base-transition * 7.5 ease-out forwards;
+      }
+
+      .star-four,
+      .star-five,
+      .star-six {
+        opacity: 0;
+        scale: --random-number;
+        // position: absolute;
+        // left: $random-number + px;
+        // top: $random-number + px;
+        animation: starTwoAnimation $base-transition * 5 ease-out forwards;
       }
 
       .separator {
@@ -745,6 +941,8 @@ h1 {
     }
   }
 }
+
+
 
 
 .section__hero,
@@ -828,6 +1026,8 @@ h1 {
 .past-work {
   .content__left {
     p {
+      padding-right: 40px;
+
       @media(max-width: $medium-breakpoint) {
         margin-bottom: 30px;
       }
@@ -1166,5 +1366,207 @@ h1 {
   100% {
     translate: 250px 65px;
     scale: 0.5;
+  }
+}
+
+@keyframes shipGlowAnimation {
+  0% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes starGlow {
+  0% {
+    opacity: 0.15;
+  }
+
+  50% {
+    opacity: 0.01;
+  }
+
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@keyframes starMainAnimation {
+  0% {
+    transform: scale(.25);
+    opacity: 0.15;
+  }
+
+  50% {
+    // scale: 0.05;
+    transform: scale(.05);
+    opacity: 0.25;
+
+  }
+
+  100% {
+    // scale: .25;
+    transform: scale(.25);
+    opacity: 0.15;
+  }
+}
+
+@keyframes starSubAnimation {
+  0% {
+    transform: scale(0.015);
+    // scale: 0.015;
+    opacity: 0.5;
+  }
+
+  50% {
+    // scale: .125;
+    transform: scale(0.125);
+    opacity: 0.25;
+  }
+
+  100% {
+    // scale: 0.015;
+    transform: scale(0.015);
+    opacity: .5;
+  }
+}
+
+
+@keyframes starRotate {
+  0% {
+    // opacity: 0.8;
+    rotate: 0deg;
+  }
+
+  50% {
+    // opacity: 0.2;
+
+  }
+
+  100% {
+    // opacity: 0.8;
+    rotate: 180deg;
+  }
+}
+
+
+@keyframes starOneAnimation {
+  0% {
+    // translate: 0 0;
+  }
+
+  100% {
+    // translate: 1000px -100px;
+    opacity: 1;
+    translate: 0 round(random() * 2000);
+  }
+}
+
+@keyframes starTwoAnimation {
+  0% {
+    opacity: 1;
+    // translate: 0 0;
+  }
+
+  100% {
+    opacity: 1;
+    // scale: round(random() * 50);
+    // translate: -500px round(random() * -2000);
+    translate: 0 round(random() * 2000);
+  }
+}
+
+@keyframes wrenchAnimateLeft {
+  0% {
+    // rotate: -90deg;
+    transform: rotate(-90deg) translateX(-500px);
+    // translate: 100px;
+    opacity: 0;
+  }
+
+  20% {
+    // transform: rotate(-45deg) translate(170px);
+  }
+
+  100% {
+    // rotate: 0deg;
+    transform: rotate(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes wrenchAnimateRight {
+  from {
+    // rotate: -90deg;
+    transform: rotate(90deg);
+    transform: rotate(-45deg) translateX(150px) scale(3);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotate(0);
+    transform: rotate(0deg) translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes wrenchLeftHover {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes cloudAppears {
+  0% {
+    transform: translateX(500px);
+    // translate: 500px;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+    // translate: 0;
+  }
+}
+
+@keyframes sunRays {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sunRises {
+  0% {
+    transform: translate(-50px, 500px) scale(0);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes cloudLeaves {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    opacity: 0;
   }
 }

@@ -77,18 +77,19 @@ h1 {
           align-items: center;
   text-align: center;
   font-weight: 800;
-  padding: 15px 20px;
+  padding: 10px 20px;
   text-decoration: none;
   width: 220px;
   margin: 0;
   background: linear-gradient(92.98deg, #D6F15B 21.64%, #69B75D 189.75%);
   -webkit-box-shadow: 0px 1px 1px #000000;
           box-shadow: 0px 1px 1px #000000;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .content__cta:hover {
   scale: 1.025;
+  background: linear-gradient(92.98deg, #D6F15B 121.64%, #69B75D 309.75%);
 }
 @media (max-width: 991px) {
   .content__cta {
@@ -269,7 +270,80 @@ h1 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-transition-delay: 0;
+            transition-delay: 0;
   }
+}
+.section__hero .content__left .wrench-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #f3f3f3;
+  background: #fff;
+  padding: 2px;
+  position: relative;
+  top: 3px;
+  border-radius: 120px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.section__hero .content__left #cloud-main,
+.section__hero .content__left #cloud-secondary,
+.section__hero .content__left #cloud-small {
+  opacity: 0;
+  -webkit-animation: cloudAppears 2.5s 1s ease-out forwards;
+          animation: cloudAppears 2.5s 1s ease-out forwards;
+}
+.section__hero .content__left .content__cta--alt:hover #cloud-main,
+.section__hero .content__left .content__cta--alt:hover #cloud-secondary,
+.section__hero .content__left .content__cta--alt:hover #cloud-small {
+  -webkit-animation: cloudLeaves 0.5s ease-out forwards;
+          animation: cloudLeaves 0.5s ease-out forwards;
+}
+.section__hero .content__left .content__cta--alt:hover #art-background--full rect {
+  fill: #E6FA5C;
+}
+.section__hero .content__left #sun--full {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+.section__hero .content__left #sun--full circle {
+  opacity: 0;
+  -webkit-animation: sunRises 0.5s 2.5s ease-out forwards;
+          animation: sunRises 0.5s 2.5s ease-out forwards;
+}
+.section__hero .content__left #sun-rays {
+  opacity: 0;
+  -webkit-animation: sunRays 1.5s 2.5s linear infinite;
+          animation: sunRays 1.5s 2.5s linear infinite;
+}
+.section__hero .content__left .art-button {
+  width: 30px;
+  height: 30px;
+}
+.section__hero .content__left #wrench--left {
+  opacity: 0;
+  -webkit-animation: wrenchAnimateLeft 0.5s 2s ease-out forwards;
+          animation: wrenchAnimateLeft 0.5s 2s ease-out forwards;
+}
+.section__hero .content__left #wrench--right {
+  opacity: 0;
+  -webkit-animation: wrenchAnimateRight 0.5s 2s ease-out forwards;
+          animation: wrenchAnimateRight 0.5s 2s ease-out forwards;
+}
+.section__hero .art-button {
+  margin-left: 10px;
+  position: relative;
+  top: 5px;
+}
+.section__hero .content__cta--wrench svg {
+  will-change: rotate;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  margin-left: 10px;
+}
+.section__hero .content__cta--wrench:hover svg {
+  -webkit-animation: wrenchLeftHover 1.5s linear infinite;
+          animation: wrenchLeftHover 1.5s linear infinite;
 }
 .section__hero .content__right {
   width: 50%;
@@ -284,6 +358,8 @@ h1 {
 @media (max-width: 991px) {
   .section__hero .content__right {
     width: 100%;
+    -webkit-transition-delay: 0;
+            transition-delay: 0;
   }
 }
 .section__hero p {
@@ -374,9 +450,9 @@ h1 {
 }
 .section__portfolio .background--portfolio {
   position: absolute;
-  translate: 0 -500px;
+  -webkit-transform: translateY(-500px) scale(2);
+          transform: translateY(-500px) scale(2);
   width: 100%;
-  scale: 2;
   z-index: 0;
   overflow: hidden;
   -webkit-transition: 0.5s;
@@ -391,19 +467,21 @@ h1 {
   scale: 3;
 }
 .section__portfolio.animate .background--portfolio {
-  translate: 0 100px;
+  -webkit-transform: translateY(-400px);
+          transform: translateY(-400px);
 }
 @media (max-width: 991px) {
   .section__portfolio.animate .background--portfolio {
-    translate: 0 -100px;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
   }
 }
 .section__portfolio.animate .background--portfolio path {
+  -webkit-transform: translateX(-5000px) scale(2);
+          transform: translateX(-5000px) scale(2);
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  scale: 2;
   position: absolute;
-  translate: -4000px;
 }
 .section__portfolio.animate .content__left {
   -webkit-animation: contentLeftAppear 0.5s 0.5s ease-out forwards;
@@ -482,8 +560,7 @@ h1 {
 }
 @media (max-width: 991px) {
   .section__about-me .about__img {
-    max-width: 50%;
-    width: 40%;
+    width: 200px;
   }
 }
 .section__about-me .container {
@@ -579,6 +656,9 @@ h1 {
   -webkit-animation: aboutSectionUFOTranslateOne 2s 0.5s ease-out forwards, aboutSectionUFOPulse 3s 2.5s ease-out infinite;
           animation: aboutSectionUFOTranslateOne 2s 0.5s ease-out forwards, aboutSectionUFOPulse 3s 2.5s ease-out infinite;
 }
+.section__about-me.animate .svg__about--ufo-back .ufo-alien--full {
+  scale: 0.5;
+}
 .section__footer {
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -615,6 +695,37 @@ h1 {
     text-align: center;
   }
 }
+.section__footer #star-glow,
+.section__footer #star-main,
+.section__footer #star-sub {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+.section__footer .stars__container {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  z-index: -1;
+  opacity: 5;
+}
+.section__footer .stars__container svg {
+  -webkit-animation: starRotate 4s 1s infinite linear;
+          animation: starRotate 4s 1s infinite linear;
+}
+.section__footer .stars__container #star-glow {
+  -webkit-animation: starGlow 3.5s 0.5s ease-in-out infinite;
+          animation: starGlow 3.5s 0.5s ease-in-out infinite;
+}
+.section__footer .stars__container #star-main {
+  -webkit-animation: starMainAnimation 2.5s 0.5s ease-in-out infinite;
+          animation: starMainAnimation 2.5s 0.5s ease-in-out infinite;
+}
+.section__footer .stars__container #star-sub {
+  -webkit-animation: starSubAnimation 5s 0.5s ease-in-out infinite;
+          animation: starSubAnimation 5s 0.5s ease-in-out infinite;
+}
 .section__footer .moon-container {
   margin: 0 auto;
   display: -webkit-box;
@@ -643,6 +754,17 @@ h1 {
 }
 .section__footer .ufo--moon path {
   fill: #101010;
+}
+.section__footer .ufo--moon #bottom-hole--grey {
+  fill: rgba(230, 250, 92, 0.3137254902);
+}
+.section__footer .ufo--moon #glass-top--coupling {
+  fill: red;
+}
+.section__footer #ship--glow {
+  will-change: opacity;
+  -webkit-animation: shipGlowAnimation 2.5s 1s ease-in-out infinite;
+          animation: shipGlowAnimation 2.5s 1s ease-in-out infinite;
 }
 .section__footer .social__container {
   padding: 0;
@@ -702,9 +824,41 @@ h1 {
           animation: socialContainerAnimate 1s ease-out forwards;
 }
 .section__footer.animate .ufo--moon {
+  will-change: translate;
   -webkit-animation: footerUFOEntrance 10s 1s ease-out forwards;
           animation: footerUFOEntrance 10s 1s ease-out forwards;
   scale: 0.15;
+}
+.section__footer.animate .star-one {
+  scale: 0.2;
+  left: 63px;
+  top: 63px;
+  -webkit-animation: starOneAnimation 1.25s ease-out forwards;
+          animation: starOneAnimation 1.25s ease-out forwards;
+}
+.section__footer.animate .star-two {
+  scale: 0.5;
+  scale: --random-number;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  left: 63px;
+  top: 63px;
+  -webkit-animation: starTwoAnimation 2.5s ease-out forwards;
+          animation: starTwoAnimation 2.5s ease-out forwards;
+}
+.section__footer.animate .star-three {
+  opacity: 0;
+  scale: --random-number;
+  -webkit-animation: starTwoAnimation 3.75s ease-out forwards;
+          animation: starTwoAnimation 3.75s ease-out forwards;
+}
+.section__footer.animate .star-four,
+.section__footer.animate .star-five,
+.section__footer.animate .star-six {
+  opacity: 0;
+  scale: --random-number;
+  -webkit-animation: starTwoAnimation 2.5s ease-out forwards;
+          animation: starTwoAnimation 2.5s ease-out forwards;
 }
 .section__footer.animate .separator {
   -webkit-animation: separatorAnimate 1s 0.75s ease forwards;
@@ -811,6 +965,9 @@ h1 {
   color: #121212;
 }
 
+.past-work .content__left p {
+  padding-right: 40px;
+}
 @media (max-width: 991px) {
   .past-work .content__left p {
     margin-bottom: 30px;
@@ -1307,5 +1464,317 @@ h1 {
   100% {
     translate: 250px 65px;
     scale: 0.5;
+  }
+}
+@-webkit-keyframes shipGlowAnimation {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@keyframes shipGlowAnimation {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@-webkit-keyframes starGlow {
+  0% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+@keyframes starGlow {
+  0% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+@-webkit-keyframes starMainAnimation {
+  0% {
+    -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+    opacity: 0.15;
+  }
+  50% {
+    -webkit-transform: scale(0.05);
+            transform: scale(0.05);
+    opacity: 0.25;
+  }
+  100% {
+    -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+    opacity: 0.15;
+  }
+}
+@keyframes starMainAnimation {
+  0% {
+    -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+    opacity: 0.15;
+  }
+  50% {
+    -webkit-transform: scale(0.05);
+            transform: scale(0.05);
+    opacity: 0.25;
+  }
+  100% {
+    -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+    opacity: 0.15;
+  }
+}
+@-webkit-keyframes starSubAnimation {
+  0% {
+    -webkit-transform: scale(0.015);
+            transform: scale(0.015);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: scale(0.125);
+            transform: scale(0.125);
+    opacity: 0.25;
+  }
+  100% {
+    -webkit-transform: scale(0.015);
+            transform: scale(0.015);
+    opacity: 0.5;
+  }
+}
+@keyframes starSubAnimation {
+  0% {
+    -webkit-transform: scale(0.015);
+            transform: scale(0.015);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: scale(0.125);
+            transform: scale(0.125);
+    opacity: 0.25;
+  }
+  100% {
+    -webkit-transform: scale(0.015);
+            transform: scale(0.015);
+    opacity: 0.5;
+  }
+}
+@-webkit-keyframes starRotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 180deg;
+  }
+}
+@keyframes starRotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 180deg;
+  }
+}
+@-webkit-keyframes starOneAnimation {
+  100% {
+    opacity: 1;
+    translate: 0 367;
+  }
+}
+@keyframes starOneAnimation {
+  100% {
+    opacity: 1;
+    translate: 0 367;
+  }
+}
+@-webkit-keyframes starTwoAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 928;
+  }
+}
+@keyframes starTwoAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 928;
+  }
+}
+@-webkit-keyframes wrenchAnimateLeft {
+  0% {
+    -webkit-transform: rotate(-90deg) translateX(-500px);
+            transform: rotate(-90deg) translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0) translateY(0);
+            transform: rotate(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes wrenchAnimateLeft {
+  0% {
+    -webkit-transform: rotate(-90deg) translateX(-500px);
+            transform: rotate(-90deg) translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0) translateY(0);
+            transform: rotate(0) translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes wrenchAnimateRight {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transform: rotate(-45deg) translateX(150px) scale(3);
+            transform: rotate(-45deg) translateX(150px) scale(3);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-transform: rotate(0deg) translateX(0) scale(1);
+            transform: rotate(0deg) translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes wrenchAnimateRight {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transform: rotate(-45deg) translateX(150px) scale(3);
+            transform: rotate(-45deg) translateX(150px) scale(3);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-transform: rotate(0deg) translateX(0) scale(1);
+            transform: rotate(0deg) translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes wrenchLeftHover {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes wrenchLeftHover {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes cloudAppears {
+  0% {
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+@keyframes cloudAppears {
+  0% {
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+@-webkit-keyframes sunRays {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes sunRays {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes sunRises {
+  0% {
+    -webkit-transform: translate(-50px, 500px) scale(0);
+            transform: translate(-50px, 500px) scale(0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) scale(1);
+            transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes sunRises {
+  0% {
+    -webkit-transform: translate(-50px, 500px) scale(0);
+            transform: translate(-50px, 500px) scale(0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) scale(1);
+            transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes cloudLeaves {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes cloudLeaves {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    opacity: 0;
   }
 }/*# sourceMappingURL=styles.css.map */
