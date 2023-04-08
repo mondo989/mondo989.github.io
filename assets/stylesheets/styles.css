@@ -286,13 +286,6 @@ h1 {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
-.section__hero .content__left #cloud-main,
-.section__hero .content__left #cloud-secondary,
-.section__hero .content__left #cloud-small {
-  opacity: 0;
-  -webkit-animation: cloudAppears 2.5s 1s ease-out forwards;
-          animation: cloudAppears 2.5s 1s ease-out forwards;
-}
 .section__hero .content__left .content__cta--alt:hover #cloud-main,
 .section__hero .content__left .content__cta--alt:hover #cloud-secondary,
 .section__hero .content__left .content__cta--alt:hover #cloud-small {
@@ -319,16 +312,6 @@ h1 {
 .section__hero .content__left .art-button {
   width: 30px;
   height: 30px;
-}
-.section__hero .content__left #wrench--left {
-  opacity: 0;
-  -webkit-animation: wrenchAnimateLeft 0.5s 2s ease-out forwards;
-          animation: wrenchAnimateLeft 0.5s 2s ease-out forwards;
-}
-.section__hero .content__left #wrench--right {
-  opacity: 0;
-  -webkit-animation: wrenchAnimateRight 0.5s 2s ease-out forwards;
-          animation: wrenchAnimateRight 0.5s 2s ease-out forwards;
 }
 .section__hero .art-button {
   margin-left: 10px;
@@ -375,6 +358,23 @@ h1 {
 .section__hero.animate .content__left {
   -webkit-animation: contentLeftAppear 0.5s 0.5s ease-out forwards;
           animation: contentLeftAppear 0.5s 0.5s ease-out forwards;
+}
+.section__hero.animate #wrench--left {
+  opacity: 0;
+  -webkit-animation: wrenchAnimateLeft 0.5s 1s ease-out forwards;
+          animation: wrenchAnimateLeft 0.5s 1s ease-out forwards;
+}
+.section__hero.animate #wrench--right {
+  opacity: 0;
+  -webkit-animation: wrenchAnimateRight 0.5s 1.5s ease-out forwards;
+          animation: wrenchAnimateRight 0.5s 1.5s ease-out forwards;
+}
+.section__hero.animate #cloud-main,
+.section__hero.animate #cloud-secondary,
+.section__hero.animate #cloud-small {
+  opacity: 0;
+  -webkit-animation: cloudAppears 2.5s 1s ease-out forwards;
+          animation: cloudAppears 2.5s 1s ease-out forwards;
 }
 .section__portfolio {
   background-repeat: no-repeat;
@@ -831,8 +831,8 @@ h1 {
 }
 .section__footer.animate .star-one {
   scale: 0.2;
-  left: 63px;
-  top: 63px;
+  left: 40px;
+  top: 40px;
   -webkit-animation: starOneAnimation 1.25s ease-out forwards;
           animation: starOneAnimation 1.25s ease-out forwards;
 }
@@ -841,8 +841,8 @@ h1 {
   scale: --random-number;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
-  left: 63px;
-  top: 63px;
+  left: 40px;
+  top: 40px;
   -webkit-animation: starTwoAnimation 2.5s ease-out forwards;
           animation: starTwoAnimation 2.5s ease-out forwards;
 }
@@ -1597,13 +1597,13 @@ h1 {
 @-webkit-keyframes starOneAnimation {
   100% {
     opacity: 1;
-    translate: 0 367;
+    translate: 0 1302;
   }
 }
 @keyframes starOneAnimation {
   100% {
     opacity: 1;
-    translate: 0 367;
+    translate: 0 1302;
   }
 }
 @-webkit-keyframes starTwoAnimation {
@@ -1612,7 +1612,7 @@ h1 {
   }
   100% {
     opacity: 1;
-    translate: 0 928;
+    translate: 0 552;
   }
 }
 @keyframes starTwoAnimation {
@@ -1621,7 +1621,7 @@ h1 {
   }
   100% {
     opacity: 1;
-    translate: 0 928;
+    translate: 0 552;
   }
 }
 @-webkit-keyframes wrenchAnimateLeft {

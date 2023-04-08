@@ -277,12 +277,12 @@ h1 {
         transform: translate3d(0,0,0)
       }
 
-      #cloud-main,
-      #cloud-secondary,
-      #cloud-small {
-        opacity: 0;
-        animation: cloudAppears $base-transition * 5 $base-transition * 2 ease-out forwards;
-      }
+      // #cloud-main,
+      // #cloud-secondary,
+      // #cloud-small {
+      //   opacity: 0;
+      //   animation: cloudAppears $base-transition * 5 $base-transition * 2 ease-out forwards;
+      // }
 
       .content__cta--alt {
         &:hover {
@@ -321,16 +321,6 @@ h1 {
       .art-button {
         width: 30px;
         height: 30px;
-      }
-
-      #wrench--left {
-        opacity: 0;
-        animation: wrenchAnimateLeft $base-transition $base-transition * 4 ease-out forwards;
-      }
-
-      #wrench--right {
-        opacity: 0;
-        animation: wrenchAnimateRight $base-transition $base-transition * 4 ease-out forwards;
       }
     }
 
@@ -384,6 +374,23 @@ h1 {
     &.animate {
       .content__left {
         animation: contentLeftAppear $base-transition $base-transition ease-out forwards;
+      }
+
+      #wrench--left {
+        opacity: 0;
+        animation: wrenchAnimateLeft $base-transition $base-transition * 2 ease-out forwards;
+      }
+
+      #wrench--right {
+        opacity: 0;
+        animation: wrenchAnimateRight $base-transition $base-transition * 3 ease-out forwards;
+      }
+
+      #cloud-main,
+      #cloud-secondary,
+      #cloud-small {
+        opacity: 0;
+        animation: cloudAppears $base-transition * 5 $base-transition * 2 ease-out forwards;
       }
     }
   }
