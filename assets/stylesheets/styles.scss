@@ -407,7 +407,7 @@ h1 {
 
     .container {
       padding: 20px 0;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       position: relative;
       z-index: 5;
     }
@@ -435,11 +435,25 @@ h1 {
       }
     }
 
+    .portfolio__alien {
+      width: 200px;
+      z-index: 90;
+
+      
+      &.activated {
+        animation: portfolioAlienDrive $base-transition * 3 ease-out forwards;
+      }
+      // #ufo-alien--full {
+      //   width: 100px;
+      // }
+    }
+
     .content__right {
       width: 50%;
       justify-content: flex-end;
       display: flex;
       height: inherit;
+      z-index: 2 !important;
 
       @media(max-width: $medium-breakpoint) {
         width: 100%;
@@ -1371,7 +1385,7 @@ h1 {
   }
 
   100% {
-    translate: 250px 65px;
+    translate: 10px -35px;
     scale: 0.5;
   }
 }
@@ -1575,5 +1589,31 @@ h1 {
 
   to {
     opacity: 0;
+  }
+}
+
+@keyframes portfolioAlienDrive {
+  0% {
+    opacity: 0.7;
+  }
+
+  20% {
+    translate: 20vw 0;
+    scale: 1;
+  }
+
+  70% {
+    scale: 1;
+    translate: 20vw 0;
+  }
+
+  90% {
+    scale: 15;
+    opacity: 1;
+    translate: 20vw 0;
+  }
+  100% {
+    opacity: 0;
+    scale: 20;
   }
 }
