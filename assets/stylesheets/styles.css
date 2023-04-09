@@ -735,6 +735,15 @@ h1 {
   -webkit-animation: starSubAnimation 5s 0.5s ease-in-out infinite;
           animation: starSubAnimation 5s 0.5s ease-in-out infinite;
 }
+.section__footer canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+}
 .section__footer .moon-container {
   margin: 0 auto;
   display: -webkit-box;
@@ -750,7 +759,8 @@ h1 {
 }
 .section__footer .moon--full {
   height: 100%;
-  width: 200px;
+  width: 150px;
+  margin: 10px 0;
   scale: 0;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
@@ -821,8 +831,8 @@ h1 {
   rotate: y 90deg;
 }
 .section__footer.animate .moon--full {
-  -webkit-animation: moonAnimate 1s ease-in-out forwards;
-          animation: moonAnimate 1s ease-in-out forwards;
+  -webkit-animation: moonAnimate 17.5s ease-in-out forwards;
+          animation: moonAnimate 17.5s ease-in-out forwards;
 }
 .section__footer.animate .social__container {
   -webkit-animation: socialContainerAnimate 1s ease-out forwards;
@@ -840,8 +850,8 @@ h1 {
 }
 .section__footer.animate .star-one {
   scale: 0.2;
-  left: 9px;
-  top: 9px;
+  left: 34px;
+  top: 34px;
   -webkit-animation: starOneAnimation 1.25s ease-out forwards;
           animation: starOneAnimation 1.25s ease-out forwards;
 }
@@ -850,8 +860,8 @@ h1 {
   scale: --random-number;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
-  left: 9px;
-  top: 9px;
+  left: 34px;
+  top: 34px;
   -webkit-animation: starTwoAnimation 2.5s ease-out forwards;
           animation: starTwoAnimation 2.5s ease-out forwards;
 }
@@ -1362,15 +1372,23 @@ h1 {
   }
 }
 @-webkit-keyframes moonAnimate {
-  to {
+  0% {
+    scale: 0;
+    opacity: 1;
+  }
+  100% {
     scale: 1;
-    opacity: 0.3;
+    opacity: 0.7;
   }
 }
 @keyframes moonAnimate {
-  to {
+  0% {
+    scale: 0;
+    opacity: 1;
+  }
+  100% {
     scale: 1;
-    opacity: 0.3;
+    opacity: 0.7;
   }
 }
 @-webkit-keyframes separatorAnimate {
@@ -1606,13 +1624,13 @@ h1 {
 @-webkit-keyframes starOneAnimation {
   100% {
     opacity: 1;
-    translate: 0 1763;
+    translate: 0 421;
   }
 }
 @keyframes starOneAnimation {
   100% {
     opacity: 1;
-    translate: 0 1763;
+    translate: 0 421;
   }
 }
 @-webkit-keyframes starTwoAnimation {
@@ -1621,7 +1639,7 @@ h1 {
   }
   100% {
     opacity: 1;
-    translate: 0 650;
+    translate: 0 1168;
   }
 }
 @keyframes starTwoAnimation {
@@ -1630,7 +1648,7 @@ h1 {
   }
   100% {
     opacity: 1;
-    translate: 0 650;
+    translate: 0 1168;
   }
 }
 @-webkit-keyframes wrenchAnimateLeft {
