@@ -1,6 +1,7 @@
 html {
   background: inherit;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -379,7 +380,6 @@ h1 {
 .section__portfolio {
   background-repeat: no-repeat;
   padding-top: 30px;
-  padding-bottom: 60px;
   position: relative;
   height: 90vh;
   -webkit-transition: 0.5s;
@@ -425,8 +425,11 @@ h1 {
   }
 }
 .section__portfolio .portfolio__alien {
-  width: 200px;
-  z-index: 90;
+  width: 150px;
+  -webkit-transform: unset !important;
+          transform: unset !important;
+  -webkit-animation: portfolioAlienEntrance 5s 0.5s ease-in-out forwards;
+          animation: portfolioAlienEntrance 5s 0.5s ease-in-out forwards;
 }
 .section__portfolio .portfolio__alien.activated {
   -webkit-animation: portfolioAlienDrive 1.5s ease-out forwards;
@@ -469,15 +472,16 @@ h1 {
   -webkit-transition-delay: 0.125s;
           transition-delay: 0.125s;
 }
+@media (max-width: 991px) {
+  .section__portfolio .background--portfolio {
+    display: inherit;
+  }
+}
 .section__portfolio .background--portfolio path {
   fill: url(#portfolio-gradient);
   -webkit-transition: 1s;
   transition: 1s;
-  scale: 3;
-}
-.section__portfolio.animate .background--portfolio {
-  -webkit-transform: translateY(-400px);
-          transform: translateY(-400px);
+  scale: 4;
 }
 @media (max-width: 991px) {
   .section__portfolio.animate .background--portfolio {
@@ -514,15 +518,17 @@ h1 {
   display: flex;
   padding: 100px 0;
   z-index: 5;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (max-width: 991px) {
   .section__about-me {
     padding: 100px 0;
   }
-}
-.section__about-me .dancer {
-  width: 200px;
-  height: auto;
 }
 .section__about-me .content {
   display: -webkit-box;
@@ -534,10 +540,6 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  top: 150px;
-  height: 150px;
-  position: absolute;
   width: 100%;
 }
 @media (max-width: 991px) {
@@ -621,6 +623,9 @@ h1 {
 .section__about-me .svg__about--background.activated .svg__about--ufo-back {
   display: none;
 }
+.section__about-me .svg__about--background.activated #base-angled-background {
+  opacity: inherit;
+}
 .section__about-me .svg__about--background.activated .svg__about--ufo-front {
   display: block;
   -webkit-animation: frontUFOLeave 2.5s ease-out forwards;
@@ -635,6 +640,7 @@ h1 {
   -webkit-animation: appear 0.5s 0.5s ease-out forwards;
           animation: appear 0.5s 0.5s ease-out forwards;
   height: inherit;
+  margin-bottom: 30px;
 }
 .section__about-me .svg__about--ufo-front {
   display: none;
@@ -650,23 +656,53 @@ h1 {
   opacity: 1;
   fill: #1E1E1E;
 }
-.section__about-me.animate .moon--behind circle {
-  opacity: 1;
-}
 .section__about-me.animate .content__left {
-  -webkit-animation: contentLeftAppear 0.5s 2.25s ease-out forwards;
-          animation: contentLeftAppear 0.5s 2.25s ease-out forwards;
+  -webkit-animation: contentLeftAppear 0.5s 0.25s ease-out forwards;
+          animation: contentLeftAppear 0.5s 0.25s ease-out forwards;
 }
-.section__about-me.animate .svg__about--ufo-back {
-  scale: 0.5;
-  cursor: pointer;
+.section__about-me.animate .about-planet {
+  opacity: 0;
+  -webkit-animation: wholePlanetRotate 3.5s ease-out forwards;
+          animation: wholePlanetRotate 3.5s ease-out forwards;
+}
+.section__about-me.animate .about-planet #planet--full circle {
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-animation: aboutSectionUFOTranslateOne 2s 0.5s ease-out forwards, aboutSectionUFOPulse 3s 2.5s ease-out infinite;
-          animation: aboutSectionUFOTranslateOne 2s 0.5s ease-out forwards, aboutSectionUFOPulse 3s 2.5s ease-out infinite;
+  -webkit-animation: planetRotate 2.5s linear infinite;
+          animation: planetRotate 2.5s linear infinite;
 }
-.section__about-me.animate .svg__about--ufo-back .ufo-alien--full {
-  scale: 0.5;
+.section__about-me.animate .about-planet #ring-1 path,
+.section__about-me.animate .about-planet #ring-2 path,
+.section__about-me.animate .about-planet #ring-3 path,
+.section__about-me.animate .about-planet #ring-4 path,
+.section__about-me.animate .about-planet #ring-5 path {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+.section__about-me.animate .about-planet #ring-1 path {
+  opacity: 0;
+  -webkit-animation: ringOneAnimation 1s 0.5s ease-out forwards;
+          animation: ringOneAnimation 1s 0.5s ease-out forwards;
+}
+.section__about-me.animate .about-planet #ring-2 path {
+  opacity: 0;
+  -webkit-animation: ringTwoAnimation 1s 1s ease-out forwards;
+          animation: ringTwoAnimation 1s 1s ease-out forwards;
+}
+.section__about-me.animate .about-planet #ring-3 path {
+  opacity: 0;
+  -webkit-animation: ringThreeAnimation 1s 1.5s ease-out forwards;
+          animation: ringThreeAnimation 1s 1.5s ease-out forwards;
+}
+.section__about-me.animate .about-planet #ring-4 path {
+  opacity: 0;
+  -webkit-animation: ringFourAnimation 1s 2s ease-out forwards;
+          animation: ringFourAnimation 1s 2s ease-out forwards;
+}
+.section__about-me.animate .about-planet #ring-5 path {
+  opacity: 0;
+  -webkit-animation: ringFiveAnimation 1s 2.5s ease-out forwards;
+          animation: ringFiveAnimation 1s 2.5s ease-out forwards;
 }
 .section__footer {
   -webkit-transition: 0.5s;
@@ -696,6 +732,7 @@ h1 {
 }
 .section__footer p {
   margin: 10px auto;
+  margin-top: 20px;
   text-align: left;
   max-width: 600px;
 }
@@ -785,6 +822,9 @@ h1 {
   -webkit-animation: shipGlowAnimation 2.5s 1s ease-in-out infinite;
           animation: shipGlowAnimation 2.5s 1s ease-in-out infinite;
 }
+.section__footer #glass-top path {
+  fill: #E6FA5C;
+}
 .section__footer .social__container {
   padding: 0;
   translate: 0 150px;
@@ -848,10 +888,13 @@ h1 {
           animation: footerUFOEntrance 10s 1s ease-out forwards;
   scale: 0.15;
 }
+.section__footer.animate .ufo--moon path {
+  fill: inherit;
+}
 .section__footer.animate .star-one {
   scale: 0.2;
-  left: 34px;
-  top: 34px;
+  left: 20px;
+  top: 20px;
   -webkit-animation: starOneAnimation 1.25s ease-out forwards;
           animation: starOneAnimation 1.25s ease-out forwards;
 }
@@ -860,8 +903,8 @@ h1 {
   scale: --random-number;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
-  left: 34px;
-  top: 34px;
+  left: 20px;
+  top: 20px;
   -webkit-animation: starTwoAnimation 2.5s ease-out forwards;
           animation: starTwoAnimation 2.5s ease-out forwards;
 }
@@ -1465,7 +1508,7 @@ h1 {
     scale: 0.3;
   }
   100% {
-    translate: 10px -35px;
+    translate: 2px -10px;
     scale: 0.5;
   }
 }
@@ -1489,7 +1532,7 @@ h1 {
     scale: 0.3;
   }
   100% {
-    translate: 10px -35px;
+    translate: 2px -10px;
     scale: 0.5;
   }
 }
@@ -1624,13 +1667,13 @@ h1 {
 @-webkit-keyframes starOneAnimation {
   100% {
     opacity: 1;
-    translate: 0 421;
+    translate: 0 1212;
   }
 }
 @keyframes starOneAnimation {
   100% {
     opacity: 1;
-    translate: 0 421;
+    translate: 0 1212;
   }
 }
 @-webkit-keyframes starTwoAnimation {
@@ -1639,7 +1682,7 @@ h1 {
   }
   100% {
     opacity: 1;
-    translate: 0 1168;
+    translate: 0 1890;
   }
 }
 @keyframes starTwoAnimation {
@@ -1648,7 +1691,7 @@ h1 {
   }
   100% {
     opacity: 1;
-    translate: 0 1168;
+    translate: 0 1890;
   }
 }
 @-webkit-keyframes wrenchAnimateLeft {
@@ -1847,5 +1890,297 @@ h1 {
   100% {
     opacity: 0;
     scale: 20;
+  }
+}
+@-webkit-keyframes portfolioAlienEntrance {
+  0% {
+    opacity: 0.2;
+    translate: 20vw 0;
+    scale: 0.1;
+  }
+  20% {
+    opacity: 0.4;
+    translate: 0 0;
+    scale: 0.4;
+  }
+  80% {
+    translate: 1000px 100px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes portfolioAlienEntrance {
+  0% {
+    opacity: 0.2;
+    translate: 20vw 0;
+    scale: 0.1;
+  }
+  20% {
+    opacity: 0.4;
+    translate: 0 0;
+    scale: 0.4;
+  }
+  80% {
+    translate: 1000px 100px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes ringOneAnimation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0.2;
+  }
+  50% {
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025);
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes ringOneAnimation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0.2;
+  }
+  50% {
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025);
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes ringTwoAnimation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0.2;
+  }
+  50% {
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025);
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes ringTwoAnimation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0.2;
+  }
+  50% {
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025);
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes ringThreeAnimation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes ringThreeAnimation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes ringFourAnimation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes ringFourAnimation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes ringFiveAnimation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes ringFiveAnimation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes wholePlanetRotate {
+  0% {
+    opacity: 0.2;
+    scale: 0.1;
+    rotate: 0deg;
+  }
+  25% {
+    scale: 0.25;
+    rotate: -30deg;
+  }
+  50% {
+    opacity: 0.5;
+    scale: 0.5;
+    rotate: 15deg;
+  }
+  75% {
+    scale: 0.75;
+    rotate: 20deg;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+    rotate: 23deg;
+  }
+}
+@keyframes wholePlanetRotate {
+  0% {
+    opacity: 0.2;
+    scale: 0.1;
+    rotate: 0deg;
+  }
+  25% {
+    scale: 0.25;
+    rotate: -30deg;
+  }
+  50% {
+    opacity: 0.5;
+    scale: 0.5;
+    rotate: 15deg;
+  }
+  75% {
+    scale: 0.75;
+    rotate: 20deg;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+    rotate: 23deg;
+  }
+}
+@-webkit-keyframes planetRotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+@keyframes planetRotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+@-webkit-keyframes planetEntrance {
+  from {
+    scale: 0.25;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes planetEntrance {
+  from {
+    scale: 0.25;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -17,6 +17,7 @@ $random-number: round(random() * 100)+1;
 html {
   background: inherit;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -274,7 +275,7 @@ h1 {
         position: relative;
         top: 3px;
         border-radius: 120px;
-        transform: translate3d(0,0,0)
+        transform: translate3d(0, 0, 0)
       }
 
       // #cloud-main,
@@ -286,6 +287,7 @@ h1 {
 
       .content__cta--alt {
         &:hover {
+
           #cloud-main,
           #cloud-secondary,
           #cloud-small {
@@ -300,9 +302,6 @@ h1 {
           }
         }
       }
-
-
-      #sun--full {}
 
       #sun--full {
         transform-origin: center;
@@ -338,9 +337,6 @@ h1 {
       }
 
       &:hover {
-
-        .wrench-button {}
-
         svg {
           animation: wrenchLeftHover $base-transition * 3 linear infinite;
         }
@@ -398,7 +394,7 @@ h1 {
   &__portfolio {
     background-repeat: no-repeat;
     padding-top: 30px;
-    padding-bottom: 60px;
+    // padding-bottom: 60px;
     position: relative;
     height: 90vh;
     transition: $base-transition;
@@ -436,13 +432,16 @@ h1 {
     }
 
     .portfolio__alien {
-      width: 200px;
-      z-index: 90;
+      width: 150px;
+      transform: unset !important;
+      animation: portfolioAlienEntrance $base-transition * 10 $base-transition ease-in-out forwards;
 
-      
+
+
       &.activated {
         animation: portfolioAlienDrive $base-transition * 3 ease-out forwards;
       }
+
       // #ufo-alien--full {
       //   width: 100px;
       // }
@@ -469,45 +468,35 @@ h1 {
 
     .background--portfolio {
       position: absolute;
-      // translate: 0 -500px;
       transform: translateY(-500px) scale(2);
       width: 100%;
-      // scale: 2;
       z-index: 0;
       overflow: hidden;
       transition: $base-transition;
       transition-delay: $base-transition * 0.25;
 
       @media(max-width: $medium-breakpoint) {
-        // display: none;
-        // translate: 0 -100px;
+        display: inherit;
       }
 
       path {
         fill: url(#portfolio-gradient);
         transition: $base-transition * 2;
-        scale: 3;
+        scale: 4;
       }
     }
 
     &.animate {
       .background--portfolio {
-        // translate: 0 100px;
-        transform: translateY(-400px);
 
         @media(max-width: $medium-breakpoint) {
-          // display: none;
-          // translate: 0 -100px;
           transform: translateY(-100px);
         }
 
         path {
-
           transform: translateX(-5000px) scale(2);
           transition: $base-transition;
-          // scale: 2;
           position: absolute;
-          // translate: -4000px;
         }
       }
 
@@ -536,24 +525,17 @@ h1 {
     display: flex;
     padding: 100px 0;
     z-index: 5;
+    justify-content: center;
+    align-items: center;
 
     @media(max-width: $medium-breakpoint) {
       padding: 100px 0;
-    }
-
-    .dancer {
-      width: 200px;
-      height: auto;
     }
 
     .content {
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
-      top: 150px;
-      height: 150px;
-      position: absolute;
       width: 100%;
 
       @media(max-width: $medium-breakpoint) {
@@ -587,9 +569,6 @@ h1 {
       border-radius: 100%;
 
       @media(max-width: $medium-breakpoint) {
-        // max-width: 50%;
-        // width: 40%;
-
         width: 200px;
       }
     }
@@ -642,7 +621,9 @@ h1 {
           display: none;
         }
 
-        #base-angled-background {}
+        #base-angled-background {
+          opacity: inherit;
+        }
 
         .svg__about--ufo-front {
           display: block;
@@ -660,6 +641,7 @@ h1 {
       opacity: 0;
       animation: appear $base-transition $base-transition ease-out forwards;
       height: inherit;
+      margin-bottom: 30px;
     }
 
     .svg__about--ufo-front {
@@ -676,9 +658,8 @@ h1 {
     }
 
     &.animate {
-
       #base-angled-background {
-        // fill: #232323;
+        // fill: inherit;
       }
 
       .svg__about--background {
@@ -689,31 +670,70 @@ h1 {
         }
       }
 
-      .moon--behind {
-        circle {
-          opacity: 1;
-          // animation: moonRises $base-transition * 2 ease-out forwards;
-        }
-      }
-
       .content__left {
-        animation: contentLeftAppear $base-transition $base-transition * 4.5 ease-out forwards;
+        animation: contentLeftAppear $base-transition $base-transition * 0.5 ease-out forwards;
       }
 
-      .svg__about--ufo-back {
-        scale: 0.5;
-        cursor: pointer;
-        transform-origin: center;
 
-        animation: aboutSectionUFOTranslateOne 2s $base-transition ease-out forwards,
-          // aboutSectionUFOTranslateTwo 3s $base-transition + 2s ease-out forwards,
-          aboutSectionUFOPulse 3s $base-transition + 2s ease-out infinite;
-        // aboutSectionUFOTranslateThree 5s $base-transition + 5s ease-out forwards;
+      .about-planet {
+        opacity: 0;
+        animation: wholePlanetRotate $base-transition * 7 ease-out forwards;
 
-        .ufo-alien--full {
-          scale: 0.5;
+        #planet--full {
+          // animation: planetEntrance $base-transition * 5 ease-out forwards;
+
+          circle {
+            transform-origin: center;
+            animation: planetRotate $base-transition * 5 linear infinite;
+          }
+        }
+
+        #ring-1,
+        #ring-2,
+        #ring-3,
+        #ring-4,
+        #ring-5 {
+          path {
+            transform-origin: center;
+          }
+        }
+
+        #ring-1 {
+          path {
+            opacity: 0;
+            animation: ringOneAnimation $base-transition * 2 $base-transition ease-out forwards;
+          }
+        }
+
+        #ring-2 {
+          path {
+            opacity: 0;
+            animation: ringTwoAnimation $base-transition * 2 $base-transition * 2 ease-out forwards;
+          }
+        }
+
+        #ring-3 {
+          path {
+            opacity: 0;
+            animation: ringThreeAnimation $base-transition * 2 $base-transition * 3 ease-out forwards;
+          }
+        }
+
+        #ring-4 {
+          path {
+            opacity: 0;
+            animation: ringFourAnimation $base-transition * 2 $base-transition * 4 ease-out forwards;
+          }
+        }
+
+        #ring-5 {
+          path {
+            opacity: 0;
+            animation: ringFiveAnimation $base-transition * 2 $base-transition * 5 ease-out forwards;
+          }
         }
       }
+
     }
   }
 
@@ -743,6 +763,7 @@ h1 {
 
     p {
       margin: 10px auto;
+      margin-top: 20px;
       text-align: left;
       max-width: 600px;
 
@@ -769,7 +790,6 @@ h1 {
       opacity: 5;
 
       svg {
-        // opacity: 0;
         animation: starRotate $base-transition * 8 $base-transition * 2 infinite linear;
       }
 
@@ -843,7 +863,9 @@ h1 {
     }
 
     #glass-top {
-      path {}
+      path {
+        fill: $primary-color;
+      }
     }
 
     .social__container {
@@ -915,8 +937,7 @@ h1 {
         scale: 0.15;
 
         path {
-          // transform: footerUFOEntrance $base-transition * 2 ease-out forwards;
-          // fill: red;
+          fill: inherit;
         }
       }
 
@@ -926,7 +947,6 @@ h1 {
         // scale: --random-number;
         left: $random-number + px;
         top: $random-number + px;
-        // position: absolute;
         // left: --random-number;
         animation: starOneAnimation $base-transition * 2.5 ease-out forwards;
       }
@@ -1074,10 +1094,6 @@ h1 {
   @media(max-width: $medium-breakpoint) {
     width: auto;
   }
-
-  // &:hover {
-  //   scale: 1.025;
-  // }
 
   .profile-img__rounded {
     border-radius: $base-border-radius;
@@ -1292,11 +1308,6 @@ h1 {
     opacity: 1;
     translate: 3000px -142px;
     scale: 0.85;
-    // scale: 5;
-
-    // opacity: 1;
-    // translate: 1277px -12px;
-    // scale: 78
   }
 }
 
@@ -1335,6 +1346,7 @@ h1 {
     scale: 0;
     opacity: 1;
   }
+
   100% {
     scale: 1;
     opacity: 0.7;
@@ -1400,7 +1412,7 @@ h1 {
   }
 
   100% {
-    translate: 10px -35px;
+    translate: 2px -10px;
     scale: 0.5;
   }
 }
@@ -1627,8 +1639,179 @@ h1 {
     opacity: 1;
     translate: 20vw 0;
   }
+
   100% {
     opacity: 0;
     scale: 20;
+  }
+}
+
+@keyframes portfolioAlienEntrance {
+  0% {
+    opacity: 0.2;
+    translate: 20vw 0;
+    scale: 0.1;
+  }
+
+  20% {
+    opacity: 0.4;
+    translate: 0 0;
+    scale: 0.4;
+  }
+
+  40% {}
+
+  60% {}
+
+  80% {
+    translate: 1000px 100px;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+
+
+
+@keyframes ringOneAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: scale(1.025);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+@keyframes ringTwoAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: scale(1.025);
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+@keyframes ringThreeAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(1.025);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+@keyframes ringFourAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.025);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ringFiveAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.025);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes wholePlanetRotate {
+  0% {
+    opacity: .2;
+    scale: 0.1;
+    rotate: (0deg);
+  }
+
+  25% {
+    scale: 0.25;
+    rotate: (-30deg);
+  }
+
+  50% {
+    opacity: 0.5;
+    scale: 0.5;
+    rotate: (15deg);
+  }
+
+  75% {
+    scale: 0.75;
+    rotate: (20deg)
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+    rotate: (23deg);
+  }
+}
+
+@keyframes planetRotate {
+ 0% {
+  rotate: 0deg;
+ }
+ 
+ 100% {
+  rotate: 360deg;
+ }
+}
+
+@keyframes planetEntrance {
+  from {
+    scale: 0.25;
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
   }
 }
