@@ -89,7 +89,7 @@ h1 {
   transition: $base-transition;
 
   &:hover {
-    scale: 1.025;
+    transform: scale(1.025);
     background: linear-gradient(92.98deg, #D6F15B 121.64%, #69B75D 309.75%);
   }
 
@@ -141,7 +141,6 @@ h1 {
   a {
 
     @media(max-width: $medium-breakpoint) {
-      // width: 100%;
       margin: 10px 0;
     }
   }
@@ -156,7 +155,6 @@ h1 {
     border-radius: 150px;
     height: auto;
     opacity: 0;
-    // box-shadow: 0 2px 5px #232323;
 
     animation: profileImageEntrance $base-transition $base-transition * 1.5 ease-out forwards;
 
@@ -178,9 +176,6 @@ h1 {
   align-items: center;
   display: flex;
   justify-content: center;
-  // Working
-  // height: 500px;
-  // width: 500px;
   height: inherit;
   width: inherit;
 
@@ -198,6 +193,8 @@ h1 {
   }
 
   .shape__full {
+    transition: $base-transition;
+
     path {
       fill: url(#gradient);
     }
@@ -206,30 +203,41 @@ h1 {
   #left-half,
   #right-half,
   #shape__full--path {
-    scale: 0.5;
+    // transform: scale(0.5);
     transform-origin: center;
     transition: $base-transition;
   }
 
   .shape__halves {
-    animation: rotateEntrance $base-transition $base-transition ease-out forwards;
+    // transform: rotate(-45deg);
+    transform: scale(0.2);
+    animation: rotateEntrance $base-transition $base-transition * 2 ease-out forwards;
   }
 
   #left-half {
-    rotate: (135deg);
-    translate: 500px 500px;
-    animation: leftHalfEntrance $base-transition ease-out forwards;
+    // rotate: (135deg);
+    // translate: 500px 500px;
+    // opacity: 0;
+    // transform: translateY(500px);
+    transform: scale(0);
+    animation: leftHalfEntrance $base-transition $base-transition ease-out forwards;
   }
 
   #right-half {
-    rotate: (135deg);
-    translate: -500px -500px;
-    animation: rightHalfEntrance $base-transition ease-out forwards;
+    // rotate: (135deg);
+    // translate: -500px -500px;
+    // opacity: 0;
+    // transform: translateY(-500px);
+    // transform: scale(0);
+    transform: scale(0);
+    animation: rightHalfEntrance $base-transition $base-transition ease-out forwards;
+    // z-index: 1;
   }
 
   #shape__full--path {
-    opacity: 0;
-    animation: shapeFullEntrance $base-transition $base-transition ease-out forwards, shapeFullRotate $base-transition * 250 $base-transition * 2 ease-out forwards infinite;
+    // opacity: 0;
+    transform: scale(0.4);
+    animation: shapeAppear $base-transition * 2 ease-out forwards, shapeFullRotate $base-transition * 70 $base-transition * 2 linear infinite;
   }
 }
 
@@ -363,7 +371,7 @@ h1 {
     .profile-img {
       @media(max-width: $medium-breakpoint) {
         max-width: 50%;
-        width: 40%;
+        width: 35%;
       }
     }
 
@@ -435,8 +443,6 @@ h1 {
       width: 150px;
       transform: unset !important;
       animation: portfolioAlienEntrance $base-transition * 10 $base-transition ease-in-out forwards;
-
-
 
       &.activated {
         animation: portfolioAlienDrive $base-transition * 3 ease-out forwards;
@@ -657,9 +663,13 @@ h1 {
       }
     }
 
+    .about-planet {
+      opacity: 0;
+    }
+
     &.animate {
       #base-angled-background {
-        // fill: inherit;
+        opacity: inherit;
       }
 
       .svg__about--background {
@@ -676,7 +686,6 @@ h1 {
 
 
       .about-planet {
-        opacity: 0;
         animation: wholePlanetRotate $base-transition * 7 ease-out forwards;
 
         #planet--full {
@@ -684,7 +693,7 @@ h1 {
 
           circle {
             transform-origin: center;
-            animation: planetRotate $base-transition * 5 linear infinite;
+            animation: planetRotate $base-transition * 10 linear infinite;
           }
         }
 
@@ -762,8 +771,8 @@ h1 {
     }
 
     p {
-      margin: 10px auto;
-      margin-top: 20px;
+      margin: 20px auto;
+      margin-bottom: 30px;
       text-align: left;
       max-width: 600px;
 
@@ -780,17 +789,15 @@ h1 {
 
     .stars__container {
       position: absolute;
-      // background-color: red;
       width: 100%;
       right: 0;
       top: 0;
       opacity: 0;
-      // scale: 0.25;
-      z-index: -1;
-      opacity: 5;
+      z-index: 0;
+      opacity: 1;
 
       svg {
-        animation: starRotate $base-transition * 8 $base-transition * 2 infinite linear;
+        animation: starRotate $base-transition * 8 $base-transition * 2 linear infinite;
       }
 
       #star-glow {
@@ -814,6 +821,7 @@ h1 {
       width: 100%;
       z-index: -1;
       height: 100%;
+      animation: canvasFooterAppear $base-transition * 5 $base-transition * 5 ease-out forwards;
     }
 
     .moon-container {
@@ -870,7 +878,7 @@ h1 {
 
     .social__container {
       padding: 0;
-      translate: 0 150px;
+      // translate: 0 -150px;
       opacity: 0;
 
       a {
@@ -891,16 +899,19 @@ h1 {
           transform-origin: center;
           transition: $base-transition;
           fill: #D6F15B77;
+          transform: scale(0.85);
           scale: 0.85;
         }
 
         &:hover {
           scale: 1.15;
+          transform: scale(1.15);
 
           .icon-path {
 
             transition-delay: $base-transition * 0.25;
-            scale: 1;
+            transform: scale(1);
+            // scale: 1;
             fill: #D6F15B;
           }
         }
@@ -913,10 +924,13 @@ h1 {
       max-width: 600px;
       margin: 20px auto 30px;
       background: $primary-gradient;
+      // background: red;
       opacity: 0;
-      rotate: y 90deg;
     }
 
+    [class^="star-"] {
+      opacity: 0;
+    }
 
     &.animate {
       .moon--full {
@@ -941,54 +955,41 @@ h1 {
         }
       }
 
+      [class^="star-"] {
+        animation: starAppear $base-transition * 5 ease-out forwards;
+      }
+
       .star-one {
-        scale: 0.2;
-        // opacity: 0;
-        // scale: --random-number;
-        left: $random-number + px;
-        top: $random-number + px;
-        // left: --random-number;
-        animation: starOneAnimation $base-transition * 2.5 ease-out forwards;
+        animation-delay: $base-transition;
       }
 
       .star-two {
-        // opacity: 1;
-        scale: 0.5;
-        scale: --random-number;
-        animation-delay: $base-transition;
-        left: $random-number + px;
-        top: $random-number + px;
-        // position: absolute;
-        animation: starTwoAnimation $base-transition * 5 ease-out forwards;
+        animation-delay: $base-transition * 2;
       }
 
       .star-three {
-        opacity: 0;
-        scale: --random-number;
-        // position: absolute;
-        // left: $random-number + px;
-        // top: $random-number + px;
-        animation: starTwoAnimation $base-transition * 7.5 ease-out forwards;
+        animation-delay: $base-transition * 4;
       }
 
-      .star-four,
-      .star-five,
+      .star-four {
+        animation-delay: $base-transition * 6;
+      }
+
+      .star-five {
+        animation-delay: $base-transition * 8;
+      }
+
       .star-six {
-        opacity: 0;
-        scale: --random-number;
-        // position: absolute;
-        // left: $random-number + px;
-        // top: $random-number + px;
-        animation: starTwoAnimation $base-transition * 5 ease-out forwards;
+        animation-delay: $base-transition * 10;
       }
 
       .separator {
-        animation: separatorAnimate $base-transition * 2 $base-transition * 1.5 ease forwards;
+        animation: separatorAnimate $base-transition * 2 $base-transition * 1.5 ease-out forwards;
       }
 
       .icon-path {
         opacity: 0;
-        animation: iconPathsAnimate $base-transition * 2 $base-transition * 2 ease forwards;
+        animation: iconPathsAnimate $base-transition * 2 $base-transition * 2 ease-out forwards;
       }
     }
   }
@@ -1150,44 +1151,87 @@ h1 {
 
 
 @keyframes leftHalfEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0) translateY(0);
+  }
+
   to {
-    translate: 0;
+    // translate: 0;
+    opacity: 0.2;
+    transform: scale(1) translateY(0);
   }
 }
 
 @keyframes rightHalfEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0) translateY(0);
+  }
+
   to {
-    translate: 0;
+    opacity: 0.2;
+    transform: scale(1) translateY(0);
+    // transform: translateY(0);
+
+    // translate: 0;
   }
 }
 
 @keyframes rotateEntrance {
+  from {
+    transform: scale(0.2);
+  }
+
   to {
-    rotate: 45deg;
+    opacity: 1;
+    transform: rotate(0) scale(0.4);
+    // rotate: 45deg;
   }
 }
 
-@keyframes shapeFullEntrance {
+// @keyframes shapeFullEntrance {
+//   from {
+//     // scale: 0;
+//     // rotate: 90deg;
+//     opacity: 0;
+//     // transform: scale(0) rotate(90deg);
+//   }
+
+//   to {
+//     // scale: 0.6;
+//     // rotate: 0deg;
+//     opacity: 1;
+//     // transform: scale(0) rotate(0deg);
+//   }
+// }
+
+
+@keyframes shapeAppear {
   from {
-    scale: 0;
-    rotate: 90deg;
+    // scale: 0;
+    // rotate: 90deg;
+    transform: scale(0.24);
     opacity: 0;
+    // transform: scale(0) rotate(90deg);
   }
 
   to {
-    scale: 0.6;
-    rotate: 0deg;
+    // scale: 0.6;
+    // rotate: 0deg;
+    transform: scale(0.5);
     opacity: 1;
+    // transform: scale(0) rotate(0deg);
   }
 }
 
 @keyframes shapeFullRotate {
   from {
-    rotate: 0deg;
+    transform: scale(0.5) rotate(0deg);
   }
 
   to {
-    rotate: 360deg;
+    transform: scale(0.5) rotate(360deg);
   }
 }
 
@@ -1207,121 +1251,6 @@ h1 {
   }
 }
 
-@keyframes aboutSectionUFOTranslate {
-  0% {}
-
-  30% {
-    translate: 350px;
-    scale: 1.2;
-  }
-
-  60% {
-    translate: -350px 50px;
-    scale: 1.35;
-  }
-
-  90% {
-    translate: 350px 90px;
-    scale: 1.4;
-    opacity: 1;
-  }
-
-  95% {
-    scale: 0.5;
-    translate: 250px -40px;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes aboutSectionUFOTranslateOne {
-
-  0% {
-    opacity: 0.2;
-    scale: 2;
-    translate: 700px -50px;
-    rotate: 0deg;
-  }
-
-  90% {
-    opacity: 0.8;
-    scale: 0.8;
-    translate: 80px -5px;
-    rotate: -1deg;
-  }
-
-  100% {
-    opacity: 0.2;
-    scale: 0.28;
-  }
-}
-
-@keyframes aboutSectionUFOTranslateTwo {
-  0% {
-    translate: 80px -5px;
-    opacity: 1;
-    scale: 0.8;
-  }
-
-  100% {
-    opacity: 1;
-    scale: 0.78;
-    translate: 130px -145px;
-    rotate: 0deg;
-  }
-}
-
-
-@keyframes aboutSectionUFOPulse {
-  0% {
-    // translate: 80px -5px;
-    opacity: 1;
-    scale: 0.78;
-    translate: 130px -140px;
-  }
-
-  50% {
-    opacity: 1;
-    scale: 0.78;
-    translate: 130px -145px;
-    rotate: 0deg;
-  }
-
-  100% {
-    opacity: 1;
-    translate: 130px -140px;
-    scale: 0.78;
-  }
-}
-
-
-@keyframes frontUFOLeave {
-  from {
-    opacity: 1;
-    translate: 277px -12px;
-    scale: 0.78;
-  }
-
-  to {
-    opacity: 1;
-    translate: 3000px -142px;
-    scale: 0.85;
-  }
-}
-
-@keyframes aboutSectionUFOTranslateThree {
-  from {
-    scale: 1.2;
-  }
-
-  to {
-    translate: -350px;
-    scale: 2;
-  }
-}
-
 @keyframes appear {
   from {
     opacity: 0;
@@ -1333,59 +1262,29 @@ h1 {
 }
 
 @keyframes socialContainerAnimate {
-  from {}
-
   to {
-    translate: 0;
+    transform: translate(0);
+    // translate: 0;
     opacity: 1;
-  }
-}
-
-@keyframes moonAnimate {
-  0% {
-    scale: 0;
-    opacity: 1;
-  }
-
-  100% {
-    scale: 1;
-    opacity: 0.7;
   }
 }
 
 @keyframes separatorAnimate {
+  from {
+    opacity: 0;
+    // transform: rotateY(90deg);
+  }
+
   to {
     opacity: 1;
-    rotate: y 180deg;
-  }
-}
-
-@keyframes moonRises {
-  0% {
-    scale: 0;
-    opacity: 0;
-    scale: 30;
-  }
-
-  10% {
-    opacity: 0;
-    // scale: 3;
-    translate: 50px 0;
-  }
-
-  100% {
-    scale: 1;
-    translate: 100px 0;
-    opacity: 1;
+    // transform: rotateX(180deg);
   }
 }
 
 @keyframes iconPathsAnimate {
-
   to {
     opacity: 1;
   }
-
 }
 
 @keyframes footerUFOEntrance {
@@ -1448,85 +1347,57 @@ h1 {
 @keyframes starMainAnimation {
   0% {
     transform: scale(.25);
-    opacity: 0.15;
+    opacity: 0.75;
   }
 
   50% {
-    // scale: 0.05;
     transform: scale(.05);
-    opacity: 0.25;
+    opacity: 0.5;
 
   }
 
   100% {
-    // scale: .25;
     transform: scale(.25);
-    opacity: 0.15;
+    opacity: 0.75;
   }
 }
 
 @keyframes starSubAnimation {
   0% {
     transform: scale(0.015);
-    // scale: 0.015;
-    opacity: 0.5;
+    opacity: 0.9;
   }
 
   50% {
-    // scale: .125;
     transform: scale(0.125);
     opacity: 0.25;
   }
 
   100% {
-    // scale: 0.015;
     transform: scale(0.015);
-    opacity: .5;
+    opacity: .9;
   }
 }
 
 
 @keyframes starRotate {
   0% {
-    // opacity: 0.8;
-    rotate: 0deg;
-  }
-
-  50% {
-    // opacity: 0.2;
-
+    transform: rotate(0deg);
   }
 
   100% {
-    // opacity: 0.8;
-    rotate: 180deg;
+    transform: rotate(360deg);
   }
 }
 
 
-@keyframes starOneAnimation {
+@keyframes starAppear {
   0% {
-    // translate: 0 0;
-  }
-
-  100% {
-    // translate: 1000px -100px;
-    opacity: 1;
-    translate: 0 round(random() * 2000);
-  }
-}
-
-@keyframes starTwoAnimation {
-  0% {
-    opacity: 1;
-    // translate: 0 0;
+    opacity: 0;
   }
 
   100% {
     opacity: 1;
-    // scale: round(random() * 50);
-    // translate: -500px round(random() * -2000);
-    translate: 0 round(random() * 2000);
   }
 }
 
@@ -1598,16 +1469,16 @@ h1 {
   }
 }
 
-@keyframes sunRises {
-  0% {
-    transform: translate(-50px, 500px) scale(0);
-  }
+// @keyframes sunRises {
+//   0% {
+//     transform: translate(-50px, 500px) scale(0);
+//   }
 
-  100% {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-  }
-}
+//   100% {
+//     transform: translate(0, 0) scale(1);
+//     opacity: 1;
+//   }
+// }
 
 @keyframes cloudLeaves {
   from {
@@ -1625,24 +1496,27 @@ h1 {
   }
 
   20% {
-    translate: 20vw 0;
-    scale: 1;
+    transform: translate(20vw, 0) scale(1);
+    // translate: 20vw 0;
+    // scale: 1;
   }
 
   70% {
+    transform: translate(20vw, 0) scale(1);
     scale: 1;
-    translate: 20vw 0;
+    // translate: 20vw 0;
   }
 
   90% {
-    scale: 15;
+    transform: translate(20vw, 0) scale(15);
+    // scale: 15;
     opacity: 1;
-    translate: 20vw 0;
+    // translate: 20vw 0;
   }
 
   100% {
+    transform: scale(20);
     opacity: 0;
-    scale: 20;
   }
 }
 
@@ -1766,52 +1640,73 @@ h1 {
 
 @keyframes wholePlanetRotate {
   0% {
+
     opacity: .2;
-    scale: 0.1;
-    rotate: (0deg);
+    transform: scale(0.1) rotate(0deg);
   }
 
-  25% {
-    scale: 0.25;
-    rotate: (-30deg);
+  20% {
+    transform: scale(0.25) rotate(-30deg);
   }
 
-  50% {
+  40% {
     opacity: 0.5;
-    scale: 0.5;
-    rotate: (15deg);
+    transform: scale(0.5) rotate(15deg);
+  }
+
+  70% {
+    transform: scale(0.75) rotate(20deg);
   }
 
   75% {
-    scale: 0.75;
-    rotate: (20deg)
+    transform: scale(0.9) rotate(23deg);
+    // transform: scale(0.75) rotate(20deg);
+  }
+
+  80% {
+    transform: scale(0.65) rotate(20deg);
+    
+  }
+
+  85% {
+    transform: scale(1.2) rotate(23deg);
+    // transform: scale(0.75) rotate(20deg);
   }
 
   100% {
     opacity: 1;
-    scale: 1;
-    rotate: (23deg);
+    transform: scale(1) rotate(23deg);
   }
 }
 
 @keyframes planetRotate {
- 0% {
-  rotate: 0deg;
- }
- 
- 100% {
-  rotate: 360deg;
- }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes planetEntrance {
   from {
-    scale: 0.25;
+    transform: scale(0.25);
     opacity: 0;
   }
 
   to {
     opacity: 1;
-    scale: 1;
+    transform: scale(0.25)
   }
 }
+
+// @keyframes canvasFooterAppear {
+//   from {
+//     transform: translate(0);
+//   }
+
+//   to {
+//     transform: translate(-400px);
+//   }
+// }
